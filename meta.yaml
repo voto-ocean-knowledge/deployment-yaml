@@ -1,0 +1,44 @@
+metadata:
+  acknowledgement: Funding from Voice of the Ocean
+  comment: <Any other relevant info. Fine to leave blank>
+  contributor_name: Callum Rollo, <PI name>, <glider techinician name>
+  contributor_role: Data Processor, Principal Investigator, Glider Technician
+  creator_email: <your email>
+  creator_name: <your name> 
+  creator_url: <your website>
+  deployment_id: <mission number>
+  deployment_name: <mission name>
+  # date format 'yyyy-mm-dd'
+  deployment_start: <start date>
+  deployment_end: <end date (approx)>
+  format_version: IOOS_Glider_NetCDF_v2.0.nc
+  glider_name: <glider name>
+  glider_serial: <glider number>
+  glider_model: SeaExplorer
+  glider_instrument_name: seaexplorer
+  glider_wmo: <glider wmo>
+  institution: VOTO Ocean Knowledge
+  keywords: "AUVS, Autonomous Underwater Vehicles, Oceans, Ocean Pressure,
+             Water Pressure, Oceans, Ocean Temperature, Water Temperature,
+             Oceans, Salinity/Density, Conductivity, Oceans,
+             Salinity/Density, Density, Oceans, Salinity/Density, Salinity"
+  keywords_vocabulary: GCMD Science Keywords
+  license: <license>
+  metadata_link: <metadata link>
+  Metadata_Conventions: CF-1.6, Unidata Dataset Discovery v1.0
+  naming_authority: "VOTO"
+  platform_type:    "SeaExplorer Glider"
+  processing_level: "Data provided as is with no expressed or implied
+                     assurance of quality assurance or quality control. L0"
+  project: <project name>
+  project_url: <project url>
+  publisher_email: callum.rollo@voiceoftheocean.org
+  publisher_name:  Callum Rollo
+  publisher_url:   https://voiceoftheocean.org
+  references:     "created with pyglider https://github.com/c-proof/pyglider"
+  sea_name: <sea name e.g. Baltic>
+  source:     Observational data from a profiling glider.
+  standard_name_vocabulary: CF STandard Name Table v49
+  summary: <mission summary>
+  transmission_system: IRRIDIUM
+  wmo_id: <glider wmo>
