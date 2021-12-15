@@ -5,10 +5,10 @@ glider_devices:
     serial: '104702'
   ctd:
     make: RBR
-    model: Legato
+    model: legato
     serial: '206523'
-    long_name: RBR Legato CTD
-    make_model:  RBR Legato CTD
+    long_name: RBR legato CTD
+    make_model:  RBR legato CTD
     factory_calibrated: "Yes"
     calibration_date: "2021-03-01"
   optics:
@@ -56,10 +56,10 @@ glider_devices:
     calibration_date: "2021-01-20"
   oxygen2:
     make: RBR
-    model: CODA
+    model: coda
     serial: '205592'
-    long_name: RBR CODA3 T.ODO
-    make_model: RBR CODA
+    long_name: RBR coda T.ODO
+    make_model: RBR coda T.ODO
     factory_calibrated: "Yes"
     calibration_date: "2021-03-01"
   irradiance:
