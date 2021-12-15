@@ -74,25 +74,25 @@ netcdf_variables:
     coordinates:  time depth latitude longitude
     instrument:    instrument_ctd
     valid_min:    "0."
-    valid_max:    "10."
+    valid_max:    "85."
     observation_type: "measured"
-    accuracy:      "0.0003"
-    precision:     "0.0001"
-    resolution:     "0.00002"
+    accuracy:      "0.003"
+    precision:     "0.001" #?
+    resolution:     "0.001"
 
   temperature:
     source:       LEGATO_TEMPERATURE
     long_name:    water temperature
     standard_name: sea_water_temperature
-    units:        Celsius
+    units:        degree Celsius
     coordinates:  time depth latitude longitude
     instrument:   instrument_ctd
     valid_min:    "-5"
-    valid_max:    "50"
+    valid_max:    "42"
     observation_type: "measured"
     accuracy:      "0.002"
-    precision:     "0.001"
-    resolution:    "0.0002"
+    precision:     "0.001" #?
+    resolution:    "0.00005"
 
   pressure:
     source:       LEGATO_PRESSURE
@@ -101,29 +101,29 @@ netcdf_variables:
     units:        dbar
     coordinates:  time depth latitude longitude
     valid_min:    "0"
-    valid_max:    "2000"
+    valid_max:    "1000"
     positive:      "down"
     reference_datum:  "sea-surface"
     instrument:     "instrument_ctd"
     observation_type: "measured"
-    accuracy:         "1"
-    precision:        "2"
-    resolution:       "0.02"
+    accuracy:         "0.05% FS"
+    precision:        "2" #?
+    resolution:       "0.001% FS"
     comment:          "ctd pressure sensor"
 
   salinity:
     source:       LEGATO_SALINITY
     long_name:    water salinity
     standard_name: sea_water_salinity
-    units:        kg m-3
+    units:        kg m-3 #PSU?
     coordinates:  time depth latitude longitude
     instrument:    instrument_ctd
-    valid_min:    "0."
-    valid_max:    "50."
+    valid_min:    "0." #?
+    valid_max:    "50." #?
     observation_type: "calculated"
-    accuracy:      "0.0003"
-    precision:     "0.0001"
-    resolution:     "0.00002"
+    accuracy:      "0.003" #?
+    precision:     "0.001" #?
+    resolution:     "0.001" #?
 
 # optics:
   chlorophyll:
@@ -132,11 +132,16 @@ netcdf_variables:
     standard_name: concentration_of_chlorophyll_in_sea_water
     units:        mg m-3
     coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+    valid_min:    "0."
+    valid_max:    "50."
+    observation_type: "calculated"
+    sensitivity:      "0.025"
 
-  cdom:
+  turbidity:
     source:  FLNTU_NTU_SCALED
-    long_name:    flntu variable
-    units:        arbitrary
+    long_name:    turbidity
+    units:        NTU
     coordinates:  time depth latitude longitude
 
 
