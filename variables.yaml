@@ -223,23 +223,59 @@ netcdf_variables:
     sensitivity:      "0.002"
 
 
-# Oxygen
+# oxygen
   oxygen_concentration:
     source:       AROD_FT_DO
     long_name:    oxygen concentration
     standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
     units:        umol l-1
     coordinates:   time depth latitude longitude
+    instrument:    instrument_phosphorescence
+    valid_min:    "0."
+    valid_max:    "425."
+    observation_type: "calculated"
+    accuracy:      "2% or 2.0"
+    resolution:      "0.01"
 
   temperature_oxygen:
     source:  AROD_FT_TEMP
     long_name:    oxygen sensor temperature
     standard_name: temperature_of_sensor_for_oxygen_in_sea_water
-    units:        Celsius
+    units:        degree Celsius
     coordinates:   time depth latitude longitude
+    instrument:    instrument_thermistor
+    valid_min:    "-3."
+    valid_max:    "45."
+    observation_type: "measured"
+    accuracy:      "0.01"
+    resolution:      "0.001"
 
+  oxygen_concentration2:
+    source:       LEGATO_CODA_DO
+    long_name:    oxygen concentration
+    standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
+    units:        umol l-1
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_optode
+    valid_min:    "0."
+    valid_max:    "500."
+    observation_type: "calculated"
+    accuracy:      "5% or 8.0"
+    resolution:      "<1"
 
-
+  temperature_oxygen2:
+    source:  LEGATO_CODA_TEMPERATURE
+    long_name:    oxygen sensor temperature
+    standard_name: temperature_of_sensor_for_oxygen_in_sea_water
+    units:        degree Celsius
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_thermistor
+    valid_min:    "-5."
+    valid_max:    "35."
+    observation_type: "measured"
+    accuracy:      "0.002"
+    resolution:      "<0.00005"
+    
 # AD2CP
   ad2cp_heading:
     source:       AD2CP_HEADING
