@@ -141,9 +141,86 @@ netcdf_variables:
   turbidity:
     source:  FLNTU_NTU_SCALED
     long_name:    turbidity
+    standard_name: turbidity_in_sea_water
     units:        NTU
     coordinates:  time depth latitude longitude
+    instrument:    instrument_turbidity_meter
+    valid_min:    "0."
+    valid_max:    "25."
+    observation_type: "calculated"
+    sensitivity:      "0.01"
 
+  chlorophyll1:
+    source:       FLBBPC_CHL_SCALED
+    long_name:    chlorophyll
+    standard_name: concentration_of_chlorophyll_in_sea_water
+    units:        mg m-3
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+    valid_min:    "0."
+    valid_max:    "50."
+    observation_type: "calculated"
+    sensitivity:      "0.025"
+
+  phycocyanin:
+    source:       FLBBPC_PC_SCALED
+    long_name:    phycocyanin
+    standard_name: concentration_of_phycocyanin_in_sea_water
+    units:        ppb
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+    valid_min:    "0."
+    valid_max:    "175."
+    observation_type: "calculated"
+    sensitivity:      "0.09"
+
+  backscatter:
+    source:       FLBBPC_BB_700_SCALED
+    long_name:    700 nm wavelength backscatter
+    standard_name: 700_nm_wavelength_backscatter_in_sea_water
+    units:        m-1
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_scatterometer
+    valid_min:    "0."
+    valid_max:    "3."
+    observation_type: "calculated"
+    sensitivity:      "0.002"
+
+  chlorophyll2:
+    source:       FLBBCD_CHL_SCALED
+    long_name:    chlorophyll
+    standard_name: concentration_of_chlorophyll_in_sea_water
+    units:        mg m-3
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+    valid_min:    "0."
+    valid_max:    "50."
+    observation_type: "calculated"
+    sensitivity:      "0.025"
+
+  cdom:
+    source:       FLBBCD_CDOM_SCALED
+    long_name:    colored dissolved organic matter
+    standard_name: concentration_of_colored_dissolved_organic_matter_in_sea_water
+    units:        ppb
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+    valid_min:    "0."
+    valid_max:    "375."
+    observation_type: "calculated"
+    sensitivity:      "0.28"
+
+  backscatter:
+    source:       FLBBCD_BB_700_SCALED
+    long_name:    700 nm wavelength backscatter
+    standard_name: 700_nm_wavelength_backscatter_in_sea_water
+    units:        m-1
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_scatterometer
+    valid_min:    "0."
+    valid_max:    "3."
+    observation_type: "calculated"
+    sensitivity:      "0.002"
 
 
 # Oxygen
