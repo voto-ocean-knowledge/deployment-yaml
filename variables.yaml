@@ -210,7 +210,7 @@ netcdf_variables:
     observation_type: "calculated"
     sensitivity:      "0.28"
 
-  backscatter:
+  backscatter2:
     source:       FLBBCD_BB_700_SCALED
     long_name:    700 nm wavelength backscatter
     standard_name: 700_nm_wavelength_backscatter_in_sea_water
@@ -275,7 +275,44 @@ netcdf_variables:
     observation_type: "measured"
     accuracy:      "0.002"
     resolution:      "<0.00005"
-    
+
+    # irradiance     "PARAMETER_UNITS"       : ["W/m^2/nm", "W/m^2/nm", "W/m^2/nm", "μE/m^2/s"],
+  down_irradiance_380:
+    source:  OCR504_Ed1
+    long_name:    Downwelling irradiance value of the 380 nm wavelength
+    standard_name: 380nm_downwelling_irradiance
+    units:        W/m^2/nm
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_radiometer
+    observation_type: "measured"
+
+  down_irradiance_490:
+    source:  OCR504_Ed2
+    long_name:    Downwelling irradiance value of the 490 nm wavelength
+    standard_name: 490nm_downwelling_irradiance
+    units:        W/m^2/nm
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_radiometer
+    observation_type: "measured"
+
+  down_irradiance_532:
+    source:  OCR504_Ed3
+    long_name:    Downwelling irradiance value of the 532 nm wavelength
+    standard_name: 532nm_downwelling_irradiance
+    units:       W/m^2/nm
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_radiometer
+    observation_type: "measured"
+
+  DOWNWELLING_PAR:
+    source:  OCR504_Ed4
+    long_name:    Downwelling PAR (Photosynthetically Active Radiation) in range 400-700 nm
+    standard_name: downwelling_PAR
+    units:        μE/m^2/s
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_radiometer
+    observation_type: "measured"
+
 # AD2CP
   ad2cp_heading:
     source:       AD2CP_HEADING
