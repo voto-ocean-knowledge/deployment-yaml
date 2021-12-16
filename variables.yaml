@@ -77,21 +77,19 @@ netcdf_variables:
     valid_max:    "85."
     observation_type: "measured"
     accuracy:      "0.003"
-    precision:     "0.001" #?
     resolution:     "0.001"
 
   temperature:
     source:       LEGATO_TEMPERATURE
     long_name:    water temperature
     standard_name: sea_water_temperature
-    units:        degree Celsius
+    units:        Celsius
     coordinates:  time depth latitude longitude
     instrument:   instrument_ctd
     valid_min:    "-5"
     valid_max:    "42"
     observation_type: "measured"
     accuracy:      "0.002"
-    precision:     "0.001" #?
     resolution:    "0.00005"
 
   pressure:
@@ -106,24 +104,23 @@ netcdf_variables:
     reference_datum:  "sea-surface"
     instrument:     "instrument_ctd"
     observation_type: "measured"
-    accuracy:         "0.05% FS"
-    precision:        "2" #?
-    resolution:       "0.001% FS"
+    accuracy:         "0.05% of full scale"
+    resolution:       "0.001% of fulll scale"
     comment:          "ctd pressure sensor"
 
   salinity:
     source:       LEGATO_SALINITY
     long_name:    water salinity
     standard_name: sea_water_salinity
-    units:        kg m-3 #PSU?
+    units:        PSU
     coordinates:  time depth latitude longitude
     instrument:    instrument_ctd
-    valid_min:    "0." #?
-    valid_max:    "50." #?
+    valid_min:    "0."
+    valid_max:    "50."
     observation_type: "calculated"
-    accuracy:      "0.003" #?
-    precision:     "0.001" #?
-    resolution:     "0.001" #?
+    accuracy:      "0.003"
+    precision:     "0.001"
+    resolution:     "0.001"
 
 # optics:
   chlorophyll:
@@ -138,6 +135,14 @@ netcdf_variables:
     observation_type: "calculated"
     sensitivity:      "0.025"
 
+  chlorophyll_raw:
+    source:       FLNTU_CHL_COUNT
+    long_name:    raw chlorophyll
+    standard_name: raw_chlorophyll_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+
   turbidity:
     source:  FLNTU_NTU_SCALED
     long_name:    turbidity
@@ -149,6 +154,14 @@ netcdf_variables:
     valid_max:    "25."
     observation_type: "calculated"
     sensitivity:      "0.01"
+
+  turbidity_raw:
+    source:       FLNTU_NTU_COUNT
+    long_name:    raw turbidity
+    standard_name: raw_turbidity_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
 
   chlorophyll1:
     source:       FLBBPC_CHL_SCALED
@@ -162,6 +175,14 @@ netcdf_variables:
     observation_type: "calculated"
     sensitivity:      "0.025"
 
+  chlorophyll_raw1:
+    source:       FLBBPC_CHL_COUNT
+    long_name:    raw chlorophyll
+    standard_name: raw_chlorophyll_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+
   phycocyanin:
     source:       FLBBPC_PC_SCALED
     long_name:    phycocyanin
@@ -173,6 +194,14 @@ netcdf_variables:
     valid_max:    "175."
     observation_type: "calculated"
     sensitivity:      "0.09"
+
+  phycocyanin_raw:
+    source:       FLBBPC_PC_COUNT
+    long_name:    raw phycocyanin
+    standard_name: raw_phycocyanin_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
 
   backscatter:
     source:       FLBBPC_BB_700_SCALED
@@ -186,6 +215,14 @@ netcdf_variables:
     observation_type: "calculated"
     sensitivity:      "0.002"
 
+  backscatter_raw:
+    source:       FLBBPC_BB_700_COUNT
+    long_name:    raw 700 nm wavelength backscatter
+    standard_name: raw_700_nm_wavelength_backscatter_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_scatterometer
+
   chlorophyll2:
     source:       FLBBCD_CHL_SCALED
     long_name:    chlorophyll
@@ -197,6 +234,14 @@ netcdf_variables:
     valid_max:    "50."
     observation_type: "calculated"
     sensitivity:      "0.025"
+
+  chlorophyll_raw2:
+    source:       FLBBCD_CHL_COUNT
+    long_name:    raw chlorophyll
+    standard_name: raw_chlorophyll_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
 
   cdom:
     source:       FLBBCD_CDOM_SCALED
@@ -210,6 +255,14 @@ netcdf_variables:
     observation_type: "calculated"
     sensitivity:      "0.28"
 
+  cdom_raw:
+    source:       FLBBCD_CDOM_COUNT
+    long_name:    raw colored dissolved organic matter
+    standard_name: raw_colored_dissolved_organic_matter_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_scatterometer
+
   backscatter2:
     source:       FLBBCD_BB_700_SCALED
     long_name:    700 nm wavelength backscatter
@@ -222,6 +275,13 @@ netcdf_variables:
     observation_type: "calculated"
     sensitivity:      "0.002"
 
+  backscatter_raw2:
+    source:       FLBBCD_BB_700_COUNT
+    long_name:    raw 700 nm wavelength backscatter
+    standard_name: raw_700_nm_wavelength_backscatter_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_scatterometer
 
 # oxygen
   oxygen_concentration:
@@ -241,7 +301,7 @@ netcdf_variables:
     source:  AROD_FT_TEMP
     long_name:    oxygen sensor temperature
     standard_name: temperature_of_sensor_for_oxygen_in_sea_water
-    units:        degree Celsius
+    units:        Celsius
     coordinates:   time depth latitude longitude
     instrument:    instrument_thermistor
     valid_min:    "-3."
@@ -261,20 +321,28 @@ netcdf_variables:
     valid_max:    "500."
     observation_type: "calculated"
     accuracy:      "5% or 8.0"
-    resolution:      "<1"
+    resolution:      "1"
 
   temperature_oxygen2:
     source:  LEGATO_CODA_TEMPERATURE
     long_name:    oxygen sensor temperature
     standard_name: temperature_of_sensor_for_oxygen_in_sea_water
-    units:        degree Celsius
+    units:        Celsius
     coordinates:   time depth latitude longitude
     instrument:    instrument_thermistor
     valid_min:    "-5."
     valid_max:    "35."
     observation_type: "measured"
     accuracy:      "0.002"
-    resolution:      "<0.00005"
+    resolution:      "0.00005"
+
+  oxygen_phase:
+    source:  LEGATO_CODA_CORR_PHASE
+    long_name:    oxygen phase
+    standard_name: oxygen_phase_in_sea_water
+    units:        degree
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_optode
 
     # irradiance     "PARAMETER_UNITS"       : ["W/m^2/nm", "W/m^2/nm", "W/m^2/nm", "μE/m^2/s"],
   down_irradiance_380:
@@ -314,7 +382,6 @@ netcdf_variables:
     observation_type: "measured"
 
 # AD2CP
-
   ad2cp_heading:
     source:       AD2CP_HEADING
     long_name:    glider heading angle from AD2CP
