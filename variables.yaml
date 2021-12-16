@@ -186,3 +186,4 @@ netcdf_variables:
     standard_name: ad2cp_recorded_time
     units:        datetime
     coordinates:  time depth latitude longitude
+    datetime_format: "%m%d%y %H:%M:%S"
