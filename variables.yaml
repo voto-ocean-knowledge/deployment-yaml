@@ -304,7 +304,7 @@ netcdf_variables:
     instrument:    instrument_radiometer
     observation_type: "measured"
 
-  DOWNWELLING_PAR:
+  downwelling_PAR:
     source:  OCR504_Ed4
     long_name:    Downwelling PAR (Photosynthetically Active Radiation) in range 400-700 nm
     standard_name: downwelling_PAR
@@ -314,6 +314,7 @@ netcdf_variables:
     observation_type: "measured"
 
 # AD2CP
+
   ad2cp_heading:
     source:       AD2CP_HEADING
     long_name:    glider heading angle from AD2CP
@@ -333,4 +334,46 @@ netcdf_variables:
     long_name:    glider roll angle from AD2CP
     standard_name: platform_roll_angle_ad2cp
     units:        degrees
+    coordinates:  time depth latitude longitude
+
+  ad2cp_pressure:
+    source:       AD2CP_PRESSURE
+    long_name:    glider pressure from AD2CP
+    standard_name: platform_pressure_ad2cp
+    units:        dbar
+    coordinates:  time depth latitude longitude
+
+  ad2cp_altitude:
+    source:       AD2CP_ALT
+    long_name:    glider altitude from AD2CP
+    standard_name: platform_altitude_ad2cp
+    units:        m
+    coordinates:  time depth latitude longitude
+
+  ad2cp_beam1_cell_number[X]:
+    source:       AD2CP_V1_CN[X]
+    long_name:    glider beam 1 measure from AD2CP in cell [X]
+    standard_name: platform_beam1_measure_ad2cp_cell[X]
+    units:        m/s
+    coordinates:  time depth latitude longitude
+
+  ad2cp_beam2_cell_number[X]:
+    source:       AD2CP_V1_CN[X]
+    long_name:    glider beam 2 measure from AD2CP in cell [X]
+    standard_name: platform_beam1_measure_ad2cp_cell[X]
+    units:        m/s
+    coordinates:  time depth latitude longitude
+
+  ad2cp_beam3_cell_number[X]:
+    source:       AD2CP_V1_CN[X]
+    long_name:    glider beam 3 measure from AD2CP in cell [X]
+    standard_name: platform_beam1_measure_ad2cp_cell[X]
+    units:        m/s
+    coordinates:  time depth latitude longitude
+
+  ad2cp_beam4_cell_number[X]:
+    source:       AD2CP_V1_CN[X]
+    long_name:    glider beam 4 measure from AD2CP in cell [X]
+    standard_name: platform_beam1_measure_ad2cp_cell[X]
+    units:        m/s
     coordinates:  time depth latitude longitude
