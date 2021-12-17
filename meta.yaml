@@ -35,6 +35,7 @@ metadata:
   publisher_name:  Callum Rollo
   publisher_url:   https://voiceoftheocean.org
   references:     "created with pyglider https://github.com/c-proof/pyglider"
+  # Examples: Skagerrak, Kattegatt, Baltic, Gulf of Bothnia, Gulf of Finland, Gulf of Riga
   sea_name: <sea name e.g. Baltic>
   source:     Observational data from a profiling glider.
   standard_name_vocabulary: CF STandard Name Table v49
