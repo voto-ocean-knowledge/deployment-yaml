@@ -19,9 +19,8 @@ metadata:
   glider_wmo: <glider wmo>
   institution: VOTO Ocean Knowledge
   keywords: "AUVS, Autonomous Underwater Vehicles, Oceans, Ocean Pressure,
-             Water Pressure, Oceans, Ocean Temperature, Water Temperature,
-             Oceans, Salinity/Density, Conductivity, Oceans,
-             Salinity/Density, Density, Oceans, Salinity/Density, Salinity"
+             Water Pressure, Ocean Temperature, Water Temperature,
+             Salinity/Density, Conductivity, Density, Salinity"
   keywords_vocabulary: GCMD Science Keywords
   license: <license>
   metadata_link: <metadata link>
