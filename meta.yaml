@@ -4,7 +4,7 @@ metadata:
   contributor_name: Callum Rollo, <PI name>, <glider techinician name>
   contributor_role: Data Processor, Principal Investigator, Glider Technician
   creator_email: <your email>
-  creator_name: <your name> 
+  creator_name: <your name>
   creator_url: <your website>
   deployment_id: <mission number>
   deployment_name: <mission name>
@@ -40,5 +40,5 @@ metadata:
   source:     Observational data from a profiling glider.
   standard_name_vocabulary: CF STandard Name Table v49
   summary: <mission summary>
-  transmission_system: IRRIDIUM
+  transmission_system: IRIDIUM
   wmo_id: <glider wmo>
