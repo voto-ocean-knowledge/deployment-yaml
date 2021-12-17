@@ -104,8 +104,8 @@ netcdf_variables:
     reference_datum:  "sea-surface"
     instrument:     "instrument_ctd"
     observation_type: "measured"
-    accuracy:         "0.05% of full scale"
-    resolution:       "0.001% of fulll scale"
+    accuracy:         "0.5"
+    resolution:       "0.01"
     comment:          "ctd pressure sensor"
 
   salinity:
@@ -118,9 +118,8 @@ netcdf_variables:
     valid_min:    "0."
     valid_max:    "50."
     observation_type: "calculated"
-    accuracy:      "0.003"
-    precision:     "0.001"
-    resolution:     "0.001"
+    accuracy:      "0.02"
+    resolution:     "0.01"
 
 # optics:
   chlorophyll:
@@ -163,7 +162,7 @@ netcdf_variables:
     coordinates:  time depth latitude longitude
     instrument:    instrument_flourometer
 
-  chlorophyll1:
+  chlorophyll:
     source:       FLBBPC_CHL_SCALED
     long_name:    chlorophyll
     standard_name: concentration_of_chlorophyll_in_sea_water
@@ -175,7 +174,7 @@ netcdf_variables:
     observation_type: "calculated"
     sensitivity:      "0.025"
 
-  chlorophyll_raw1:
+  chlorophyll_raw:
     source:       FLBBPC_CHL_COUNT
     long_name:    raw chlorophyll
     standard_name: raw_chlorophyll_in_sea_water
@@ -223,7 +222,7 @@ netcdf_variables:
     coordinates:  time depth latitude longitude
     instrument:    instrument_scatterometer
 
-  chlorophyll2:
+  chlorophyll:
     source:       FLBBCD_CHL_SCALED
     long_name:    chlorophyll
     standard_name: concentration_of_chlorophyll_in_sea_water
@@ -235,7 +234,7 @@ netcdf_variables:
     observation_type: "calculated"
     sensitivity:      "0.025"
 
-  chlorophyll_raw2:
+  chlorophyll_raw:
     source:       FLBBCD_CHL_COUNT
     long_name:    raw chlorophyll
     standard_name: raw_chlorophyll_in_sea_water
@@ -263,7 +262,7 @@ netcdf_variables:
     coordinates:  time depth latitude longitude
     instrument:    instrument_scatterometer
 
-  backscatter2:
+  backscatter:
     source:       FLBBCD_BB_700_SCALED
     long_name:    700 nm wavelength backscatter
     standard_name: 700_nm_wavelength_backscatter_in_sea_water
@@ -275,7 +274,7 @@ netcdf_variables:
     observation_type: "calculated"
     sensitivity:      "0.002"
 
-  backscatter_raw2:
+  backscatter_raw:
     source:       FLBBCD_BB_700_COUNT
     long_name:    raw 700 nm wavelength backscatter
     standard_name: raw_700_nm_wavelength_backscatter_in_sea_water
@@ -310,7 +309,7 @@ netcdf_variables:
     accuracy:      "0.01"
     resolution:      "0.001"
 
-  oxygen_concentration2:
+  oxygen_concentration:
     source:       LEGATO_CODA_DO
     long_name:    oxygen concentration
     standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
@@ -323,7 +322,7 @@ netcdf_variables:
     accuracy:      "5% or 8.0"
     resolution:      "1"
 
-  temperature_oxygen2:
+  temperature_oxygen:
     source:  LEGATO_CODA_TEMPERATURE
     long_name:    oxygen sensor temperature
     standard_name: temperature_of_sensor_for_oxygen_in_sea_water
