@@ -1,5 +1,6 @@
 metadata:
-  acknowledgement: Funding from Voice of the Ocean
+  acknowledgement: This study used data collected and made freely available by Voice of the Ocean Foundation 
+                   (https://www.voiceoftheocean.org) accessed from https://erddap.voiceoftheocean.org
   comment: <Any other relevant info. Fine to leave blank>
   contributor_name: Callum Rollo, <PI name>, <glider techinician name>
   contributor_role: Data Processor, Principal Investigator, Glider Technician
@@ -16,17 +17,19 @@ metadata:
   glider_serial: <glider number>
   glider_model: SeaExplorer
   glider_instrument_name: seaexplorer
-  glider_wmo: <glider wmo>
-  institution: VOTO Ocean Knowledge
+  wmoid: <glider wmo>
+  institution: Voice of the Ocean Foundation
   keywords: "AUVS, Autonomous Underwater Vehicles, Oceans, Ocean Pressure,
              Water Pressure, Oceans, Ocean Temperature, Water Temperature,
              Oceans, Salinity/Density, Conductivity, Oceans,
              Salinity/Density, Density, Oceans, Salinity/Density, Salinity"
   keywords_vocabulary: GCMD Science Keywords
-  license: <license>
+  license: Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/)
+           This study used data collected and made freely available by Voice of the Ocean Foundation
+           (https://www.voiceoftheocean.org) accessed from https://erddap.voiceoftheocean.org
   metadata_link: <metadata link>
   Metadata_Conventions: CF-1.6, Unidata Dataset Discovery v1.0
-  naming_authority: "VOTO"
+  naming_authority: Voice of the Ocean Foundation
   platform_type:    "SeaExplorer Glider"
   processing_level: "Data provided as is with no expressed or implied
                      assurance of quality assurance or quality control. L0"
@@ -41,4 +44,3 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   summary: <mission summary>
   transmission_system: IRRIDIUM
-  wmo_id: <glider wmo>
