@@ -5,7 +5,7 @@ metadata:
   contributor_name: Callum Rollo, <PI name>, <glider techinician name>
   contributor_role: Data Processor, Principal Investigator, Glider Technician
   creator_email: <your email>
-  creator_name: <your name> 
+  creator_name: <your name>
   creator_url: <your website>
   deployment_id: <mission number>
   deployment_name: <mission name>
@@ -20,9 +20,8 @@ metadata:
   wmoid: <glider wmo>
   institution: Voice of the Ocean Foundation
   keywords: "AUVS, Autonomous Underwater Vehicles, Oceans, Ocean Pressure,
-             Water Pressure, Oceans, Ocean Temperature, Water Temperature,
-             Oceans, Salinity/Density, Conductivity, Oceans,
-             Salinity/Density, Density, Oceans, Salinity/Density, Salinity"
+             Water Pressure, Ocean Temperature, Water Temperature,
+             Salinity/Density, Conductivity, Density, Salinity"
   keywords_vocabulary: GCMD Science Keywords
   license: Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/)
            This study used data collected and made freely available by Voice of the Ocean Foundation
@@ -39,8 +38,11 @@ metadata:
   publisher_name:  Callum Rollo
   publisher_url:   https://voiceoftheocean.org
   references:     "created with pyglider https://github.com/c-proof/pyglider"
+  # Examples: Skagerrak, Kattegatt, Baltic, Gulf of Bothnia, Gulf of Finland, Gulf of Riga
   sea_name: <sea name e.g. Baltic>
   source:     Observational data from a profiling glider.
   standard_name_vocabulary: CF STandard Name Table v49
   summary: <mission summary>
+  transmission_system: IRIDIUM
+  wmo_id: <glider wmo>
   transmission_system: IRRIDIUM
