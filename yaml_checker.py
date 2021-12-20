@@ -105,10 +105,11 @@ def check_against_meta(deployment_meta, _log):
     _log.info('Checking against meta.yaml')
     with open('meta.yaml') as fin:
         meta = yaml.safe_load(fin)['metadata']
-    constant_vals = ['acknowledgement', 'format_version', 'institution', 'keywords', 'keywords_vocabulary', 'license',
-                     'metadata_link', 'Metadata_Conventions', 'naming_authority', 'platform_type', 'processing_level',
-                     'publisher_email', 'publisher_name', 'publisher_url', 'references', 'standard_name_vocabulary',
-                     'transmission_system', 'wmo_id']
+    constant_vals = ('acknowledgement', 'institution', 'license', 'format_version', 'glider_model',
+                     'glider_instrument_name', 'keywords', 'keywords_vocabulary', 'metadata_link',
+                     'Metadata_Conventions', 'naming_authority', 'platform', 'processing_level', 'publisher_email',
+                     'publisher_name', 'publisher_url', 'references', 'source', 'standard_name_vocabulary',
+                     'transmission_system')
     for key in constant_vals:
         if deployment_meta[key] != meta[key]:
             _log.error(f'{key}: {deployment_meta[key]} does not match value {meta[key]} in meta.yaml')
