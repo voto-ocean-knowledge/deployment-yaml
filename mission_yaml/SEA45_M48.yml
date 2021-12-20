@@ -6,7 +6,7 @@ metadata:
   contributor_role: Data processor
   creator_email: c.rollo@outlook.com
   creator_name:  Callum Rollo
-  creator_url:   callumrollo.com
+  creator_url:    https://callumrollo.com
   # date_created etc: added automatically
   # numbers must be eenclosed by strings so YAML keeps as strings
   deployment_id: '48'
