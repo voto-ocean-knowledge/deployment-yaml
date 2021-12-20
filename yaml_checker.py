@@ -31,15 +31,15 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
             failures += 1
     meta = deployment['metadata']
     _log.info('Checking metadata')
-    metadata_keys = (
-        'acknowledgement', 'comment', 'contributor_name', 'contributor_role', 'creator_email', 'creator_name',
-        'creator_url', 'deployment_id', 'deployment_name', 'deployment_start', 'deployment_end', 'format_version',
-        'glider_name', 'glider_serial', 'glider_model', 'glider_instrument_name', 'glider_wmo', 'institution',
-        'keywords',
-        'keywords_vocabulary', 'license', 'metadata_link', 'Metadata_Conventions', 'naming_authority', 'platform_type',
-        'processing_level', 'project', 'project_url', 'publisher_email', 'publisher_name', 'publisher_url',
-        'references',
-        'sea_name', 'source', 'standard_name_vocabulary', 'summary', 'transmission_system', 'wmo_id')
+    metadata_keys = ('acknowledgement', 'institution', 'license', 'format_version', 'glider_model',
+                     'glider_instrument_name', 'keywords', 'keywords_vocabulary', 'metadata_link',
+                     'Metadata_Conventions', 'naming_authority', 'platform', 'processing_level', 'publisher_email',
+                     'publisher_name', 'publisher_url', 'references', 'source', 'standard_name_vocabulary',
+                     'transmission_system', 'glider_name', 'glider_serial', 'wmoid', 'comment', 'contributor_name',
+                     'contributor_role', 'creator_email', 'creator_name', 'creator_url', 'deployment_id',
+                     'deployment_name', 'deployment_start', 'deployment_end', 'project', 'project_url', 'summary',
+                     'sea_name')
+
 
     for key in metadata_keys:
         if key not in deployment['metadata'].keys():
