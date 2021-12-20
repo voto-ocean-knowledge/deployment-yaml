@@ -6,7 +6,7 @@ metadata:
   contributor_role: Data processor
   creator_email: c.rollo@outlook.com
   creator_name:  Callum Rollo
-  creator_url:   callumrollo.com
+  creator_url:  https://callumrollo.com
   # date_created etc: added automatically
   # numbers must be eenclosed by strings so YAML keeps as strings
   deployment_id: '51'
@@ -35,7 +35,7 @@ metadata:
   processing_level: "Data provided as is with no expressed or implied
                      assurance of quality assurance or quality control. L0"
   project: test
-  project_url: test
+  project_url: "https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea"
   publisher_email: c.rollo@outlook.com
   publisher_name:  Callum Rollo
   publisher_url:   https://voiceoftheocean.org
