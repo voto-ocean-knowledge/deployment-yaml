@@ -27,7 +27,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Martorn
   glider_serial: "44"
-  wmoid: 6801672
+  wmo_id: 6801672
   comment: 'deployment and recovery in Bornholm'
   contributor_name: Callum Rollo, Louise Biddle
   contributor_role: Data Processor, PI

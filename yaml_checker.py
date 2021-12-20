@@ -35,7 +35,7 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
                      'glider_instrument_name', 'keywords', 'keywords_vocabulary', 'metadata_link',
                      'Metadata_Conventions', 'naming_authority', 'platform', 'processing_level', 'publisher_email',
                      'publisher_name', 'publisher_url', 'references', 'source', 'standard_name_vocabulary',
-                     'transmission_system', 'glider_name', 'glider_serial', 'wmoid', 'comment', 'contributor_name',
+                     'transmission_system', 'glider_name', 'glider_serial', 'wmo_id', 'comment', 'contributor_name',
                      'contributor_role', 'creator_email', 'creator_name', 'creator_url', 'deployment_id',
                      'deployment_name', 'deployment_start', 'deployment_end', 'project', 'project_url', 'summary',
                      'sea_name')
