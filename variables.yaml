@@ -289,6 +289,8 @@ netcdf_variables:
     standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
     units:        umol l-1
     coordinates:   time depth latitude longitude
+    correct_oxygen: "True"
+    reference_salinity: "0"
     instrument:    instrument_phosphorescence
     valid_min:    "0."
     valid_max:    "425."
