@@ -74,11 +74,10 @@ netcdf_variables:
     coordinates:  time depth latitude longitude
     instrument:    instrument_ctd
     valid_min:    "0."
-    valid_max:    "10."
+    valid_max:    "85."
     observation_type: "measured"
-    accuracy:      "0.0003"
-    precision:     "0.0001"
-    resolution:     "0.00002"
+    accuracy:      "0.003"
+    resolution:     "0.001"
 
   temperature:
     source:       LEGATO_TEMPERATURE
@@ -88,11 +87,10 @@ netcdf_variables:
     coordinates:  time depth latitude longitude
     instrument:   instrument_ctd
     valid_min:    "-5"
-    valid_max:    "50"
+    valid_max:    "42"
     observation_type: "measured"
     accuracy:      "0.002"
-    precision:     "0.001"
-    resolution:    "0.0002"
+    resolution:    "0.00005"
 
   pressure:
     source:       LEGATO_PRESSURE
@@ -101,29 +99,27 @@ netcdf_variables:
     units:        dbar
     coordinates:  time depth latitude longitude
     valid_min:    "0"
-    valid_max:    "2000"
+    valid_max:    "1000"
     positive:      "down"
     reference_datum:  "sea-surface"
     instrument:     "instrument_ctd"
     observation_type: "measured"
-    accuracy:         "1"
-    precision:        "2"
-    resolution:       "0.02"
+    accuracy:         "0.5"
+    resolution:       "0.01"
     comment:          "ctd pressure sensor"
 
   salinity:
     source:       LEGATO_SALINITY
     long_name:    water salinity
     standard_name: sea_water_salinity
-    units:        kg m-3
+    units:        PSU
     coordinates:  time depth latitude longitude
     instrument:    instrument_ctd
     valid_min:    "0."
     valid_max:    "50."
     observation_type: "calculated"
-    accuracy:      "0.0003"
-    precision:     "0.0001"
-    resolution:     "0.00002"
+    accuracy:      "0.02"
+    resolution:     "0.01"
 
 # optics:
   chlorophyll:
@@ -132,22 +128,173 @@ netcdf_variables:
     standard_name: concentration_of_chlorophyll_in_sea_water
     units:        mg m-3
     coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+    valid_min:    "0."
+    valid_max:    "50."
+    observation_type: "calculated"
+    sensitivity:      "0.025"
+
+  chlorophyll_raw:
+    source:       FLNTU_CHL_COUNT
+    long_name:    raw chlorophyll
+    standard_name: raw_chlorophyll_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+
+  turbidity:
+    source:  FLNTU_NTU_SCALED
+    long_name:    turbidity
+    standard_name: turbidity_in_sea_water
+    units:        NTU
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_turbidity_meter
+    valid_min:    "0."
+    valid_max:    "25."
+    observation_type: "calculated"
+    sensitivity:      "0.01"
+
+  turbidity_raw:
+    source:       FLNTU_NTU_COUNT
+    long_name:    raw turbidity
+    standard_name: raw_turbidity_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+
+  chlorophyll:
+    source:       FLBBPC_CHL_SCALED
+    long_name:    chlorophyll
+    standard_name: concentration_of_chlorophyll_in_sea_water
+    units:        mg m-3
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+    valid_min:    "0."
+    valid_max:    "50."
+    observation_type: "calculated"
+    sensitivity:      "0.025"
+
+  chlorophyll_raw:
+    source:       FLBBPC_CHL_COUNT
+    long_name:    raw chlorophyll
+    standard_name: raw_chlorophyll_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+
+  phycocyanin:
+    source:       FLBBPC_PC_SCALED
+    long_name:    phycocyanin
+    standard_name: concentration_of_phycocyanin_in_sea_water
+    units:        ppb
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+    valid_min:    "0."
+    valid_max:    "175."
+    observation_type: "calculated"
+    sensitivity:      "0.09"
+
+  phycocyanin_raw:
+    source:       FLBBPC_PC_COUNT
+    long_name:    raw phycocyanin
+    standard_name: raw_phycocyanin_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+
+  backscatter:
+    source:       FLBBPC_BB_700_SCALED
+    long_name:    700 nm wavelength backscatter
+    standard_name: 700_nm_wavelength_backscatter_in_sea_water
+    units:        m-1
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_scatterometer
+    valid_min:    "0."
+    valid_max:    "3."
+    observation_type: "calculated"
+    sensitivity:      "0.002"
+
+  backscatter_raw:
+    source:       FLBBPC_BB_700_COUNT
+    long_name:    raw 700 nm wavelength backscatter
+    standard_name: raw_700_nm_wavelength_backscatter_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_scatterometer
+
+  chlorophyll:
+    source:       FLBBCD_CHL_SCALED
+    long_name:    chlorophyll
+    standard_name: concentration_of_chlorophyll_in_sea_water
+    units:        mg m-3
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+    valid_min:    "0."
+    valid_max:    "50."
+    observation_type: "calculated"
+    sensitivity:      "0.025"
+
+  chlorophyll_raw:
+    source:       FLBBCD_CHL_COUNT
+    long_name:    raw chlorophyll
+    standard_name: raw_chlorophyll_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
 
   cdom:
-    source:  FLNTU_NTU_SCALED
-    long_name:    flntu variable
-    units:        arbitrary
+    source:       FLBBCD_CDOM_SCALED
+    long_name:    colored dissolved organic matter
+    standard_name: concentration_of_colored_dissolved_organic_matter_in_sea_water
+    units:        ppb
     coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+    valid_min:    "0."
+    valid_max:    "375."
+    observation_type: "calculated"
+    sensitivity:      "0.28"
 
+  cdom_raw:
+    source:       FLBBCD_CDOM_COUNT
+    long_name:    raw colored dissolved organic matter
+    standard_name: raw_colored_dissolved_organic_matter_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_scatterometer
 
+  backscatter:
+    source:       FLBBCD_BB_700_SCALED
+    long_name:    700 nm wavelength backscatter
+    standard_name: 700_nm_wavelength_backscatter_in_sea_water
+    units:        m-1
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_scatterometer
+    valid_min:    "0."
+    valid_max:    "3."
+    observation_type: "calculated"
+    sensitivity:      "0.002"
 
-# Oxygen
+  backscatter_raw:
+    source:       FLBBCD_BB_700_COUNT
+    long_name:    raw 700 nm wavelength backscatter
+    standard_name: raw_700_nm_wavelength_backscatter_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_scatterometer
+
+# oxygen
   oxygen_concentration:
     source:       AROD_FT_DO
     long_name:    oxygen concentration
     standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
     units:        umol l-1
     coordinates:   time depth latitude longitude
+    instrument:    instrument_phosphorescence
+    valid_min:    "0."
+    valid_max:    "425."
+    observation_type: "calculated"
+    accuracy:      "2% or 2.0"
+    resolution:      "0.01"
 
   temperature_oxygen:
     source:  AROD_FT_TEMP
@@ -155,8 +302,83 @@ netcdf_variables:
     standard_name: temperature_of_sensor_for_oxygen_in_sea_water
     units:        Celsius
     coordinates:   time depth latitude longitude
+    instrument:    instrument_thermistor
+    valid_min:    "-3."
+    valid_max:    "45."
+    observation_type: "measured"
+    accuracy:      "0.01"
+    resolution:      "0.001"
 
+  oxygen_concentration:
+    source:       LEGATO_CODA_DO
+    long_name:    oxygen concentration
+    standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
+    units:        umol l-1
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_optode
+    valid_min:    "0."
+    valid_max:    "500."
+    observation_type: "calculated"
+    accuracy:      "5% or 8.0"
+    resolution:      "1"
 
+  temperature_oxygen:
+    source:  LEGATO_CODA_TEMPERATURE
+    long_name:    oxygen sensor temperature
+    standard_name: temperature_of_sensor_for_oxygen_in_sea_water
+    units:        Celsius
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_thermistor
+    valid_min:    "-5."
+    valid_max:    "35."
+    observation_type: "measured"
+    accuracy:      "0.002"
+    resolution:      "0.00005"
+
+  oxygen_phase:
+    source:  LEGATO_CODA_CORR_PHASE
+    long_name:    oxygen phase
+    standard_name: oxygen_phase_in_sea_water
+    units:        degree
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_optode
+
+    # irradiance     "PARAMETER_UNITS"       : ["W/m^2/nm", "W/m^2/nm", "W/m^2/nm", "μE/m^2/s"],
+  down_irradiance_380:
+    source:  OCR504_Ed1
+    long_name:    Downwelling irradiance value of the 380 nm wavelength
+    standard_name: 380nm_downwelling_irradiance
+    units:        W m-2 nm-1
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_radiometer
+    observation_type: "measured"
+
+  down_irradiance_490:
+    source:  OCR504_Ed2
+    long_name:    Downwelling irradiance value of the 490 nm wavelength
+    standard_name: 490nm_downwelling_irradiance
+    units:        W m-2 nm-1
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_radiometer
+    observation_type: "measured"
+
+  down_irradiance_532:
+    source:  OCR504_Ed3
+    long_name:    Downwelling irradiance value of the 532 nm wavelength
+    standard_name: 532nm_downwelling_irradiance
+    units:       W m-2 nm-1
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_radiometer
+    observation_type: "measured"
+
+  downwelling_PAR:
+    source:  OCR504_Ed4
+    long_name:    Downwelling PAR (Photosynthetically Active Radiation) in range 400-700 nm
+    standard_name: downwelling_PAR
+    units:        μE m-2 s-1
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_radiometer
+    observation_type: "measured"
 
 # AD2CP
   ad2cp_heading:
@@ -178,4 +400,54 @@ netcdf_variables:
     long_name:    glider roll angle from AD2CP
     standard_name: platform_roll_angle_ad2cp
     units:        degrees
+    coordinates:  time depth latitude longitude
+
+  ad2cp_time:
+    source:       AD2CP_TIME
+    long_name:    AD2CP recorded time
+    standard_name: ad2cp_recorded_time
+    units:        datetime
+    coordinates:  time depth latitude longitude
+    datetime_format: "%m%d%y %H:%M:%S"
+    
+  ad2cp_pressure:
+    source:       AD2CP_PRESSURE
+    long_name:    glider pressure from AD2CP
+    standard_name: platform_pressure_ad2cp
+    units:        dbar
+    coordinates:  time depth latitude longitude
+
+  ad2cp_altitude:
+    source:       AD2CP_ALT
+    long_name:    glider altitude from AD2CP
+    standard_name: platform_altitude_ad2cp
+    units:        m
+    coordinates:  time depth latitude longitude
+
+  ad2cp_beam1_cell_number[X]:
+    source:       AD2CP_V1_CN[X]
+    long_name:    glider beam 1 measure from AD2CP in cell [X]
+    standard_name: platform_beam1_measure_ad2cp_cell[X]
+    units:        m s-1
+    coordinates:  time depth latitude longitude
+
+  ad2cp_beam2_cell_number[X]:
+    source:       AD2CP_V1_CN[X]
+    long_name:    glider beam 2 measure from AD2CP in cell [X]
+    standard_name: platform_beam1_measure_ad2cp_cell[X]
+    units:        m s-1
+    coordinates:  time depth latitude longitude
+
+  ad2cp_beam3_cell_number[X]:
+    source:       AD2CP_V1_CN[X]
+    long_name:    glider beam 3 measure from AD2CP in cell [X]
+    standard_name: platform_beam1_measure_ad2cp_cell[X]
+    units:        m s-1
+    coordinates:  time depth latitude longitude
+
+  ad2cp_beam4_cell_number[X]:
+    source:       AD2CP_V1_CN[X]
+    long_name:    glider beam 4 measure from AD2CP in cell [X]
+    standard_name: platform_beam1_measure_ad2cp_cell[X]
+    units:        m s-1
     coordinates:  time depth latitude longitude
