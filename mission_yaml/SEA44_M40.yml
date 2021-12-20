@@ -444,3 +444,14 @@ profile_variables:
     calendar:      gregorian
     units:         seconds since 1970-01-01T00:00:00Z
     observation_type: calculated
+
+  instrument_ctd:
+    comment:    unpumped RBR legato CTD
+    calibration_date: "2020-07-23"
+    calibration_report:  " "
+    factory_calibrated:  "yes"
+    long_name: RBR legato CTD
+    make_model:  RBR legato CTD
+    platform:            platform
+    serial_number:       "205047"
+    type:                platform
