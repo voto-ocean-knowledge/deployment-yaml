@@ -98,6 +98,21 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
                 _log.error(f'{field} not present for glider_devices: {name}')
                 failures += 1
     check_strings(deployment, _log)
+    check_against_meta(meta, _log)
+
+
+def check_against_meta(deployment_meta, _log):
+    _log.info('Checking against meta.yaml')
+    with open('meta.yaml') as fin:
+        meta = yaml.safe_load(fin)['metadata']
+    constant_vals = ('acknowledgement', 'institution', 'license', 'format_version', 'glider_model',
+                     'glider_instrument_name', 'keywords', 'keywords_vocabulary', 'metadata_link',
+                     'Metadata_Conventions', 'naming_authority', 'platform', 'processing_level', 'publisher_email',
+                     'publisher_name', 'publisher_url', 'references', 'source', 'standard_name_vocabulary',
+                     'transmission_system')
+    for key in constant_vals:
+        if deployment_meta[key] != meta[key]:
+            _log.error(f'{key}: {deployment_meta[key]} does not match value {meta[key]} in meta.yaml')
 
 
 def check_strings(d, _log):
