@@ -1,0 +1,135 @@
+import yaml
+import sys
+from datetime import datetime, timedelta
+from urllib import request
+import logging
+
+
+def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
+    """
+    Simple yaml checker for expected SeaExplorer deployment yaml.
+    THIS IS NOT A SUBSTITUTE FOR CHECKING YOUR YAML!
+    But it will flag some values you might have missed.
+
+    Parameters
+    ----------
+    yaml_path: path to your yaml file
+    check_urls: boolean. If True, checks that urls are reachable. Default: False
+    log_level: default to 'INFO'. Can be 'WARNING', or 'ERROR'
+    """
+    logging.basicConfig(level=log_level)
+    _log = logging.getLogger(__name__)
+    failures = 0
+    _log.info(f'Checking deployment yaml at: {yaml_path}')
+    with open(yaml_path) as fin:
+        deployment = yaml.safe_load(fin)
+    _log.info('read yaml successfully')
+    _log.info('Checking top level items')
+    for item in ['metadata', 'glider_devices', 'netcdf_variables', 'profile_variables']:
+        if item not in deployment.keys():
+            _log.error(f'{item} not found')
+            failures += 1
+    meta = deployment['metadata']
+    _log.info('Checking metadata')
+    metadata_keys = (
+        'acknowledgement', 'comment', 'contributor_name', 'contributor_role', 'creator_email', 'creator_name',
+        'creator_url', 'deployment_id', 'deployment_name', 'deployment_start', 'deployment_end', 'format_version',
+        'glider_name', 'glider_serial', 'glider_model', 'glider_instrument_name', 'glider_wmo', 'institution',
+        'keywords',
+        'keywords_vocabulary', 'license', 'metadata_link', 'Metadata_Conventions', 'naming_authority', 'platform_type',
+        'processing_level', 'project', 'project_url', 'publisher_email', 'publisher_name', 'publisher_url',
+        'references',
+        'sea_name', 'source', 'standard_name_vocabulary', 'summary', 'transmission_system', 'wmo_id')
+
+    for key in metadata_keys:
+        if key not in deployment['metadata'].keys():
+            _log.error(f'{key} not found in metadata')
+            failures += 1
+    if 'deployment_id' in metadata_keys and 'glider_id' in meta.keys():
+        yaml_file_name = yaml_path.split('/')[-1]
+        if meta['deployment_id'] not in yaml_file_name:
+            _log.error(f'deployment_id {meta["deployment_id"]} does not match yaml filenmae {yaml_file_name}')
+        if meta['glider_id'] not in yaml_file_name:
+            _log.error(f'glider_id {meta["glider_id"]} does not match yaml filenmae {yaml_file_name}')
+
+    _log.info('Checking dates')
+    start = deployment['metadata']['deployment_start']
+    end = deployment['metadata']['deployment_end']
+    try:
+        start_time = datetime.strptime(start, "%Y-%m-%d")
+    except ValueError:
+        _log.error(f'deployment_start {start} incorrectly formatted. Should be YYYY-MM-DD')
+        failures += 1
+    try:
+        end_time = datetime.strptime(end, "%Y-%m-%d")
+    except ValueError:
+        _log.error(f'deployment_end {end} incorrectly formatted. Should be YYYY-MM-DD')
+        failures += 1
+    try:
+        deployment_duration = end_time - start_time
+        if deployment_duration < timedelta(0):
+            _log.error('deployment_end date is sooner than deployment_start date')
+            failures += 1
+        if deployment_duration > timedelta(days=365):
+            _log.warning('inferred deployment duration > 1 year, please check deployment_start and deployment_end')
+    except ValueError:
+        pass
+    if check_urls:
+        _log.info('Checking urls')
+        for url_id in ['creator_url', 'project_url', 'publisher_url']:
+            url = deployment['metadata'][url_id]
+            try:
+                http_code = request.urlopen(url).getcode()
+                if int(http_code / 100) != 2:
+                    _log.info(f'Warning, did not receive 200 html response from {url}')
+            except ValueError:
+                _log.error(f"ERROR could not reach {url_id}: {url}")
+                failures += 1
+    else:
+        _log.warning(
+            'Warning, not checking urls. Enable this time-consuming check by calling: '
+            'python yaml_check.py deployment.yaml True')
+
+    _log.info('Checking glider_devices')
+    devices = deployment['glider_devices']
+    for name, device in devices.items():
+        for field in ('make', 'model', 'serial'):
+            if field not in device.keys():
+                _log.error(f'{field} not present for glider_devices: {name}')
+                failures += 1
+    check_strings(deployment, _log)
+    log_file = 'check_yaml.log'
+    with open(log_file) as f:
+        lines = f.readlines()
+    log_output = ''.join(lines)
+    if 'ERROR' in log_output:
+        print(f'\nYour yaml seems to have some missing/erroneous values, check out errors above')
+    elif 'WARNING' in log_output:
+        print('\nNo errors found, but some warning you should check')
+    else:
+        print('\nYour yaml looks pretty good to me :) you should still check it though')
+    return _log
+
+
+def check_strings(d, _log):
+    for k, v in d.items():
+        if isinstance(v, dict):
+            _log = check_strings(v, _log)
+        else:
+            if type(v) is not str and k != 'keep_variables':
+                _log.warning(f'Value of {k}: {v} is not a string')
+            if not bool(v):
+                _log.error(f'{k} is empty')
+    return _log
+
+
+if __name__ == '__main__':
+    args = sys.argv
+    url_check = False
+    if len(args) > 1:
+        yaml_file = args[1]
+    else:
+        sys.exit('Must specify yaml file to parse')
+    if len(args) > 2:
+        url_check = args[2]
+    check_yaml(yaml_file, check_urls=url_check)
