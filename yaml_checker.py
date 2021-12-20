@@ -98,17 +98,6 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
                 _log.error(f'{field} not present for glider_devices: {name}')
                 failures += 1
     check_strings(deployment, _log)
-    log_file = 'check_yaml.log'
-    with open(log_file) as f:
-        lines = f.readlines()
-    log_output = ''.join(lines)
-    if 'ERROR' in log_output:
-        print(f'\nYour yaml seems to have some missing/erroneous values, check out errors above')
-    elif 'WARNING' in log_output:
-        print('\nNo errors found, but some warning you should check')
-    else:
-        print('\nYour yaml looks pretty good to me :) you should still check it though')
-    return _log
 
 
 def check_strings(d, _log):
