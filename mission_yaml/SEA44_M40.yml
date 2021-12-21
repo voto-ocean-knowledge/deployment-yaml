@@ -1,5 +1,5 @@
 metadata:
-  acknowledgement: This study used data collected and made freely available by Voice of the Ocean Foundation 
+  acknowledgement: This study used data collected and made freely available by Voice of the Ocean Foundation
                    (https://www.voiceoftheocean.org) accessed from https://erddap.voiceoftheocean.org
   institution: Voice of the Ocean Foundation
   license: Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/)
@@ -242,7 +242,7 @@ netcdf_variables:
     source:       FLBBPC_PC_SCALED
     long_name:    phycocyanin
     standard_name: concentration_of_phycocyanin_in_sea_water
-    units:        ppb
+    units:        mg m-3
     coordinates:  time depth latitude longitude
     instrument:    instrument_flourometer
     valid_min:    "0."
@@ -262,7 +262,7 @@ netcdf_variables:
     source:       FLBBPC_BB_700_SCALED
     long_name:    700 nm wavelength backscatter
     standard_name: 700_nm_wavelength_backscatter_in_sea_water
-    units:        m-1
+    units:        m-1 sr-1
     coordinates:  time depth latitude longitude
     instrument:    instrument_scatterometer
     valid_min:    "0."
@@ -284,7 +284,7 @@ netcdf_variables:
     source:       AROD_FT_DO
     long_name:    oxygen concentration
     standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
-    units:        umol l-1
+    units:        mmol m-3
     coordinates:   time depth latitude longitude
     correct_oxygen: "True"
     reference_salinity: "0"
