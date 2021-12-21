@@ -206,7 +206,7 @@ netcdf_variables:
     source:       FLBBPC_BB_700_SCALED
     long_name:    700 nm wavelength backscatter
     standard_name: 700_nm_wavelength_backscatter_in_sea_water
-    units:        m-1/sr-1
+    units:        m-1 sr-1
     coordinates:  time depth latitude longitude
     instrument:    instrument_scatterometer
     valid_min:    "0."
@@ -266,7 +266,7 @@ netcdf_variables:
     source:       FLBBCD_BB_700_SCALED
     long_name:    700 nm wavelength backscatter
     standard_name: 700_nm_wavelength_backscatter_in_sea_water
-    units:        m-1/sr-1
+    units:        m-1 sr-1
     coordinates:  time depth latitude longitude
     instrument:    instrument_scatterometer
     valid_min:    "0."
