@@ -27,7 +27,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: <glider name>
   glider_serial: <glider number>
-  wmoid: <glider wmo>
+  wmo_id: <glider wmo>
   comment: <Any other relevant info. Fine to leave blank>
   contributor_name: Callum Rollo, <PI name>, <glider techinician name>
   contributor_role: Data Processor, Principal Investigator, Glider Technician

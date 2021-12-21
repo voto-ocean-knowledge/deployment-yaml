@@ -3,6 +3,10 @@ glider_devices:
     make: Micron
     model: Pressure
     serial: 'XXXXXX'
+  altimeter:
+    make: UNKNOWN
+    model: UNKNOWN
+    serial: 'XXX'
   ctd:
     make: RBR
     model: legato
