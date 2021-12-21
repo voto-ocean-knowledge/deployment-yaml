@@ -46,10 +46,10 @@ metadata:
   sea_name: Baltic
 
 glider_devices:
-  pressure:
-    make: Micron
-    model: Pressure
-    serial: '34'
+  altimeter:
+    make: UNKNOWN
+    model: UNKNOWN
+    serial: '034'
   ctd:
     make: RBR
     model: legato
