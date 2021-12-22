@@ -59,31 +59,31 @@ glider_devices:
     make_model:  RBR legato CTD
     factory_calibrated: "Yes"
     calibration_date: "2021-03-01"
-optics:
-  make: Wetlabs
-  model: FLNTU
-  serial: '6661'
-  long_name: Wetlabs ECO Puck FLNTU
-  make_model: Wetlabs FLNTU
-  factory_calibrated: "Yes"
-  calibration_date: " 2021-02-01"
-  calibration_parameters: {Chl_DarkCounts: 48, Chl_SF: 0.0121, NTU_DarkCounts: 49, NTU_SF: 0.0060}
-oxygen:
-  make: JFE Advantech
-  model: AROD-FT
-  serial: '0044'
-  long_name: JFE Advantech RINKO-FT
-  make_model: JFE Advantech AROD_FT
-  factory_calibrated: "Yes"
-  calibration_date: "2021-01-20"
-AD2CP:
-  make: Nortek
-  model: AD2CP
-  serial: '101589'
-  long_name: Nortek Glider1000 AD2CP
-  make_model: Nortek AD2CP
-  factory_calibrated: "Yes"
-  calibration_date: "2021-02-03"
+  optics:
+    make: Wetlabs
+    model: FLNTU
+    serial: '6661'
+    long_name: Wetlabs ECO Puck FLNTU
+    make_model: Wetlabs FLNTU
+    factory_calibrated: "Yes"
+    calibration_date: " 2021-02-01"
+    calibration_parameters: {Chl_DarkCounts: 48, Chl_SF: 0.0121, NTU_DarkCounts: 49, NTU_SF: 0.0060}
+  oxygen:
+    make: JFE Advantech
+    model: AROD-FT
+    serial: '0044'
+    long_name: JFE Advantech RINKO-FT
+    make_model: JFE Advantech AROD_FT
+    factory_calibrated: "Yes"
+    calibration_date: "2021-01-20"
+  AD2CP:
+    make: Nortek
+    model: AD2CP
+    serial: '101589'
+    long_name: Nortek Glider1000 AD2CP
+    make_model: Nortek AD2CP
+    factory_calibrated: "Yes"
+    calibration_date: "2021-02-03"
 
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
@@ -91,7 +91,7 @@ netcdf_variables:
   keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll']
   timebase:
     source:       NAV_LATITUDE
-  # Time and Place:
+# Time and Place:
   time:
     source:        time
     long_name:     Time
@@ -162,7 +162,7 @@ netcdf_variables:
     units:        degrees
     coordinates:  time depth latitude longitude
 
-  # data parameters
+# data parameters
   conductivity:
     source:       LEGATO_CONDUCTIVITY
     long_name:    water conductivity
@@ -219,74 +219,74 @@ netcdf_variables:
     resolution:     "0.01"
 
 # optics:
-chlorophyll:
-  source:       FLNTU_CHL_SCALED
-  long_name:    chlorophyll
-  standard_name: concentration_of_chlorophyll_in_sea_water
-  units:        mg m-3
-  coordinates:  time depth latitude longitude
-  instrument:    instrument_flourometer
-  valid_min:    "0."
-  valid_max:    "50."
-  observation_type: "calculated"
-  sensitivity:      "0.025"
+  chlorophyll:
+    source:       FLNTU_CHL_SCALED
+    long_name:    chlorophyll
+    standard_name: concentration_of_chlorophyll_in_sea_water
+    units:        mg m-3
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+    valid_min:    "0."
+    valid_max:    "50."
+    observation_type: "calculated"
+    sensitivity:      "0.025"
 
-chlorophyll_raw:
-  source:       FLNTU_CHL_COUNT
-  long_name:    raw chlorophyll
-  standard_name: raw_chlorophyll_in_sea_water
-  units:        counts
-  coordinates:  time depth latitude longitude
-  instrument:    instrument_flourometer
+  chlorophyll_raw:
+    source:       FLNTU_CHL_COUNT
+    long_name:    raw chlorophyll
+    standard_name: raw_chlorophyll_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
 
-turbidity:
-  source:  FLNTU_NTU_SCALED
-  long_name:    turbidity
-  standard_name: turbidity_in_sea_water
-  units:        NTU
-  coordinates:  time depth latitude longitude
-  instrument:    instrument_turbidity_meter
-  valid_min:    "0."
-  valid_max:    "25."
-  observation_type: "calculated"
-  sensitivity:      "0.01"
+  turbidity:
+    source:  FLNTU_NTU_SCALED
+    long_name:    turbidity
+    standard_name: turbidity_in_sea_water
+    units:        NTU
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_turbidity_meter
+    valid_min:    "0."
+    valid_max:    "25."
+    observation_type: "calculated"
+    sensitivity:      "0.01"
 
-turbidity_raw:
-  source:       FLNTU_NTU_COUNT
-  long_name:    raw turbidity
-  standard_name: raw_turbidity_in_sea_water
-  units:        counts
-  coordinates:  time depth latitude longitude
-  instrument:    instrument_flourometer
+  turbidity_raw:
+    source:       FLNTU_NTU_COUNT
+    long_name:    raw turbidity
+    standard_name: raw_turbidity_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
 
-# Oxygen
-oxygen_concentration:
-  source:       AROD_FT_DO
-  long_name:    oxygen concentration
-  standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
-  units:        mmol m-3
-  coordinates:   time depth latitude longitude
-  correct_oxygen: "True"
-  reference_salinity: "0"
-  instrument:    instrument_phosphorescence
-  valid_min:    "0."
-  valid_max:    "425."
-  observation_type: "calculated"
-  accuracy:      "2% or 2.0"
-  resolution:      "0.01"
+# oxygen
+  oxygen_concentration:
+    source:       AROD_FT_DO
+    long_name:    oxygen concentration
+    standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
+    units:        mmol m-3
+    coordinates:   time depth latitude longitude
+    correct_oxygen: "True"
+    reference_salinity: "0"
+    instrument:    instrument_phosphorescence
+    valid_min:    "0."
+    valid_max:    "425."
+    observation_type: "calculated"
+    accuracy:      "2% or 2.0"
+    resolution:      "0.01"
 
-temperature_oxygen:
-  source:  AROD_FT_TEMP
-  long_name:    oxygen sensor temperature
-  standard_name: temperature_of_sensor_for_oxygen_in_sea_water
-  units:        Celsius
-  coordinates:   time depth latitude longitude
-  instrument:    instrument_thermistor
-  valid_min:    "-3."
-  valid_max:    "45."
-  observation_type: "measured"
-  accuracy:      "0.01"
-  resolution:      "0.001"
+  temperature_oxygen:
+    source:  AROD_FT_TEMP
+    long_name:    oxygen sensor temperature
+    standard_name: temperature_of_sensor_for_oxygen_in_sea_water
+    units:        Celsius
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_thermistor
+    valid_min:    "-3."
+    valid_max:    "45."
+    observation_type: "measured"
+    accuracy:      "0.01"
+    resolution:      "0.001"
 
 # AD2CP
   ad2cp_heading:
@@ -309,14 +309,6 @@ temperature_oxygen:
     standard_name: platform_roll_angle_ad2cp
     units:        degrees
     coordinates:  time depth latitude longitude
-
-  ad2cp_time:
-    source:       AD2CP_TIME
-    long_name:    AD2CP recorded time
-    standard_name: ad2cp_recorded_time
-    units:        datetime
-    coordinates:  time depth latitude longitude
-    datetime_format: "%m%d%y %H:%M:%S"
 
   ad2cp_pressure:
     source:       AD2CP_PRESSURE
@@ -360,8 +352,9 @@ temperature_oxygen:
     units:        m s-1
     coordinates:  time depth latitude longitude
 
-  profile_variables:
-  # variables for extract_L1timeseries_profiles processing step...
+
+profile_variables:
+# variables for extract_L1timeseries_profiles processing step...
   profile_id:
     comment: Sequential profile number within the trajectory.  This value is unique in each file that is part of a single trajectory/deployment.
     long_name: 'Profile ID'
@@ -463,7 +456,6 @@ temperature_oxygen:
   instrument_ctd:
     comment:    unpumped RBR legato CTD
     calibration_date:     "2021-03-01"
-    calibration_report:  " "
     factory_calibrated:  "yes"
     long_name:           RBR legato CTD
     make_model:          RBR legato CTD

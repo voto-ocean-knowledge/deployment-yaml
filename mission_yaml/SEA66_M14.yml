@@ -95,7 +95,7 @@ netcdf_variables:
   keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll']
   timebase:
     source:       NAV_LATITUDE
-  # Time and Place:
+# Time and Place:
   time:
     source:        time
     long_name:     Time
@@ -166,7 +166,7 @@ netcdf_variables:
     units:        degrees
     coordinates:  time depth latitude longitude
 
-  # data parameters
+# data parameters
   conductivity:
     source:       LEGATO_CONDUCTIVITY
     long_name:    water conductivity
@@ -377,14 +377,6 @@ netcdf_variables:
     units:        degrees
     coordinates:  time depth latitude longitude
 
-  ad2cp_time:
-    source:       AD2CP_TIME
-    long_name:    AD2CP recorded time
-    standard_name: ad2cp_recorded_time
-    units:        datetime
-    coordinates:  time depth latitude longitude
-    datetime_format: "%m%d%y %H:%M:%S"
-
   ad2cp_pressure:
     source:       AD2CP_PRESSURE
     long_name:    glider pressure from AD2CP
@@ -427,8 +419,8 @@ netcdf_variables:
     units:        m s-1
     coordinates:  time depth latitude longitude
 
-  profile_variables:
-  # variables for extract_L1timeseries_profiles processing step...
+profile_variables:
+# variables for extract_L1timeseries_profiles processing step...
   profile_id:
     comment: Sequential profile number within the trajectory.  This value is unique in each file that is part of a single trajectory/deployment.
     long_name: 'Profile ID'
@@ -530,7 +522,6 @@ netcdf_variables:
   instrument_ctd:
     comment:    unpumped RBR legato CTD
     calibration_date:     "2021-03-12"
-    calibration_report:  " "
     factory_calibrated:  "yes"
     long_name:           RBR legato CTD
     make_model:          RBR legato CTD

@@ -90,7 +90,7 @@ netcdf_variables:
   keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll', 'downwelling_PAR']
   timebase:
     source:       NAV_LATITUDE
-  # Time and Place:
+# Time and Place:
   time:
     source:        time
     long_name:     Time
@@ -161,7 +161,7 @@ netcdf_variables:
     units:        degrees
     coordinates:  time depth latitude longitude
 
-  # data parameters
+# data parameters
   conductivity:
     source:       LEGATO_CONDUCTIVITY
     long_name:    water conductivity
@@ -278,8 +278,7 @@ netcdf_variables:
     coordinates:  time depth latitude longitude
     instrument:    instrument_scatterometer
 
-
-
+# oxygen
   oxygen_concentration:
     source:       AROD_FT_DO
     long_name:    oxygen concentration
@@ -307,7 +306,6 @@ netcdf_variables:
     observation_type: "measured"
     accuracy:      "0.01"
     resolution:      "0.001"
-
 
 # irradiance     "PARAMETER_UNITS"       : ["W/m^2/nm", "W/m^2/nm", "W/m^2/nm", "μE/m^2/s"],
   down_irradiance_380:
@@ -348,7 +346,7 @@ netcdf_variables:
 
 
 profile_variables:
-  # variables for extract_L1timeseries_profiles processing step...
+# variables for extract_L1timeseries_profiles processing step...
   profile_id:
     comment: Sequential profile number within the trajectory.  This value is unique in each file that is part of a single trajectory/deployment.
     long_name: 'Profile ID'
@@ -450,7 +448,6 @@ profile_variables:
   instrument_ctd:
     comment:    unpumped RBR legato CTD
     calibration_date: "2020-07-23"
-    calibration_report:  " "
     factory_calibrated:  "yes"
     long_name: RBR legato CTD
     make_model:  RBR legato CTD
