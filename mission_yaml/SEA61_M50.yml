@@ -49,7 +49,7 @@ glider_devices:
   altimeter:
     make: UNKNOWN
     model: UNKNOWN
-    serial: '048'
+    serial: '48'
   ctd:
     make: RBR
     model: legato
@@ -74,7 +74,7 @@ glider_devices:
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: "Yes"
-    calibration_date: "2021-01-13"
+    calibration_date: "2021-02-05"
   irradiance:
     make: SeaBird
     model: OCR504
@@ -82,7 +82,7 @@ glider_devices:
     long_name: SeaBird OCR504
     make_model: SeaBird OCR504
     factory_calibrated: "Yes"
-    calibration_date: "2020-02-02"
+    calibration_date: "2021-02-02"
 
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
@@ -242,7 +242,7 @@ netcdf_variables:
     source:       FLBBPC_PC_SCALED
     long_name:    phycocyanin
     standard_name: concentration_of_phycocyanin_in_sea_water
-    units:        ppb
+    units:        mg m-3
     coordinates:  time depth latitude longitude
     instrument:    instrument_flourometer
     valid_min:    "0."
@@ -262,7 +262,7 @@ netcdf_variables:
     source:       FLBBPC_BB_700_SCALED
     long_name:    700 nm wavelength backscatter
     standard_name: 700_nm_wavelength_backscatter_in_sea_water
-    units:        m-1
+    units:        m-1 sr-1
     coordinates:  time depth latitude longitude
     instrument:    instrument_scatterometer
     valid_min:    "0."
@@ -284,7 +284,7 @@ netcdf_variables:
     source:       AROD_FT_DO
     long_name:    oxygen concentration
     standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
-    units:        umol l-1
+    units:        mmol m-3
     coordinates:   time depth latitude longitude
     correct_oxygen: "True"
     reference_salinity: "0"
