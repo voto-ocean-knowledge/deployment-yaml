@@ -50,11 +50,11 @@ glider_devices:
   altimeter:
     make: UNKNOWN
     model: UNKNOWN
-    serial: '035'
+    serial: '35'
   ctd:
     make: RBR
     model: legato
-    serial: '205047'
+    serial: '205048'
     long_name: RBR legato CTD
     make_model:  RBR legato CTD
     factory_calibrated: "Yes"
@@ -256,7 +256,7 @@ netcdf_variables:
     source:       AROD_FT_DO
     long_name:    oxygen concentration
     standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
-    units:        umol l-1
+    units:        mmol m-3
     coordinates:   time depth latitude longitude
     correct_oxygen: "True"
     reference_salinity: "0"
@@ -448,11 +448,11 @@ profile_variables:
 
   instrument_ctd:
     comment:    unpumped RBR legato CTD
-    calibration_date:     "2020-07-23"
+    calibration_date:     "2020-07-29"
     calibration_report:  " "
     factory_calibrated:  "yes"
-    long_name:           RBR legato seaexplorer CTD
-    make_model:          RBR legato
+    long_name: RBR legato CTD
+    make_model:  RBR legato CTD
     platform:            platform
-    serial_number:       "205047"
+    serial_number:       "205048"
     type:                platform
