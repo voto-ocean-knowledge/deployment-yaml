@@ -76,7 +76,7 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
         pass
     if check_urls:
         _log.info('Checking urls')
-        for url_id in ['creator_url', 'project_url', 'publisher_url']:
+        for url_id in ['creator_url', 'project_url', 'publisher_url', 'metadata_link']:
             url = deployment['metadata'][url_id]
             try:
                 http_code = request.urlopen(url).getcode()
@@ -99,6 +99,7 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
                 failures += 1
     check_strings(deployment, _log)
     check_against_meta(meta, _log)
+    check_keep_variables(deployment, _log)
 
 
 def check_against_meta(deployment_meta, _log):
@@ -113,6 +114,22 @@ def check_against_meta(deployment_meta, _log):
     for key in constant_vals:
         if deployment_meta[key] != meta[key]:
             _log.error(f'{key}: {deployment_meta[key]} does not match value {meta[key]} in meta.yaml')
+
+
+def check_keep_variables(deployment, _log):
+    _log.info('Checking timebase and keep vars')
+    devices = deployment['glider_devices']
+    variables = deployment['netcdf_variables']
+    if variables['timebase']['source'] != 'NAV_LATITUDE':
+        _log.error('timebase:source must be NAV_LATITUDE')
+    num_sensors = len(devices) - 1
+    keeps = variables['keep_variables']
+    if len(keeps) != num_sensors:
+        _log.error("Number of sensors in glider_devices does not match number of keep variables")
+    for var in keeps:
+        if var not in variables.keys():
+            _log.error(f"kee_variable {var} not found in netcdf_variables")
+
 
 
 def check_strings(d, _log):
