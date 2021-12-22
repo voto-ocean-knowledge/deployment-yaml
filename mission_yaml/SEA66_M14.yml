@@ -47,47 +47,47 @@ metadata:
 
 
 glider_devices:
-ctd:
-  make: RBR
-  model: legato
-  serial: '206610'
-  long_name: RBR legato CTD
-  make_model:  RBR legato CTD
-  factory_calibrated: "Yes"
-  calibration_date: "2021-03-12"
-optics:
-  make: Wetlabs
-  model: FLBBPC
-  serial: '6754'
-  long_name: Wetlabs ECO Puck FLBBPC
-  make_model: Wetlabs FLBBPC
-  factory_calibrated: "Yes"
-  calibration_date: " 2021-03-23"
-  calibration_parameters: {Chl_DarkCounts: 48, Chl_SF: 0.0073, PC_DarkCounts: 44, PC_SF: 0.0424, SIG_DarkCounts: 46, SIG_SF: 1.783E-06}
-oxygen:
-  make: RBR
-  model: coda
-  serial: '205592'
-  long_name: RBR coda TODO
-  make_model: RBR coda TODO
-  factory_calibrated: "Yes"
-  calibration_date: "2021-02-26"
-irradiance:
-  make: SeaBird
-  model: OCR504
-  serial: '2199'
-  long_name: SeaBird OCR504
-  make_model: SeaBird OCR504
-  factory_calibrated: "Yes"
-  calibration_date: "2021-03-15"
-AD2CP:
-  make: Nortek
-  model: AD2CP
-  serial: '102758'
-  long_name: Nortek Glider1000 AD2CP
-  make_model: Nortek AD2CP
-  factory_calibrated: "Yes"
-  calibration_date: "2021-02-04"
+  ctd:
+    make: RBR
+    model: legato
+    serial: '206610'
+    long_name: RBR legato CTD
+    make_model:  RBR legato CTD
+    factory_calibrated: "Yes"
+    calibration_date: "2021-03-12"
+  optics:
+    make: Wetlabs
+    model: FLBBPC
+    serial: '6754'
+    long_name: Wetlabs ECO Puck FLBBPC
+    make_model: Wetlabs FLBBPC
+    factory_calibrated: "Yes"
+    calibration_date: " 2021-03-23"
+    calibration_parameters: {Chl_DarkCounts: 48, Chl_SF: 0.0073, PC_DarkCounts: 44, PC_SF: 0.0424, SIG_DarkCounts: 46, SIG_SF: 1.783E-06}
+  oxygen:
+    make: RBR
+    model: coda
+    serial: '205592'
+    long_name: RBR coda TODO
+    make_model: RBR coda TODO
+    factory_calibrated: "Yes"
+    calibration_date: "2021-02-26"
+  irradiance:
+    make: SeaBird
+    model: OCR504
+    serial: '2199'
+    long_name: SeaBird OCR504
+    make_model: SeaBird OCR504
+    factory_calibrated: "Yes"
+    calibration_date: "2021-03-15"
+  AD2CP:
+    make: Nortek
+    model: AD2CP
+    serial: '102758'
+    long_name: Nortek Glider1000 AD2CP
+    make_model: Nortek AD2CP
+    factory_calibrated: "Yes"
+    calibration_date: "2021-02-04"
 
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
