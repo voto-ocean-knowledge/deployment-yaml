@@ -449,7 +449,6 @@ profile_variables:
   instrument_ctd:
     comment:    unpumped RBR legato CTD
     calibration_date:     "2020-07-29"
-    calibration_report:  " "
     factory_calibrated:  "yes"
     long_name: RBR legato CTD
     make_model:  RBR legato CTD
