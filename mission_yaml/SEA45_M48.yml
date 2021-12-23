@@ -1,5 +1,5 @@
 metadata:
-  acknowledgement: This study used data collected and made freely available by Voice of the Ocean Foundation 
+  acknowledgement: This study used data collected and made freely available by Voice of the Ocean Foundation
                    (https://www.voiceoftheocean.org) accessed from https://erddap.voiceoftheocean.org
   institution: Voice of the Ocean Foundation
   license: Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/)
@@ -84,6 +84,7 @@ glider_devices:
     make_model: Nortek AD2CP
     factory_calibrated: "Yes"
     calibration_date: "2020-01-28"
+
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
 netcdf_variables:
@@ -154,7 +155,7 @@ netcdf_variables:
     units:        degrees
     coordinates:  time depth latitude longitude
 
-  # data parameters
+# data parameters
   conductivity:
     source:       LEGATO_CONDUCTIVITY
     long_name:    water conductivity
@@ -250,7 +251,6 @@ netcdf_variables:
     coordinates:  time depth latitude longitude
     instrument:    instrument_flourometer
 
-
 # oxygen
   oxygen_concentration:
     source:       AROD_FT_DO
@@ -279,7 +279,6 @@ netcdf_variables:
     observation_type: "measured"
     accuracy:      "0.01"
     resolution:      "0.001"
-
 
 # AD2CP
   ad2cp_heading:
@@ -317,37 +316,37 @@ netcdf_variables:
     units:        m
     coordinates:  time depth latitude longitude
 
-  ad2cp_beam1_cell_number1:
-    source:       AD2CP_V1_CN1
+  ad2cp_beam1_cell_number_1:
+    source:       AD2CP_V1_CN[1]
     long_name:    glider beam 1 measure from AD2CP in cell 1
-    standard_name: platform_beam1_measure_ad2cp_cell1
+    standard_name: platform_beam1_measure_ad2cp_cell_1
     units:        m s-1
     coordinates:  time depth latitude longitude
 
-  ad2cp_beam2_cell_number1:
-    source:       AD2CP_V1_CN1
+  ad2cp_beam2_cell_number_1:
+    source:       AD2CP_V1_CN[1]
     long_name:    glider beam 2 measure from AD2CP in cell 1
-    standard_name: platform_beam1_measure_ad2cp_cell1
+    standard_name: platform_beam1_measure_ad2cp_cell_1
     units:        m s-1
     coordinates:  time depth latitude longitude
 
-  ad2cp_beam3_cell_number1:
-    source:       AD2CP_V1_CN1
+  ad2cp_beam3_cell_number_1:
+    source:       AD2CP_V1_CN[1]
     long_name:    glider beam 3 measure from AD2CP in cell 1
-    standard_name: platform_beam1_measure_ad2cp_cell1
+    standard_name: platform_beam1_measure_ad2cp_cell_1
     units:        m s-1
     coordinates:  time depth latitude longitude
 
-  ad2cp_beam4_cell_number1:
-    source:       AD2CP_V1_CN1
+  ad2cp_beam4_cell_number_1:
+    source:       AD2CP_V1_CN[1]
     long_name:    glider beam 4 measure from AD2CP in cell 1
-    standard_name: platform_beam1_measure_ad2cp_cell1
+    standard_name: platform_beam1_measure_ad2cp_cell_1
     units:        m s-1
     coordinates:  time depth latitude longitude
 
 
 profile_variables:
-  # variables for extract_L1timeseries_profiles processing step...
+# variables for extract_L1timeseries_profiles processing step...
   profile_id:
     comment: Sequential profile number within the trajectory.  This value is unique in each file that is part of a single trajectory/deployment.
     long_name: 'Profile ID'
@@ -455,4 +454,3 @@ profile_variables:
     platform:            platform
     serial_number:       "205048"
     type:                platform
-    
