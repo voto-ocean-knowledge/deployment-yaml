@@ -428,28 +428,28 @@ netcdf_variables:
 
   ad2cp_beam1_cell_number_X:
     source:       AD2CP_V1_CN[X]
-    long_name:    glider beam 1 measure from AD2CP in cell_X
+    long_name:    glider beam 1 measure from AD2CP in cell X
     standard_name: platform_beam1_measure_ad2cp_cell_X
     units:        m s-1
     coordinates:  time depth latitude longitude
 
   ad2cp_beam2_cell_number_X:
     source:       AD2CP_V1_CN[X]
-    long_name:    glider beam 2 measure from AD2CP in cell_X
+    long_name:    glider beam 2 measure from AD2CP in cell X
     standard_name: platform_beam1_measure_ad2cp_cell_X
     units:        m s-1
     coordinates:  time depth latitude longitude
 
   ad2cp_beam3_cell_number_X:
     source:       AD2CP_V1_CN[X]
-    long_name:    glider beam 3 measure from AD2CP in cell_X
+    long_name:    glider beam 3 measure from AD2CP in cell X
     standard_name: platform_beam1_measure_ad2cp_cell_X
     units:        m s-1
     coordinates:  time depth latitude longitude
 
   ad2cp_beam4_cell_number_X:
     source:       AD2CP_V1_CN[X]
-    long_name:    glider beam 4 measure from AD2CP in cell_X
+    long_name:    glider beam 4 measure from AD2CP in cell X
     standard_name: platform_beam1_measure_ad2cp_cell_X
     units:        m s-1
     coordinates:  time depth latitude longitude
