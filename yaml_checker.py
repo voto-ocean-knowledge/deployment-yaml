@@ -76,7 +76,7 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
         pass
     if check_urls:
         _log.info('Checking urls')
-        for url_id in ['creator_url', 'project_url', 'publisher_url']:
+        for url_id in ['creator_url', 'project_url', 'publisher_url', 'metadata_link']:
             url = deployment['metadata'][url_id]
             try:
                 http_code = request.urlopen(url).getcode()
@@ -99,6 +99,8 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
                 failures += 1
     check_strings(deployment, _log)
     check_against_meta(meta, _log)
+    check_keep_variables(deployment, _log)
+    check_variables(deployment['netcdf_variables'], _log)
 
 
 def check_against_meta(deployment_meta, _log):
@@ -115,17 +117,34 @@ def check_against_meta(deployment_meta, _log):
             _log.error(f'{key}: {deployment_meta[key]} does not match value {meta[key]} in meta.yaml')
 
 
+def check_keep_variables(deployment, _log):
+    _log.info('Checking timebase and keep vars')
+    devices = deployment['glider_devices']
+    variables = deployment['netcdf_variables']
+    if variables['timebase']['source'] != 'NAV_LATITUDE':
+        _log.error('timebase:source must be NAV_LATITUDE')
+    num_sensors = len(devices) - 1
+    keeps = variables['keep_variables']
+    if len(keeps) != num_sensors:
+        _log.error("Number of sensors in glider_devices does not match number of keep variables. Some data will be lost in conversion")
+    for var in keeps:
+        if var not in variables.keys():
+            _log.error(f"keep_variable {var} not found in netcdf_variables")
+
+
 def check_strings(d, _log):
     for k, v in d.items():
         if isinstance(v, dict):
             _log = check_strings(v, _log)
         else:
-            if type(v) is not str and k != 'keep_variables':
-                _log.warning(f'Value of {k}: {v} is not a string')
             if not bool(v):
                 _log.error(f'{k} is empty')
     return _log
 
+
+def check_variables(variables, _log):
+    if 'ad2cp_altitude' in variables.keys():
+        _log.error('ad2cp_altitude found in variables. We are not currently distributing altitude data. Please remove')
 
 if __name__ == '__main__':
     args = sys.argv
