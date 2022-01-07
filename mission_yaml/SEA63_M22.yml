@@ -88,7 +88,7 @@ glider_devices:
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
 netcdf_variables:
-  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll', 'ad2cp_heading']
+  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll']
   timebase:
     source:       NAV_LATITUDE
 # Time and Place:
@@ -287,6 +287,7 @@ netcdf_variables:
     observation_type: "measured"
     accuracy:      "0.01"
     resolution:      "0.001"
+
 
 # AD2CP
   ad2cp_heading:
