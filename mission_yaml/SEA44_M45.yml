@@ -28,28 +28,28 @@ metadata:
   glider_name: Martorn
   glider_serial: "44"
   wmo_id: 6801672
-  comment: 'deployment and recovery in Bornholm'
+  comment: 'deployment and recovery in Skagerrak'
   contributor_name: Callum Rollo, Louise Biddle, Aleksandra Mazur, Olle Petersson, Marcus Melin
   contributor_role: Data Processor, PI, Glider Technician, Glider Technician, Glider Technician
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://callumrollo.com/
-  deployment_id: "40"
+  deployment_id: "45"
   deployment_name: SAMBA
   # date format 'yyyy-mm-dd'
-  deployment_start: "2021-10-05"
-  deployment_end: "2021-10-24"
+  deployment_start: "2021-12-02"
+  deployment_end: "2021-12-20"
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
   summary: ' Part of SAMBA continuous monitoring'
   # Examples: Skagerrak, Kattegatt, Baltic, Gulf of Bothnia, Gulf of Finland, Gulf of Riga
-  sea_name: Baltic
+  sea_name: Skagerrak
 
 glider_devices:
   altimeter:
     make: UNKNOWN
     model: UNKNOWN
-    serial: '34'
+    serial: '53'
   ctd:
     make: RBR
     model: legato

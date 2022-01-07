@@ -288,7 +288,10 @@ netcdf_variables:
     accuracy:      "0.01"
     resolution:      "0.001"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4c54fb7535c970e0abaa1e0a0e65bcb716c336df
 # AD2CP
   ad2cp_heading:
     source:       AD2CP_HEADING

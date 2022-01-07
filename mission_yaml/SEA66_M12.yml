@@ -412,8 +412,6 @@ netcdf_variables:
     units:        m s-1
     coordinates:  time depth latitude longitude
 
-
-
 profile_variables:
 # variables for extract_L1timeseries_profiles processing step...
   profile_id:
