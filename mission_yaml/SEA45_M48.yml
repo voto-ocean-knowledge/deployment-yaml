@@ -1,5 +1,5 @@
 metadata:
-  acknowledgement: This study used data collected and made freely available by Voice of the Ocean Foundation
+  acknowledgement: This study used data collected and made freely available by Voice of the Ocean Foundation 
                    (https://www.voiceoftheocean.org) accessed from https://erddap.voiceoftheocean.org
   institution: Voice of the Ocean Foundation
   license: Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/)
@@ -95,8 +95,8 @@ netcdf_variables:
     source:        time
     long_name:     Time
     standard_name: time
-    calendar: gregorian
-    units: seconds since 1970-01-01T00:00:00Z
+    calendar:      gregorian
+    units:         seconds since 1970-01-01T00:00:00Z
     axis:          T
     observation_type: "measured"
     coordinates:   time depth latitude longitude
@@ -132,13 +132,6 @@ netcdf_variables:
     valid_max:    "180.0"
     valid_min:    "-180.0"
     coordinate_reference_frame:  urn:ogc:crs:EPSG::4326
-
-  nav_state:
-    source:       NAV_RESOURCE
-    long_name:    seaexplorer navigation state
-    standard_name: navigation_state
-    units:        None
-    coordinates:  time depth latitude longitude
 
   heading:
     source:       Heading
@@ -257,17 +250,6 @@ netcdf_variables:
     coordinates:  time depth latitude longitude
     instrument:    instrument_flourometer
 
-turbidity:
-  source:  FLNTU_NTU_SCALED
-  long_name:    turbidity
-  standard_name: turbidity_in_sea_water
-  units:        NTU
-  coordinates:  time depth latitude longitude
-  instrument:    instrument_turbidity_meter
-  valid_min:    "0."
-  valid_max:    "25."
-  observation_type: "calculated"
-  sensitivity:      "0.01"
 
 # oxygen
   oxygen_concentration:
@@ -298,18 +280,6 @@ turbidity:
     accuracy:      "0.01"
     resolution:      "0.001"
 
-temperature_oxygen:
-  source:  AROD_FT_TEMP
-  long_name:    oxygen sensor temperature
-  standard_name: temperature_of_sensor_for_oxygen_in_sea_water
-  units:        Celsius
-  coordinates:   time depth latitude longitude
-  instrument:    instrument_thermistor
-  valid_min:    "-3."
-  valid_max:    "45."
-  observation_type: "measured"
-  accuracy:      "0.01"
-  resolution:      "0.001"
 
 # AD2CP
   ad2cp_heading:
@@ -369,57 +339,7 @@ temperature_oxygen:
     coordinates:  time depth latitude longitude
 
 
-  ad2cp_time:
-    source:       AD2CP_TIME
-    long_name:    AD2CP recorded time
-    standard_name: ad2cp_recorded_time
-    units:        datetime
-    coordinates:  time depth latitude longitude
-    datetime_format: "%m%d%y %H:%M:%S"
-
-  ad2cp_pressure:
-    source:       AD2CP_PRESSURE
-    long_name:    glider pressure from AD2CP
-    standard_name: platform_pressure_ad2cp
-    units:        dbar
-    coordinates:  time depth latitude longitude
-
-  ad2cp_altitude:
-    source:       AD2CP_ALT
-    long_name:    glider altitude from AD2CP
-    standard_name: platform_altitude_ad2cp
-    units:        m
-    coordinates:  time depth latitude longitude
-
-  ad2cp_beam1_cell_number[1]:
-    source:       AD2CP_V1_CN[1]
-    long_name:    glider beam 1 measure from AD2CP in cell [1]
-    standard_name: platform_beam1_measure_ad2cp_cell[1]
-    units:        m s-1
-    coordinates:  time depth latitude longitude
-
-  ad2cp_beam2_cell_number[1]:
-    source:       AD2CP_V1_CN[1]
-    long_name:    glider beam 2 measure from AD2CP in cell [1]
-    standard_name: platform_beam1_measure_ad2cp_cell[1]
-    units:        m s-1
-    coordinates:  time depth latitude longitude
-
-  ad2cp_beam3_cell_number[1]:
-    source:       AD2CP_V1_CN[X]
-    long_name:    glider beam 3 measure from AD2CP in cell [1]
-    standard_name: platform_beam1_measure_ad2cp_cell[1]
-    units:        m s-1
-    coordinates:  time depth latitude longitude
-
-  ad2cp_beam4_cell_number[1]:
-    source:       AD2CP_V1_CN[1]
-    long_name:    glider beam 4 measure from AD2CP in cell [1]
-    standard_name: platform_beam1_measure_ad2cp_cell[1]
-    units:        m s-1
-    coordinates:  time depth latitude longitude
-
-  profile_variables:
+profile_variables:
   # variables for extract_L1timeseries_profiles processing step...
   profile_id:
     comment: Sequential profile number within the trajectory.  This value is unique in each file that is part of a single trajectory/deployment.
@@ -528,3 +448,4 @@ temperature_oxygen:
     platform:            platform
     serial_number:       "205048"
     type:                platform
+    
