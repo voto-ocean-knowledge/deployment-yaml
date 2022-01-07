@@ -1,90 +1,107 @@
 metadata:
-  # https://github.com/ioos/ioosngdac/wiki/NGDAC-NetCDF-File-Format-Version-2
-  acknowledgement: Funding from Voice of the Ocean
-  comment:        "Test processing"
-  contributor_name: Callum Rollo
-  contributor_role: Data processor
-  creator_email: c.rollo@outlook.com
-  creator_name:  Callum Rollo
-  creator_url:  https://callumrollo.com
-  # date_created etc: added automatically
-  # numbers must be eenclosed by strings so YAML keeps as strings
-  deployment_id: '22'
-  deployment_name: 'test_mission'
-  deployment_start: '2021-08-23'
-  deployment_end: '2021-08-25'
+  acknowledgement: This study used data collected and made freely available by Voice of the Ocean Foundation
+                   (https://www.voiceoftheocean.org) accessed from https://erddap.voiceoftheocean.org
+  institution: Voice of the Ocean Foundation
+  license: Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/)
+    This study used data collected and made freely available by Voice of the Ocean Foundation
+    (https://www.voiceoftheocean.org) accessed from https://erddap.voiceoftheocean.org
   format_version: IOOS_Glider_NetCDF_v2.0.nc
-  # id filled automatically...
-  glider_name: Ljung
-  glider_serial: '063'
   glider_model: SeaExplorer
   glider_instrument_name: seaexplorer
-  glider_wmo: '999999'
-  institution: VOTO
   keywords: "AUVS, Autonomous Underwater Vehicles, Oceans, Ocean Pressure,
-             Water Pressure, Oceans, Ocean Temperature, Water Temperature,
-             Oceans, Salinity/Density, Conductivity, Oceans,
-             Salinity/Density, Density, Oceans, Salinity/Density, Salinity"
+             Water Pressure, Ocean Temperature, Water Temperature,
+             Salinity/Density, Conductivity, Density, Salinity"
   keywords_vocabulary: GCMD Science Keywords
-  license: "This data may be redistributed and used without restriction or
-            warranty"
-  metadata_link: "callumrollo.com"
+  metadata_link: http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html
   Metadata_Conventions: CF-1.6, Unidata Dataset Discovery v1.0
-  naming_authority: "VOTO"
-  platform_type:    "SeaExplorer Glider"
+  naming_authority: Voice of the Ocean Foundation
+  platform:    "SeaExplorer Glider"
   processing_level: "Data provided as is with no expressed or implied
                      assurance of quality assurance or quality control. L0"
-  project: test
-  project_url: "https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea"
-  publisher_email: c.rollo@outlook.com
+  publisher_email: callum.rollo@voiceoftheocean.org
   publisher_name:  Callum Rollo
   publisher_url:   https://voiceoftheocean.org
   references:     "created with pyglider https://github.com/c-proof/pyglider"
-  sea_name:   sea name test
   source:     Observational data from a profiling glider.
   standard_name_vocabulary: CF STandard Name Table v49
-  summary: mission summary test
-  transmission_system: IRRIDIUM
-  wmo_id: "999999"
+  transmission_system: IRIDIUM
+  glider_name: Saltarv
+  glider_serial: "66"
+  wmo_id: 6801505
+  comment: 'deployment and recovery in Bornholm'
+  contributor_name: Callum Rollo, Louise Biddle, Aleksandra Mazur, Olle Petersson, Marcus Melin
+  contributor_role: Data Processor, PI, Glider Technician, Glider Technician, Glider Technician
+  creator_email: callum.rollo@voiceoftheocean.org
+  creator_name: Callum Rollo
+  creator_url: https://callumrollo.com/
+  deployment_id: "12"
+  deployment_name: SAMBA
+  # date format 'yyyy-mm-dd'
+  deployment_start: "2021-11-16"
+  deployment_end: "2021-12-07"
+  project: SAMBA
+  project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
+  summary: ' Part of SAMBA continuous monitoring'
+  # Examples: Skagerrak, Kattegatt, Baltic, Gulf of Bothnia, Gulf of Finland, Gulf of Riga
+  sea_name: Baltic
 
 
 glider_devices:
-  pressure:
-    make: Micron
-    model: Pressure
-    serial: '104702'
   ctd:
     make: RBR
     model: legato
-    serial: '206523'
+    serial: '206610'
     long_name: RBR legato CTD
     make_model:  RBR legato CTD
     factory_calibrated: "Yes"
-    calibration_date: "2021-03-01"
-    calibration_report: " "
-    comment:   " "
+    calibration_date: "2021-03-12"
   optics:
     make: Wetlabs
-    model: FLNTU
-    serial: '6661'
+    model: FLBBPC
+    serial: '6754'
+    long_name: Wetlabs ECO Puck FLBBPC
+    make_model: Wetlabs FLBBPC
+    factory_calibrated: "Yes"
+    calibration_date: " 2021-03-23"
+    calibration_parameters: {Chl_DarkCounts: 48, Chl_SF: 0.0073, PC_DarkCounts: 44, PC_SF: 0.0424, SIG_DarkCounts: 46, SIG_SF: 1.783E-06}
   oxygen:
-    make: AROD_FT
-    model: Optode4831
-    serial: '0044'
+    make: RBR
+    model: coda
+    serial: '205592'
+    long_name: RBR coda TODO
+    make_model: RBR coda TODO
+    factory_calibrated: "Yes"
+    calibration_date: "2021-02-26"
+  irradiance:
+    make: SeaBird
+    model: OCR504
+    serial: '2199'
+    long_name: SeaBird OCR504
+    make_model: SeaBird OCR504
+    factory_calibrated: "Yes"
+    calibration_date: "2021-03-15"
+  AD2CP:
+    make: Nortek
+    model: AD2CP
+    serial: '102758'
+    long_name: Nortek Glider1000 AD2CP
+    make_model: Nortek AD2CP
+    factory_calibrated: "Yes"
+    calibration_date: "2021-02-04"
 
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
 netcdf_variables:
-  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll']
+  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll', 'ad2cp_heading']
   timebase:
     source:       NAV_LATITUDE
-  # Time and Place:
+# Time and Place:
   time:
     source:        time
     long_name:     Time
     standard_name: time
-    calendar:      gregorian
-    units:         seconds since 1970-01-01T00:00:00Z
+    calendar: gregorian
+    units: seconds since 1970-01-01T00:00:00Z
     axis:          T
     observation_type: "measured"
     coordinates:   time depth latitude longitude
@@ -121,6 +138,13 @@ netcdf_variables:
     valid_min:    "-180.0"
     coordinate_reference_frame:  urn:ogc:crs:EPSG::4326
 
+  nav_state:
+    source:       NAV_RESOURCE
+    long_name:    seaexplorer navigation state
+    standard_name: navigation_state
+    units:        None
+    coordinates:  time depth latitude longitude
+
   heading:
     source:       Heading
     long_name:    glider heading angle
@@ -142,7 +166,7 @@ netcdf_variables:
     units:        degrees
     coordinates:  time depth latitude longitude
 
-  # data parameters
+# data parameters
   conductivity:
     source:       LEGATO_CONDUCTIVITY
     long_name:    water conductivity
@@ -151,11 +175,10 @@ netcdf_variables:
     coordinates:  time depth latitude longitude
     instrument:    instrument_ctd
     valid_min:    "0."
-    valid_max:    "10."
+    valid_max:    "85."
     observation_type: "measured"
-    accuracy:      "0.0003"
-    precision:     "0.0001"
-    resolution:     "0.00002"
+    accuracy:      "0.003"
+    resolution:     "0.001"
 
   temperature:
     source:       LEGATO_TEMPERATURE
@@ -165,11 +188,10 @@ netcdf_variables:
     coordinates:  time depth latitude longitude
     instrument:   instrument_ctd
     valid_min:    "-5"
-    valid_max:    "50"
+    valid_max:    "42"
     observation_type: "measured"
     accuracy:      "0.002"
-    precision:     "0.001"
-    resolution:    "0.0002"
+    resolution:    "0.00005"
 
   pressure:
     source:       LEGATO_PRESSURE
@@ -178,62 +200,160 @@ netcdf_variables:
     units:        dbar
     coordinates:  time depth latitude longitude
     valid_min:    "0"
-    valid_max:    "2000"
+    valid_max:    "1000"
     positive:      "down"
     reference_datum:  "sea-surface"
     instrument:     "instrument_ctd"
     observation_type: "measured"
-    accuracy:         "1"
-    precision:        "2"
-    resolution:       "0.02"
+    accuracy:         "0.5"
+    resolution:       "0.01"
     comment:          "ctd pressure sensor"
 
   salinity:
     source:       LEGATO_SALINITY
     long_name:    water salinity
     standard_name: sea_water_salinity
-    units:        kg m-3
+    units:        PSU
     coordinates:  time depth latitude longitude
     instrument:    instrument_ctd
     valid_min:    "0."
     valid_max:    "50."
     observation_type: "calculated"
-    accuracy:      "0.0003"
-    precision:     "0.0001"
-    resolution:     "0.00002"
+    accuracy:      "0.02"
+    resolution:     "0.01"
 
 # optics:
   chlorophyll:
-    source:       FLNTU_CHL_SCALED
+    source:       FLBBPC_CHL_SCALED
     long_name:    chlorophyll
     standard_name: concentration_of_chlorophyll_in_sea_water
     units:        mg m-3
     coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+    valid_min:    "0."
+    valid_max:    "50."
+    observation_type: "calculated"
+    sensitivity:      "0.025"
 
-  cdom:
-    source:  FLNTU_NTU_SCALED
-    long_name:    flntu variable
-    units:        arbitrary
+  chlorophyll_raw:
+    source:       FLBBPC_CHL_COUNT
+    long_name:    raw chlorophyll
+    standard_name: raw_chlorophyll_in_sea_water
+    units:        counts
     coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
 
+  phycocyanin:
+    source:       FLBBPC_PC_SCALED
+    long_name:    phycocyanin
+    standard_name: concentration_of_phycocyanin_in_sea_water
+    units:        mg m-3
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+    valid_min:    "0."
+    valid_max:    "175."
+    observation_type: "calculated"
+    sensitivity:      "0.09"
 
+  phycocyanin_raw:
+    source:       FLBBPC_PC_COUNT
+    long_name:    raw phycocyanin
+    standard_name: raw_phycocyanin_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
 
-# Oxygen
+  backscatter:
+    source:       FLBBPC_BB_700_SCALED
+    long_name:    700 nm wavelength backscatter
+    standard_name: 700_nm_wavelength_backscatter_in_sea_water
+    units:        m-1 sr-1
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_scatterometer
+    valid_min:    "0."
+    valid_max:    "3."
+    observation_type: "calculated"
+    sensitivity:      "0.002"
+
+  backscatter_raw:
+    source:       FLBBPC_BB_700_COUNT
+    long_name:    raw 700 nm wavelength backscatter
+    standard_name: raw_700_nm_wavelength_backscatter_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_scatterometer
+
+# oxygen
   oxygen_concentration:
-    source:       AROD_FT_DO
+    source:       LEGATO_CODA_DO
     long_name:    oxygen concentration
     standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
-    units:        umol l-1
+    units:        mmol m-3
     coordinates:   time depth latitude longitude
+    instrument:    instrument_optode
+    valid_min:    "0."
+    valid_max:    "500."
+    observation_type: "calculated"
+    accuracy:      "5% or 8.0"
+    resolution:      "1"
 
   temperature_oxygen:
-    source:  AROD_FT_TEMP
+    source:  LEGATO_CODA_TEMPERATURE
     long_name:    oxygen sensor temperature
     standard_name: temperature_of_sensor_for_oxygen_in_sea_water
     units:        Celsius
     coordinates:   time depth latitude longitude
+    instrument:    instrument_thermistor
+    valid_min:    "-5."
+    valid_max:    "35."
+    observation_type: "measured"
+    accuracy:      "0.002"
+    resolution:      "0.00005"
 
+  oxygen_phase:
+    source:  LEGATO_CODA_CORR_PHASE
+    long_name:    oxygen phase
+    standard_name: oxygen_phase_in_sea_water
+    units:        degree
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_optode
 
+# irradiance     "PARAMETER_UNITS"       : ["W/m^2/nm", "W/m^2/nm", "W/m^2/nm", "μE/m^2/s"],
+  down_irradiance_380:
+    source:  OCR504_Ed1
+    long_name:    Downwelling irradiance value of the 380 nm wavelength
+    standard_name: 380nm_downwelling_irradiance
+    units:        W m-2 nm-1
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_radiometer
+    observation_type: "measured"
+
+  down_irradiance_490:
+    source:  OCR504_Ed2
+    long_name:    Downwelling irradiance value of the 490 nm wavelength
+    standard_name: 490nm_downwelling_irradiance
+    units:        W m-2 nm-1
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_radiometer
+    observation_type: "measured"
+
+  down_irradiance_532:
+    source:  OCR504_Ed3
+    long_name:    Downwelling irradiance value of the 532 nm wavelength
+    standard_name: 532nm_downwelling_irradiance
+    units:       W m-2 nm-1
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_radiometer
+    observation_type: "measured"
+
+  downwelling_PAR:
+    source:  OCR504_Ed4
+    long_name:    Downwelling PAR (Photosynthetically Active Radiation) in range 400-700 nm
+    standard_name: downwelling_PAR
+    units:        μE m-2 s-1
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_radiometer
+    observation_type: "measured"
 
 # AD2CP
   ad2cp_heading:
@@ -256,23 +376,46 @@ netcdf_variables:
     standard_name: platform_roll_angle_ad2cp
     units:        degrees
     coordinates:  time depth latitude longitude
-    # derived water speed:
-  # water_velocity_eastward:
-  #   source:    m_final_water_vx
-  #   long_name:      mean eastward water velocity in segment
-  #   standard_name:  barotropic_eastward_sea_water_velocity
-  #   units:          m s-1
-  #   coordinates:   time depth latitude longitude
-  #
-  # water_velocity_northward:
-  #   source:    m_final_water_vy
-  #   long_name:      mean northward water velocity in segment
-  #   standard_name:  barotropic_northward_sea_water_velocity
-  #   units:          m s-1
-  #   coordinates:   time depth latitude longitude
+
+  ad2cp_pressure:
+    source:       AD2CP_PRESSURE
+    long_name:    glider pressure from AD2CP
+    standard_name: platform_pressure_ad2cp
+    units:        dbar
+    coordinates:  time depth latitude longitude
+
+  ad2cp_beam1_cell_number1:
+    source:       AD2CP_V1_CN1
+    long_name:    glider beam 1 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
+    units:        m s-1
+    coordinates:  time depth latitude longitude
+
+  ad2cp_beam2_cell_number1:
+    source:       AD2CP_V2_CN1
+    long_name:    glider beam 2 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
+    units:        m s-1
+    coordinates:  time depth latitude longitude
+
+  ad2cp_beam3_cell_number1:
+    source:       AD2CP_V3_CN1
+    long_name:    glider beam 3 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
+    units:        m s-1
+    coordinates:  time depth latitude longitude
+
+  ad2cp_beam4_cell_number1:
+    source:       AD2CP_V4_CN1
+    long_name:    glider beam 4 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
+    units:        m s-1
+    coordinates:  time depth latitude longitude
+
+
 
 profile_variables:
-  # variables for extract_L1timeseries_profiles processing step...
+# variables for extract_L1timeseries_profiles processing step...
   profile_id:
     comment: Sequential profile number within the trajectory.  This value is unique in each file that is part of a single trajectory/deployment.
     long_name: 'Profile ID'
@@ -373,11 +516,10 @@ profile_variables:
 
   instrument_ctd:
     comment:    unpumped RBR legato CTD
-    calibration_date:     "2021-03-01"
-    calibration_report:  " "
+    calibration_date:     "2021-03-12"
     factory_calibrated:  "yes"
-    long_name:           RBR legato seaexplorer CTD
-    make_model:          RBR legato
+    long_name:           RBR legato CTD
+    make_model:          RBR legato CTD
     platform:            platform
-    serial_number:       "206523"
+    serial_number:       "206610"
     type:                platform

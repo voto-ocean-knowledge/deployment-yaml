@@ -25,20 +25,20 @@ metadata:
   source:     Observational data from a profiling glider.
   standard_name_vocabulary: CF STandard Name Table v49
   transmission_system: IRIDIUM
-  glider_name: Kvanne
-  glider_serial: "45"
-  wmo_id: 6801673
+  glider_name: Ljung
+  glider_serial: "63"
+  wmo_id: 6801707
   comment: 'deployment and recovery in Bornholm'
   contributor_name: Callum Rollo, Louise Biddle, Aleksandra Mazur, Olle Petersson, Marcus Melin
-  contributor_role: Data Processor, PI, glider technician, glider technician, glider technician
+  contributor_role: Data Processor, PI, Glider Technician, Glider Technician, Glider Technician
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://callumrollo.com/
-  deployment_id: "48"
+  deployment_id: "22"
   deployment_name: SAMBA
   # date format 'yyyy-mm-dd'
-  deployment_start: "2021-10-05"
-  deployment_end: "2021-10-24"
+  deployment_start: "2021-08-22"
+  deployment_end: "2021-09-10"
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
   summary: ' Part of SAMBA continuous monitoring'
@@ -50,40 +50,40 @@ glider_devices:
   altimeter:
     make: UNKNOWN
     model: UNKNOWN
-    serial: '35'
+    serial: '42'
   ctd:
     make: RBR
     model: legato
-    serial: '205048'
+    serial: '206523'
     long_name: RBR legato CTD
     make_model:  RBR legato CTD
     factory_calibrated: "Yes"
-    calibration_date: "2020-07-23"
+    calibration_date: "2021-03-01"
   optics:
     make: Wetlabs
     model: FLNTU
-    serial: '6170'
+    serial: '6661'
     long_name: Wetlabs ECO Puck FLNTU
     make_model: Wetlabs FLNTU
     factory_calibrated: "Yes"
-    calibration_date: "2020-03-02"
-    calibration_parameters: {Chl_DarkCounts: 48, Chl_SF: 0.0121, NTU_DarkCounts: 50, NTU_SF: 0.0061}
+    calibration_date: " 2021-02-01"
+    calibration_parameters: {Chl_DarkCounts: 48, Chl_SF: 0.0121, NTU_DarkCounts: 49, NTU_SF: 0.0060}
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0039'
+    serial: '0044'
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: "Yes"
-    calibration_date: "2020-01-28"
+    calibration_date: "2021-01-20"
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '101136'
+    serial: '101589'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: "Yes"
-    calibration_date: "2020-01-28"
+    calibration_date: "2021-02-03"
 
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
@@ -91,13 +91,13 @@ netcdf_variables:
   keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll', 'ad2cp_heading']
   timebase:
     source:       NAV_LATITUDE
-  # Time and Place:
+# Time and Place:
   time:
     source:        time
     long_name:     Time
     standard_name: time
-    calendar:      gregorian
-    units:         seconds since 1970-01-01T00:00:00Z
+    calendar: gregorian
+    units: seconds since 1970-01-01T00:00:00Z
     axis:          T
     observation_type: "measured"
     coordinates:   time depth latitude longitude
@@ -133,6 +133,13 @@ netcdf_variables:
     valid_max:    "180.0"
     valid_min:    "-180.0"
     coordinate_reference_frame:  urn:ogc:crs:EPSG::4326
+
+  nav_state:
+    source:       NAV_RESOURCE
+    long_name:    seaexplorer navigation state
+    standard_name: navigation_state
+    units:        None
+    coordinates:  time depth latitude longitude
 
   heading:
     source:       Heading
@@ -211,6 +218,7 @@ netcdf_variables:
     accuracy:      "0.02"
     resolution:     "0.01"
 
+# optics:
   chlorophyll:
     source:       FLNTU_CHL_SCALED
     long_name:    chlorophyll
@@ -280,6 +288,7 @@ netcdf_variables:
     accuracy:      "0.01"
     resolution:      "0.001"
 
+
 # AD2CP
   ad2cp_heading:
     source:       AD2CP_HEADING
@@ -309,41 +318,33 @@ netcdf_variables:
     units:        dbar
     coordinates:  time depth latitude longitude
 
-  ad2cp_altitude:
-    source:       AD2CP_ALT
-    long_name:    glider altitude from AD2CP
-    standard_name: platform_altitude_ad2cp
-    units:        m
-    coordinates:  time depth latitude longitude
-
   ad2cp_beam1_cell_number1:
     source:       AD2CP_V1_CN1
     long_name:    glider beam 1 measure from AD2CP in cell 1
-    standard_name: platform_beam1_measure_ad2cp_cell_1
+    standard_name: platform_beam1_measure_ad2cp_cell1
     units:        m s-1
     coordinates:  time depth latitude longitude
 
   ad2cp_beam2_cell_number1:
     source:       AD2CP_V2_CN1
     long_name:    glider beam 2 measure from AD2CP in cell 1
-    standard_name: platform_beam1_measure_ad2cp_cell_1
+    standard_name: platform_beam1_measure_ad2cp_cell1
     units:        m s-1
     coordinates:  time depth latitude longitude
 
   ad2cp_beam3_cell_number1:
     source:       AD2CP_V3_CN1
     long_name:    glider beam 3 measure from AD2CP in cell 1
-    standard_name: platform_beam1_measure_ad2cp_cell_1
+    standard_name: platform_beam1_measure_ad2cp_cell1
     units:        m s-1
     coordinates:  time depth latitude longitude
 
   ad2cp_beam4_cell_number1:
     source:       AD2CP_V4_CN1
     long_name:    glider beam 4 measure from AD2CP in cell 1
-    standard_name: platform_beam1_measure_ad2cp_cell_1
+    standard_name: platform_beam1_measure_ad2cp_cell1
     units:        m s-1
     coordinates:  time depth latitude longitude
-
 
 profile_variables:
 # variables for extract_L1timeseries_profiles processing step...
@@ -447,10 +448,10 @@ profile_variables:
 
   instrument_ctd:
     comment:    unpumped RBR legato CTD
-    calibration_date:     "2020-07-29"
+    calibration_date:     "2021-03-01"
     factory_calibrated:  "yes"
-    long_name: RBR legato CTD
-    make_model:  RBR legato CTD
+    long_name:           RBR legato CTD
+    make_model:          RBR legato CTD
     platform:            platform
-    serial_number:       "205048"
+    serial_number:       "206523"
     type:                platform
