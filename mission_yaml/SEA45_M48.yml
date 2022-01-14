@@ -1,5 +1,5 @@
 metadata:
-  acknowledgement: This study used data collected and made freely available by Voice of the Ocean Foundation 
+  acknowledgement: This study used data collected and made freely available by Voice of the Ocean Foundation
                    (https://www.voiceoftheocean.org) accessed from https://erddap.voiceoftheocean.org
   institution: Voice of the Ocean Foundation
   license: Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/)
@@ -27,10 +27,10 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Kvanne
   glider_serial: "45"
-  wmo_id: 6801673
+  wmo_id: "6801673"
   comment: 'deployment and recovery in Bornholm'
-  contributor_name: Callum Rollo, Louise Biddle, Aleksandra Mazur, Olle Petersson, Marcus Melin
-  contributor_role: Data Processor, PI, glider technician, glider technician, glider technician
+  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur, Marcus Melin
+  contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider Technician
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://callumrollo.com/
@@ -58,7 +58,7 @@ glider_devices:
     long_name: RBR legato CTD
     make_model:  RBR legato CTD
     factory_calibrated: "Yes"
-    calibration_date: "2020-07-23"
+    calibration_date: "2020-07-29"
   optics:
     make: Wetlabs
     model: FLNTU
@@ -84,6 +84,7 @@ glider_devices:
     make_model: Nortek AD2CP
     factory_calibrated: "Yes"
     calibration_date: "2020-01-28"
+
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
 netcdf_variables:
@@ -132,6 +133,13 @@ netcdf_variables:
     valid_max:    "180.0"
     valid_min:    "-180.0"
     coordinate_reference_frame:  urn:ogc:crs:EPSG::4326
+
+  nav_state:
+    source:       NAV_RESOURCE
+    long_name:    seaexplorer navigation state
+    standard_name: navigation_state
+    units:        None
+    coordinates:  time depth latitude longitude
 
   heading:
     source:       Heading
@@ -210,6 +218,7 @@ netcdf_variables:
     accuracy:      "0.02"
     resolution:     "0.01"
 
+# optics:
   chlorophyll:
     source:       FLNTU_CHL_SCALED
     long_name:    chlorophyll
@@ -250,8 +259,7 @@ netcdf_variables:
     coordinates:  time depth latitude longitude
     instrument:    instrument_flourometer
 
-
-# oxygen
+# oxygen:
   oxygen_concentration:
     source:       AROD_FT_DO
     long_name:    oxygen concentration
@@ -279,7 +287,6 @@ netcdf_variables:
     observation_type: "measured"
     accuracy:      "0.01"
     resolution:      "0.001"
-
 
 # AD2CP
   ad2cp_heading:
@@ -342,7 +349,7 @@ netcdf_variables:
 profile_variables:
   # variables for extract_L1timeseries_profiles processing step...
   profile_id:
-    comment: Sequential profile number within the trajectory.  This value is unique in each file that is part of a single trajectory/deployment.
+    comment: Sequential profile number within the trajectory. This value is unique in each file that is part of a single trajectory/deployment.
     long_name: 'Profile ID'
     valid_max: '2147483647'
     valid_min: '1'
@@ -441,11 +448,10 @@ profile_variables:
 
   instrument_ctd:
     comment:    unpumped RBR legato CTD
-    calibration_date:     "2020-07-29"
+    calibration_date: "2020-07-29"
     factory_calibrated:  "yes"
     long_name: RBR legato CTD
     make_model:  RBR legato CTD
     platform:            platform
     serial_number:       "205048"
     type:                platform
-    

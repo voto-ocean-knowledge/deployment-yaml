@@ -27,10 +27,10 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Kvanne
   glider_serial: "45"
-  wmo_id: 6801673
+  wmo_id: "6801673"
   comment: 'deployment and recovery in Skagerrak'
-  contributor_name: Callum Rollo, Louise Biddle, Aleksandra Mazur, Olle Petersson, Marcus Melin
-  contributor_role: Data Processor, PI, Glider Technician, Glider Technician, Glider Technician
+  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur, Marcus Melin
+  contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider Technician
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://callumrollo.com/
@@ -38,7 +38,7 @@ metadata:
   deployment_name: SAMBA
   # date format 'yyyy-mm-dd'
   deployment_start: "2021-12-21"
-  deployment_end: "2022-01-21"
+  deployment_end: "2022-01-15"
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
   summary: ' Part of SAMBA continuous monitoring'
@@ -66,7 +66,7 @@ glider_devices:
     long_name: Wetlabs ECO Puck FLNTU
     make_model: Wetlabs FLNTU
     factory_calibrated: "Yes"
-    calibration_date: " 2020-03-02"
+    calibration_date: "2020-03-02"
     calibration_parameters: {Chl_DarkCounts: 48, Chl_SF: 0.0121, NTU_DarkCounts: 50, NTU_SF: 0.0061}
   oxygen:
     make: JFE Advantech
@@ -259,7 +259,7 @@ netcdf_variables:
     coordinates:  time depth latitude longitude
     instrument:    instrument_flourometer
 
-# oxygen
+# oxygen:
   oxygen_concentration:
     source:       AROD_FT_DO
     long_name:    oxygen concentration
@@ -349,7 +349,7 @@ netcdf_variables:
 profile_variables:
 # variables for extract_L1timeseries_profiles processing step...
   profile_id:
-    comment: Sequential profile number within the trajectory.  This value is unique in each file that is part of a single trajectory/deployment.
+    comment: Sequential profile number within the trajectory. This value is unique in each file that is part of a single trajectory/deployment.
     long_name: 'Profile ID'
     valid_max: '2147483647'
     valid_min: '1'

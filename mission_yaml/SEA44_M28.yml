@@ -34,11 +34,11 @@ metadata:
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://callumrollo.com/
-  deployment_id: "46"
+  deployment_id: "28"
   deployment_name: SAMBA
   # date format 'yyyy-mm-dd'
-  deployment_start: "2021-12-21"
-  deployment_end: "2022-01-15"
+  deployment_start: "2021-02-22"
+  deployment_end: "2021-03-18"
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
   summary: ' Part of SAMBA continuous monitoring'
@@ -49,7 +49,7 @@ glider_devices:
   altimeter:
     make: UNKNOWN
     model: UNKNOWN
-    serial: '53'
+    serial: '34'
   ctd:
     make: RBR
     model: legato
