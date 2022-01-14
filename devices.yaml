@@ -6,7 +6,7 @@ glider_devices:
   altimeter:
     make: UNKNOWN
     model: UNKNOWN
-    serial: 'XXX'
+    serial: 'XX'
   ctd:
     make: RBR
     model: legato
@@ -24,7 +24,6 @@ glider_devices:
     factory_calibrated: "Yes"
     calibration_date: "YYYY-MM-DD"
     calibration_parameters: {Chl_DarkCounts: XX, Chl_SF: XX, NTU_DarkCounts: XX, NTU_SF: XX}
-
   optics:
     make: Wetlabs
     model: FLBBPC
