@@ -27,7 +27,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Kvanne
   glider_serial: "45"
-  wmo_id: 6801673
+  wmo_id: "6801673"
   comment: 'deployment and recovery in Bornholm'
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur, Marcus Melin
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider Technician
