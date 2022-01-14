@@ -27,10 +27,10 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Saltarv
   glider_serial: "66"
-  wmo_id: 6801505
+  wmo_id: "6801505"
   comment: 'deployment and recovery in Bornholm'
-  contributor_name: Callum Rollo, Louise Biddle, Aleksandra Mazur, Olle Petersson, Marcus Melin
-  contributor_role: Data Processor, PI, Glider Technician, Glider Technician, Glider Technician
+  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur, Marcus Melin
+  contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider Technician
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://callumrollo.com/
@@ -38,7 +38,7 @@ metadata:
   deployment_name: SAMBA
   # date format 'yyyy-mm-dd'
   deployment_start: "2021-12-17"
-  deployment_end: "2022-01-17"
+  deployment_end: "2022-01-04"
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
   summary: ' Part of SAMBA continuous monitoring'
@@ -283,7 +283,7 @@ netcdf_variables:
     coordinates:  time depth latitude longitude
     instrument:    instrument_scatterometer
 
-# oxygen
+# oxygen:
   oxygen_concentration:
     source:       LEGATO_CODA_DO
     long_name:    oxygen concentration
@@ -416,7 +416,7 @@ netcdf_variables:
 profile_variables:
 # variables for extract_L1timeseries_profiles processing step...
   profile_id:
-    comment: Sequential profile number within the trajectory.  This value is unique in each file that is part of a single trajectory/deployment.
+    comment: Sequential profile number within the trajectory. This value is unique in each file that is part of a single trajectory/deployment.
     long_name: 'Profile ID'
     valid_max: '2147483647'
     valid_min: '1'
@@ -515,7 +515,7 @@ profile_variables:
 
   instrument_ctd:
     comment:    unpumped RBR legato CTD
-    calibration_date:     "2021-03-12"
+    calibration_date:    "2021-03-12"
     factory_calibrated:  "yes"
     long_name:           RBR legato CTD
     make_model:          RBR legato CTD
