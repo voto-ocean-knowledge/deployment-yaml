@@ -345,7 +345,7 @@ netcdf_variables:
     coordinates:   time depth latitude longitude
     instrument:    instrument_optode
 
-    # irradiance     "PARAMETER_UNITS"       : ["W/m^2/nm", "W/m^2/nm", "W/m^2/nm", "μE/m^2/s"],
+  # irradiance     "PARAMETER_UNITS"       : ["W/m^2/nm", "W/m^2/nm", "W/m^2/nm", "μE/m^2/s"],
   down_irradiance_380:
     source:  OCR504_Ed1
     long_name:    Downwelling irradiance value of the 380 nm wavelength
@@ -382,7 +382,7 @@ netcdf_variables:
     instrument:    instrument_radiometer
     observation_type: "measured"
 
-# AD2CP
+  # AD2CP
   ad2cp_heading:
     source:       AD2CP_HEADING
     long_name:    glider heading angle from AD2CP
@@ -426,30 +426,30 @@ netcdf_variables:
     units:        m
     coordinates:  time depth latitude longitude
 
-  ad2cp_beam1_cell_number[X]:
-    source:       AD2CP_V1_CN[X]
-    long_name:    glider beam 1 measure from AD2CP in cell [X]
-    standard_name: platform_beam1_measure_ad2cp_cell[X]
+  ad2cp_beam1_cell_numberX:
+    source:       AD2CP_V1_CNX
+    long_name:    glider beam 1 measure from AD2CP in cell X
+    standard_name: platform_beam1_measure_ad2cp_cellX
     units:        m s-1
     coordinates:  time depth latitude longitude
 
-  ad2cp_beam2_cell_number[X]:
-    source:       AD2CP_V1_CN[X]
-    long_name:    glider beam 2 measure from AD2CP in cell [X]
-    standard_name: platform_beam1_measure_ad2cp_cell[X]
+  ad2cp_beam2_cell_numberX:
+    source:       AD2CP_V1_CNX
+    long_name:    glider beam 2 measure from AD2CP in cell X
+    standard_name: platform_beam1_measure_ad2cp_cellX
     units:        m s-1
     coordinates:  time depth latitude longitude
 
-  ad2cp_beam3_cell_number[X]:
-    source:       AD2CP_V1_CN[X]
-    long_name:    glider beam 3 measure from AD2CP in cell [X]
-    standard_name: platform_beam1_measure_ad2cp_cell[X]
+  ad2cp_beam3_cell_numberX:
+    source:       AD2CP_V1_CNX
+    long_name:    glider beam 3 measure from AD2CP in cell X
+    standard_name: platform_beam1_measure_ad2cp_cellX
     units:        m s-1
     coordinates:  time depth latitude longitude
 
-  ad2cp_beam4_cell_number[X]:
-    source:       AD2CP_V1_CN[X]
-    long_name:    glider beam 4 measure from AD2CP in cell [X]
-    standard_name: platform_beam1_measure_ad2cp_cell[X]
+  ad2cp_beam4_cell_numberX:
+    source:       AD2CP_V1_CNX
+    long_name:    glider beam 4 measure from AD2CP in cell X
+    standard_name: platform_beam1_measure_ad2cp_cellX
     units:        m s-1
     coordinates:  time depth latitude longitude
