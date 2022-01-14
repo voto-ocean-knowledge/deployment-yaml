@@ -84,6 +84,7 @@ glider_devices:
     make_model: Nortek AD2CP
     factory_calibrated: "Yes"
     calibration_date: "2020-01-28"
+
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
 netcdf_variables:
@@ -132,6 +133,13 @@ netcdf_variables:
     valid_max:    "180.0"
     valid_min:    "-180.0"
     coordinate_reference_frame:  urn:ogc:crs:EPSG::4326
+
+  nav_state:
+    source:       NAV_RESOURCE
+    long_name:    seaexplorer navigation state
+    standard_name: navigation_state
+    units:        None
+    coordinates:  time depth latitude longitude
 
   heading:
     source:       Heading
@@ -210,6 +218,7 @@ netcdf_variables:
     accuracy:      "0.02"
     resolution:     "0.01"
 
+# optics:
   chlorophyll:
     source:       FLNTU_CHL_SCALED
     long_name:    chlorophyll
@@ -250,7 +259,6 @@ netcdf_variables:
     coordinates:  time depth latitude longitude
     instrument:    instrument_flourometer
 
-
 # oxygen:
   oxygen_concentration:
     source:       AROD_FT_DO
@@ -279,7 +287,6 @@ netcdf_variables:
     observation_type: "measured"
     accuracy:      "0.01"
     resolution:      "0.001"
-
 
 # AD2CP
   ad2cp_heading:
