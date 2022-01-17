@@ -25,20 +25,20 @@ metadata:
   source:     Observational data from a profiling glider.
   standard_name_vocabulary: CF STandard Name Table v49
   transmission_system: IRIDIUM
-  glider_name: Saltarv
-  glider_serial: "66"
-  wmo_id: "6801505"
+  glider_name: Marviol
+  glider_serial: "67"
+  wmo_id: "6801507"
   comment: 'deployment and recovery in Bornholm'
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur, Marcus Melin
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider Technician
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://callumrollo.com/
-  deployment_id: "14"
+  deployment_id: "15"
   deployment_name: SAMBA
   # date format 'yyyy-mm-dd'
-  deployment_start: "2021-12-17"
-  deployment_end: "2022-01-04"
+  deployment_start: "2021-10-24"
+  deployment_end: "2021-11-01"
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
   summary: ' Part of SAMBA continuous monitoring'
@@ -50,24 +50,24 @@ glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '206610'
+    serial: '206611'
     long_name: RBR legato CTD
     make_model:  RBR legato CTD
     factory_calibrated: "Yes"
-    calibration_date: "2021-03-12"
+    calibration_date: "2021-03-16"
   optics:
     make: Wetlabs
     model: FLBBPC
-    serial: '6754'
+    serial: '6755'
     long_name: Wetlabs ECO Puck FLBBPC
     make_model: Wetlabs FLBBPC
     factory_calibrated: "Yes"
-    calibration_date: " 2021-03-23"
-    calibration_parameters: {Chl_DarkCounts: 48, Chl_SF: 0.0073, PC_DarkCounts: 44, PC_SF: 0.0424, SIG_DarkCounts: 46, SIG_SF: 1.783E-06}
+    calibration_date: " 2021-03-22"
+    calibration_parameters: {Chl_DarkCounts: 47, Chl_SF: 0.0073, PC_DarkCounts: 43, PC_SF: 0.0422, SIG_DarkCounts: 46, SIG_SF: 1.800E-06}
   oxygen:
     make: RBR
     model: coda
-    serial: '205592'
+    serial: '206115'
     long_name: RBR coda TODO
     make_model: RBR coda TODO
     factory_calibrated: "Yes"
@@ -75,19 +75,19 @@ glider_devices:
   irradiance:
     make: SeaBird
     model: OCR504
-    serial: '2199'
+    serial: '2197'
     long_name: SeaBird OCR504
     make_model: SeaBird OCR504
     factory_calibrated: "Yes"
-    calibration_date: "2021-03-15"
+    calibration_date: "2021-03-08"
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '102758'
+    serial: '102882'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: "Yes"
-    calibration_date: "2021-02-04"
+    calibration_date: "2021-05-31"
 
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
@@ -515,10 +515,10 @@ profile_variables:
 
   instrument_ctd:
     comment:    unpumped RBR legato CTD
-    calibration_date:    "2021-03-12"
+    calibration_date:    "2021-03-16"
     factory_calibrated:  "yes"
     long_name:           RBR legato CTD
     make_model:          RBR legato CTD
     platform:            platform
-    serial_number:       "206610"
+    serial_number:       "206611"
     type:                platform
