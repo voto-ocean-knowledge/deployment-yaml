@@ -34,11 +34,11 @@ metadata:
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://callumrollo.com/
-  deployment_id: "22"
+  deployment_id: "21"
   deployment_name: SAMBA
   # date format 'yyyy-mm-dd'
-  deployment_start: "2021-08-22"
-  deployment_end: "2021-09-10"
+  deployment_start: "2021-07-28"
+  deployment_end: "2021-08-16"
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
   summary: ' Part of SAMBA continuous monitoring'
