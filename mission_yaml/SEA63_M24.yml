@@ -38,7 +38,7 @@ metadata:
   deployment_name: SAMBA
   # date format 'yyyy-mm-dd'
   deployment_start: "2021-09-20"
-  deployment_end: "2021-10-31"
+  deployment_end: "2021-10-14"
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
   summary: ' Part of SAMBA continuous monitoring'
