@@ -87,7 +87,7 @@ glider_devices:
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
 netcdf_variables:
-  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll', 'downwelling_PAR']
+  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll']
   timebase:
     source:       NAV_LATITUDE
 # Time and Place:
