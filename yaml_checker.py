@@ -76,7 +76,7 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
         pass
     if check_urls:
         _log.info('Checking urls')
-        for url_id in ['project_url', 'publisher_url', 'metadata_link']:
+        for url_id in ['creator_url','project_url', 'publisher_url', 'metadata_link']:
             url = deployment['metadata'][url_id]
             try:
                 http_code = request.urlopen(url).getcode()
