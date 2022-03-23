@@ -17,7 +17,7 @@ class TestCheckYamlLog(TestCase):
 
     def check_yaml_log_error(self):
         with self.assertLogs() as captured:
-            check_yaml(self.yaml_file, check_urls=True)
+            check_yaml(self.yaml_file, check_urls=False)
         # There should be at least 5 lines of INFO output by yaml checker
         assert len(captured.records) > 5
         for record in captured.records:
