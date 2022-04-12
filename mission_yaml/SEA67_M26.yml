@@ -50,20 +50,20 @@ glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '206611'
+    serial: '206612'
     long_name: RBR legato CTD
     make_model:  RBR legato CTD
     factory_calibrated: "Yes"
-    calibration_date: "2021-03-16"
+    calibration_date: "2021-03-15"
   optics:
     make: Wetlabs
     model: FLBBPC
-    serial: '6755'
+    serial: '7313'
     long_name: Wetlabs ECO Puck FLBBPC
     make_model: Wetlabs FLBBPC
     factory_calibrated: "Yes"
-    calibration_date: " 2021-03-22"
-    calibration_parameters: {Chl_DarkCounts: 47, Chl_SF: 0.0073, PC_DarkCounts: 43, PC_SF: 0.0422, SIG_DarkCounts: 46, SIG_SF: 1.800E-06}
+    calibration_date: " 2022-01-11"
+    calibration_parameters: {Chl_DarkCounts: 44, Chl_SF: 0.0072, PC_DarkCounts: 51, PC_SF: 0.0423, SIG_DarkCounts: 48, SIG_SF: 1.899E-06}
   oxygen:
     make: RBR
     model: coda
@@ -72,22 +72,14 @@ glider_devices:
     make_model: RBR coda TODO
     factory_calibrated: "Yes"
     calibration_date: "2021-02-26"
-  irradiance:
-    make: SeaBird
-    model: OCR504
-    serial: '2197'
-    long_name: SeaBird OCR504
-    make_model: SeaBird OCR504
-    factory_calibrated: "Yes"
-    calibration_date: "2021-03-08"
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '102882'
+    serial: '103354'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: "Yes"
-    calibration_date: "2021-05-31"
+    calibration_date: "2022-01-12"
 
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
@@ -317,43 +309,6 @@ netcdf_variables:
     units:        degree
     coordinates:   time depth latitude longitude
     instrument:    instrument_optode
-
-# irradiance     "PARAMETER_UNITS"       : ["W/m^2/nm", "W/m^2/nm", "W/m^2/nm", "μE/m^2/s"],
-  down_irradiance_380:
-    source:  OCR504_Ed1
-    long_name:    Downwelling irradiance value of the 380 nm wavelength
-    standard_name: 380nm_downwelling_irradiance
-    units:        W m-2 nm-1
-    coordinates:   time depth latitude longitude
-    instrument:    instrument_radiometer
-    observation_type: "measured"
-
-  down_irradiance_490:
-    source:  OCR504_Ed2
-    long_name:    Downwelling irradiance value of the 490 nm wavelength
-    standard_name: 490nm_downwelling_irradiance
-    units:        W m-2 nm-1
-    coordinates:   time depth latitude longitude
-    instrument:    instrument_radiometer
-    observation_type: "measured"
-
-  down_irradiance_532:
-    source:  OCR504_Ed3
-    long_name:    Downwelling irradiance value of the 532 nm wavelength
-    standard_name: 532nm_downwelling_irradiance
-    units:       W m-2 nm-1
-    coordinates:   time depth latitude longitude
-    instrument:    instrument_radiometer
-    observation_type: "measured"
-
-  downwelling_PAR:
-    source:  OCR504_Ed4
-    long_name:    Downwelling PAR (Photosynthetically Active Radiation) in range 400-700 nm
-    standard_name: downwelling_PAR
-    units:        μE m-2 s-1
-    coordinates:   time depth latitude longitude
-    instrument:    instrument_radiometer
-    observation_type: "measured"
 
 # AD2CP
   ad2cp_heading:
