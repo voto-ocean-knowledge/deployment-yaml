@@ -123,7 +123,10 @@ def check_keep_variables(deployment, _log):
     variables = deployment['netcdf_variables']
     if variables['timebase']['source'] != 'NAV_LATITUDE':
         _log.error('timebase:source must be NAV_LATITUDE')
-    num_sensors = len(devices) - 1
+    if 'altimeter' in devices:    
+        num_sensors = len(devices) - 1
+    else:
+        num_sensors = len(devices)    
     keeps = variables['keep_variables']
     if len(keeps) != num_sensors:
         _log.error("Number of sensors in glider_devices does not match number of keep variables. Some data will be lost in conversion")
