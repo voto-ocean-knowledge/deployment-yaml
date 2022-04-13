@@ -50,7 +50,7 @@ glider_devices:
   altimeter:
     make: UNKNOWN
     model: UNKNOWN
-    serial: 'XX'
+    serial: '25'
   ctd:
     make: RBR
     model: legato
