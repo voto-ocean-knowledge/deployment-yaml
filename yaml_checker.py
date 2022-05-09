@@ -45,12 +45,12 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
         if key not in deployment['metadata'].keys():
             _log.error(f'{key} not found in metadata')
             failures += 1
-    if 'deployment_id' in metadata_keys and 'glider_id' in meta.keys():
+    if 'deployment_id' in metadata_keys and 'glider_serial' in meta.keys():
         yaml_file_name = yaml_path.split('/')[-1]
         if meta['deployment_id'] not in yaml_file_name:
-            _log.error(f'deployment_id {meta["deployment_id"]} does not match yaml filenmae {yaml_file_name}')
-        if meta['glider_id'] not in yaml_file_name:
-            _log.error(f'glider_id {meta["glider_id"]} does not match yaml filenmae {yaml_file_name}')
+            _log.error(f'deployment_id {meta["deployment_id"]} does not match yaml filename {yaml_file_name}')
+        if meta['glider_serial'] not in yaml_file_name:
+            _log.error(f'glider_serial {meta["glider_serial"]} does not match yaml filename {yaml_file_name}')
 
     _log.info('Checking dates')
     start = deployment['metadata']['deployment_start']
