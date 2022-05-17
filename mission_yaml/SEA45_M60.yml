@@ -25,20 +25,20 @@ metadata:
   source:     Observational data from a profiling glider.
   standard_name_vocabulary: CF STandard Name Table v49
   transmission_system: IRIDIUM
-  glider_name: Ljung
-  glider_serial: "63"
-  wmo_id: "6801707"
+  glider_name: Kvanne
+  glider_serial: "45"
+  wmo_id: "6801673"
   comment: 'deployment and recovery in Bornholm'
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur, Marcus Melin
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider Technician
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://callumrollo.com/
-  deployment_id: "37"
+  deployment_id: "60"
   deployment_name: SAMBA
   # date format 'yyyy-mm-dd'
-  deployment_start: "2022-04-28"
-  deployment_end: "2022-05-17"
+  deployment_start: "2022-05-17"
+  deployment_end: "2022-06-17"
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
   summary: ' Part of SAMBA continuous monitoring'
@@ -50,40 +50,40 @@ glider_devices:
   altimeter:
     make: UNKNOWN
     model: UNKNOWN
-    serial: '25'
+    serial: '35'
   ctd:
     make: RBR
     model: legato
-    serial: '206523'
+    serial: '205048'
     long_name: RBR legato CTD
     make_model:  RBR legato CTD
     factory_calibrated: "Yes"
-    calibration_date: "2021-03-01"
+    calibration_date: "2020-07-29"
   optics:
     make: Wetlabs
     model: FLNTU
-    serial: '6661'
+    serial: '6170'
     long_name: Wetlabs ECO Puck FLNTU
     make_model: Wetlabs FLNTU
     factory_calibrated: "Yes"
-    calibration_date: " 2021-02-01"
-    calibration_parameters: {Chl_DarkCounts: 48, Chl_SF: 0.0121, NTU_DarkCounts: 49, NTU_SF: 0.0060}
+    calibration_date: "2020-03-02"
+    calibration_parameters: {Chl_DarkCounts: 48, Chl_SF: 0.0121, NTU_DarkCounts: 50, NTU_SF: 0.0061}
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0041'
+    serial: '0039'
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: "Yes"
-    calibration_date: "2020-02-05"
+    calibration_date: "2020-01-28"
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '101589'
+    serial: '101136'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: "Yes"
-    calibration_date: "2021-02-03"
+    calibration_date: "2020-01-28"
 
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
@@ -345,6 +345,7 @@ netcdf_variables:
     units:        m s-1
     coordinates:  time depth latitude longitude
 
+
 profile_variables:
 # variables for extract_L1timeseries_profiles processing step...
   profile_id:
@@ -447,10 +448,10 @@ profile_variables:
 
   instrument_ctd:
     comment:    unpumped RBR legato CTD
-    calibration_date:     "2021-03-01"
+    calibration_date:     "2020-07-29"
     factory_calibrated:  "yes"
     long_name:           RBR legato CTD
     make_model:          RBR legato CTD
     platform:            platform
-    serial_number:       "206523"
+    serial_number:       "205048"
     type:                platform
