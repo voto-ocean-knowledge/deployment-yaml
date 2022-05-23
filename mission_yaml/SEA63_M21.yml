@@ -24,7 +24,7 @@ metadata:
   references:     "created with pyglider https://github.com/c-proof/pyglider"
   source:     Observational data from a profiling glider.
   standard_name_vocabulary: CF STandard Name Table v49
-sea_name: Baltic
+  sea_name: Baltic
   transmission_system: IRIDIUM
   glider_name: Ljung
   glider_serial: "63"
