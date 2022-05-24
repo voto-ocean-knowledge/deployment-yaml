@@ -24,6 +24,7 @@ metadata:
   references:     "created with pyglider https://github.com/c-proof/pyglider"
   source:     Observational data from a profiling glider.
   standard_name_vocabulary: CF STandard Name Table v49
+  sea_name: Baltic
   transmission_system: IRIDIUM
   glider_name: <glider name>
   glider_serial: <glider number>
@@ -42,5 +43,3 @@ metadata:
   project: <project name>
   project_url: <project url>
   summary: <mission summary>
-  # Examples: Skagerrak, Kattegatt, Baltic, Gulf of Bothnia, Gulf of Finland, Gulf of Riga
-  sea_name: <sea name e.g. Baltic>
