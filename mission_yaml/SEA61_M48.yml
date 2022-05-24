@@ -24,6 +24,7 @@ metadata:
   references:     "created with pyglider https://github.com/c-proof/pyglider"
   source:     Observational data from a profiling glider.
   standard_name_vocabulary: CF STandard Name Table v49
+  sea_name: Baltic
   transmission_system: IRIDIUM
   glider_name: Vass
   glider_serial: "61"
@@ -42,8 +43,6 @@ metadata:
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
   summary: ' Part of SAMBA continuous monitoring'
-  # Examples: Skagerrak, Kattegatt, Baltic, Gulf of Bothnia, Gulf of Finland, Gulf of Riga
-  sea_name: Baltic
 
 glider_devices:
   altimeter:
