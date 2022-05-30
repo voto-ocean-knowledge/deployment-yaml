@@ -1,10 +1,10 @@
 metadata:
   acknowledgement: This study used data collected and made freely available by Voice of the Ocean Foundation 
-                   (https://www.voiceoftheocean.org) accessed from https://erddap.voiceoftheocean.org
+                   (https://voiceoftheocean.org) accessed from https://erddap.observations.voiceoftheocean.org/erddap/index.html
   institution: Voice of the Ocean Foundation
   license: Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/)
     This study used data collected and made freely available by Voice of the Ocean Foundation
-    (https://www.voiceoftheocean.org) accessed from https://erddap.voiceoftheocean.org
+    (https://voiceoftheocean.org) accessed from https://erddap.observations.voiceoftheocean.org/erddap/index.html
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_model: SeaExplorer
   glider_instrument_name: seaexplorer
