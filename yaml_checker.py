@@ -148,6 +148,13 @@ def check_strings(d, _log):
 def check_variables(variables, _log):
     if 'ad2cp_altitude' in variables.keys():
         _log.error('ad2cp_altitude found in variables. We are not currently distributing altitude data. Please remove')
+    for name in variables.keys():
+        if name in ["keep_variables", "timebase"]:
+            continue
+        var = variables[name]
+        if "irradiance" in var["long_name"] or "PAR" in var["long_name"]:
+            if var["average_method"] != "geometric mean":
+                _log.error(f"{name} avergage_method should be 'geometric mean'")
 
 if __name__ == '__main__':
     args = sys.argv
