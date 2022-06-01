@@ -26,63 +26,59 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Kvanne
-  glider_serial: "45"
-  wmo_id: "6801673"
-  comment: 'Deployment and recovery in Bornholm. CTD data missing after cycle 455.'
+  glider_name: Marviol
+  glider_serial: "67"
+  wmo_id: "6801507"
+  comment: 'deployment and recovery in Gotland'
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur, Marcus Melin
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider Technician
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: "60"
-  deployment_name: SAMBA
+  deployment_id: "29"
+  deployment_name: CABLE
   # date format 'yyyy-mm-dd'
-  deployment_start: "2022-05-17"
-  deployment_end: "2022-05-30"
-  project: SAMBA
-  project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
-  summary: ' Part of SAMBA continuous monitoring'
+  deployment_start: "2022-06-01"
+  deployment_end: "2022-07-01"
+  project: CABLE
+  project_url: https://voiceoftheocean.org/knowledge/
+  summary: 'Part of CABLE project'
 
 
 glider_devices:
-  altimeter:
-    make: UNKNOWN
-    model: UNKNOWN
-    serial: '35'
   ctd:
     make: RBR
     model: legato
-    serial: '205048'
+    serial: '206612'
     long_name: RBR legato CTD
     make_model:  RBR legato CTD
     factory_calibrated: "Yes"
-    calibration_date: "2020-07-29"
+    calibration_date: "2021-03-15"
   optics:
     make: Wetlabs
-    model: FLNTU
-    serial: '6170'
-    long_name: Wetlabs ECO Puck FLNTU
-    make_model: Wetlabs FLNTU
+    model: FLBBPC
+    serial: '7313'
+    long_name: Wetlabs ECO Puck FLBBPC
+    make_model: Wetlabs FLBBPC
     factory_calibrated: "Yes"
-    calibration_date: "2020-03-02"
-    calibration_parameters: {Chl_DarkCounts: 48, Chl_SF: 0.0121, NTU_DarkCounts: 50, NTU_SF: 0.0061}
+    calibration_date: " 2022-01-11"
+    calibration_parameters: {Chl_DarkCounts: 44, Chl_SF: 0.0072, PC_DarkCounts: 51, PC_SF: 0.0423, SIG_DarkCounts: 48, SIG_SF: 1.899E-06}
   oxygen:
-    make: JFE Advantech
-    model: AROD-FT
-    serial: '0039'
-    long_name: JFE Advantech RINKO-FT
-    make_model: JFE Advantech AROD_FT
+    make: RBR
+    model: coda
+    serial: '206115'
+    long_name: RBR coda TODO
+    make_model: RBR coda TODO
     factory_calibrated: "Yes"
-    calibration_date: "2020-01-28"
+    calibration_date: "2021-02-26"
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '101136'
+    serial: '103354'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: "Yes"
-    calibration_date: "2020-01-28"
+    calibration_date: "2022-01-12"
 
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
@@ -219,7 +215,7 @@ netcdf_variables:
 
 # optics:
   chlorophyll:
-    source:       FLNTU_CHL_SCALED
+    source:       FLBBPC_CHL_SCALED
     long_name:    chlorophyll
     standard_name: concentration_of_chlorophyll_in_sea_water
     units:        mg m-3
@@ -231,61 +227,87 @@ netcdf_variables:
     sensitivity:      "0.025"
 
   chlorophyll_raw:
-    source:       FLNTU_CHL_COUNT
+    source:       FLBBPC_CHL_COUNT
     long_name:    raw chlorophyll
     standard_name: raw_chlorophyll_in_sea_water
     units:        counts
     coordinates:  time depth latitude longitude
     instrument:    instrument_flourometer
 
-  turbidity:
-    source:  FLNTU_NTU_SCALED
-    long_name:    turbidity
-    standard_name: turbidity_in_sea_water
-    units:        NTU
+  phycocyanin:
+    source:       FLBBPC_PC_SCALED
+    long_name:    phycocyanin
+    standard_name: concentration_of_phycocyanin_in_sea_water
+    units:        mg m-3
     coordinates:  time depth latitude longitude
-    instrument:    instrument_turbidity_meter
+    instrument:    instrument_flourometer
     valid_min:    "0."
-    valid_max:    "25."
+    valid_max:    "175."
     observation_type: "calculated"
-    sensitivity:      "0.01"
+    sensitivity:      "0.09"
 
-  turbidity_raw:
-    source:       FLNTU_NTU_COUNT
-    long_name:    raw turbidity
-    standard_name: raw_turbidity_in_sea_water
+  phycocyanin_raw:
+    source:       FLBBPC_PC_COUNT
+    long_name:    raw phycocyanin
+    standard_name: raw_phycocyanin_in_sea_water
     units:        counts
     coordinates:  time depth latitude longitude
     instrument:    instrument_flourometer
 
+  backscatter:
+    source:       FLBBPC_BB_700_SCALED
+    long_name:    700 nm wavelength backscatter
+    standard_name: 700_nm_wavelength_backscatter_in_sea_water
+    units:        m-1 sr-1
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_scatterometer
+    valid_min:    "0."
+    valid_max:    "3."
+    observation_type: "calculated"
+    sensitivity:      "0.002"
+
+  backscatter_raw:
+    source:       FLBBPC_BB_700_COUNT
+    long_name:    raw 700 nm wavelength backscatter
+    standard_name: raw_700_nm_wavelength_backscatter_in_sea_water
+    units:        counts
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_scatterometer
+
 # oxygen:
   oxygen_concentration:
-    source:       AROD_FT_DO
+    source:       LEGATO_CODA_DO
     long_name:    oxygen concentration
     standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
     units:        mmol m-3
     coordinates:   time depth latitude longitude
-    correct_oxygen: "True"
-    reference_salinity: "0"
-    instrument:    instrument_phosphorescence
+    instrument:    instrument_optode
     valid_min:    "0."
-    valid_max:    "425."
+    valid_max:    "500."
     observation_type: "calculated"
-    accuracy:      "2% or 2.0"
-    resolution:      "0.01"
+    accuracy:      "5% or 8.0"
+    resolution:      "1"
 
   temperature_oxygen:
-    source:  AROD_FT_TEMP
+    source:  LEGATO_CODA_TEMPERATURE
     long_name:    oxygen sensor temperature
     standard_name: temperature_of_sensor_for_oxygen_in_sea_water
     units:        Celsius
     coordinates:   time depth latitude longitude
     instrument:    instrument_thermistor
-    valid_min:    "-3."
-    valid_max:    "45."
+    valid_min:    "-5."
+    valid_max:    "35."
     observation_type: "measured"
-    accuracy:      "0.01"
-    resolution:      "0.001"
+    accuracy:      "0.002"
+    resolution:      "0.00005"
+
+  oxygen_phase:
+    source:  LEGATO_CODA_CORR_PHASE
+    long_name:    oxygen phase
+    standard_name: oxygen_phase_in_sea_water
+    units:        degree
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_optode
 
 # AD2CP
   ad2cp_heading:
@@ -447,10 +469,10 @@ profile_variables:
 
   instrument_ctd:
     comment:    unpumped RBR legato CTD
-    calibration_date:     "2020-07-29"
+    calibration_date:    "2021-03-16"
     factory_calibrated:  "yes"
     long_name:           RBR legato CTD
     make_model:          RBR legato CTD
     platform:            platform
-    serial_number:       "205048"
+    serial_number:       "206611"
     type:                platform
