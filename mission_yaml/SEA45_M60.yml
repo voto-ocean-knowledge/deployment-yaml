@@ -29,7 +29,7 @@ metadata:
   glider_name: Kvanne
   glider_serial: "45"
   wmo_id: "6801673"
-  comment: 'deployment and recovery in Bornholm'
+  comment: 'deployment and recovery in Bornholm. CTD data missing after cycle 455.'
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur, Marcus Melin
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider Technician
   creator_email: callum.rollo@voiceoftheocean.org
@@ -39,7 +39,7 @@ metadata:
   deployment_name: SAMBA
   # date format 'yyyy-mm-dd'
   deployment_start: "2022-05-17"
-  deployment_end: "2022-06-17"
+  deployment_end: "2022-05-30"
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
   summary: ' Part of SAMBA continuous monitoring'
