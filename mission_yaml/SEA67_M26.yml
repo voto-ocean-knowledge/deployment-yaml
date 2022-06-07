@@ -338,6 +338,12 @@ netcdf_variables:
     units:        dbar
     coordinates:  time depth latitude longitude
 
+  ad2cp_time:
+    source:       AD2CP_TIME
+    long_name:       AD2CP recorded time
+    standard_name:       ad2cp_recorded_time
+    coordinates:  time depth latitude longitude
+    
   ad2cp_beam1_cell_number1:
     source:       AD2CP_V1_CN1
     long_name:    glider beam 1 measure from AD2CP in cell 1

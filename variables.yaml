@@ -408,14 +408,6 @@ netcdf_variables:
     units:        degrees
     coordinates:  time depth latitude longitude
 
-  ad2cp_time:
-    source:       AD2CP_TIME
-    long_name:    AD2CP recorded time
-    standard_name: ad2cp_recorded_time
-    units:        datetime
-    coordinates:  time depth latitude longitude
-    datetime_format: "%m%d%y %H:%M:%S"
-
   ad2cp_pressure:
     source:       AD2CP_PRESSURE
     long_name:    glider pressure from AD2CP
@@ -429,6 +421,13 @@ netcdf_variables:
     standard_name: platform_altitude_ad2cp
     units:        m
     coordinates:  time depth latitude longitude
+
+  ad2cp_time:
+    source:       AD2CP_TIME
+    long_name:       AD2CP recorded time
+    standard_name:       ad2cp_recorded_time
+    coordinates:  time depth latitude longitude
+    
 
   ad2cp_beam1_cell_numberX:
     source:       AD2CP_V1_CNX
