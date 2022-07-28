@@ -71,14 +71,6 @@ glider_devices:
     make_model: RBR coda TODO
     factory_calibrated: "Yes"
     calibration_date: "2021-02-26"
-  irradiance:
-    make: SeaBird
-    model: OCR504
-    serial: '2199'
-    long_name: SeaBird OCR504
-    make_model: SeaBird OCR504
-    factory_calibrated: "Yes"
-    calibration_date: "2021-03-15"
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -91,7 +83,7 @@ glider_devices:
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
 netcdf_variables:
-  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll', 'ad2cp_heading', 'down_irradiance_380']
+  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll', 'ad2cp_heading']
   timebase:
     source:       NAV_LATITUDE
 # Time and Place:
@@ -402,47 +394,6 @@ netcdf_variables:
     units:        degree
     coordinates:   time depth latitude longitude
     instrument:    instrument_optode
-
-# irradiance     "PARAMETER_UNITS"       : ["W/m^2/nm", "W/m^2/nm", "W/m^2/nm", "μE/m^2/s"],
-  down_irradiance_380:
-    source:  OCR504_Ed1
-    long_name:    Downwelling irradiance value of the 380 nm wavelength
-    standard_name: 380nm_downwelling_irradiance
-    units:        W m-2 nm-1
-    average_method: "geometric mean"
-    coordinates:   time depth latitude longitude
-    instrument:    instrument_radiometer
-    observation_type: "measured"
-
-  down_irradiance_490:
-    source:  OCR504_Ed2
-    long_name:    Downwelling irradiance value of the 490 nm wavelength
-    standard_name: 490nm_downwelling_irradiance
-    units:        W m-2 nm-1
-    average_method: "geometric mean"
-    coordinates:   time depth latitude longitude
-    instrument:    instrument_radiometer
-    observation_type: "measured"
-
-  down_irradiance_532:
-    source:  OCR504_Ed3
-    long_name:    Downwelling irradiance value of the 532 nm wavelength
-    standard_name: 532nm_downwelling_irradiance
-    units:       W m-2 nm-1
-    average_method: "geometric mean"
-    coordinates:   time depth latitude longitude
-    instrument:    instrument_radiometer
-    observation_type: "measured"
-
-  downwelling_PAR:
-    source:  OCR504_Ed4
-    long_name:    Downwelling PAR (Photosynthetically Active Radiation) in range 400-700 nm
-    standard_name: downwelling_PAR
-    units:        μE m-2 s-1
-    average_method: "geometric mean"
-    coordinates:   time depth latitude longitude
-    instrument:    instrument_radiometer
-    observation_type: "measured"
 
 # AD2CP
   ad2cp_heading:
