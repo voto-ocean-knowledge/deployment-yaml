@@ -7,7 +7,7 @@ Top level metadata describing the dataset. Much of this will be constant across 
 
 ### devices
 
-Information on the devices in the glider payload, including calibration dates. This should remain constant for each glider  only changing when sensors are calibrated
+Information on the devices in the glider payload, including calibration dates. This should remain constant for each glider only changing when sensors are calibrated
 
 ### variables
 
