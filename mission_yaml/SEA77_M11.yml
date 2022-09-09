@@ -38,8 +38,8 @@ metadata:
   deployment_id: "11"
   deployment_name: SAMBA
   # date format 'yyyy-mm-dd'
-  deployment_start: "2022-07-27"
-  deployment_end: "2022-08-27"
+  deployment_start: "2022-09-06"
+  deployment_end: "2022-10-06"
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
   summary: ' Part of SAMBA continuous monitoring'
@@ -70,7 +70,7 @@ glider_devices:
     long_name: RBR coda TODO
     make_model: RBR coda TODO
     factory_calibrated: "Yes"
-    calibration_date: "2022-05-06"
+    calibration_date: "2022-05-13"
   AD2CP:
     make: Nortek
     model: AD2CP
