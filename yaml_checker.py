@@ -47,9 +47,10 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
             failures += 1
     if 'deployment_id' in metadata_keys and 'glider_serial' in meta.keys():
         yaml_file_name = yaml_path.split('/')[-1]
-        if meta['deployment_id'] not in yaml_file_name:
+        yml_glider, yml_mission = yaml_file_name.split("_")
+        if meta['deployment_id'] not in yml_mission:
             _log.error(f'deployment_id {meta["deployment_id"]} does not match yaml filename {yaml_file_name}')
-        if meta['glider_serial'] not in yaml_file_name:
+        if meta['glider_serial'] not in yml_glider:
             _log.error(f'glider_serial {meta["glider_serial"]} does not match yaml filename {yaml_file_name}')
 
     _log.info('Checking dates')
