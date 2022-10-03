@@ -162,6 +162,16 @@ netcdf_variables:
     coordinates:  time depth latitude longitude
 
   # data parameters
+
+
+  dive_num:
+    source:       fnum
+    long_name:    glider dive number from original SeaExplorer filename
+    standard_name: dive_number
+    units:        None
+    coordinates:  time depth latitude longitude
+
+
   security_level:
     source:       SecurityLevel
     long_name:    security level
