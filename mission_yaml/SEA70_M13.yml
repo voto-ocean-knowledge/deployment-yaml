@@ -71,6 +71,14 @@ glider_devices:
     make_model: Seabird SBE43F
     factory_calibrated: "Yes"
     calibration_date: "Nan"
+  methane:
+    make: Franatech
+    model: METS 
+    serial: 'Nan'
+    long_name: Franatech METS
+    make_model: Franatech METS
+    factory_calibrated: "Yes"
+    calibration_date: "Nan"
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -356,16 +364,68 @@ netcdf_variables:
   oxygen_concentration:
     source:       GPCTD_DOF
     long_name:    oxygen concentration
-    standard_name: Nan
+    standard_name: oxygen_frequency
     units:        Hz
     coordinates:   time depth latitude longitude
-    instrument:    Nane
+    instrument:    Nan
     valid_min:    "Nan"
     valid_max:    "Nan"
     observation_type: "calculated"
     accuracy:      "Nan"
     resolution:      "Nan"
 
+# methane:
+  methane_raw_concentration:
+    source:       METS_METHANE_VOLT
+    long_name:    methane raw concentration
+    standard_name: methane_raw_concentration
+    units:        volts
+    coordinates:   time depth latitude longitude
+    instrument:    Nan
+    valid_min:    "Nan"
+    valid_max:    "Nan"
+    observation_type: "calculated"
+    accuracy:      "Nan"
+    resolution:      "Nan"
+
+  methane_concentration:
+    source:       METS_METHANE_SCALED
+    long_name:    methane concentration
+    standard_name: methane_concentration
+    units:        mg m-3
+    coordinates:   time depth latitude longitude
+    instrument:    Nan
+    valid_min:    "Nan"
+    valid_max:    "Nan"
+    observation_type: "calculated"
+    accuracy:      "Nan"
+    resolution:      "Nan"
+
+  mets_raw_temperature:
+    source:       METS_TEMP_VOLT
+    long_name:    mets sensor raw temperature
+    standard_name: sensor_raw_temperature
+    units:        volts
+    coordinates:   time depth latitude longitude
+    instrument:    Nan
+    valid_min:    "Nan"
+    valid_max:    "Nan"
+    observation_type: "calculated"
+    accuracy:      "Nan"
+    resolution:      "Nan"
+
+  mets_temperature:
+    source:       METS_METHANE_SCALED
+    long_name:    mets sensor temperature
+    standard_name: sensor_temperature
+    units:        Celsius
+    coordinates:   time depth latitude longitude
+    instrument:    Nan
+    valid_min:    "Nan"
+    valid_max:    "Nan"
+    observation_type: "calculated"
+    accuracy:      "Nan"
+    resolution:      "Nan"
 
 # AD2CP
   ad2cp_heading:
@@ -531,11 +591,11 @@ profile_variables:
     observation_type: calculated
 
   instrument_ctd:
-    comment:    unpumped RBR legato CTD
-    calibration_date:    "2021-03-12"
+    comment:    Seabird SlocumCTD
+    calibration_date:    "Nan"
     factory_calibrated:  "yes"
-    long_name:           RBR legato CTD
-    make_model:          RBR legato CTD
+    long_name:           Seabird SlocumCTD
+    make_model:          Seabird SlocumCTD
     platform:            platform
-    serial_number:       "206610"
+    serial_number:       "Nan"
     type:                platform
