@@ -40,7 +40,7 @@ metadata:
   # date format 'yyyy-mm-dd'
   deployment_start: "2022-10-03"
   deployment_end: "2022-11-03"
-  project: SAMBA
+  project: NS_Bornholm
   project_url: https://voiceoftheocean.org/
   summary: ' Part of NS_Bornholm monitoring'
 
