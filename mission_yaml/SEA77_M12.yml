@@ -36,13 +36,13 @@ metadata:
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
   deployment_id: "12"
-  deployment_name: SAMBA
+  deployment_name: NS_Bornholm
   # date format 'yyyy-mm-dd'
   deployment_start: "2022-10-03"
   deployment_end: "2022-11-03"
-  project: SAMBA
-  project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
-  summary: ' Part of SAMBA continuous monitoring'
+  project: NS_Bornholm
+  project_url: https://voiceoftheocean.org/
+  summary: ' Part of NS_Bornholm continuous monitoring'
 
 
 glider_devices:
