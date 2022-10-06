@@ -250,7 +250,7 @@ netcdf_variables:
     source:       GPCTD_CONDUCTIVITY
     long_name:    water conductivity
     standard_name: sea_water_electrical_conductivity
-    units:        S cm-1
+    units:        S m-1
     coordinates:  time depth latitude longitude
     instrument:    instrument_ctd
     valid_min:    "0."
