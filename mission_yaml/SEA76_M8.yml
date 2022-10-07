@@ -93,7 +93,7 @@ glider_devices:
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
 netcdf_variables:
-  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll', 'ad2cp_heading']
+  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll', 'ad2cp_heading', 'nitrate_concentration']
   timebase:
     source:       NAV_LATITUDE
 # Time and Place:
@@ -406,7 +406,7 @@ netcdf_variables:
     instrument:    instrument_optode
 
 # nitrate
-nitrate_concentration:
+  nitrate_concentration:
     source:       SUNA_NITRATE
     long_name:    nitrate concentration
     standard_name: concentration_of_nitrate_in_sea_water
@@ -436,7 +436,7 @@ suna_internal_humidity:
     source:       SUNA_HUMIDITY_NITRATE
     long_name:    relative humidity inside the SUNA
     standard_name: sensor_internal_humidity
-    units:        %
+    units:        "%"
     coordinates:   time depth latitude longitude
     instrument:    Nan
     valid_min:    "Nan"
