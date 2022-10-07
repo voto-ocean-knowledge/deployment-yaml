@@ -419,7 +419,7 @@ netcdf_variables:
     accuracy:      "Nan"
     resolution:      "Nan"
 
-nitrate_molar_concentration:
+  nitrate_molar_concentration:
     source:       SUNA_MOLAR_NITRATE
     long_name:    nitrate molar concentration
     standard_name: molar_concentration_of_nitrate_in_sea_water
@@ -432,7 +432,7 @@ nitrate_molar_concentration:
     accuracy:      "Nan"
     resolution:      "Nan"
 
-suna_internal_humidity:
+  suna_internal_humidity:
     source:       SUNA_HUMIDITY_NITRATE
     long_name:    relative humidity inside the SUNA
     standard_name: sensor_internal_humidity
@@ -445,7 +445,7 @@ suna_internal_humidity:
     accuracy:      "Nan"
     resolution:      "Nan"
 
-suna_internal_temperature:
+  suna_internal_temperature:
     source:       SUNA_TEMP_NITRATE
     long_name:    internal temperature of the SUNA
     standard_name: sensor_internal_temperature
