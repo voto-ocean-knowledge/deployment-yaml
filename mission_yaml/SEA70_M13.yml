@@ -93,7 +93,7 @@ glider_devices:
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
 netcdf_variables:
-  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll', 'ad2cp_heading']
+  keep_variables: ['temperature', 'oxygen_frequency', 'chlorophyll', 'ad2cp_heading','methane_concentration']
   timebase:
     source:       NAV_LATITUDE
 # Time and Place:
@@ -258,7 +258,7 @@ netcdf_variables:
     source:       GPCTD_CONDUCTIVITY
     long_name:    water conductivity
     standard_name: sea_water_electrical_conductivity
-    units:        S cm-1
+    units:        S m-1
     coordinates:  time depth latitude longitude
     instrument:    instrument_ctd
     valid_min:    "0."
@@ -332,7 +332,7 @@ netcdf_variables:
     observation_type: "calculated"
     sensitivity:      "Nan"
 
-  cdom_raw:
+  fdom_raw:
     source:       SEAOWL_FDOM_COUNT
     long_name:    raw fluorescent dissolved organic matter
     standard_name: raw_fluorescent_dissolved_organic_matter_in_sea_water
@@ -361,9 +361,9 @@ netcdf_variables:
     instrument:    instrument_scatterometer
 
 # oxygen:
-  oxygen_concentration:
+  oxygen frequency:
     source:       GPCTD_DOF
-    long_name:    oxygen concentration
+    long_name:    oxygen frequency
     standard_name: oxygen_frequency
     units:        Hz
     coordinates:   time depth latitude longitude
