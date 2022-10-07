@@ -71,6 +71,14 @@ glider_devices:
     make_model: RBR coda TODO
     factory_calibrated: "Yes"
     calibration_date: "2022-05-26"
+  nitrate:
+    make: Seabird
+    model: Deep SUNA
+    serial: 'NTR-1293'
+    long_name: Seabird Deep SUNA
+    make_model: Seabird Deep SUNA
+    factory_calibrated: "Yes"
+    calibration_date: "2019-05-20"
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -85,7 +93,7 @@ glider_devices:
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
 netcdf_variables:
-  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll', 'ad2cp_heading']
+  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll', 'ad2cp_heading', 'nitrate_concentration']
   timebase:
     source:       NAV_LATITUDE
 # Time and Place:
@@ -397,6 +405,59 @@ netcdf_variables:
     coordinates:   time depth latitude longitude
     instrument:    instrument_optode
 
+# nitrate
+  nitrate_concentration:
+    source:       SUNA_NITRATE
+    long_name:    nitrate concentration
+    standard_name: concentration_of_nitrate_in_sea_water
+    units:        mgN/L
+    coordinates:   time depth latitude longitude
+    instrument:    Nan
+    valid_min:    "Nan"
+    valid_max:    "Nan"
+    observation_type: "calculated"
+    accuracy:      "Nan"
+    resolution:      "Nan"
+
+  nitrate_molar_concentration:
+    source:       SUNA_MOLAR_NITRATE
+    long_name:    nitrate molar concentration
+    standard_name: molar_concentration_of_nitrate_in_sea_water
+    units:        µM
+    coordinates:   time depth latitude longitude
+    instrument:    Nan
+    valid_min:    "Nan"
+    valid_max:    "Nan"
+    observation_type: "calculated"
+    accuracy:      "Nan"
+    resolution:      "Nan"
+
+  suna_internal_humidity:
+    source:       SUNA_HUMIDITY_NITRATE
+    long_name:    relative humidity inside the SUNA
+    standard_name: sensor_internal_humidity
+    units:        "%"
+    coordinates:   time depth latitude longitude
+    instrument:    Nan
+    valid_min:    "Nan"
+    valid_max:    "Nan"
+    observation_type: "calculated"
+    accuracy:      "Nan"
+    resolution:      "Nan"
+
+  suna_internal_temperature:
+    source:       SUNA_TEMP_NITRATE
+    long_name:    internal temperature of the SUNA
+    standard_name: sensor_internal_temperature
+    units:        Celsius
+    coordinates:   time depth latitude longitude
+    instrument:    instrument_thermistor
+    valid_min:    "Nan"
+    valid_max:    "Nan"
+    observation_type: "calculated"
+    accuracy:      "Nan"
+    resolution:      "Nan"
+
 
 # AD2CP
   ad2cp_heading:
@@ -563,10 +624,10 @@ profile_variables:
 
   instrument_ctd:
     comment:    unpumped RBR legato CTD
-    calibration_date:    "2021-03-12"
+    calibration_date:    "2021-05-16"
     factory_calibrated:  "yes"
     long_name:           RBR legato CTD
     make_model:          RBR legato CTD
     platform:            platform
-    serial_number:       "206610"
+    serial_number:       "210555"
     type:                platform
