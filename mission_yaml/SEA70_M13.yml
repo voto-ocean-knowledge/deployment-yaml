@@ -361,7 +361,7 @@ netcdf_variables:
     instrument:    instrument_scatterometer
 
 # oxygen:
-  oxygen frequency:
+  oxygen_frequency:
     source:       GPCTD_DOF
     long_name:    oxygen frequency
     standard_name: oxygen_frequency
