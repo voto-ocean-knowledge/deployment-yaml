@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Scratch
   glider_serial: "70"
-  wmo_id: "Nan"
+  wmo_id: "0"
   comment: 'deployment and recovery in Bornholm. Metadata missing and methane sensor data. No salinity data-just conductivity '
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur, Marcus Melin
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider Technician
