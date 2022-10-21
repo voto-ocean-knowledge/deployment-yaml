@@ -61,7 +61,7 @@ glider_devices:
     long_name: Wetlabs ECO Puck FLBBCD
     make_model: Wetlabs FLBBCD
     factory_calibrated: "Yes"
-    calibration_date: " 2022-04-04"
+    calibration_date: "2022-04-04"
     calibration_parameters: {Chl_DarkCounts: 41, Chl_SF: 0.0121, CDOM_DarkCounts: 50, CDOM_SF: 0.0909, SIG_DarkCounts: 48, SIG_SF: 3.118E-06}
   oxygen:
     make: RBR
