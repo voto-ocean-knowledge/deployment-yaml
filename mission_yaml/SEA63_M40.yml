@@ -65,7 +65,7 @@ glider_devices:
     long_name: Wetlabs ECO Puck FLNTU
     make_model: Wetlabs FLNTU
     factory_calibrated: "Yes"
-    calibration_date: " 2021-02-01"
+    calibration_date: "2021-02-01"
     calibration_parameters: {Chl_DarkCounts: 48, Chl_SF: 0.0121, NTU_DarkCounts: 49, NTU_SF: 0.0060}
   oxygen:
     make: JFE Advantech

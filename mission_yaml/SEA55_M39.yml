@@ -65,7 +65,7 @@ glider_devices:
     long_name: Wetlabs ECO Puck FLBBPC
     make_model: Wetlabs FLBBPC
     factory_calibrated: "Yes"
-    calibration_date: " 2020-12-22"
+    calibration_date: "2020-12-22"
     calibration_parameters: {Chl_DarkCounts: 46, Chl_SF: 0.0073, PC_DarkCounts: 47, PC_SF: 0.0388, SIG_DarkCounts: 47, SIG_SF: 1.815E-06}
   oxygen:
     make: JFE Advantech
