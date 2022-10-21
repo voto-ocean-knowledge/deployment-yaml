@@ -98,6 +98,13 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
             if field not in device.keys():
                 _log.error(f'{field} not present for glider_devices: {name}')
                 failures += 1
+        if "calibration_date" in device.keys():
+            try:
+                date = device["calibration_date"]
+                time = datetime.strptime(date, "%Y-%m-%d")
+            except ValueError:
+                _log.error(f'sensor {name} calibration date incorrectly formatted. Should be YYYY-MM-DD')
+                failures += 1
     check_strings(deployment, _log)
     check_against_meta(meta, _log)
     check_keep_variables(deployment, _log)
