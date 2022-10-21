@@ -53,7 +53,7 @@ glider_devices:
     long_name: Seabird SlocumCTD
     make_model: Seabird SlocumCTD
     factory_calibrated: "Yes"
-    calibration_date: "Nan"
+    calibration_date: "05-2022"
   optics:
     make: Seabird
     model: SEAOWL
@@ -61,7 +61,7 @@ glider_devices:
     long_name: Sea-Bird Scientific SeaOWL UV-A
     make_model: SeaOWL UV-A
     factory_calibrated: "Yes"
-    calibration_date: " Nan"
+    calibration_date: "06-2022"
     calibration_parameters: {}
   oxygen:
     make: Seabird
@@ -70,7 +70,7 @@ glider_devices:
     long_name: Seabird SBE43F
     make_model: Seabird SBE43F
     factory_calibrated: "Yes"
-    calibration_date: "Nan"
+    calibration_date: "05-2022"
   methane:
     make: Franatech
     model: METS 
@@ -78,7 +78,7 @@ glider_devices:
     long_name: Franatech METS
     make_model: Franatech METS
     factory_calibrated: "Yes"
-    calibration_date: "Nan"
+    calibration_date: "07-2022"
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -86,7 +86,7 @@ glider_devices:
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: "Yes"
-    calibration_date: "Nan"
+    calibration_date: "05-2022"
 
 
 
@@ -592,7 +592,7 @@ profile_variables:
 
   instrument_ctd:
     comment:    Seabird SlocumCTD
-    calibration_date:    "Nan"
+    calibration_date:    "05-2022"
     factory_calibrated:  "yes"
     long_name:           Seabird SlocumCTD
     make_model:          Seabird SlocumCTD
