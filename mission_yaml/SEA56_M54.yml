@@ -432,7 +432,7 @@ netcdf_variables:
     resolution:      "Nan"
 
   mets_temperature:
-    source:       METS_METHANE_SCALED
+    source:       METS_TEMP_SCALED
     long_name:    mets sensor temperature
     standard_name: sensor_temperature
     units:        Celsius
