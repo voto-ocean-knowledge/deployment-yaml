@@ -75,6 +75,14 @@ glider_devices:
     make_model: JFE Advantech AROD_FT
     factory_calibrated: "Yes"
     calibration_date: "2020-01-28"
+  methane:
+    make: Franatech
+    model: METS 
+    serial: '2117'
+    long_name: Franatech METS
+    make_model: Franatech METS
+    factory_calibrated: "Yes"
+    calibration_date: "2022-07-01"
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -87,7 +95,7 @@ glider_devices:
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
 netcdf_variables:
-  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll', 'ad2cp_heading','methane_concentration']
+  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll', 'ad2cp_heading', 'methane_concentration']
   timebase:
     source:       NAV_LATITUDE
 # Time and Place:
