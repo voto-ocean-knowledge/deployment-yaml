@@ -122,7 +122,9 @@ def check_qc(deployment, _log):
         if qc_var not in variables:
             _log.error(f"qc variable {qc_var} not present in netcdf variables")
         if qc_dict["value"] not in [1, 2, 3, 4, 9]:
-            _log.error(f"qc var {qc_var}  value {qc_dict['value']} invlaid. Must be in [1, 2, 3, 4, 9]")
+            _log.error(f"qc var {qc_var}  value {qc_dict['value']} invalid. Must be in [1, 2, 3, 4, 9]")
+        if "comment" not in qc_dict.keys():
+            _log.error(f"qc var {qc_var} has no comment")
         if "start" in qc_dict.keys():
             _log.info('Checking qc start')
             start = qc_dict['start']
