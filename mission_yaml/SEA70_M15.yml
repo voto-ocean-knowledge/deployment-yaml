@@ -607,3 +607,14 @@ profile_variables:
     platform:            platform
     serial_number:       "CTD0271"
     type:                platform
+
+qc:
+    conductivity:
+        value:  4
+        comment: ctd pump failed. Downcast data are less badly affected.
+    temperature:
+        value:  4
+        comment: ctd pump failed. Downcast data are less badly affected.
+    oxygen_frequency:
+        value:  4
+        comment: ctd pump failed. Downcast data are less badly affected.

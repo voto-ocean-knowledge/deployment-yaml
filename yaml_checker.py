@@ -109,7 +109,40 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
     check_against_meta(meta, _log)
     check_keep_variables(deployment, _log)
     check_variables(deployment['netcdf_variables'], _log)
+    check_qc(deployment, _log)
 
+
+def check_qc(deployment, _log):
+    if "qc" not in deployment.keys():
+        return
+    _log.info("Check qc")
+    variables = deployment['netcdf_variables']
+    qc_items = deployment["qc"]
+    for qc_var, qc_dict in qc_items.items():
+        if qc_var not in variables:
+            _log.error(f"qc variable {qc_var} not present in netcdf variables")
+        if qc_dict["value"] not in [1, 2, 3, 4, 9]:
+            _log.error(f"qc var {qc_var}  value {qc_dict['value']} invalid. Must be in [1, 2, 3, 4, 9]")
+        if "comment" not in qc_dict.keys():
+            _log.error(f"qc var {qc_var} has no comment")
+        if "start" in qc_dict.keys():
+            _log.info('Checking qc start')
+            start = qc_dict['start']
+            try:
+                start_time = datetime.strptime(start, "%Y-%m-%d")
+            except ValueError:
+                _log.error(f'qc {qc_var} {start} incorrectly formatted. Should be YYYY-MM-DD')
+        if "end" in qc_dict.keys():
+            end =qc_dict['end']
+            try:
+                end_time = datetime.strptime(end, "%Y-%m-%d")
+            except ValueError:
+                _log.error(f'qc {qc_var} {end} incorrectly formatted. Should be YYYY-MM-DD')
+        if "start" in qc_dict.keys() and "end" in qc_dict.keys():
+                deployment_duration = end_time - start_time
+                if deployment_duration < timedelta(0):
+                    _log.error(f'qc {qc_var} end is sooner than start')
+    
 
 def check_against_meta(deployment_meta, _log):
     _log.info('Checking against meta.yaml')
