@@ -511,9 +511,8 @@ profile_variables:
 qc:
     cdom:
         value:  3
-        comment: strong temporal decrease in intensity of the signal.
+        comment: An unexplained issue with the sensor causes an apparent temporal decrease in the intensity of the CDOM signal.
     cdom_raw:
         value:  3
-        comment: strong temporal decrease in intensity of the signal.
-
+        comment: An unexplained issue with the sensor causes an apparent temporal decrease in the intensity of the CDOM signal.
 
