@@ -507,3 +507,13 @@ profile_variables:
     platform:            platform
     serial_number:       "206610"
     type:                platform
+
+qc:
+    cdom:
+        value:  3
+        comment: strong temporal decrease in intensity of the signal.
+    cdom_raw:
+        value:  3
+        comment: strong temporal decrease in intensity of the signal.
+
+
