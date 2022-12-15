@@ -580,3 +580,11 @@ profile_variables:
     platform:            platform
     serial_number:       "206610"
     type:                platform
+
+qc:
+    cdom:
+        value:  3
+        comment: An unexplained issue with the sensor causes an apparent temporal decrease in the intensity of the CDOM signal.
+    cdom_raw:
+        value:  3
+        comment: An unexplained issue with the sensor causes an apparent temporal decrease in the intensity of the CDOM signal.
