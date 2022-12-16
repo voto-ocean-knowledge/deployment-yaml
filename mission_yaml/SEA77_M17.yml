@@ -580,3 +580,11 @@ profile_variables:
     platform:            platform
     serial_number:       "2110556"
     type:                platform
+
+qc:
+    cdom:
+        value:  3
+        comment: An unexplained issue with the sensor causes an apparent temporal decrease in the intensity of the CDOM signal. In this mission, the protective copper plate over the sensor was removed and we notice and increase instead. The apparent increase in CDOM could be the result of an instrument issue or a real termporal increase in CDOM.
+    cdom_raw:
+        value:  3
+        comment: An unexplained issue with the sensor causes an apparent temporal decrease in the intensity of the CDOM signal. In this mission, the protective copper plate over the sensor was removed and we notice and increase instead. The apparent increase in CDOM could be the result of an instrument issue or a real termporal increase in CDOM.
