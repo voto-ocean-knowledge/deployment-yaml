@@ -372,39 +372,34 @@ netcdf_variables:
     instrument:    instrument_scatterometer
 
 # oxygen:
+
   oxygen_concentration:
-    source:       LEGATO_CODA_DO
+    source:       AROD_FT_DO
     long_name:    oxygen concentration
     standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
     units:        mmol m-3
     coordinates:   time depth latitude longitude
-    instrument:    instrument_optode
+    correct_oxygen: "True"
+    reference_salinity: "0"
+    instrument:    instrument_phosphorescence
     valid_min:    "0."
-    valid_max:    "500."
+    valid_max:    "425."
     observation_type: "calculated"
-    accuracy:      "5% or 8.0"
-    resolution:      "1"
+    accuracy:      "2% or 2.0"
+    resolution:      "0.01"
 
   temperature_oxygen:
-    source:  LEGATO_CODA_TEMPERATURE
+    source:  AROD_FT_TEMP
     long_name:    oxygen sensor temperature
     standard_name: temperature_of_sensor_for_oxygen_in_sea_water
     units:        Celsius
     coordinates:   time depth latitude longitude
     instrument:    instrument_thermistor
-    valid_min:    "-5."
-    valid_max:    "35."
+    valid_min:    "-3."
+    valid_max:    "45."
     observation_type: "measured"
-    accuracy:      "0.002"
-    resolution:      "0.00005"
-
-  oxygen_phase:
-    source:  LEGATO_CODA_CORR_PHASE
-    long_name:    oxygen phase
-    standard_name: oxygen_phase_in_sea_water
-    units:        degree
-    coordinates:   time depth latitude longitude
-    instrument:    instrument_optode
+    accuracy:      "0.01"
+    resolution:      "0.001"
 
 # AD2CP
   ad2cp_heading:
