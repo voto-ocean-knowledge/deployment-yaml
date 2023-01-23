@@ -553,7 +553,6 @@ profile_variables:
     platform:            platform
     serial_number:       "204958"
     type:                platform
-
 qc:
     oxygen_concentration:
         value:  4
