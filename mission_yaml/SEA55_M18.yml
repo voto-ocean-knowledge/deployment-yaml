@@ -553,3 +553,15 @@ profile_variables:
     platform:            platform
     serial_number:       "204958"
     type:                platform
+
+qc:
+    oxygen_concentration:
+        value:  4
+        comment: An issue with the sensor causes a temporal drift in the oxygen values. Restarting the sensor every surfacing seems to solve the issue. Data from 2021-03-17 onwards is good as the sensor is set to restart every surfacing.
+	start: "2021-03-05"
+	end: "2021-03-17"
+    temperature_oxygen:
+        value:  4
+        comment: An issue with the sensor causes a temporal drift in the temperature values from the oxygen sensor. Restarting the sensor every surfacing seems to solve the issue. Data from 2021-03-17 onwards is good as the sensor is set to restart every surfacing.
+	start: "2021-03-05"
+	end: "2021-03-17"
