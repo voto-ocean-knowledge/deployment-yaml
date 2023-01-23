@@ -559,10 +559,10 @@ qc:
     oxygen_concentration:
         value:  4
         comment: An issue with the sensor causes a temporal drift in the oxygen values. Restarting the sensor every surfacing seems to solve the issue. Data from 2021-05-15 onwards is bad as the sensor is not set to restart every surfacing anymore.
-	start: "2021-05-15"
-	end: "2021-05-21"
+        start: "2021-05-15"
+        end: "2021-05-21"
     temperature_oxygen:
         value:  4
         comment: An issue with the sensor causes a temporal drift in the oxygen values. Restarting the sensor every surfacing seems to solve the issue. Data from 2021-05-15 onwards is bad as the sensor is not set to restart every surfacing anymore.
-	start: "2021-05-15"
-	end: "2021-05-21"
+        start: "2021-05-15"
+        end: "2021-05-21"
