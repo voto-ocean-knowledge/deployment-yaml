@@ -553,3 +553,11 @@ profile_variables:
     platform:            platform
     serial_number:       "204958"
     type:                platform
+qc:
+    oxygen_concentration:
+        value:  4
+        comment: An issue with the sensor causes a temporal drift in the oxygen values.
+    temperature_oxygen:
+        value:  4
+        comment: An issue with the sensor causes a temporal drift in the temperature values from the oxygen sensor.
+
