@@ -576,8 +576,8 @@ profile_variables:
 
 qc:
     cdom:
-        value:  3
-        comment: An unexplained issue with the sensor causes an apparent temporal decrease in the intensity of the CDOM signal.
+        value:  2
+        comment: An unexplained issue with the sensor caused an apparent temporal decrease in the intensity of the CDOM signal. The copper plate protecting the optics sensor (FLBBCD) was removed and this issue seems to be resolved if compared to previous missions. Other sensors did not have a similar behaviour after the copper plate was removed and a temporal drift was still present. Uncertainty over the quality of the data persists, therefore data cannot be classified as good and requires further assessment.  
     cdom_raw:
-        value:  3
-        comment: An unexplained issue with the sensor causes an apparent temporal decrease in the intensity of the CDOM signal.
+        value:  2
+        comment: An unexplained issue with the sensor caused an apparent temporal decrease in the intensity of the CDOM signal. The copper plate protecting the optics sensor (FLBBCD) was removed and this issue seems to be resolved if compared to previous missions. Other sensors did not have a similar behaviour after the copper plate was removed and a temporal drift was still present. Uncertainty over the quality of the data persists, therefore data cannot be classified as good and requires further assessment.
