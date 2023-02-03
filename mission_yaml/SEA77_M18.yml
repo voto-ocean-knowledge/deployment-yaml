@@ -39,7 +39,7 @@ metadata:
   deployment_name: SAMBA
   # date format 'yyyy-mm-dd'
   deployment_start: "2023-01-10"
-  deployment_end: "2023-02-10"
+  deployment_end: "2023-02-03"
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
   summary: ' Part of SAMBA continuous monitoring'
@@ -442,7 +442,7 @@ netcdf_variables:
     long_name:       AD2CP recorded time
     standard_name:       ad2cp_recorded_time
     coordinates:  time depth latitude longitude
-    
+
   ad2cp_beam1_cell_number1:
     source:       AD2CP_V1_CN1
     long_name:    glider beam 1 measure from AD2CP in cell 1
@@ -470,7 +470,7 @@ netcdf_variables:
     standard_name: platform_beam1_measure_ad2cp_cell1
     units:        m s-1
     coordinates:  time depth latitude longitude
-    
+
 profile_variables:
 # variables for extract_L1timeseries_profiles processing step...
   profile_id:
