@@ -37,7 +37,7 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
                      'publisher_name', 'publisher_url', 'references', 'source', 'standard_name_vocabulary',
                      'transmission_system', 'glider_name', 'glider_serial', 'wmo_id', 'comment', 'contributor_name',
                      'contributor_role', 'creator_email', 'creator_name', 'creator_url', 'deployment_id',
-                     'deployment_name', 'deployment_start', 'deployment_end', 'project', 'project_url', 'summary',
+                     'deployment_name', 'project', 'project_url', 'summary',
                      'sea_name')
 
 
@@ -53,28 +53,6 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
         if meta['glider_serial'] not in yml_glider:
             _log.error(f'glider_serial {meta["glider_serial"]} does not match yaml filename {yaml_file_name}')
 
-    _log.info('Checking dates')
-    start = deployment['metadata']['deployment_start']
-    end = deployment['metadata']['deployment_end']
-    try:
-        start_time = datetime.strptime(start, "%Y-%m-%d")
-    except ValueError:
-        _log.error(f'deployment_start {start} incorrectly formatted. Should be YYYY-MM-DD')
-        failures += 1
-    try:
-        end_time = datetime.strptime(end, "%Y-%m-%d")
-    except ValueError:
-        _log.error(f'deployment_end {end} incorrectly formatted. Should be YYYY-MM-DD')
-        failures += 1
-    try:
-        deployment_duration = end_time - start_time
-        if deployment_duration < timedelta(0):
-            _log.error('deployment_end date is sooner than deployment_start date')
-            failures += 1
-        if deployment_duration > timedelta(days=365):
-            _log.warning('inferred deployment duration > 1 year, please check deployment_start and deployment_end')
-    except ValueError:
-        pass
     if check_urls:
         _log.info('Checking urls')
         for url_id in ['creator_url','project_url', 'publisher_url', 'metadata_link']:

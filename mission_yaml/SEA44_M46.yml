@@ -37,9 +37,6 @@ metadata:
   creator_url: https://observations.voiceoftheocean.org
   deployment_id: "46"
   deployment_name: SAMBA
-  # date format 'yyyy-mm-dd'
-  deployment_start: "2021-12-21"
-  deployment_end: "2022-01-15"
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
   summary: ' Part of SAMBA continuous monitoring'

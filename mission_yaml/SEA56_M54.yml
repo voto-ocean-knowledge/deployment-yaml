@@ -37,9 +37,6 @@ metadata:
   creator_url: https://observations.voiceoftheocean.org
   deployment_id: "54"
   deployment_name: NS_Bornholm
-  # date format 'yyyy-mm-dd'
-  deployment_start: "2022-11-15"
-  deployment_end: "2022-12-15"
   project: NS_Bornholm
   project_url: https://voiceoftheocean.org/
   summary: ' Part of NS_Bornholm continuous monitoring'
