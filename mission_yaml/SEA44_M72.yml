@@ -74,19 +74,12 @@ glider_devices:
     make_model: JFE Advantech AROD_FT
     factory_calibrated: "Yes"
     calibration_date: "2022-11-11"
-  irradiance:
-    make: SeaBird
-    model: OCR504
-    serial: '2044'
-    long_name: SeaBird OCR504
-    make_model: SeaBird OCR504
-    factory_calibrated: "Yes"
-    calibration_date: "2020-02-21"
+
 
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
 netcdf_variables:
-  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll', 'downwelling_PAR']
+  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll']
   timebase:
     source:       NAV_LATITUDE
   # Time and Place:
@@ -401,47 +394,6 @@ netcdf_variables:
     observation_type: "measured"
     accuracy:      "0.01"
     resolution:      "0.001"
-
-# irradiance     "PARAMETER_UNITS"       : ["W/m^2/nm", "W/m^2/nm", "W/m^2/nm", "μE/m^2/s"],
-  down_irradiance_380:
-    source:  OCR504_Ed1
-    long_name:    Downwelling irradiance value of the 380 nm wavelength
-    standard_name: 380nm_downwelling_irradiance
-    units:        W m-2 nm-1
-    average_method: "geometric mean"
-    coordinates:   time depth latitude longitude
-    instrument:    instrument_radiometer
-    observation_type: "measured"
-
-  down_irradiance_490:
-    source:  OCR504_Ed2
-    long_name:    Downwelling irradiance value of the 490 nm wavelength
-    standard_name: 490nm_downwelling_irradiance
-    units:        W m-2 nm-1
-    average_method: "geometric mean"
-    coordinates:   time depth latitude longitude
-    instrument:    instrument_radiometer
-    observation_type: "measured"
-
-  down_irradiance_532:
-    source:  OCR504_Ed3
-    long_name:    Downwelling irradiance value of the 532 nm wavelength
-    standard_name: 532nm_downwelling_irradiance
-    units:       W m-2 nm-1
-    average_method: "geometric mean"
-    coordinates:   time depth latitude longitude
-    instrument:    instrument_radiometer
-    observation_type: "measured"
-
-  downwelling_PAR:
-    source:  OCR504_Ed4
-    long_name:    Downwelling PAR (Photosynthetically Active Radiation) in range 400-700 nm
-    standard_name: downwelling_PAR
-    units:        μE m-2 s-1
-    average_method: "geometric mean"
-    coordinates:   time depth latitude longitude
-    instrument:    instrument_radiometer
-    observation_type: "measured"
 
 
 profile_variables:
