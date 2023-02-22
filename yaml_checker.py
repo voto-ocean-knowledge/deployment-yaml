@@ -130,7 +130,7 @@ def check_against_meta(deployment_meta, _log):
                      'glider_instrument_name', 'keywords', 'keywords_vocabulary', 'metadata_link',
                      'Metadata_Conventions', 'naming_authority', 'platform', 'processing_level', 'publisher_email',
                      'publisher_name', 'publisher_url', 'references', 'source', 'standard_name_vocabulary',
-                     'transmission_system', 'sea_name')
+                     'transmission_system')
     for key in constant_vals:
         if deployment_meta[key] != meta[key]:
             _log.error(f'{key}: {deployment_meta[key]} does not match value {meta[key]} in meta.yaml')
