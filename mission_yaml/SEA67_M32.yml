@@ -30,8 +30,8 @@ metadata:
   glider_serial: "67"
   wmo_id: "6801507"
   comment: 'deployment and recovery in Gotland'
-  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur, Marcus Melin
-  contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider Technician
+  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur, Marcus Melin, Gunnar Johnsson, Chiara Monforte
+  contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider Technician, Glider Technician, Glider Pilot
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
