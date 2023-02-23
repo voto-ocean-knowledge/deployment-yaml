@@ -29,7 +29,7 @@ metadata:
   glider_name: King Tubby
   glider_serial: "57"
   wmo_id: "62801950"
-  comment: 'Missing info for MR1000G'
+  comment: 'Missing info for MR1000G. Calibration date unknown'
   contributor_name: Callum Rollo, Bastien Queste, Estel Font
   contributor_role: Data Processor, PI, Glider Technician
   creator_email: callum.rollo@voiceoftheocean.org
@@ -82,12 +82,12 @@ glider_devices:
     long_name: Rockland Scientific Microrider-1000G 
     make_model: Rockland Scientific MR1000G-RDL
     factory_calibrated: "Yes"
-    calibration_date: "YYYY-MM-DD"
+    calibration_date: "2020-06-10"
 
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
 netcdf_variables:
-  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll', 'ad2cp_heading']
+  keep_variables: ['temperature', 'oxygen_concentration', 'chlorophyll', 'ad2cp_heading', 'tke_dissipation_shear_1']
   timebase:
     source:       NAV_LATITUDE
 # Time and Place:
@@ -465,7 +465,20 @@ netcdf_variables:
     standard_name: platform_beam1_measure_ad2cp_cell1
     units:        m s-1
     coordinates:  time depth latitude longitude
+# microstructure
+  tke_dissipation_shear_1:
+    source:       MR1000G-RDL_EPS1
+    long_name:    Turbulent kinetic energy dissipation shear 1 
+    standard_name: turbulent_kinetic_energy_dissipation_shear_1
+    units:        W kg-1
+    coordinates:  time depth latitude longitude
 
+  tke_dissipation_shear_2:
+    source:       MR1000G-RDL_EPS2
+    long_name:    Turbulent kinetic energy dissipation shear 2 
+    standard_name: turbulent_kinetic_energy_dissipation_shear_2
+    units:        W kg-1
+    coordinates:  time depth latitude longitude
 
 profile_variables:
 # variables for extract_L1timeseries_profiles processing step...
