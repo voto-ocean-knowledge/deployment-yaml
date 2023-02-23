@@ -82,7 +82,7 @@ glider_devices:
     long_name: Rockland Scientific Microrider-1000G 
     make_model: Rockland Scientific MR1000G-RDL
     factory_calibrated: "Yes"
-    calibration_date: "Nan"
+    calibration_date: "YYYY-MM-DD"
 
 # map between glider variables and netcdf variables.  This shouldn't
 # change too much.
