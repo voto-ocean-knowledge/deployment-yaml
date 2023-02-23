@@ -30,8 +30,8 @@ metadata:
   wmo_id: "8901002"
   sea_name: "South Atlantic"
   comment: 'Calibration date for OCR504 uncertain'
-  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur, Marcus Melin
-  contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider Technician
+  contributor_name: Callum Rollo, Bastien Queste, Estel Font
+  contributor_role: Data Processor, PI, glider techinician
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
@@ -615,13 +615,15 @@ profile_variables:
     observation_type: calculated
 
   instrument_ctd:
-    comment:    Seabird SlocumCTD
-    calibration_date:    "2022-05-01"
-    factory_calibrated:  "yes"
-    long_name:           Seabird SlocumCTD
-    make_model:          Seabird SlocumCTD
+    comment:    RBR legato
     platform:            platform
-    serial_number:       "CTD0271"
     type:                platform
+    make: RBR
+    model: legato
+    serial: '206611'
+    long_name: RBR legato CTD
+    make_model:  RBR legato CTD
+    factory_calibrated: "Yes"
+    calibration_date: "2021-03-17"
 
 
