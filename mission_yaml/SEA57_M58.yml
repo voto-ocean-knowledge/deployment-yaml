@@ -54,8 +54,8 @@ glider_devices:
     make: Wetlabs
     model: FLBBPE
     serial: '6480'
-    long_name: Wetlabs ECO Puck FLBBPC
-    make_model: Wetlabs FLBBPC
+    long_name: Wetlabs ECO Puck FLBBPE
+    make_model: Wetlabs FLBBPE
     factory_calibrated: "Yes"
     calibration_date: "2020-08-21"
     calibration_parameters: {Chl_DarkCounts: 44, Chl_SF: 0.0073, PE_DarkCounts: 47, PE_SF: 0.0424, SIG_DarkCounts: 43, SIG_SF: 1.85E-06}
