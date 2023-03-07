@@ -70,7 +70,7 @@ glider_devices:
     factory_calibrated: "Yes"
     calibration_date: "2021-05-20"
     calibration_parameters: { PC_DarkCounts: 0.07903, PC_SF: 702.1}
- oxygen:
+  oxygen:
     make: RBR
     model: coda
     serial: '206116'
