@@ -256,14 +256,6 @@ netcdf_variables:
     units:        V
     coordinates:  time depth latitude longitude
 
-  altimeter:
-    source:       Altitude
-    long_name:    glider altimeter reading
-    standard_name: glider_altimeter_reading
-    units:        m
-    coordinates:  time depth latitude longitude
-
-
 # pld data params
 
 
