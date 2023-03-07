@@ -60,6 +60,15 @@ glider_devices:
     factory_calibrated: "Yes"
     calibration_date: "2021-03-23"
     calibration_parameters: {Chl_DarkCounts: 47, Chl_SF: 0.0073, PC_DarkCounts: 42, PC_SF: 0.0424, SIG_DarkCounts: 46, SIG_SF: 1.789E-06}
+  optics_nanoflu:
+    make: TriOS
+    model: Nanoflu
+    serial: 'D54D'
+    long_name:  TriOS NANOFLU
+    make_model:  TriOS NANOFLU
+    factory_calibrated: "Yes"
+    calibration_date: "2021-05-20"
+    calibration_parameters: { PC_DarkCounts: 0.07903, PC_SF: 702.1}
   oxygen:
     make: RBR
     model: coda
@@ -366,6 +375,27 @@ netcdf_variables:
     units:        counts
     coordinates:  time depth latitude longitude
     instrument:    instrument_scatterometer
+
+#optics_nanoflu: 
+  phycocyanin_nanoflu:
+    source:       NANOFLU_CONCENTRATION
+    long_name:    phycocyanin
+    standard_name: concentration_of_phycocyanin_in_sea_water
+    units:        µg L-1
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_flourometer
+    valid_min:    "Nan"
+    valid_max:    "Nan"
+    observation_type: "calculated"
+    sensitivity:      "Nan"
+
+  nanoflu_temperature:
+    source:       NANOFLU_TEMPERATURE 
+    long_name:    phycocyanin sensor internal temperature
+    standard_name: internal_temperature_of_sensor_for_phycocianin_in_sea_water
+    units:        Celsius
+    coordinates:  time depth latitude longitude
+    instrument:    instrument_thermistor
 
 # oxygen:
   oxygen_concentration:
