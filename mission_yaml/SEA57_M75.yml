@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: King Tubby
   glider_serial: "57"
-  wmo_id: "62801950"
+  wmo_id: "2801950"
   comment: 'Missing info for MR1000G. Calibration date unknown'
   contributor_name: Callum Rollo, Bastien Queste, Estel Font
   contributor_role: Data Processor, PI, Glider Technician
