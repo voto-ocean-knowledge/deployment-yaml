@@ -509,3 +509,10 @@ profile_variables:
     platform:            platform
     serial_number:       "204958"
     type:                platform
+
+qc:
+    oxygen_concentration:
+        value:  3
+        comment: An unexplained issue with the sensor causes an apparent temporal increase in the dissolved oxygen concentration. Furthermore, the DO values are noticeably lower than those registred by the reference CTD cast.
+
+
