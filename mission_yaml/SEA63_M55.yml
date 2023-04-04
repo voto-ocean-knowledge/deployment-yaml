@@ -580,3 +580,10 @@ profile_variables:
     platform:            platform
     serial_number:       "207476"
     type:                platform
+
+qc:
+    oxygen_concentration:
+        value:  3
+        comment: An unexplained issue with the sensor causes an apparent temporal increase in the dissolved oxygen concentration. Furthermore, the DO values are different than those registered by the reference CTD cast. In this particular mission, the temporal increase is not as noticeable as other mission with a AROD-FT sensor. It is suspicious that oxygen values close to the seabed are not close to 0 as expected.
+
+
