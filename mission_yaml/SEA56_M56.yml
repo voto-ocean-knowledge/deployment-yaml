@@ -268,7 +268,21 @@ netcdf_variables:
     units:        m
     coordinates:  time depth latitude longitude
 
-# pld data parameters
+  dead_reckoning:
+    source:       DeadReckoning
+    long_name:    dead reckoning
+    standard_name: dead_reckoning
+    units:        None
+    coordinates:  time depth latitude longitude
+
+  nav_resource:
+    source:       NAV_RESOURCE
+    long_name:    nav resource
+    standard_name: nav_resource
+    units:        None
+    coordinates:  time depth latitude longitude
+
+# pld data params
 
 
   conductivity:
