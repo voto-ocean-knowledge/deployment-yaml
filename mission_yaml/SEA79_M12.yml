@@ -36,10 +36,10 @@ metadata:
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
   deployment_id: "12"
-  deployment_name: SWOT
-  project: SWOT
-  project_url: https://voiceoftheocean.org/
-  summary: ' Part of SWOT project'
+  deployment_name: SAMBA
+  project: SAMBA
+  project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
+  summary: ' Part of SAMBA continuous monitoring'
 
 
 glider_devices:
