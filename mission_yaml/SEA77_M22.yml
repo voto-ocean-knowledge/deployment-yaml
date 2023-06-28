@@ -606,10 +606,10 @@ profile_variables:
 qc:
     cdom:
         value:  3
-        comment: An unexplained issue with the sensor causes an apparent temporal decrease in the intensity of the CDOM signal. In this mission, the protective copper plate over the sensor was removed and we notice and increase instead. The apparent increase in CDOM could be the result of an instrument issue or a real termporal increase in CDOM.
+        comment: Previous deployments with this sensor showed a temporal decrease in CDOM. The copper plate protecting the optics sensor was removed and this issue appears  to be resolved in this mission. The issue with the sensor has not yet been identified, further controls are recommended.More information on the history and updates regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
     cdom_raw:
         value:  3
-        comment: An unexplained issue with the sensor causes an apparent temporal decrease in the intensity of the CDOM signal. In this mission, the protective copper plate over the sensor was removed and we notice and increase instead. The apparent increase in CDOM could be the result of an instrument issue or a real termporal increase in CDOM.
+        comment: Previous deployments with this sensor showed a temporal decrease in CDOM. The copper plate protecting the optics sensor was removed and this issue appears  to be resolved in this mission. The issue with the sensor has not yet been identified, further controls are recommended. More information on the history and updates regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
     oxygen_concentration:
         value:  4
         comment: The absolute values of the oxygen data can be unreliable. The relative variability is confirmed to be valid and no temporal drift exist has been observed. Absolute values may be inaccurate and lower than reference data. Re-calibration of the sensor is required. More information on the history and updates regarding this issue ( https://observations.voiceoftheocean.org/data/updates). 

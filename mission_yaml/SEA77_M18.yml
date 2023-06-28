@@ -602,8 +602,8 @@ profile_variables:
 
 qc:
     cdom:
-        value:  3
-        comment: An unexplained issue with the sensor causes an apparent temporal decrease in the intensity of the CDOM signal. In this mission, the protective copper plate over the sensor was removed and we notice and increase instead. The apparent increase in CDOM could be the result of an instrument issue or a real termporal increase in CDOM.
+        value:  4
+        comment: Apparent temporal increase in the intensity of the CDOM signal. Cause unknown. In this mission, the protective copper plate over the CDOM sensor was removed. More information on the history and updates regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
     cdom_raw:
-        value:  3
-        comment: An unexplained issue with the sensor causes an apparent temporal decrease in the intensity of the CDOM signal. In this mission, the protective copper plate over the sensor was removed and we notice and increase instead. The apparent increase in CDOM could be the result of an instrument issue or a real termporal increase in CDOM.
+        value:  4
+        comment: Apparent temporal increase in the intensity of the CDOM signal. Cause unknown. In this mission, the protective copper plate over the CDOM sensor was removed. More information on the history and updates regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
