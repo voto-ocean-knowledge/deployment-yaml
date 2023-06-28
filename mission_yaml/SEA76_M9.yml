@@ -661,8 +661,8 @@ profile_variables:
 
 qc:
     cdom:
-        value:  3
-        comment: An unexplained issue with the sensor causes an apparent temporal decrease in the intensity of the CDOM signal.
+        value:  4
+        comment: Apparent temporal decrease in the intensity of the CDOM signal. Cause unknown. More information on the history and updates regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
     cdom_raw:
-        value:  3
-        comment: An unexplained issue with the sensor causes an apparent temporal decrease in the intensity of the CDOM signal.
+        value:  4
+        comment: Apparent temporal decrease in the intensity of the CDOM signal. Cause unknown. More information on the history and updates regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
