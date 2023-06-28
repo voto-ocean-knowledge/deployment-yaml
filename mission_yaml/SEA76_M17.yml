@@ -600,3 +600,6 @@ qc:
     cdom_raw:
         value:  2
         comment: An unexplained issue with the sensor caused an apparent temporal decrease in the intensity of the CDOM signal. The copper plate protecting the optics sensor (FLBBCD) was removed and this issue seems to be resolved if compared to previous missions. Other sensors did not have a similar behaviour after the copper plate was removed and a temporal drift was still present. Uncertainty over the quality of the data persists, therefore data cannot be classified as good and requires further assessment.
+    oxygen_concentration:
+        value:  4
+        comment: Following issues with the oxygen sensor, a 2-point calibration has been performed on date {2023-06-15}. The values at 0 and 100 % saturation are accurate. Absolute Values between these two extremes may be inaccurate. The relative variability is confirmed to be valid and no temporal drift occurs. During tests values that can be outside the manufacturer acceptance range have been observed when compared to the output from a reference sensor. This issue is particularly evident around 100μmol/l. More information on the history and updates regarding this issue (https://observations.voiceoftheocean.org/data/updates). 

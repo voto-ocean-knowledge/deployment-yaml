@@ -659,6 +659,5 @@ profile_variables:
 
 qc:
     oxygen_concentration:
-        value:  3
-        comment: An unexplained issue with the sensor causes an apparent temporal increase in the dissolved oxygen concentration. Furthermore, the DO values are noticeably lower than those registered by the reference CTD cast.
-
+        value:  4
+        comment: Following issues with the oxygen sensor, a 2-point calibration has been performed on date {2023-05-25}. The values at 0 and 100 % saturation are accurate. Absolute Values between these two extremes may be inaccurate. The relative variability is confirmed to be valid and no temporal drift occurs. During tests values that can be outside the manufacturer acceptance range have been observed when compared to the output from a reference sensor. This issue is particularly evident around 100μmol/l. More information on the history and updates regarding this issue (https://observations.voiceoftheocean.org/data/updates). 
