@@ -527,8 +527,7 @@ profile_variables:
 
 qc:
     oxygen_concentration:
-        value:  3
-        comment: An unexplained issue with the sensor causes an apparent temporal increase in the dissolved oxygen concentration. Furthermore, the DO values are noticeably lower than those registered by the reference CTD cast.
-
+        value:  4
+        comment: The absolute values of the oxygen data can be unreliable. The relative variability is confirmed to be valid and no temporal drift exist has been observed. Absolute values may be inaccurate and lower than reference data. Re-calibration of the sensor is required. More information on the history and updates regarding this issue ( https://observations.voiceoftheocean.org/data/updates). 
 
 

@@ -615,7 +615,5 @@ profile_variables:
 
 qc:
     oxygen_concentration:
-        value:  3
-        comment: An unexplained issue with the sensor causes an apparent temporal increase in the dissolved oxygen concentration. Furthermore, the DO values are noticeably lower than those registered by the reference CTD cast.
-
-
+        value:  4
+        comment: Deterioration of the foil has caused uncorrectable errors in the dissolved oxygen concentration. Values are observed to be substantially lower than the reference CTD cast at deployment.  There is an apparent non-linear temporal increase in dissolved oxygen concentration throughout the mission. More information on the history and updates regarding this issue ( https://observations.voiceoftheocean.org/data/updates). Deterioration of the foil has caused uncorrectable errors in the dissolved oxygen concentration. Values are observed to be substantially lower than the reference CTD cast at deployment.  There is an apparent non-linear temporal increase in dissolved oxygen concentration throughout the mission. More information on the history and updates regarding this issue ( https://observations.voiceoftheocean.org/data/updates). 
