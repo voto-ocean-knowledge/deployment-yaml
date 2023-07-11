@@ -607,3 +607,6 @@ qc:
     cdom_raw:
         value:  4
         comment: Apparent temporal decrease in the intensity of the CDOM signal. Cause unknown. More information on the history and updates regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
+    oxygen_concentration:
+        value:  4
+        comment: Deterioration of the foil has caused errors in the dissolved oxygen concentration. Values are observed to be substantially higher than the reference CTD cast at deployment. There is an apparent temporal increase in dissolved oxygen concentration throughout the mission. More information on the history and updates regarding this issue (https://observations.voiceoftheocean.org/data/updates).

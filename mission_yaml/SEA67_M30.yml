@@ -597,3 +597,8 @@ profile_variables:
     platform:            platform
     serial_number:       "206611"
     type:                platform
+
+qc:
+    oxygen_concentration:
+        value:  4
+        comment: Dissolved oxygen concentration values are inaccurate. Deterioration of the foil has caused errors and temporal drift in other missions with this sensor during this timeframe. We do not observe a temporal drift in this particular mission, but the sensor does observe the expected 0 μmol L<sup>-1</sup> oxygen concentration in anoxic waters. More information on the history and updates regarding this issue (https://observations.voiceoftheocean.org/data/updates).
