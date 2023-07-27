@@ -421,7 +421,6 @@ netcdf_variables:
     instrument:    instrument_thermistor
 
 # optics_secondary:
-# FLBBCD sensor is top mounted thus data quality could be poor
   chlorophyll_secondary:
     source:       FLBBCD_CHL_SCALED
     long_name:    chlorophyll
