@@ -43,6 +43,10 @@ metadata:
 
 
 glider_devices:
+  altimeter:
+    make: UNKNOWN
+    model: UNKNOWN
+    serial: '52'
   ctd:
     make: RBR
     model: legato
