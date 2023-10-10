@@ -43,7 +43,7 @@ metadata:
 
 
 glider_devices:
- altimeter:
+  altimeter:
     make: UNKNOWN
     model: UNKNOWN
     serial: '52'
