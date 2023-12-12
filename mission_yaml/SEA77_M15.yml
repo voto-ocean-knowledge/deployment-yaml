@@ -27,9 +27,8 @@ metadata:
   sea_name: Baltic
   transmission_system: IRIDIUM
   glider_name: Smilla
-  glider_serial: "77"
-  wmo_id: "6801666"
-  comment: 'deployment and recovery in Bornholm'
+  wmo_id: "8901050"
+  comment: 'As of 2023-12-12, the WMO id of this platform changed from 6801666 to 8901050'
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur, Marcus Melin, Gunnar Johnsson, Chiara Monforte
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider Technician, Glider Technician, Glider Pilot
   creator_email: callum.rollo@voiceoftheocean.org
