@@ -594,7 +594,6 @@ profile_variables:
     type:                platform
 
 qc:
-    qc:
     cdom:
         value:  4
         comment: High values of CDOM raw counts. The cause of the issue is still unknown. The relative variability may be intact but absolute values are unreliable.
