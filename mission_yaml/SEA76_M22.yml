@@ -594,9 +594,10 @@ profile_variables:
     type:                platform
 
 qc:
+    qc:
     cdom:
-        value:  3
-        comment: Previous deployments with this sensor showed a temporal decrease in CDOM. The copper plate protecting the optics sensor was removed and this issue appears  to be resolved in this mission. The issue with the sensor has not yet been identified, further controls are recommended.More information on the history and updates regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
+        value:  4
+        comment: High values of CDOM raw counts. The cause of the issue is still unknown. The relative variability may be intact but absolute values are unreliable.
     cdom_raw:
-        value:  3
-        comment: Previous deployments with this sensor showed a temporal decrease in CDOM. The copper plate protecting the optics sensor was removed and this issue appears  to be resolved in this mission. The issue with the sensor has not yet been identified, further controls are recommended. More information on the history and updates regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
+        value:  4
+        comment: High values of CDOM raw counts. The cause of the issue is still unknown. The relative variability may be intact but absolute values are unreliable.
