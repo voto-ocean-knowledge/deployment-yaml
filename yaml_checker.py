@@ -25,7 +25,7 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
         deployment = yaml.safe_load(fin)
     _log.info('read yaml successfully')
     _log.info('Checking top level items')
-    for item in ['metadata', 'glider_devices', 'netcdf_variables', 'profile_variables']:
+    for item in ['metadata', 'glider_devices', 'netcdf_variables']:
         if item not in deployment.keys():
             _log.error(f'{item} not found')
             failures += 1
