@@ -1,0 +1,457 @@
+Glider,Mission,Location,Project,Start,Comments
+SEA069,M25,"Skagerrak, Kattegat",SAMBA,2024-02-08,
+SEA076,M24,Åland Sea,SAMBA,2024-02-07,
+SEA056,M71,Western Gotland Basin,SAMBA,2024-02-06,
+SEA078,M22,"Eastern Gotland Basin, Northern Baltic Proper",SAMBA,2024-02-06,
+SEA068,M30,Bornholm Basin,SAMBA,2024-01-30,
+SEA044,M88,"Skagerrak, Kattegat",SAMBA,2024-01-18,"Altitude set to 2m for the entire mission duration
+Zt/zs set to 2m but very often increased to 15-20-25m as the glider struggled with strong surface currents
+Glider hit the seabed a few times"
+SEA067,M53,Bornholm Basin,SAMBA,2024-01-09,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration
+Glider hit the seabed a few times"
+SEA077,M29,Åland Sea,SAMBA,2024-01-08,"Altitude set to 2m for the entire mission duration and occasionally increased as the glider struggled detecting the seabed
+Zt/zs set to 2m for most of the mission
+Glider hit the seabed at C102 and 512"
+SEA076,M22,Western Gotland Basin,SAMBA,2024-01-07,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration
+Glider hit the seabed at C102 and 512"
+SEA079,M18,"Eastern Gotland Basin, Northern Baltic Proper",SAMBA,2024-01-07,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration
+Glider hit the seabed at C191"
+SEA069,M23,"Skagerrak, Kattegat",SAMBA,2023-12-27,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for most of the mission but occasionally increased to 15m and 8m when the glider struggled with strong currents"
+SEA063,M69,Bornholm Basin,SAMBA,2023-12-15,"Altitude set to 2m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+The glider was put on drift mode for the last part of the mission with payload switched off, causing gaps in the dataset. The glider collected data at least once a day in between drifting dives. "
+SEA056,M68,Åland Sea,SAMBA,2023-12-14,"Altitude set to 2m for the entire mission duration apart from occasional higher values in the deep section of the transect
+Zt/zs set to 2m for the entire mission duration
+Glider hit the seabed multiple dives as the ADCP failed to detect the seabed. The bottom depth (zb) was reduced occasionally to prevent the glider from hitting the seabed"
+SEA077,M28,"Eastern Gotland Basin, Northern Baltic Proper",SAMBA,2023-12-06,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA078,M19,Western Gotland Basin,SAMBA,2023-12-06,"Altitude set to 2m for the entire mission duration apart from occasional higher values in the deep section of the transect
+Zt/zs set to 2m for the entire mission duration"
+SEA069,M22,"Skagerrak, Kattegat",SAMBA,2023-12-02,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for most of the mission but occasionally increased to 25m when the glider struggled with strong currents
+The glider was drifting south with the currents therefore it was manually moved north on a vessel. This is why there is a drastic change in postion happening on 12-12-2023"
+SEA067,M51,Bornholm Basin,SAMBA,2023-11-29,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration
+Tested different pitch values were tested during this mission and fix ballast was used too. Therefore, some profiles might look very fast and steep"
+SEA066,M52,Western Gotland Basin,SAMBA,2023-11-18,"Altitude set to 2m for the entire mission duration apart from occasional higher values in the deep section of the transect
+Zt/zs set to 2m for the entire mission duration"
+SEA069,M21,"Skagerrak, Kattegat",SAMBA,2023-11-17,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for most of the mission but occasionally increased to 20 and 25m when the glider struggled with strong currents"
+SEA076,M21,Åland Sea,SAMBA,2023-11-17,"Altitude set to 2m for the entire mission duration apart from occasional higher values in the deep section of the transect
+Zt/zs set to 2m for the entire mission duration
+Glider hit the seabed multiple dives as the ADCP failed to detect the seabed. The bottom depth (zb) was reduced occasionally to prevent the glider from hitting the seabed"
+SEA063,M67,Bornholm Basin,SAMBA,2023-11-13,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration
+Tested different pitch values were tested during this mission and fix ballast was used too. Therefore, some profiles might look very fast and steep"
+SEA079,M16,"Eastern Gotland Basin, Northern Baltic Proper",SAMBA,2023-11-11,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA069,M19,"Skagerrak, Kattegat",SAMBA,2023-10-23,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for most of the mission but occasionally increased to 10 and 20m when the glider struggled with strong currents"
+SEA056,M66,Bornholm Basin,SAMBA,2023-10-18,"Altitude set to 2m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+Pitch tests were performed during this mission. Therefore some dives have steeper pitch than usual
+The glider was put on drift mode for the last part of the mission with payload switched off causing gaps in the dataset. The glider collected data at least once a day in between drifting dives"
+SEA069,M17,Kattegat,SAMBA,2023-10-10,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration
+Glider was recovered short after deployment as the optical sensor stopped working a water leak was suspected"
+SEA077,M25,"Eastern Gotland Basin, Northern Baltic Proper",SAMBA,2023-10-05,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration
+The glider was put on drift mode towards the end of the mission with payload switched off causing gaps in the dataset. The glider collected data at least once a day in between drifting dives"
+SEA078,M15,"Western Gotland Basin, Eastern Gotland Basin",SAMBA,2023-10-05,"Altitude set to 2m for the entire mission duration apart from occasional higher values in the deep section of the transect
+Zt/zs set to 2m for the entire mission duration"
+SEA063,M65,Bornholm Basin,SAMBA,2023-09-27,"Altitude set to 2m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA044,M86,"Skagerrak, Kattegat",SAMBA,2023-09-14,"Altitude set to 2m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+The glider drifted at surface for about 8h  while waiting for emergency recovery as there was a leak in the external ballast bladder."
+SEA056,M64,Bornholm Basin,SAMBA,2023-09-06,"Altitude set to 2m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA076,M19,Western Gotland Basin,SAMBA,2023-09-06,"Altitude set to 2m for the entire mission duration apart from occasional higher values in the deep section of the transect
+Zt/zs set to 2m for the entire mission duration
+The optical sensor (FLBBCD) stopped recording data at C85
+The ADCP stopped recording data at C146 and glider hit the seabed
+Glider recover right after the issues with the ADCP. After recovery, water was found in the payload bay which caused the issues with the FLBBCD and ADCP"
+SEA079,M14,"Eastern Gotland Basin, Northern Baltic Proper",SAMBA,2023-09-06,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA044,M85,"Skagerrak, Kattegat",SAMBA,2023-08-23,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for most of the mission but occasionally increased to 20m when the glider struggled with strong currents"
+SEA063,M63,Bornholm Basin,SAMBA,2023-08-11,"Altitude set to 2m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+The glider was put on drift mode for the last part of the mission with payload switched off causing gaps in the dataset. The glider collected data at least once a day in between drifting dives. "
+SEA044,M84,"Skagerrak, Kattegat",SAMBA,2023-08-04,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for most of the mission but occasionally increased to 25-45m when the glider struggled with strong currents"
+SEA077,M24,"Eastern Gotland Basin, Northern Baltic Proper",SAMBA,2023-07-28,"Altitude set to 2m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+The glider was put on drift mode for the last week of the mission with payload switched off causing gaps in the dataset. The glider collected data at least once a day in between drifting dives. "
+SEA078,M14,Western Gotland Basin,SAMBA,2023-07-28,"Altitude set to 2m for the entire mission duration apart from occasional higher values in the deep section of the transect
+Zt/zs set to 2m for the entire mission duration
+The glider was put on drift mode towards the end of the mission with payload switched off causing gaps in the dataset. The glider collected data at least once a day in between drifting dives. "
+SEA067,M46,Bornholm Basin,SAMBA,2023-07-26,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA069,M15,Bornholm Basin,SAMBA,2023-07-26,"Altitude set to 2m for the entire mission duration apart from occasional higher values in the deep section of the transect
+Zt/zs set to 2m for the entire mission duration
+This glider was aquipped with two optical sensors (see metadata for more info. During the mission, tests with the optical sensors were performed so there may be gaps in the dataset"
+SEA044,M83,"Skagerrak, Kattegat",SAMBA,2023-07-10,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for most of the mission but occasionally increased to 20-25m when the glider struggled with strong currents"
+SEA063,M62,Bornholm Basin,SAMBA,2023-07-08,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA076,M17,Western Gotland Basin,SAMBA,2023-06-20,"Altitude set to 2m for the entire mission duration apart from occasional higher values in the deep section of the transect
+Zt/zs set to 2m for the entire mission duration"
+SEA079,M12,"Eastern Gotland Basin, Northern Baltic Proper",SAMBA,2023-06-20,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA067,M44,Bornholm Basin,SAMBA,2023-06-18,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA044,M81,"Skagerrak, Kattegat",SAMBA,2023-06-16,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for most of the mission but occasionally increased to 20-30-45m when the glider struggled with strong currents"
+SEA044,M79,"Skagerrak, Kattegat",SAMBA,2023-05-31,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for most of the mission but occasionally increased to 10m when the glider struggled with strong currents
+Glider hit the seabed at C236"
+SEA045,M79,Bornholm Basin,SAMBA,2023-05-30,"Altitude set to 2m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA077,M22,"Eastern Gotland Basin, Northern Baltic Proper",SAMBA,2023-05-16,"Altitude set to 2m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA078,M12,Eastern Gotland Basin,SWOT,2023-05-16,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration
+Glider hit the seabed at C291 as the ADCP failed to detect the seabed
+The glider was moved far north from the original transect for recovery"
+SEA056,M62,Bornholm Basin,ROMBI,2023-05-09,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA067,M42,Bornholm Basin,SAMBA,2023-05-09,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration
+Towards the end of the mission, the irradiance sensor was switched OFF during the night to save battery"
+SEA044,M78,"Skagerrak, Kattegat",SAMBA,2023-05-04,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for most of the mission but occasionally increased to 15-20m when the glider struggled with strong currents
+During the very last part of the mission, the sensors were set to collect data every 3 dives in order to save battery. This is why there are small gaps in the dataset"
+SEA063,M60,Bornholm Basin,SAMBA,2023-04-22,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration
+Emergency recovery due to a broken linear actuator. The glider spent about 20h at surface while waiting for recovery. During most of this time, the payload was swithced off and no data was collected"
+SEA044,M77,"Skagerrak, Kattegat",SAMBA,2023-04-14,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for most of the mission but occasionally increased to 10-15-20m when the glider struggled with strong currents"
+SEA076,M16,"Eastern Gotland Basin, Northern Baltic Proper",SAMBA,2023-04-11,"Altitude set to 2m for the entire mission duration apart from occasional higher values in the deep section of the transect
+Zt/zs set to 2m for the entire mission duration"
+SEA079,M11,Eastern Gotland Basin,SWOT,2023-04-11,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA067,M41,Bornholm Basin,SAMBA,2023-04-04,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA044,M75,"Skagerrak, Kattegat",SAMBA,2023-03-18,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for most of the mission but occasionally increased to  20m when the glider struggled with strong currents
+The oxygen sensor (JFE AROD-FT) stopped recording data at C541"
+SEA045,M75,Bornholm Basin,SAMBA,2023-03-16,"Altitude set to 2m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA077,M21,Eastern Gotland Basin,SAMBA,2023-03-16,"Altitude set to 2m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA078,M11,"Northern Baltic Proper, Eastern Gotland Basin",CABLE,2023-03-16,"Altitude set to 2m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA063,M55,Bornholm Basin,SAMBA,2023-03-01,"Altitude set to 2m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+Due to iridium communication issues, the glider spend about 17h at surface drifting and after that the glider was recovered"
+SEA055,M56,"Skagerrak, Kattegat",SAMBA,2023-02-27,"Altitude set to 2m for most of the mission and occasionally increased to 3 and 5m
+Zt/zs set to 2m for the entire mission duration and briefly increased to 20m towards the end of the mission"
+SEA079,M9,"Northern Baltic Proper, Eastern Gotland Basin",CABLE,2023-02-14,"Altitude set to 2m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA044,M72,"Skagerrak, Kattegat",SAMBA,2023-02-06,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+The acquisition settings for the oxygen sensor (JFE AROD-FT) were changed towards the end of the mission. Instead of fast sampling all the time, while at surface, the sensor was set to sample  every 30s"
+SEA045,M74,Bornholm Basin,SAMBA,2023-02-03,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+The acquisition settings for the oxygen sensor (JFE AROD-FT) were changed towards the end of the mission. Instead of fast sampling all the time, while at surface, the sensor was set to sample  every 30s
+Glider was set to drift for the last part of the mission with payload switched off. No science data is available for that period"
+SEA055,M54,"Skagerrak, Kattegat",SAMBA,2023-01-20,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration apart from few dives at the end with zt=35
+Glider did a couple of short dives to 50m for some tests"
+SEA076,M13,"Northern Baltic Proper, Eastern Gotland Basin",CABLE,2023-01-13,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+Glider hit the seabed at C781"
+SEA077,M18,Bornholm Basin,SAMBA,2023-01-10,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA055,M53,"Skagerrak, Kattegat",SAMBA,2022-12-21,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+Glider hit the seabed at C408"
+SEA056,M57,Bornholm Basin,NS_Bornholm,2022-12-17,"Max diving depth set to 57m to avoid sampling in anoxic waters as it damages the methane sensor
+Zt/zs set to 2m for the entire mission duration and altitude set to 5m but the glider was flying well above the seabed due to the shallow max diving depth (zb)
+The optical sensor (FLNTU) was set to record data on downcast and inflecting points only and at C17 those settings were changed such that the sensor collects data only on downcast "
+SEA045,M73,Bornholm Basin,SAMBA,2022-12-16,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA067,M39,"Northern Baltic Proper, Eastern Gotland Basin",CABLE,2022-12-16,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA056,M56,Bornholm Basin,NS_Bornholm,2022-12-09,"Max diving depth set to 57m to avoid sampling in anoxic waters as it damages the methane sensor
+Zt/zs set to 2m for the entire mission duration and altitude set to 5m but the glider was flying well above the seabed due to the shallow max diving depth (zb)
+Methane sensor equilibration tests were performed so the glider was set to drift for 1h every 10m from surface to bottom depth"
+SEA077,M17,Bornholm Basin,SAMBA,2022-12-08,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA055,M52,"Skagerrak, Kattegat",SAMBA,2022-12-01,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the most of the mission and occasionally increased to 15m when the glider struggled with currents
+At C727 the sampling frequency of the oxygen sensor (JFE AROD-FT) was increased from 30s to 1s for the data collected in the top 2m of the water column"
+SEA066,M45,Northern Baltic Proper,CABLE,2022-11-27,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+Glider had a major water leak so it was recover short after deployment"
+SEA056,M55,Bornholm Basin,NS_Bornholm,2022-11-26,"Max diving depth set to 60 and then 57m to avoid sampling in anoxic waters as it damages the methane sensor
+Zt/zs set to 2m for the entire mission duration and altitude set to 5m but the glider was flying well above the seabed due to the shallow max diving depth (zb)"
+SEA045,M71,Bornholm Basin,SAMBA,2022-11-25,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA055,M50,"Kattegat, Skagerrak",SAMBA,2022-11-24,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the start of the mission and it was then increased to 10m
+The glider particularly struggled with currents and could not keep transect"
+SEA056,M54,Bornholm Basin,NS_Bornholm,2022-11-15,"Max diving depth set to 60m to avoid sampling in anoxic waters as it damages the methane sensor
+Zt/zs set to 2m for the entire mission duration and altitude set to 5m but the glider was flying well above the seabed due to the shallow max diving depth (zb)"
+SEA067,M37,"Northern Baltic Proper, Eastern Gotland Basin",CABLE,2022-11-13,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA077,M15,Bornholm Basin,SAMBA,2022-11-13,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA070,M15,Bornholm Basin,NS_Bornholm,2022-11-01,"Max diving depth set to 60m to avoid sampling in anoxic waters as it damages the methane sensor
+Zt/zs set to 4m for the entire mission duration and altitude set to 5m but the glider was flying well above the seabed due to the shallow max diving depth (zb)
+Issues with the CTD (GPCTD) so data quality is unreliable"
+SEA055,M48,"Skagerrak, Kattegat",SAMBA,2022-10-27,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA069,M13,Skagerrak,eurofleet,2022-10-24,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA045,M69,Bornholm Basin,SAMBA,2022-10-20,"Altitude set to 5m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration
+Glider was set to drift for the last part of the mission with payload switched off. No science data is available for that period"
+SEA070,M14,Bornholm Basin,NS_Bornholm,2022-10-20,"After a few days the max diving  depth set to 60m to avoid sampling in anoxic waters as it damages the methane sensor
+Zt/zs set to 4m for the entire mission duration and altitude set to 5m but the glider was flying well above the seabed due to the shallow max diving depth (zb)"
+SEA076,M9,Bornholm Basin,NS_Bornholm,2022-10-20,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 4m for the entire mission duration
+The glider hit the seabed a few times due to issues with the ADCP
+Occasionally max diving depth was reduced or altitude was increased to avoid the risk of collision"
+SEA066,M43,"Northern Baltic Proper, Eastern Gotland Basin",CABLE,2022-10-12,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+Glider was set to drift for the last part of the mission with payload switched off. No science data is available for that period"
+SEA077,M13,Bornholm Basin,SAMBA,2022-10-12,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA070,M13,Bornholm Basin,NS_Bornholm,2022-10-05,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 4m for the entire mission duration
+The glider performed a few dives with max diving depth 45 and then 30m for testing"
+SEA076,M8,Bornholm Basin,NS_Bornholm,2022-10-05,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 4m for the entire mission duration
+The glider hit the seabed a dew times due to issues with the ADCP. Occasionally max diving depth was reduced tor altitude was increased to avoid the risk of collision"
+SEA055,M46,"Skagerrak, Kattegat",SAMBA,2022-10-04,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+Glider hit the seabed at C439"
+SEA077,M12,Bornholm Basin,NS_Bornholm,2022-10-03,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA045,M67,Bornholm Basin,SAMBA,2022-09-23,"Altitude set to 5m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA069,M11,Bornholm Basin,SAMBA,2022-09-23,"Altitude set to 5m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA067,M32,"Northern Baltic Proper, Eastern Gotland Basin",CABLE,2022-09-22,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA055,M45,Kattegat,SAMBA,2022-09-07,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the start of the mission and it was then increased to 5m
+The glider particularly struggled with currents and could not keep transect"
+SEA077,M11,Bornholm Basin,SAMBA,2022-09-06,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA066,M42,"Northern Baltic Proper, Eastern Gotland Basin",CABLE,2022-08-25,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+Glider was set to drift for the last part of the mission with payload switched off. In this period, the glider was completing some normal dives with payload switched on. This is why there are gaps in the dataset"
+SEA045,M65,Bornholm Basin,SAMBA,2022-08-18,"Altitude set to 5m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA061,M63,"Skagerrak, Kattegat",SAMBA,2022-08-15,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+The glider was lost just before recovery therefore only the subsampled files sent through iriudium are available for this mission"
+SEA045,M64,Bornholm Basin,SAMBA,2022-07-28,"Altitude set to 5m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA055,M43,Bornholm Basin,SAMBA,2022-07-28,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+Glider hit the seabed a few times due to bad seabed detection from the altimeter"
+SEA063,M40,Bornholm Basin,SAMBA,2022-07-28,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+The glider was set to drift at depth for the last two days with payload switched off. Close to recovery, the glider performed a few dives with payload switched on"
+SEA066,M41,"Northern Baltic Proper, Eastern Gotland Basin",CABLE,2022-07-27,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA068,M27,Eastern Gotland Basin,gotland-trials,2022-07-27,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA069,M9,Eastern Gotland Basin,gotland-trials,2022-07-27,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA061,M62,"Skagerrak, Kattegat",SAMBA,2022-07-19,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA063,M39,Bornholm Basin,SAMBA,2022-07-08,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA055,M41,"Skagerrak, Kattegat",SAMBA,2022-07-01,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA067,M30,"Northern Baltic Proper, Eastern Gotland Basin",CABLE,2022-06-21,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+Glider was lost in an underwater cave and recovered a month later. This is why there is a large gap in the dataset in this area"
+SEA045,M62,Bornholm Basin,SAMBA,2022-06-16,"Altitude set to 5m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration
+The glider was set to drift at depth for the last two days with payload switched off. No science data is available for that period"
+SEA061,M60,"Skagerrak, Kattegat",SAMBA,2022-06-15,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA067,M29,"Northern Baltic Proper, Eastern Gotland Basin",CABLE,2022-06-01,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA063,M38,Bornholm Basin,SAMBA,2022-05-30,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA055,M39,"Skagerrak, Kattegat",SAMBA,2022-05-23,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA045,M60,Bornholm Basin,SAMBA,2022-05-17,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+The CTD (RBR LEGATO) stopped working at C522. The other sensor kept working but the pressure comes from the LEGATO therefore no data from the other sensors can be processed. Data from the other sensors can be shared upon request"
+SEA067,M27,"Northern Baltic Proper, Eastern Gotland Basin",CABLE,2022-05-06,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA061,M57,"Skagerrak, Kattegat",SAMBA,2022-05-05,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration apart from occasional increase to 20m when the glider struggled with currents"
+SEA055,M37,Bornholm Basin,SAMBA,2022-04-28,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA063,M37,Bornholm Basin,SAMBA,2022-04-28,"Altitude set to 6m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA061,M56,"Skagerrak, Kattegat",SAMBA,2022-04-15,"Altitude set to 10m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA045,M56,Bornholm Basin,SAMBA,2022-04-12,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+the glider had issues at the beginning of the mission keeping track due to bad navigation settings"
+SEA067,M26,"Northern Baltic Proper, Eastern Gotland Basin",CABLE,2022-04-11,"Altitude set to 10m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration"
+SEA055,M35,"Skagerrak, Kattegat",SAMBA,2022-03-24,"Altitude set to 10m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA061,M54,Bornholm Basin,SAMBA,2022-03-21,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 2m for the entire mission duration
+The glider was set to drift at depth for the last two days with payload switched off. No science data is available for that period"
+SEA063,M35,Bornholm Basin,SAMBA,2022-02-27,"Altitude set to 6m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration"
+SEA055,M33,Skagerrak,SAMBA,2022-02-26,"Altitude set to 10m for the entire mission duration 
+Zt/zs set to 2m for the entire mission duration
+The glider encountered a very fresh surface layer and the glider was too heavy to cross it and surface. The glider therefore drifted north until it encountered dense enough waters to surface. This is why some surface data is missing and a long period of only surface data follows"
+SEA044,M48,Bornholm Basin,SAMBA,2022-01-23,"Altitude set to 6m for the entire mission duration 
+Zt/zs set to 5m for the start of the mission and it was then decreased to 2m for the rest of them mission
+Glider often turned back well before 6m from the seabed due to false triggering of the Altitude
+The glider was set to drift at depth and sit on the seabed with payload switched off to save battery for the last 2 weeks of the mission. No data is available for this period"
+SEA045,M54,Bornholm Basin,SAMBA,2022-01-23,"Altitude set to 6m for the entire mission duration 
+Zt/zs set to 5m for the start of the mission and it was then decreased to 2m for the rest of them mission
+Glider often turned back well before 6m from the seabed due to false triggering of the altimeter
+The glider was set to drift at depth and sit on the seabed with payload switched off to save battery for the last 2 weeks of the mission. No data is available for this period"
+SEA066,M16,Skagerrak,SAMBA,2022-01-15,"Altitude set to 12m the entire mission duration
+Zt/zs set to 2m for most of the mission and occasioanally increased to 15m
+The ADCP stopped working at C142 as well as the OCR504 (Irradiance). Glider was recovered soon after due to suspected leak. Water was found in the dry section of the glider"
+SEA055,M31,Bornholm Basin,SAMBA,2022-01-04,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration"
+SEA063,M33,Bornholm Basin,SAMBA,2022-01-04,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration"
+SEA044,M46,Skagerrak,SAMBA,2021-12-21,"Altitude set to 12m for most of the mission and occasionally increased to 20m
+Zt/zs set to 5m for most of the mission and occasionally increased to 10m"
+SEA045,M52,Skagerrak,SAMBA,2021-12-21,"Altitude set to 12m for most of the mission and occasionally increased to 20m
+Zt/zs set to 5m for the entire mission duration"
+SEA061,M50,Bornholm Basin,SAMBA,2021-12-17,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration"
+SEA066,M14,Bornholm Basin,SAMBA,2021-12-17,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration"
+SEA055,M28,Bornholm Basin,SAMBA,2021-12-07,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration"
+SEA045,M51,Skagerrak,SAMBA,2021-12-03,"Altitude set to 12m for the entire mission duration
+Zt/zs set to 5m for the beginning of the mission and it was then increased to 10m"
+SEA044,M45,Skagerrak,SAMBA,2021-12-02,"Altitude set to 12m for the entire mission duration
+Zt/zs set to 5m for most of the mission and occasionally increased to 10 and 15m"
+SEA061,M48,Bornholm Basin,SAMBA,2021-11-16,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration
+The glider was set to drift at depth with payload switched off to save battery for the last few days of the mission. No data is available for this period"
+SEA066,M12,Bornholm Basin,SAMBA,2021-11-16,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the start of the mission and it was then decreased to 2m for the rest of them mission
+The glider was set to drift at depth with payload switched off to save battery for the last few days of the mission. No data is available for this period"
+SEA045,M50,Skagerrak,SAMBA,2021-11-14,"Altitude set to 12m for most of the mission and occasionally increased to 20m
+Zt/zs set to 5m for most of the mission and briefly increased to 20m"
+SEA066,M10,Bornholm Basin,SAMBA,2021-10-24,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration"
+SEA067,M15,Bornholm Basin,SAMBA,2021-10-24,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration
+The gldier hit the seabed a few times due to ADCP failure. ADCP and irradiance sensor (OCR504) stopped recording dat at C174
+Emergency recovery due to water leaks in the dry section of the glider. The raw data could not be recovered and only the subsampled files sent through iriudium are available for this mission"
+SEA055,M26,Skagerrak,SAMBA,2021-10-18,"Altitude set to 12m for most of the mission and occasionally increased to 20m
+Zt/zs set to 5m for most of the mission and occasionally increased to up to 20m"
+SEA056,M42,Skagerrak,SAMBA,2021-10-18,"Altitude set to 12m for most of the mission and occasionally increased to up to 25m when the glider struggled with currents
+Zt/zs set to 5m for most of the mission and occasionally increased to 10m"
+SEA044,M40,Bornholm Basin,SAMBA,2021-10-04,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration
+Glider hit the seabed multiple times due to issues with the altimeter and after that the maximum diving depth was reduced to avoid possible collisions with the seabed
+The glider maximum diving depth was set to 65 or 75m depending on the section of the transect, therefore the glider often turned back well before 6m from the seabed"
+SEA045,M48,Bornholm Basin,SAMBA,2021-10-04,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration"
+SEA061,M45,Skagerrak,SAMBA,2021-09-20,"Altitude set to 12m for the entire mission duration and occasionally increased to 20m
+Zt/zs set to 5m for most of the mission and occasionally increased to up to 20m
+Oxygen data (JFE AROD-FT) stopped recording data at cycle 203"
+SEA063,M24,Skagerrak,SAMBA,2021-09-20,"Altitude set to 12m for the entire mission duration
+Zt/zs set to 5m for most of the mission and occasionally increased to up to 20m"
+SEA055,M24,Bornholm Basin,SAMBA,2021-09-10,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration
+The glider was set to drift at depth with payload switched off to save battery for the last few days of the mission. No data is available for this period"
+SEA056,M40,Bornholm Basin,SAMBA,2021-09-10,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration
+The glider was set to drift at depth for the last week of the mission with payload switched off. No data is avaialble from this period"
+SEA045,M45,Skagerrak,SAMBA,2021-08-24,"Altitude set to 12m for the entire mission duration
+Zt/zs was often changed and was always set between 20 and 30m"
+SEA061,M43,Bornholm Basin,SAMBA,2021-08-22,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration"
+SEA063,M22,Bornholm Basin,SAMBA,2021-08-22,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration"
+SEA055,M23,Eastern Gotland Basin,AUV project,2021-08-21,"Altitude set to 10m for the entire mission duration
+Zt/zs set to 10m for the entire mission duration"
+SEA061,M42,Bornholm Basin,SAMBA,2021-07-28,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration"
+SEA063,M21,Bornholm Basin,SAMBA,2021-07-28,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration"
+SEA044,M35,Skagerrak,SAMBA,2021-07-22,"Altitude set to 12m for the entire mission duration
+Zt/zs set to 20m for most of the mission and occasionally increased as the glider struggled with surface currents to 50 and 100m"
+SEA045,M44,Skagerrak,SAMBA,2021-07-22,"Altitude set to 12m for the entire mission duration
+Zt/zs set to 20m for most of the mission and occasionally increased as the glider struggled with surface currents"
+SEA061,M40,Bornholm Basin,SAMBA,2021-07-06,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration"
+SEA063,M20,Bornholm Basin,SAMBA,2021-07-06,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration"
+SEA044,M34,Skagerrak,SAMBA,2021-06-18,"Altitude set to 12m for the entire mission duration
+Zt/zs swas often changed and was always set between 10 and 25m"
+SEA045,M43,Skagerrak,SAMBA,2021-06-18,"Altitude set to 12m for the entire mission duration
+Zt/zs set to 10-15m at the beginning and it was the inceased to 20 for the rest of the mission"
+SEA061,M39,Bornholm Basin,SAMBA,2021-06-11,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration
+Glider left at surface with payload switched off for about 10h before recovery "
+SEA063,M19,Bornholm Basin,SAMBA,2021-06-11,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration
+Glider left at surface with payload switched off for about 10h before recovery "
+SEA063,M18,Bornholm Basin,SAMBA,2021-05-22,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration"
+SEA061,M38,Bornholm Basin,SAMBA,2021-05-21,"Altitude set to 6m for the entire mission duration
+Zt/zs set to 5m for the entire mission duration"
+SEA044,M33,Skagerrak,SAMBA,2021-05-18,"Altitude set to 12m for the entire mission duration
+Zt/zs set to 30m for the entire mission duration"
+SEA045,M42,Skagerrak,SAMBA,2021-05-18,"Altitude set to 12m for the entire mission duration
+Zt/zs set to 30m for the entire mission duration"
+SEA055,M21,Bornholm Basin,SAMBA,2021-05-03,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 10m and soon after the start of the mission, it was decreased to 5m"
+SEA063,M17,Bornholm Basin,SAMBA,2021-05-02,"Altitude set to 5m and soon after the start of the mission, it was increased to 6m
+Zt/zs set to 10m and soon after the start of the mission, it was decreased to 5m
+Glider hit the seabed at C181
+At C253 the sampling frequency of the oxygen sensor (JFE AROD-FT) was increased from 30s to 1s"
+SEA055,M20,Bornholm Basin,SAMBA,2021-04-14,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 10m for the entire mission duration
+At cycle 1037 the acquiisition settings of the CTD (RBR LEGATO) were changed. The sensor sampling frequency was changed from 1Hz to the fastest possible"
+SEA044,M32,Skagerrak,SAMBA,2021-04-13,"Altitude set to 12m for the entire mission duration
+Zt/zs set to 25m and occasionally increased to 28 and 30m"
+SEA045,M41,Skagerrak,SAMBA,2021-04-13,"Altitude set to 12m for the entire mission duration
+Zt/zs set to 25m for the first third of the mission and then 30m for the rest
+At cycle 245 the acquiisition settings of the CTD (RBR LEGATO) were changed. The sensor sampling frequency was changed from 1Hz to the fastest possible"
+SEA055,M19,Bornholm Basin,SAMBA,2021-03-26,"Altitude set to 5m for the entire mission duration
+Zt/zs set to 10m for the entire mission duration"
+SEA044,M29,Skagerrak,SAMBA,2021-03-19,"Altitude set to 12m for the entire mission duration
+Zt/zs set to 30m for the entire mission duration
+Soon after the start of them mission, the oxygen sensor acquisition settings were changed to record data every 30s instead of 1s between 0 and 1m (i.e while at surface)"
+SEA045,M37,Skagerrak,SAMBA,2021-03-19,"Altitude set to 10m for most of the mission and occasionally increased to 12m
+Zt/zs set to 25m at the beginning of the mission and then increased to 30m
+Soon after the start of them mission, the oxygen sensor acquisition settings were changed to record data every 30s instead of 1s between 0 and 1m (i.e while at surface)"
+SEA055,M18,Bornholm Basin,SAMBA,2021-03-05,"Altitude set to 5m for most of the mission and occasionally increased to 10m
+Zt/zs set to 10m for the entire mission duration duration apart from few dives with deeper settings"
+SEA045,M36,Skagerrak,SAMBA,2021-03-01,"Altitude set to 30m for the entire mission duration
+Zt/zs mostly set to 25m and occasionally at 30 and 35m"
+SEA044,M28,Skagerrak,SAMBA,2021-02-22,"Altitude set to 30m for the entire mission duration
+Zt/zs mostly set to 25m and occasionally at 30 and 35m
+Irradiance acqusition settings set to collect data only from 0 to 100m and for the last week of this mission the settinsg were changed to collected data all the way to 150m"
+SEA055,M16,Bornholm Basin,SAMBA,2020-10-31,"Altitude set to 5m for most of the mission but occasionally increased especially at the start of the mission
+Zt/zs was set to 10m for the entire mission duration
+The glider struggled detecting the seabed so zb was often reduced and/or a high altitude value was used
+Drift mode with payload switched off was enabled 3 times during this mission so three data gaps occured"
+SEA044,M25,Skagerrak,SAMBA,2020-08-20,"Issue on first deployment so glider was recovered and redeployed 8 days later with the same mission number
+Altitude set to 12m for the entire mission duration
+Zt/zs set to 15m for the entire mission duration"
+SEA045,M33,Skagerrak,SAMBA,2020-08-20,"Altitude set to 10m at the beginning of the mission and then increased to 12m for the rest of the mission but occasionally decreased to 8m 
+Zt/zs set to 15m for most the mission and occasionally increased to 35m and 40m"
