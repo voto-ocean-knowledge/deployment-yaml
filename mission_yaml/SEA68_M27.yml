@@ -51,7 +51,7 @@ glider_devices:
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2021-06-17'
+    calibration_date: '2021-06-10'
   optics:
     make: Wetlabs
     model: FLBBCD
@@ -74,7 +74,7 @@ glider_devices:
     long_name: RBR coda TODO
     make_model: RBR coda TODO
     factory_calibrated: 'Yes'
-    calibration_date: '2021-06-17'
+    calibration_date: '2022-07-12'
 netcdf_variables:
   keep_variables:
   - temperature

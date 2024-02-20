@@ -52,7 +52,7 @@ glider_devices:
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2021-03-15'
+    calibration_date: '2021-03-07'
   optics:
     make: Wetlabs
     model: FLBBPC
@@ -83,7 +83,7 @@ glider_devices:
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2022-01-12'
+    calibration_date: '2022-01-11'
 netcdf_variables:
   keep_variables:
   - temperature

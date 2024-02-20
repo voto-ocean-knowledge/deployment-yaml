@@ -57,7 +57,7 @@ glider_devices:
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2020-07-29'
+    calibration_date: '2020-07-21'
   optics:
     make: Wetlabs
     model: FLNTU
@@ -78,7 +78,7 @@ glider_devices:
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    calibration_date: '2022-03-14'
+    calibration_date: '2022-03-19'
   methane:
     make: Franatech
     model: METS
@@ -94,7 +94,7 @@ glider_devices:
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2022-03-18'
+    calibration_date: '2022-03-17'
 netcdf_variables:
   keep_variables:
   - temperature
