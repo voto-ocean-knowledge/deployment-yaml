@@ -56,7 +56,7 @@ glider_devices:
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2020-07-23'
+    calibration_date: '2020-07-21'
   optics:
     make: Wetlabs
     model: FLBBCD
@@ -79,7 +79,7 @@ glider_devices:
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    calibration_date: '2020-02-05'
+    calibration_date: '2020-02-08'
   irradiance:
     make: SeaBird
     model: OCR504

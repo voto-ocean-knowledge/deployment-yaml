@@ -56,7 +56,7 @@ glider_devices:
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2020-07-23'
+    calibration_date: '2020-07-21'
   optics:
     make: Wetlabs
     model: FLBBPC
