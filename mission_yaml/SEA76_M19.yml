@@ -441,32 +441,28 @@ netcdf_variables:
 qc:
   cdom:
     value: 3
-    comment: Previous deployments with this sensor showed a temporal decrease in CDOM.
-      The copper plate protecting the optics sensor was removed and this issue appears  to
-      be resolved in this mission. The issue with the sensor has not yet been identified,
-      further controls are recommended.More information on the history and updates
-      regarding this issue ( https://observations.voiceoftheocean.org/data/updates). 
-      Water was leaking through the FLBBCD sensors so data may be incorrect, further controls are recommended.
+    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
+      further controls are recommended.
   cdom_raw:
     value: 3
-    comment: Previous deployments with this sensor showed a temporal decrease in CDOM.
-      The copper plate protecting the optics sensor was removed and this issue appears  to
-      be resolved in this mission. The issue with the sensor has not yet been identified,
-      further controls are recommended. More information on the history and updates
-      regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
-      Water was leaking through the FLBBCD sensors so data may be incorrect, further controls are recommended.
+    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
+      further controls are recommended.  
   backscatter_scaled:
     value: 3
-    comment: Water was leaking through the FLBBCD sensors so data may be incorrect, further controls are recommended.
+    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
+      further controls are recommended.
   backscatter_raw:
     value: 3
-    comment: Water was leaking through the FLBBCD sensors so data may be incorrect, further controls are recommended.
+    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
+      further controls are recommended.
   chlorophyll:
     value: 3
-    comment: Water was leaking through the FLBBCD sensors so data may be incorrect, further controls are recommended.
+    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
+      further controls are recommended.
   chlorophyll_raw:
     value: 3
-    comment: Water was leaking through the FLBBCD sensors so data may be incorrect, further controls are recommended.
+    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
+      further controls are recommended.
   oxygen_concentration:
     value: 4
     comment: "Following issues with the oxygen sensor, a 2-point calibration has been\

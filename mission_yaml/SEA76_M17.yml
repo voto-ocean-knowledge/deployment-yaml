@@ -31,7 +31,8 @@ metadata:
   wmo_id: '6801665'
   comment: Altitude set to 2m for the entire mission duration apart from occasional
     higher values in the deep section of the transect. Zt/zs set to 2m for the entire
-    mission duration. Water was leaking through the FLBBCD which likely causes the temporal drift evident in the chlorophyll data
+    mission duration. Water was leaking through the FLBBCD which likely causes the
+    temporal drift evident in the chlorophyll data
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Chiara Monforte
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -438,32 +439,28 @@ netcdf_variables:
 qc:
   cdom:
     value: 3
-    comment: Previous deployments with this sensor showed a temporal decrease in CDOM.
-      The copper plate protecting the optics sensor was removed and this issue appears  to
-      be resolved in this mission. The issue with the sensor has not yet been identified,
-      further controls are recommended.More information on the history and updates
-      regarding this issue ( https://observations.voiceoftheocean.org/data/updates). 
-      Water was leaking through the FLBBCD sensors so data may be incorrect, further controls are recommended.
+    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
+      further controls are recommended.
   cdom_raw:
     value: 3
-    comment: Previous deployments with this sensor showed a temporal decrease in CDOM.
-      The copper plate protecting the optics sensor was removed and this issue appears  to
-      be resolved in this mission. The issue with the sensor has not yet been identified,
-      further controls are recommended. More information on the history and updates
-      regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
-      Water was leaking through the FLBBCD sensors so data may be incorrect, further controls are recommended.
+    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
+      further controls are recommended.
   backscatter_scaled:
     value: 3
-    comment: Water was leaking through the FLBBCD sensors so data may be incorrect, further controls are recommended.
+    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
+      further controls are recommended.
   backscatter_raw:
     value: 3
-    comment: Water was leaking through the FLBBCD sensors so data may be incorrect, further controls are recommended.
+    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
+      further controls are recommended.
   chlorophyll:
     value: 3
-    comment: Water was leaking through the FLBBCD sensors so data may be incorrect, further controls are recommended.
+    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
+      further controls are recommended.
   chlorophyll_raw:
     value: 3
-    comment: Water was leaking through the FLBBCD sensors so data may be incorrect, further controls are recommended.
+    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
+      further controls are recommended.
   oxygen_concentration:
     value: 4
     comment: "Following issues with the oxygen sensor, a 2-point calibration has been\

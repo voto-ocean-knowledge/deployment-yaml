@@ -480,20 +480,6 @@ netcdf_variables:
     accuracy: '0.01'
     resolution: '0.001'
 qc:
-  cdom:
-    value: 3
-    comment: Previous deployments with this sensor showed a temporal decrease in CDOM.
-      The copper plate protecting the optics sensor was removed and this issue appears  to
-      be resolved in this mission. The issue with the sensor has not yet been identified,
-      further controls are recommended.More information on the history and updates
-      regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
-  cdom_raw:
-    value: 3
-    comment: Previous deployments with this sensor showed a temporal decrease in CDOM.
-      The copper plate protecting the optics sensor was removed and this issue appears  to
-      be resolved in this mission. The issue with the sensor has not yet been identified,
-      further controls are recommended. More information on the history and updates
-      regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
   oxygen_concentration:
     value: 4
     comment: "Following issues with the oxygen sensor, a 2-point calibration has been\

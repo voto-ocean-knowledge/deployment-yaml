@@ -29,8 +29,8 @@ metadata:
   glider_name: Vresros
   glider_serial: '78'
   wmo_id: '8901000'
-  comment: Altitude set to 2m for the entire mission duration. Zt/zs set to 2m for the entire
-    mission duration
+  comment: Altitude set to 2m for the entire mission duration. Zt/zs set to 2m for
+    the entire mission duration
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Chiara Monforte
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -435,20 +435,6 @@ netcdf_variables:
     units: m s-1
     coordinates: time depth latitude longitude
 qc:
-  cdom:
-    value: 3
-    comment: Previous deployments with this sensor showed a temporal decrease in CDOM.
-      The copper plate protecting the optics sensor was removed and this issue appears  to
-      be resolved in this mission. The issue with the sensor has not yet been identified,
-      further controls are recommended.More information on the history and updates
-      regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
-  cdom_raw:
-    value: 3
-    comment: Previous deployments with this sensor showed a temporal decrease in CDOM.
-      The copper plate protecting the optics sensor was removed and this issue appears  to
-      be resolved in this mission. The issue with the sensor has not yet been identified,
-      further controls are recommended. More information on the history and updates
-      regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
   oxygen_concentration:
     value: 4
     comment: "Following issues with the oxygen sensor, a 2-point calibration has been\
