@@ -436,20 +436,6 @@ netcdf_variables:
     units: m s-1
     coordinates: time depth latitude longitude
 qc:
-  cdom:
-    value: 3
-    comment: Previous deployments with this sensor showed a temporal decrease in CDOM.
-      The copper plate protecting the optics sensor was removed and this issue appears  to
-      be resolved in this mission. The issue with the sensor has not yet been identified,
-      further controls are recommended.More information on the history and updates
-      regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
-  cdom_raw:
-    value: 3
-    comment: Previous deployments with this sensor showed a temporal decrease in CDOM.
-      The copper plate protecting the optics sensor was removed and this issue appears  to
-      be resolved in this mission. The issue with the sensor has not yet been identified,
-      further controls are recommended. More information on the history and updates
-      regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
   oxygen_concentration:
     value: 4
     comment: The absolute values of the oxygen data can be unreliable. The relative
