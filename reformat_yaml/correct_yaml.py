@@ -61,6 +61,15 @@ def correct_yaml(yaml_path):
         except:
             print(f'failed to strip comment: {yaml_path} {comment}')
         deployment['metadata']['comment'] = comment
+    if 'qc' in deployment:  
+        if 'cdom' in deployment['qc']:
+            if 'Previous deployments with this sensor showed a temporal decrease in CDOM' in deployment['qc']['cdom']['comment']:
+                deployment['qc'].pop('cdom')
+            if 'Previous deployments with this sensor showed a temporal decrease in CDOM' in deployment['qc']['cdom_raw']['comment']:
+                deployment['qc'].pop('cdom_raw')
+    if 'qc' in deployment: 
+        if not deployment['qc']:
+            deployment.pop('qc')
 
     with open(yaml_path, "w") as fout:
         yaml.dump(deployment, fout, sort_keys=False)
