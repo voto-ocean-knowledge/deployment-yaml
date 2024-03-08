@@ -439,6 +439,14 @@ netcdf_variables:
     units: m s-1
     coordinates: time depth latitude longitude
 qc:
+  cdom:
+    value: 3
+    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
+      further controls are recommended.
+  cdom_raw:
+    value: 3
+    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
+      further controls are recommended.  
   backscatter_scaled:
     value: 3
     comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
