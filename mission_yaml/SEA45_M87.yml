@@ -414,32 +414,3 @@ netcdf_variables:
     standard_name: platform_beam1_measure_ad2cp_cell1
     units: m s-1
     coordinates: time depth latitude longitude
-  downwelling_PAR:
-    source: MPE-PAR_IRRADIANCE
-    long_name: Downwelling PAR (Photosynthetically Active Radiation) in range 400-700
-      nm
-    standard_name: downwelling_PAR
-    units: "\u03BCE cm-2 s-1"
-    average_method: geometric mean
-    coordinates: time depth latitude longitude
-    instrument: instrument_radiometer
-    observation_type: measured
-  internal_temperature_PAR:
-    source: MPE-PAR_TEMPERATURE
-    long_name: Sensor internal temperature
-    standard_name: internal_temperature_PAR
-    units: Celsius
-    coordinates: time depth latitude longitude
-    instrument: instrument_thermistor
-    observation_type: measured
-qc:
-  oxygen_concentration:
-    value: 4
-    comment: "Following issues with the oxygen sensor, a 2-point calibration has been\
-      \ performed on date {2023-05-25}. The values at 0 and 100 % saturation are accurate.\
-      \ Absolute Values between these two extremes may be inaccurate. The relative\
-      \ variability is confirmed to be valid and no temporal drift occurs. During\
-      \ tests values that can be outside the manufacturer acceptance range have been\
-      \ observed when compared to the output from a reference sensor. This issue is\
-      \ particularly evident around 100\u03BCmol/l. More information on the history\
-      \ and updates regarding this issue (https://observations.voiceoftheocean.org/data/updates)."
