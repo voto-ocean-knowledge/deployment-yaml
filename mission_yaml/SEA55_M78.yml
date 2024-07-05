@@ -313,7 +313,7 @@ netcdf_variables:
     source: LEGATO_TRIDENTE_CHLOROPHYLL
     long_name: chlorophyll
     standard_name: concentration_of_chlorophyll_in_sea_water
-    units:  μg L-1
+    units:  mg m-3
     coordinates: time depth latitude longitude
     instrument: instrument_flourometer
     observation_type: calculated
@@ -321,7 +321,7 @@ netcdf_variables:
     source: LEGATO_TRIDENTE_PHYCOCYANIN
     long_name: phycocyanin
     standard_name: concentration_of_phycocyanin_in_sea_water
-    units: μg L-1
+    units: mg m-3
     coordinates: time depth latitude longitude
     instrument: instrument_flourometer
     observation_type: calculated
