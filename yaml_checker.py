@@ -179,7 +179,7 @@ def check_variables(variables, _log):
 def check_sensor_serials(sensors, _log):
     for sensor, attrs in sensors.items():
         if type(attrs['serial']) is not str:
-            _log.error(f"{sensor} serial number must be a string")
+            _log.error(f"type of {sensor} serial number must be a string. It is {type(attrs['serial'])}")
 
 
 if __name__ == '__main__':
