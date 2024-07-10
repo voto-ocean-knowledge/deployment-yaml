@@ -40,7 +40,6 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
                      'deployment_name', 'project', 'project_url', 'summary',
                      'sea_name')
 
-
     for key in metadata_keys:
         if key not in deployment['metadata'].keys():
             _log.error(f'{key} not found in metadata')
@@ -88,6 +87,7 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
     check_keep_variables(deployment, _log)
     check_variables(deployment['netcdf_variables'], _log)
     check_qc(deployment, _log)
+    check_sensor_serials(deployment['glider_devices'], _log)
 
 
 def check_qc(deployment, _log):
@@ -174,6 +174,13 @@ def check_variables(variables, _log):
         if "irradiance" in var["long_name"] or "PAR" in var["long_name"]:
             if var["average_method"] != "geometric mean":
                 _log.error(f"{name} avergage_method should be 'geometric mean'")
+
+
+def check_sensor_serials(sensors, _log):
+    for sensor, attrs in sensors.items():
+        if type(attrs['serial']) is not str:
+            _log.error(f"{sensor} serial number must be a string")
+
 
 if __name__ == '__main__':
     args = sys.argv
