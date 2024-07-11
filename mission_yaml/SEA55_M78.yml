@@ -26,68 +26,70 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Ljung
-  glider_serial: '63'
-  wmo_id: '6801707'
-  comment: Altitude set to 2m
+  glider_name: Kaprifol
+  glider_serial: '55'
+  wmo_id: '6801674'
+  comment: " "
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Chiara Monforte
+    Marcus Melin, Gunnar Johnsson, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
-    Technician, Glider Technician, Glider Technician, Glider Pilot
+    Technician, Glider Technician, Platform Coordinator
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '74'
-  deployment_name: SAMBA
-  project: SAMBA
-  project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
-  summary: ' Part of SAMBA continuous monitoring'
+  deployment_id: '78'
+  deployment_name: PHYCOGLIDER
+  project: PHYCOGLIDER
+  project_url: https://voiceoftheocean.org
+  summary: ' Part of Phycoglider project in collaboration with SMHI '
 glider_devices:
-  ctd:
-    make: RBR
-    model: legato
-    serial: '207476'
-    long_name: RBR legato CTD
-    make_model: RBR legato CTD
-    factory_calibrated: 'Yes'
-    calibration_date: '2021-06-10'
-  optics:
-    make: Wetlabs
-    model: FLNTU
-    serial: '6661'
-    long_name: Wetlabs ECO Puck FLNTU
-    make_model: Wetlabs FLNTU
-    factory_calibrated: 'Yes'
-    calibration_date: '2021-02-01'
-    calibration_parameters:
-      Chl_DarkCounts: 48
-      Chl_SF: 0.0121
-      NTU_DarkCounts: 49
-      NTU_SF: 0.006
-  oxygen:
-    make: JFE Advantech
-    model: AROD-FT
-    serial: '0040'
-    long_name: JFE Advantech RINKO-FT
-    make_model: JFE Advantech AROD_FT
-    factory_calibrated: 'Yes'
-    calibration_date: '2023-08-11'
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '101589'
+    serial: '103355'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2021-02-02'
+    calibration_date: '2022-03-17'
+  ctd:
+    make: RBR
+    model: legato
+    serial: '206612'
+    long_name: RBR legato CTD
+    make_model: RBR legato CTD
+    factory_calibrated: 'Yes'
+    calibration_date: '2021-03-17'
   irradiance:
     make: Biospherical
     model: MPE-PAR
-    serial: '2983'
+    serial: '2984'
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
     factory_calibrated: 'Yes'
     calibration_date: '2023-02-21'
+  optics:
+    make: Wetlabs
+    model: FLBBPC
+    serial: '6598'
+    long_name: Wetlabs ECO Puck FLBBPC
+    make_model: Wetlabs FLBBPC
+    factory_calibrated: 'Yes'
+    calibration_date: '2020-12-22'
+    calibration_parameters:
+      Chl_DarkCounts: 46
+      Chl_SF: 0.0073
+      PC_DarkCounts: 47
+      PC_SF: 0.0388
+      SIG_DarkCounts: 47
+      SIG_SF: 1.815e-06
+  oxygen:
+    make: JFE Advantech
+    model: AROD-FT
+    serial: '0039'
+    long_name: JFE Advantech RINKO-FT
+    make_model: JFE Advantech AROD_FT
+    factory_calibrated: 'Yes'
+    calibration_date: '2020-02-05'
 netcdf_variables:
   keep_variables:
   - temperature
@@ -307,8 +309,32 @@ netcdf_variables:
     observation_type: calculated
     accuracy: '0.02'
     resolution: '0.01'
+  chlorophyll_tridente:
+    source: LEGATO_TRIDENTE_CHLOROPHYLL
+    long_name: chlorophyll
+    standard_name: concentration_of_chlorophyll_in_sea_water
+    units:  mg m-3
+    coordinates: time depth latitude longitude
+    instrument: instrument_flourometer
+    observation_type: calculated
+  phycocyanin_tridente:
+    source: LEGATO_TRIDENTE_PHYCOCYANIN
+    long_name: phycocyanin
+    standard_name: concentration_of_phycocyanin_in_sea_water
+    units: mg m-3
+    coordinates: time depth latitude longitude
+    instrument: instrument_flourometer
+    observation_type: calculated
+  turbidity:
+    source: LEGATO_TRIDENTE_TURBIDITY
+    long_name: turbidity
+    standard_name: turbidity_in_sea_water
+    units: FTU
+    coordinates: time depth latitude longitude
+    instrument: instrument_turbidity_meter
+    observation_type: calculated
   chlorophyll:
-    source: FLNTU_CHL_SCALED
+    source: FLBBPC_CHL_SCALED
     long_name: chlorophyll
     standard_name: concentration_of_chlorophyll_in_sea_water
     units: mg m-3
@@ -319,30 +345,48 @@ netcdf_variables:
     observation_type: calculated
     sensitivity: '0.025'
   chlorophyll_raw:
-    source: FLNTU_CHL_COUNT
+    source: FLBBPC_CHL_COUNT
     long_name: raw chlorophyll
     standard_name: raw_chlorophyll_in_sea_water
     units: counts
     coordinates: time depth latitude longitude
     instrument: instrument_flourometer
-  turbidity:
-    source: FLNTU_NTU_SCALED
-    long_name: turbidity
-    standard_name: turbidity_in_sea_water
-    units: NTU
+  phycocyanin:
+    source: FLBBPC_PC_SCALED
+    long_name: phycocyanin
+    standard_name: concentration_of_phycocyanin_in_sea_water
+    units: mg m-3
     coordinates: time depth latitude longitude
-    instrument: instrument_turbidity_meter
+    instrument: instrument_flourometer
     valid_min: '0.'
-    valid_max: '25.'
+    valid_max: '175.'
     observation_type: calculated
-    sensitivity: '0.01'
-  turbidity_raw:
-    source: FLNTU_NTU_COUNT
-    long_name: raw turbidity
-    standard_name: raw_turbidity_in_sea_water
+    sensitivity: '0.09'
+  phycocyanin_raw:
+    source: FLBBPC_PC_COUNT
+    long_name: raw phycocyanin
+    standard_name: raw_phycocyanin_in_sea_water
     units: counts
     coordinates: time depth latitude longitude
     instrument: instrument_flourometer
+  backscatter_scaled:
+    source: FLBBPC_BB_700_SCALED
+    long_name: "700 nm \u03B2 total volume scattering coefficient at 117 degree angle"
+    standard_name: 700_nm_wavelength_total_volume_scattering_coefficient
+    units: m-1 sr-1
+    coordinates: time depth latitude longitude
+    instrument: instrument_scatterometer
+    valid_min: '0.'
+    valid_max: '3.'
+    observation_type: calculated
+    sensitivity: '0.002'
+  backscatter_raw:
+    source: FLBBPC_BB_700_COUNT
+    long_name: raw 700 nm wavelength backscatter
+    standard_name: raw_700_nm_wavelength_backscatter_in_sea_water
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_scatterometer
   oxygen_concentration:
     source: AROD_FT_DO
     long_name: oxygen concentration
