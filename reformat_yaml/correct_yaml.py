@@ -6,7 +6,9 @@ df_cal = pd.read_csv('new_cal.csv')
 df_comments = pd.read_csv('piloting_comments.csv')
 df_missions = pd.read_csv('https://erddap.observations.voiceoftheocean.org/erddap/tabledap/meta_users_table.csv')
 expected_failures = [(70, 29), (57, 58), (57, 75)]
-
+import sys
+sys.path.append("/home/callum/Documents/data-flow/raw-to-nc/deployment-yaml")
+from yaml_checker import expected_units
 
 def correct_yaml(yaml_path):
     with open(yaml_path) as fin:
@@ -17,7 +19,7 @@ def correct_yaml(yaml_path):
     if mission.empty:
         if (int(meta['glider_serial']), int(meta['deployment_id'])) in expected_failures:
             return
-        print(f"fail SEA{ meta['glider_serial']} M{meta['deployment_id']} ")
+        print(f"fail SEA{meta['glider_serial']} M{meta['deployment_id']} ")
         return
     start = str(mission['deployment_start'].values[0])[:10]
     devices = deployment['glider_devices']
@@ -40,7 +42,8 @@ def correct_yaml(yaml_path):
         df_pre_deployment_cals = df_serial[df_serial['calibration_date'] < start]
         new_cal_date = df_pre_deployment_cals['calibration_date'].values[-1]
         old_cal_date = cal_dict['calibration_date']
-        time_diff = (datetime.datetime.strptime(new_cal_date, '%Y-%m-%d') - datetime.datetime.strptime(old_cal_date, '%Y-%m-%d')).days
+        time_diff = (datetime.datetime.strptime(new_cal_date, '%Y-%m-%d') - datetime.datetime.strptime(old_cal_date,
+                                                                                                       '%Y-%m-%d')).days
         # fix the calibration date
         deployment['glider_devices'][device_name]['calibration_date'] = new_cal_date
         # Don't warn if time difference is small
@@ -49,7 +52,8 @@ def correct_yaml(yaml_path):
         # Don't warn if calibration month-days are just switched american style
         if old_cal_date == new_cal_date[:5] + new_cal_date[8:] + new_cal_date[4:7]:
             continue
-        print(f"CORRECTION {old_cal_date} >> {new_cal_date}. {yaml_path.name.split('.')[0]} {cal_dict['model']} {serial}. {time_diff} days ")
+        print(
+            f"CORRECTION {old_cal_date} >> {new_cal_date}. {yaml_path.name.split('.')[0]} {cal_dict['model']} {serial}. {time_diff} days ")
     df_glider_comment = df_comments[df_comments['Glider'] == f"SEA{meta['glider_serial'].zfill(3)}"]
     df_mission_comment = df_glider_comment[df_glider_comment['Mission'] == f"M{meta['deployment_id']}"]
     if df_mission_comment.empty:
@@ -61,13 +65,15 @@ def correct_yaml(yaml_path):
         except:
             print(f'failed to strip comment: {yaml_path} {comment}')
         deployment['metadata']['comment'] = comment
-    if 'qc' in deployment:  
+    if 'qc' in deployment:
         if 'cdom' in deployment['qc']:
-            if 'Previous deployments with this sensor showed a temporal decrease in CDOM' in deployment['qc']['cdom']['comment']:
+            if 'Previous deployments with this sensor showed a temporal decrease in CDOM' in deployment['qc']['cdom'][
+                'comment']:
                 deployment['qc'].pop('cdom')
-            if 'Previous deployments with this sensor showed a temporal decrease in CDOM' in deployment['qc']['cdom_raw']['comment']:
+            if 'Previous deployments with this sensor showed a temporal decrease in CDOM' in \
+                    deployment['qc']['cdom_raw']['comment']:
                 deployment['qc'].pop('cdom_raw')
-    if 'qc' in deployment: 
+    if 'qc' in deployment:
         if not deployment['qc']:
             deployment.pop('qc')
 
@@ -75,6 +81,29 @@ def correct_yaml(yaml_path):
         yaml.dump(deployment, fout, sort_keys=False)
 
 
+def correct_units(yaml_path):
+    with open(yaml_path) as fin:
+        deployment = yaml.safe_load(fin)
+
+    variables = deployment['netcdf_variables']
+    for key, val in variables.items():
+        if key in ['keep_variables', 'timebase', 'time', 'ad2cp_time']:
+            continue
+        source = val['source']
+        if 'units' not in val.keys():
+            print(f"no units for {key}")
+            continue
+        unit = val['units']
+        if source not in expected_units.keys():
+            print(f"no unit for {yaml_path}: {source}")
+            continue
+        if expected_units[source] != unit:
+            print(f"bad unit {source}: {unit}")
+            deployment['netcdf_variables'][key]['units'] = expected_units[source]
+    with open(yaml_path, "w") as fout:
+       yaml.dump(deployment, fout, sort_keys=False)
+
+
 if __name__ == '__main__':
     for yml in list(Path("../mission_yaml").glob("*.yml")):
-        correct_yaml(yml)
+        correct_units(yml)

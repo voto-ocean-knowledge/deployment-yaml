@@ -176,7 +176,7 @@ netcdf_variables:
     source: Declination
     long_name: declination
     standard_name: declination
-    units: None
+    units: degrees
     coordinates: time depth latitude longitude
   internal_temperature:
     source: Temperature
@@ -383,14 +383,14 @@ netcdf_variables:
     source: LEGATO_CODA_CORR_PHASE
     long_name: oxygen phase
     standard_name: oxygen_phase_in_sea_water
-    units: degree
+    units: degrees
     coordinates: time depth latitude longitude
     instrument: instrument_optode
   nitrate_concentration:
     source: SUNA_NITRATE
     long_name: nitrate concentration
     standard_name: concentration_of_nitrate_in_sea_water
-    units: mgN/L
+    units: mg L-1
     coordinates: time depth latitude longitude
     instrument: Nan
     valid_min: Nan
@@ -402,7 +402,7 @@ netcdf_variables:
     source: SUNA_MOLAR_NITRATE
     long_name: nitrate molar concentration
     standard_name: molar_concentration_of_nitrate_in_sea_water
-    units: "\xB5M L-1"
+    units: "\xB5M"
     coordinates: time depth latitude longitude
     instrument: Nan
     valid_min: Nan
