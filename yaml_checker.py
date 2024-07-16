@@ -3,6 +3,102 @@ import sys
 from datetime import datetime, timedelta
 from urllib import request
 import logging
+expected_units = {'AD2CP_HEADING': 'degrees',
+                  'AD2CP_PITCH': 'degrees',
+                  'AD2CP_PRESSURE': 'dbar',
+                  'AD2CP_ROLL': 'degrees',
+                  'AD2CP_V1_CN1': 'm s-1',
+                  'AD2CP_V1_CN2': 'm s-1',
+                  'AD2CP_V2_CN1': 'm s-1',
+                  'AD2CP_V2_CN2': 'm s-1',
+                  'AD2CP_V3_CN1': 'm s-1',
+                  'AD2CP_V3_CN2': 'm s-1',
+                  'AD2CP_V4_CN1': 'm s-1',
+                  'AD2CP_V4_CN2': 'm s-1',
+                  'AROD_FT_DO': 'mmol m-3',
+                  'AROD_FT_TEMP': 'Celsius',
+                  'Altitude': 'm',
+                  'AngCmd': 'degrees',
+                  'AngPos': 'degrees',
+                  'BallastCmd': 'ml',
+                  'BallastPos': 'ml',
+                  'DeadReckoning': 'None',
+                  'Declination': 'degrees',
+                  'DesiredH': 'degrees',
+                  'FLBBCD_BB_700_COUNT': 'counts',
+                  'FLBBCD_BB_700_SCALED': 'm-1 sr-1',
+                  'FLBBCD_CDOM_COUNT': 'counts',
+                  'FLBBCD_CDOM_SCALED': 'mg m-3',
+                  'FLBBCD_CHL_COUNT': 'counts',
+                  'FLBBCD_CHL_SCALED': 'mg m-3',
+                  'FLBBPC_BB_700_COUNT': 'counts',
+                  'FLBBPC_BB_700_SCALED': 'm-1 sr-1',
+                  'FLBBPC_CHL_COUNT': 'counts',
+                  'FLBBPC_CHL_SCALED': 'mg m-3',
+                  'FLBBPC_PC_COUNT': 'counts',
+                  'FLBBPC_PC_SCALED': 'mg m-3',
+                  'FLBBPE_BB_700_COUNT': 'counts',
+                  'FLBBPE_BB_700_SCALED': 'm-1 sr-1',
+                  'FLBBPE_CHL_COUNT': 'counts',
+                  'FLBBPE_CHL_SCALED': 'mg m-3',
+                  'FLBBPE_PE_COUNT': 'counts',
+                  'FLBBPE_PE_SCALED': 'mg m-3',
+                  'FLNTU_CHL_COUNT': 'counts',
+                  'FLNTU_CHL_SCALED': 'mg m-3',
+                  'FLNTU_NTU_COUNT': 'counts',
+                  'FLNTU_NTU_SCALED': 'NTU',
+                  'fnum': 'None',
+                  'GPCTD_CONDUCTIVITY': 'S m-1',
+                  'GPCTD_DOF': 'Hz',
+                  'GPCTD_PRESSURE': 'dbar',
+                  'GPCTD_TEMPERATURE': 'Celsius',
+                  'Heading': 'degrees',
+                  'LEGATO_CODA_CORR_PHASE': 'degrees',
+                  'LEGATO_CODA_DO': 'mmol m-3',
+                  'LEGATO_CODA_TEMPERATURE': 'Celsius',
+                  'LEGATO_CONDUCTIVITY': 'mS cm-1',
+                  'LEGATO_PRESSURE': 'dbar',
+                  'LEGATO_SALINITY': 'PSU',
+                  'LEGATO_TEMPERATURE': 'Celsius',
+                  'LEGATO_TRIDENTE_CHLOROPHYLL': 'mg m-3',
+                  'LEGATO_TRIDENTE_PHYCOCYANIN': 'mg m-3',
+                  'LEGATO_TRIDENTE_TURBIDITY': 'FTU',
+                  'LinCmd': 'cm',
+                  'LinPos': 'cm',
+                  'METS_METHANE_SCALED': 'mg m-3',
+                  'METS_METHANE_VOLT': 'V',
+                  'METS_TEMP_SCALED': 'Celsius',
+                  'METS_TEMP_VOLT': 'V',
+                  'MPE-PAR_IRRADIANCE': 'μE cm-2 s-1',
+                  'MPE-PAR_TEMPERATURE': 'Celsius',
+                  'MR1000G-RDL_EPS1': 'W kg-1',
+                  'MR1000G-RDL_EPS2': 'W kg-1',
+                  'NANOFLU_CONCENTRATION': 'µg L-1',
+                  'NANOFLU_TEMPERATURE': 'Celsius',
+                  'NAV_LATITUDE': 'degrees_north',
+                  'NAV_LONGITUDE': 'degrees_east',
+                  'NAV_RESOURCE': 'None',
+                  'OCR504_Ed1': 'W m-2 nm-1',
+                  'OCR504_Ed2': 'W m-2 nm-1',
+                  'OCR504_Ed3': 'W m-2 nm-1',
+                  'OCR504_Ed4': 'μE m-2 s-1',
+                  'Pa': 'Pa',
+                  'Pitch': 'degrees',
+                  'Roll': 'degrees',
+                  'SEAOWL_BB_700_COUNT': 'counts',
+                  'SEAOWL_BB_700_SCALED': 'm-1 sr-1',
+                  'SEAOWL_CHL_COUNT': 'counts',
+                  'SEAOWL_CHL_SCALED': 'mg m-3',
+                  'SEAOWL_FDOM_COUNT': 'counts',
+                  'SEAOWL_FDOM_SCALED': 'ppb Quinine Sulfate Equivalent',
+                  'SUNA_HUMIDITY_NITRATE': '%',
+                  'SUNA_MOLAR_NITRATE': 'µM',
+                  'SUNA_NITRATE': 'mg L-1',
+                  'SUNA_TEMP_NITRATE': 'Celsius',
+                  'SecurityLevel': 'None',
+                  'Temperature': 'Celsius',
+                  'Voltage': 'V',
+ }
 
 
 def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
@@ -88,6 +184,7 @@ def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
     check_variables(deployment['netcdf_variables'], _log)
     check_qc(deployment, _log)
     check_sensor_serials(deployment['glider_devices'], _log)
+    check_units(deployment['netcdf_variables'], _log)
 
 
 def check_qc(deployment, _log):
@@ -180,6 +277,22 @@ def check_sensor_serials(sensors, _log):
     for sensor, attrs in sensors.items():
         if type(attrs['serial']) is not str:
             _log.error(f"type of {sensor} serial number must be a string. It is {type(attrs['serial'])}")
+
+
+def check_units(variables, _log):
+    for key, val in variables.items():
+        if key in ['keep_variables', 'timebase', 'time', 'ad2cp_time']:
+            continue
+        source = val['source']
+        if 'units' not in val.keys():
+            _log.error(f"no units in yaml for variable {key}")
+            continue
+        unit = val['units']
+        if source not in expected_units.keys():
+            _log.error(f"No unit found for {source}")
+            continue
+        if expected_units[source] != unit:
+            _log.error(f"Bad unit {source}: {unit}")
 
 
 if __name__ == '__main__':

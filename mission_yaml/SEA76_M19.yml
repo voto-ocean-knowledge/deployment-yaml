@@ -174,7 +174,7 @@ netcdf_variables:
     source: Declination
     long_name: declination
     standard_name: declination
-    units: None
+    units: degrees
     coordinates: time depth latitude longitude
   internal_temperature:
     source: Temperature
@@ -446,7 +446,7 @@ qc:
   cdom_raw:
     value: 3
     comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
-      further controls are recommended.  
+      further controls are recommended.
   backscatter_scaled:
     value: 3
     comment: Water was leaking through the FLBBCD sensors so data may be incorrect,

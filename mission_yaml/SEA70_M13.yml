@@ -174,7 +174,7 @@ netcdf_variables:
     source: Declination
     long_name: declination
     standard_name: declination
-    units: None
+    units: degrees
     coordinates: time depth latitude longitude
   internal_temperature:
     source: Temperature
@@ -365,7 +365,7 @@ netcdf_variables:
     source: METS_METHANE_VOLT
     long_name: methane raw concentration
     standard_name: methane_raw_concentration
-    units: volts
+    units: V
     coordinates: time depth latitude longitude
     instrument: Nan
     valid_min: Nan
@@ -389,7 +389,7 @@ netcdf_variables:
     source: METS_TEMP_VOLT
     long_name: mets sensor raw temperature
     standard_name: sensor_raw_temperature
-    units: volts
+    units: V
     coordinates: time depth latitude longitude
     instrument: Nan
     valid_min: Nan

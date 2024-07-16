@@ -172,7 +172,7 @@ netcdf_variables:
     source: Declination
     long_name: declination
     standard_name: declination
-    units: None
+    units: degrees
     coordinates: time depth latitude longitude
   internal_temperature:
     source: Temperature
@@ -196,13 +196,13 @@ netcdf_variables:
     source: BallastCmd
     long_name: glider ballast command
     standard_name: ballast_command
-    units: none
+    units: ml
     coordinates: time depth latitude longitude
   ballast_pos:
     source: BallastPos
     long_name: glider ballast position
     standard_name: ballast_position
-    units: none
+    units: ml
     coordinates: time depth latitude longitude
   linear_cmd:
     source: LinCmd

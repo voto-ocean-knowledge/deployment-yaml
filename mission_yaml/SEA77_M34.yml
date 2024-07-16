@@ -29,7 +29,7 @@ metadata:
   glider_name: Smilla
   glider_serial: '77'
   wmo_id: '8901050'
-  comment: " "
+  comment: ' '
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Chiara Monforte
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -69,7 +69,7 @@ glider_devices:
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0068'
+    serial: 0068
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
@@ -169,7 +169,7 @@ netcdf_variables:
     source: Declination
     long_name: declination
     standard_name: declination
-    units: None
+    units: degrees
     coordinates: time depth latitude longitude
   internal_temperature:
     source: Temperature
@@ -384,7 +384,7 @@ netcdf_variables:
     source: LEGATO_CODA_CORR_PHASE
     long_name: oxygen phase
     standard_name: oxygen_phase_in_sea_water
-    units: degree
+    units: degrees
     coordinates: time depth latitude longitude
     instrument: instrument_optode
   ad2cp_heading:
