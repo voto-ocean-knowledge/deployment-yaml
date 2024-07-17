@@ -54,11 +54,11 @@ glider_devices:
   optics:
     make: Wetlabs
     model: FLBBCD
-    serial: '7522'
+    serial: '7619'
     long_name: Wetlabs ECO Puck FLBBCD
     make_model: Wetlabs FLBBCD
     factory_calibrated: 'Yes'
-    calibration_date: '2022-04-20'
+    calibration_date: '2022-06-21'
     calibration_parameters:
       Chl_DarkCounts: 45
       Chl_SF: 0.0122
