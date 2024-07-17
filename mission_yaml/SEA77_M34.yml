@@ -29,11 +29,11 @@ metadata:
   glider_name: Smilla
   glider_serial: '77'
   wmo_id: '8901050'
-  comment: ' '
+  comment: 'Glider dove with zt/zs=2 and alt=2 for full mission. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Chiara Monforte
+    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
-    Technician, Glider Technician, Glider Technician, Glider Pilot
+    Technician, Glider Technician, Glider Technician, Platform Coordinator
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
