@@ -26,77 +26,68 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Kaprifol
-  glider_serial: '55'
-  wmo_id: '6801674'
-  comment: 'Part of PhycoGlider mission, deployed with Legato Tridente sensor. Performed virtual mooring at BY38 during the 18/7-24 for calibration with R/V Svea. In connection to that bottom tracking failed during dives 612 and 613 and following two dives went to 100 m. Apart from that zt/zs=2 and alt=2 for full mission duration. '
+  glider_name: Smilla
+  glider_serial: '77'
+  wmo_id: '8901050'
+  comment: ' '
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Michaela Edwinson
+    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
-    Technician, Glider Technician, Platform Coordinator
+    Technician, Glider Technician, Glider Technician, Platform Coordinator
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '78'
-  deployment_name: PHYCOGLIDER
-  project: PHYCOGLIDER
-  project_url: https://voiceoftheocean.org
-  summary: ' Part of Phycoglider project in collaboration with SMHI '
+  deployment_id: '35'
+  deployment_name: SAMBA
+  project: SAMBA
+  project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
+  summary: ' Part of SAMBA continuous monitoring'
 glider_devices:
-  AD2CP:
-    make: Nortek
-    model: AD2CP
-    serial: '103355'
-    long_name: Nortek Glider1000 AD2CP
-    make_model: Nortek AD2CP
-    factory_calibrated: 'Yes'
-    calibration_date: '2022-03-17'
   ctd:
     make: RBR
     model: legato
-    serial: '206612'
+    serial: '210556'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2021-03-17'
-  irradiance:
-    make: Biospherical
-    model: MPE-PAR
-    serial: '2984'
-    long_name: Biospherical MPE-PAR
-    make_model: Biospherical MPE-PAR
-    factory_calibrated: 'Yes'
-    calibration_date: '2023-02-21'
+    calibration_date: '2022-05-17'
   optics:
     make: Wetlabs
-    model: FLBBPC
-    serial: '6598'
-    long_name: Wetlabs ECO Puck FLBBPC
-    make_model: Wetlabs FLBBPC
+    model: FLBBCD
+    serial: '7522'
+    long_name: Wetlabs ECO Puck FLBBCD
+    make_model: Wetlabs FLBBCD
     factory_calibrated: 'Yes'
-    calibration_date: '2020-12-22'
+    calibration_date: '2022-04-20'
     calibration_parameters:
-      Chl_DarkCounts: 46
-      Chl_SF: 0.0073
-      PC_DarkCounts: 47
-      PC_SF: 0.0388
+      Chl_DarkCounts: 45
+      Chl_SF: 0.0122
+      CDOM_DarkCounts: 50
+      CDOM_SF: 0.0905
       SIG_DarkCounts: 47
-      SIG_SF: 1.815e-06
+      SIG_SF: 3.116e-06
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: 0039
+    serial: '0068'
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    calibration_date: '2020-02-05'
+    calibration_date: '2024-01-26'
+  AD2CP:
+    make: Nortek
+    model: AD2CP
+    serial: '103363'
+    long_name: Nortek Glider1000 AD2CP
+    make_model: Nortek AD2CP
+    factory_calibrated: 'Yes'
+    calibration_date: '2022-05-25'
 netcdf_variables:
   keep_variables:
   - temperature
   - oxygen_concentration
   - chlorophyll
   - ad2cp_heading
-  - downwelling_PAR
   timebase:
     source: NAV_LATITUDE
   time:
@@ -309,32 +300,8 @@ netcdf_variables:
     observation_type: calculated
     accuracy: '0.02'
     resolution: '0.01'
-  chlorophyll_tridente:
-    source: LEGATO_TRIDENTE_CHLOROPHYLL
-    long_name: chlorophyll
-    standard_name: concentration_of_chlorophyll_in_sea_water
-    units: mg m-3
-    coordinates: time depth latitude longitude
-    instrument: instrument_flourometer
-    observation_type: calculated
-  phycocyanin_tridente:
-    source: LEGATO_TRIDENTE_PHYCOCYANIN
-    long_name: phycocyanin
-    standard_name: concentration_of_phycocyanin_in_sea_water
-    units: mg m-3
-    coordinates: time depth latitude longitude
-    instrument: instrument_flourometer
-    observation_type: calculated
-  turbidity:
-    source: LEGATO_TRIDENTE_TURBIDITY
-    long_name: turbidity
-    standard_name: turbidity_in_sea_water
-    units: FTU
-    coordinates: time depth latitude longitude
-    instrument: instrument_turbidity_meter
-    observation_type: calculated
   chlorophyll:
-    source: FLBBPC_CHL_SCALED
+    source: FLBBCD_CHL_SCALED
     long_name: chlorophyll
     standard_name: concentration_of_chlorophyll_in_sea_water
     units: mg m-3
@@ -345,32 +312,32 @@ netcdf_variables:
     observation_type: calculated
     sensitivity: '0.025'
   chlorophyll_raw:
-    source: FLBBPC_CHL_COUNT
+    source: FLBBCD_CHL_COUNT
     long_name: raw chlorophyll
     standard_name: raw_chlorophyll_in_sea_water
     units: counts
     coordinates: time depth latitude longitude
     instrument: instrument_flourometer
-  phycocyanin:
-    source: FLBBPC_PC_SCALED
-    long_name: phycocyanin
-    standard_name: concentration_of_phycocyanin_in_sea_water
+  cdom:
+    source: FLBBCD_CDOM_SCALED
+    long_name: colored dissolved organic matter
+    standard_name: concentration_of_colored_dissolved_organic_matter_in_sea_water
     units: mg m-3
     coordinates: time depth latitude longitude
     instrument: instrument_flourometer
     valid_min: '0.'
-    valid_max: '175.'
+    valid_max: '375.'
     observation_type: calculated
-    sensitivity: '0.09'
-  phycocyanin_raw:
-    source: FLBBPC_PC_COUNT
-    long_name: raw phycocyanin
-    standard_name: raw_phycocyanin_in_sea_water
+    sensitivity: '0.28'
+  cdom_raw:
+    source: FLBBCD_CDOM_COUNT
+    long_name: raw colored dissolved organic matter
+    standard_name: raw_colored_dissolved_organic_matter_in_sea_water
     units: counts
     coordinates: time depth latitude longitude
-    instrument: instrument_flourometer
+    instrument: instrument_scatterometer
   backscatter_scaled:
-    source: FLBBPC_BB_700_SCALED
+    source: FLBBCD_BB_700_SCALED
     long_name: "700 nm \u03B2 total volume scattering coefficient at 117 degree angle"
     standard_name: 700_nm_wavelength_total_volume_scattering_coefficient
     units: m-1 sr-1
@@ -381,7 +348,7 @@ netcdf_variables:
     observation_type: calculated
     sensitivity: '0.002'
   backscatter_raw:
-    source: FLBBPC_BB_700_COUNT
+    source: FLBBCD_BB_700_COUNT
     long_name: raw 700 nm wavelength backscatter
     standard_name: raw_700_nm_wavelength_backscatter_in_sea_water
     units: counts
@@ -413,6 +380,13 @@ netcdf_variables:
     observation_type: measured
     accuracy: '0.01'
     resolution: '0.001'
+  oxygen_phase:
+    source: LEGATO_CODA_CORR_PHASE
+    long_name: oxygen phase
+    standard_name: oxygen_phase_in_sea_water
+    units: degrees
+    coordinates: time depth latitude longitude
+    instrument: instrument_optode
   ad2cp_heading:
     source: AD2CP_HEADING
     long_name: glider heading angle from AD2CP
@@ -466,21 +440,3 @@ netcdf_variables:
     standard_name: platform_beam1_measure_ad2cp_cell1
     units: m s-1
     coordinates: time depth latitude longitude
-  downwelling_PAR:
-    source: MPE-PAR_IRRADIANCE
-    long_name: Downwelling PAR (Photosynthetically Active Radiation) in range 400-700
-      nm
-    standard_name: downwelling_PAR
-    units: "\u03BCE cm-2 s-1"
-    average_method: geometric mean
-    coordinates: time depth latitude longitude
-    instrument: instrument_radiometer
-    observation_type: measured
-  internal_temperature_PAR:
-    source: MPE-PAR_TEMPERATURE
-    long_name: Sensor internal temperature
-    standard_name: internal_temperature_PAR
-    units: Celsius
-    coordinates: time depth latitude longitude
-    instrument: instrument_thermistor
-    observation_type: measured
