@@ -29,7 +29,7 @@ metadata:
   glider_name: Kalmus
   glider_serial: '69'
   wmo_id: '6801506'
-  comment: .nan
+  comment: "Glider dove on a faster profile with zt=20 occationaly due to strong currents. The sensor cap was on the oxygen sensor forr the full mission duration, see qc"
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Chiara Monforte
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -378,11 +378,4 @@ netcdf_variables:
 qc:
   oxygen_concentration:
     value: 4
-    comment: "Following issues with the oxygen sensor, a 2-point calibration has been\
-      \ performed on date {2023-06-15}. The values at 0 and 100 % saturation are accurate.\
-      \ Absolute Values between these two extremes may be inaccurate. The relative\
-      \ variability is confirmed to be valid and no temporal drift occurs. During\
-      \ tests values that can be outside the manufacturer acceptance range have been\
-      \ observed when compared to the output from a reference sensor. This issue is\
-      \ particularly evident around 100\u03BCmol/l. More information on the history\
-      \ and updates regarding this issue (https://observations.voiceoftheocean.org/data/updates)."
+    comment: "Sensor cap on oxygen sensor for full mission duration"
