@@ -29,7 +29,7 @@ metadata:
   glider_name: Kalmus
   glider_serial: '69'
   wmo_id: '6801506'
-  comment: 'zt was 20 m for a part of the mission and in the end up to 40 m. Vertical speed was also higher due to strong currents in the northern part of the transect.'
+  comment: ' '
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -37,7 +37,7 @@ metadata:
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '30'
+  deployment_id: '31'
   deployment_name: SAMBA
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
