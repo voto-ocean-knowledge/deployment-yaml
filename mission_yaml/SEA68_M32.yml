@@ -29,7 +29,7 @@ metadata:
   glider_name: Aster
   glider_serial: '68'
   wmo_id: '6801602'
-  comment: ' Sensor serials and calibration dates are currently taken from latest pdf as cfg file was not available. Will double check as I have the cfg. '
+  comment: ' '
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Chiara Monforte
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -73,7 +73,7 @@ glider_devices:
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    calibration_date: '2022-05-10'
+    calibration_date: '2024-02-15'
   AD2CP:
     make: Nortek
     model: AD2CP
