@@ -26,10 +26,10 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Kalmus
-  glider_serial: '69'
-  wmo_id: '6801506'
-  comment: ' Glider flew with increased vertical speed and zt for large parts of mission to proceed in strong currents as it got pushed off transect. '
+  glider_name: Martorn
+  glider_serial: '44'
+  wmo_id: '6801672'
+  comment: ' '
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -37,7 +37,7 @@ metadata:
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '31'
+  deployment_id: '94'
   deployment_name: SAMBA
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
@@ -46,38 +46,38 @@ glider_devices:
   altimeter:
     make: UNKNOWN
     model: UNKNOWN
-    serial: '52'
+    serial: '53'
   ctd:
     make: RBR
     model: legato
-    serial: '206613'
+    serial: '205048'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2023-06-02'
+    calibration_date: '2023-11-09'
   optics:
     make: Wetlabs
     model: FLBBPC
-    serial: '6754'
+    serial: '6597'
     long_name: Wetlabs ECO Puck FLBBPC
     make_model: Wetlabs FLBBPC
     factory_calibrated: 'Yes'
-    calibration_date: '2021-03-22'
+    calibration_date: '2020-12-22'
     calibration_parameters:
-      Chl_DarkCounts: 48
-      Chl_SF: 0.0073
-      PC_DarkCounts: 44
-      PC_SF: 0.0424
-      SIG_DarkCounts: 46
-      SIG_SF: 1.783e-06
+      Chl_DarkCounts: 46
+      Chl_SF: 0.0072
+      PC_DarkCounts: 45
+      PC_SF: 0.0386
+      SIG_DarkCounts: 45
+      SIG_SF: 1.722e-06
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0050'
+    serial: 0058
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    calibration_date: '2024-01-26'
+    calibration_date: '2023-08-26'
 netcdf_variables:
   keep_variables:
   - temperature
