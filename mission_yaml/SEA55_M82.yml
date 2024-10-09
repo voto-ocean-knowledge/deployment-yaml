@@ -96,6 +96,7 @@ netcdf_variables:
   - temperature
   - oxygen_concentration
   - chlorophyll
+  - fdom
   - ad2cp_heading
   timebase:
     source: NAV_LATITUDE
