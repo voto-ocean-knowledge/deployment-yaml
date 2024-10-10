@@ -83,12 +83,12 @@ glider_devices:
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     calibration_date: '2024-01-13'
-  microstructure:
+  turbulence:
     make: Rockland scientific
-    model: MicroRider-1000-G
+    model: MicroRider-1000G
     serial: '0496'
-    long_name: Rockland scientific MicroRider-1000-G
-    make_model: Rockland scientific MicroRider-1000-G
+    long_name: Rockland Scientific MicroRider-1000G
+    make_model: Rockland Scientific MR1000G-RDL
     factory_calibrated: 'Yes'
     calibration_date: '2024-03-04'
 netcdf_variables:
@@ -96,7 +96,7 @@ netcdf_variables:
   - temperature
   - oxygen_concentration
   - chlorophyll
-  - fdom
+  - tke_dissipation_shear_1
   - ad2cp_heading
   timebase:
     source: NAV_LATITUDE
@@ -312,7 +312,7 @@ netcdf_variables:
     resolution: '0.01'
   chlorophyll:
     source: TRIDENTE_CHLOROPHYLL
-    long_name: chlorophyll
+    long_name: 470 nm wavelength chlorophyll
     standard_name: concentration_of_chlorophyll_in_sea_water
     units: mg m-3
     coordinates: time depth latitude longitude
@@ -322,9 +322,9 @@ netcdf_variables:
     observation_type: calculated
   backscatter:
     source: TRIDENTE_BACKSCATTER
-    long_name: backscatter
-    standard_name: backscatter
-    units: m-1
+    long_name: 700 nm wavelength backscatter
+    standard_name: 700_nm_wavelength_backscatter_in_sea_water
+    units: m-1 sr-1
     valid_min: '0.'
     valid_max: '0.05'
     coordinates: time depth latitude longitude
@@ -416,4 +416,16 @@ netcdf_variables:
     long_name: glider beam 4 measure from AD2CP in cell 1
     standard_name: platform_beam1_measure_ad2cp_cell1
     units: m s-1
+    coordinates: time depth latitude longitude
+  tke_dissipation_shear_1:
+    source: MR1000G-RDL_EPS1
+    long_name: Turbulent kinetic energy dissipation shear 1
+    standard_name: turbulent_kinetic_energy_dissipation_shear_1
+    units: W kg-1
+    coordinates: time depth latitude longitude
+  tke_dissipation_shear_2:
+    source: MR1000G-RDL_EPS2
+    long_name: Turbulent kinetic energy dissipation shear 2
+    standard_name: turbulent_kinetic_energy_dissipation_shear_2
+    units: W kg-1
     coordinates: time depth latitude longitude
