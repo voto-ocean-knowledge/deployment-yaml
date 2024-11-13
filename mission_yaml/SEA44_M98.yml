@@ -26,10 +26,10 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Kalmus
-  glider_serial: '69'
-  wmo_id: '6801506'
-  comment: 'Occational flight on increased zt and vertical speed to fly in currents'
+  glider_name: Martorn
+  glider_serial: '44'
+  wmo_id: '6801672'
+  comment: ' '
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -37,52 +37,65 @@ metadata:
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '37'
+  deployment_id: '98'
   deployment_name: SAMBA
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
-  summary: ' Part of SAMBA continuous monitoring'
-glider_devices:
-  altimeter:
-    make: UNKNOWN
-    model: UNKNOWN
-    serial: '52'
+  summary: ' Part of SAMBA continuous monitoring'glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '206613'
+    serial: '204958'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2023-06-02'
+    calibration_date: '2023-09-05'
   optics:
     make: Wetlabs
     model: FLBBPC
-    serial: '6754'
+    serial: '6598'
     long_name: Wetlabs ECO Puck FLBBPC
     make_model: Wetlabs FLBBPC
     factory_calibrated: 'Yes'
-    calibration_date: '2021-03-22'
+    calibration_date: '2020-12-22'
     calibration_parameters:
-      Chl_DarkCounts: 48
+      Chl_DarkCounts: 46
       Chl_SF: 0.0073
-      PC_DarkCounts: 44
-      PC_SF: 0.0424
-      SIG_DarkCounts: 46
-      SIG_SF: 1.783e-06
+      PC_DarkCounts: 47
+      PC_SF: 0.0388
+      SIG_DarkCounts: 47
+      SIG_SF: 1.815e-06
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0050'
+    serial: '0081'
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    calibration_date: '2024-01-26'
+    calibration_date: '2023-04-01'
+  AD2CP:
+    make: Nortek
+    model: AD2CP
+    serial: '103355'
+    long_name: Nortek Glider1000 AD2CP
+    make_model: Nortek AD2CP
+    factory_calibrated: 'Yes'
+    calibration_date: '2022-03-17'
+  irradiance:
+    make: Biospherical
+    model: MPE-PAR
+    serial: '2984'
+    long_name: Biospherical MPE-PAR
+    make_model: Biospherical MPE-PAR
+    factory_calibrated: 'Yes'
+    calibration_date: '2023-02-21'
 netcdf_variables:
   keep_variables:
   - temperature
   - oxygen_concentration
   - chlorophyll
+  - ad2cp_heading
+  - downwelling_PAR
   timebase:
     source: NAV_LATITUDE
   time:
@@ -375,3 +388,74 @@ netcdf_variables:
     observation_type: measured
     accuracy: '0.01'
     resolution: '0.001'
+  ad2cp_heading:
+    source: AD2CP_HEADING
+    long_name: glider heading angle from AD2CP
+    standard_name: platform_orientation_ad2cp
+    units: degrees
+    coordinates: time depth latitude longitude
+  ad2cp_pitch:
+    source: AD2CP_PITCH
+    long_name: glider pitch angle from AD2CP
+    standard_name: platform_pitch_angle_ad2cp
+    units: degrees
+    coordinates: time depth latitude longitude
+  ad2cp_roll:
+    source: AD2CP_ROLL
+    long_name: glider roll angle from AD2CP
+    standard_name: platform_roll_angle_ad2cp
+    units: degrees
+    coordinates: time depth latitude longitude
+  ad2cp_pressure:
+    source: AD2CP_PRESSURE
+    long_name: glider pressure from AD2CP
+    standard_name: platform_pressure_ad2cp
+    units: dbar
+    coordinates: time depth latitude longitude
+  ad2cp_time:
+    source: AD2CP_TIME
+    long_name: AD2CP recorded time
+    standard_name: ad2cp_recorded_time
+    coordinates: time depth latitude longitude
+  ad2cp_beam1_cell_number1:
+    source: AD2CP_V1_CN1
+    long_name: glider beam 1 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
+    units: m s-1
+    coordinates: time depth latitude longitude
+  ad2cp_beam2_cell_number1:
+    source: AD2CP_V2_CN1
+    long_name: glider beam 2 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
+    units: m s-1
+    coordinates: time depth latitude longitude
+  ad2cp_beam3_cell_number1:
+    source: AD2CP_V3_CN1
+    long_name: glider beam 3 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
+    units: m s-1
+    coordinates: time depth latitude longitude
+  ad2cp_beam4_cell_number1:
+    source: AD2CP_V4_CN1
+    long_name: glider beam 4 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
+    units: m s-1
+    coordinates: time depth latitude longitude
+  downwelling_PAR:
+    source: MPE-PAR_IRRADIANCE
+    long_name: Downwelling PAR (Photosynthetically Active Radiation) in range 400-700
+      nm
+    standard_name: downwelling_PAR
+    units: "\u03BCE cm-2 s-1"
+    average_method: geometric mean
+    coordinates: time depth latitude longitude
+    instrument: instrument_radiometer
+    observation_type: measured
+  internal_temperature_PAR:
+    source: MPE-PAR_TEMPERATURE
+    long_name: Sensor internal temperature
+    standard_name: internal_temperature_PAR
+    units: Celsius
+    coordinates: time depth latitude longitude
+    instrument: instrument_thermistor
+    observation_type: measured
