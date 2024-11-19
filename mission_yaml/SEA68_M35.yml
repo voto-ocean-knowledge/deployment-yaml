@@ -26,10 +26,10 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Saltarv
-  glider_serial: '66'
-  wmo_id: '6801505'
-  comment: 'Voltage drops throughout mission resulted in a few 1 Alarms. Navigation pressure sensor (not legato) showing negative values occationally at the surface. zt/zs=2 and alt=2 throughout the full mission.'
+  glider_name: Aster
+  glider_serial: '68'
+  wmo_id: '6801602'
+  comment: ''
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -37,7 +37,7 @@ metadata:
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '60'
+  deployment_id: '35'
   deployment_name: SAMBA
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
@@ -46,17 +46,17 @@ glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '205047'
+    serial: '212532'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2023-08-02'
+    calibration_date: '2022-10-21'
   optics:
     make: Wetlabs
     model: FLBBCD
-    serial: '7564'
-    long_name: Wetlabs ECO Puck FLBBPC
-    make_model: Wetlabs FLBBPC
+    serial: '7563'
+    long_name: Wetlabs ECO Puck FLBBCD
+    make_model: Wetlabs FLBBCD
     factory_calibrated: 'Yes'
     calibration_date: '2022-05-10'
     calibration_parameters:
@@ -69,19 +69,19 @@ glider_devices:
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0067'
+    serial: '0071'
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    calibration_date: '2023-08-26'
+    calibration_date: '2024-02-15'
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '103360'
+    serial: '104646'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2022-03-15'
+    calibration_date: '2022-07-18'
 netcdf_variables:
   keep_variables:
   - temperature
