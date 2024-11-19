@@ -29,7 +29,7 @@ metadata:
   glider_name: Fibbla
   glider_serial: '76'
   wmo_id: '6801665'
-  comment:  " "
+  comment:  "ADCP was partly covered in mud upon recovery. May affect the data, but most likely not. Glider flew on zt/zs=2 and alt=2 fo full mission duration. "
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
