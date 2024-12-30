@@ -29,7 +29,7 @@ metadata:
   glider_name: Kaprifol
   glider_serial: '55'
   wmo_id: '6801674'
-  comment: 'Part of the TurboMix mission, deployed with Legato Tridente and a MicroRider-1000-G sensor.'
+  comment: 'Part of the TurboMix mission, deployed with Legato Tridente and a MicroRider-1000-G sensor. Mud was seen on the MicroRider after recovery as the glider touched te bottom without it being a hard strike. MicroStructure data unaffected at first glance.'
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
