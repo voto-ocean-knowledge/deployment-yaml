@@ -26,10 +26,10 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Trift
-  glider_serial: '56'
-  wmo_id: '6801675'
-  comment: " Glider flew on zt/zt and alt=2 on until last week where it loitered with payload off during evening and afternoons to save battery. "
+  glider_name: Aster
+  glider_serial: '68'
+  wmo_id: '6801602'
+  comment: '   '
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -37,49 +37,51 @@ metadata:
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '78'
+  deployment_id: '37'
   deployment_name: SAMBA
   project: SAMBA
-  project_url: https://voiceoftheocean.org/ocean-observatories/
+  project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
   summary: ' Part of SAMBA continuous monitoring'
 glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '230629'
+    serial: '212532'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2023-06-14'
+    calibration_date: '2022-10-21'
   optics:
     make: Wetlabs
-    model: FLNTU
-    serial: '6134'
-    long_name: Wetlabs ECO Puck FLNTU
-    make_model: Wetlabs FLNTU
+    model: FLBBCD
+    serial: '7563'
+    long_name: Wetlabs ECO Puck FLBBCD
+    make_model: Wetlabs FLBBCD
     factory_calibrated: 'Yes'
-    calibration_date: '2020-02-06'
+    calibration_date: '2022-05-10'
     calibration_parameters:
-      Chl_DarkCounts: 48
+      Chl_DarkCounts: 49
       Chl_SF: 0.0121
-      NTU_DarkCounts: 49
-      NTU_SF: 0.0061
+      CDOM_DarkCounts: 49
+      CDOM_SF: 0.0904
+      SIG_DarkCounts: 46
+      SIG_SF: 3.145e-06
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0039'
+    serial: '0071'
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    calibration_date: '2022-03-11'
+    calibration_date: '2024-02-15'
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '103356'
+    serial: '104646'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2023-10-19'
+    calibration_date: '2022-07-18'
 netcdf_variables:
   keep_variables:
   - temperature
@@ -299,7 +301,7 @@ netcdf_variables:
     accuracy: '0.02'
     resolution: '0.01'
   chlorophyll:
-    source: FLNTU_CHL_SCALED
+    source: FLBBCD_CHL_SCALED
     long_name: chlorophyll
     standard_name: concentration_of_chlorophyll_in_sea_water
     units: mg m-3
@@ -310,30 +312,48 @@ netcdf_variables:
     observation_type: calculated
     sensitivity: '0.025'
   chlorophyll_raw:
-    source: FLNTU_CHL_COUNT
+    source: FLBBCD_CHL_COUNT
     long_name: raw chlorophyll
     standard_name: raw_chlorophyll_in_sea_water
     units: counts
     coordinates: time depth latitude longitude
     instrument: instrument_flourometer
-  turbidity:
-    source: FLNTU_NTU_SCALED
-    long_name: turbidity
-    standard_name: turbidity_in_sea_water
-    units: NTU
-    coordinates: time depth latitude longitude
-    instrument: instrument_turbidity_meter
-    valid_min: '0.'
-    valid_max: '25.'
-    observation_type: calculated
-    sensitivity: '0.01'
-  turbidity_raw:
-    source: FLNTU_NTU_COUNT
-    long_name: raw turbidity
-    standard_name: raw_turbidity_in_sea_water
-    units: counts
+  cdom:
+    source: FLBBCD_CDOM_SCALED
+    long_name: colored dissolved organic matter
+    standard_name: concentration_of_colored_dissolved_organic_matter_in_sea_water
+    units: mg m-3
     coordinates: time depth latitude longitude
     instrument: instrument_flourometer
+    valid_min: '0.'
+    valid_max: '375.'
+    observation_type: calculated
+    sensitivity: '0.28'
+  cdom_raw:
+    source: FLBBCD_CDOM_COUNT
+    long_name: raw colored dissolved organic matter
+    standard_name: raw_colored_dissolved_organic_matter_in_sea_water
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_scatterometer
+  backscatter_scaled:
+    source: FLBBCD_BB_700_SCALED
+    long_name: "700 nm \u03B2 total volume scattering coefficient at 117 degree angle"
+    standard_name: 700_nm_wavelength_total_volume_scattering_coefficient
+    units: m-1 sr-1
+    coordinates: time depth latitude longitude
+    instrument: instrument_scatterometer
+    valid_min: '0.'
+    valid_max: '3.'
+    observation_type: calculated
+    sensitivity: '0.002'
+  backscatter_raw:
+    source: FLBBCD_BB_700_COUNT
+    long_name: raw 700 nm wavelength backscatter
+    standard_name: raw_700_nm_wavelength_backscatter_in_sea_water
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_scatterometer
   oxygen_concentration:
     source: AROD_FT_DO
     long_name: oxygen concentration
