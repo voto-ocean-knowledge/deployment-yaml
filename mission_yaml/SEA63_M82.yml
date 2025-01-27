@@ -29,7 +29,7 @@ metadata:
   glider_name: Ljung
   glider_serial: '63'
   wmo_id: '6801707'
-  comment: ' Legato conductivity was not working for the majority of time. Finished the mission by loitering in the afternoons to preserve battery due to weather '
+  comment: ' '
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -440,7 +440,3 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_thermistor
     observation_type: measured
-qc:
-  conductivity:
-    value: 4
-    comment: " Broken for the majority of mission duration "
