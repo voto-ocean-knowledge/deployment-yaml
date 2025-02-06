@@ -26,10 +26,10 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Kalmus
-  glider_serial: '69'
-  wmo_id: '6801506'
-  comment: ' Glider flew on an increased zt and speed occationally to fight currents '
+  glider_name: Vresros
+  glider_serial: '78'
+  wmo_id: '8901000'
+  comment: ' '
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -37,59 +37,59 @@ metadata:
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '41'
+  deployment_id: '33'
   deployment_name: SAMBA
   project: SAMBA
   project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
-  summary: ' Part of SAMBA continuous monitoring'
+  summary: ' Part of SAMBA continuous monitoring '
 glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '206613'
+    serial: '206523'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2023-06-02'
+    calibration_date: '2024-02-22'
   optics:
     make: Wetlabs
     model: FLBBPC
-    serial: '6754'
+    serial: '6598'
     long_name: Wetlabs ECO Puck FLBBPC
     make_model: Wetlabs FLBBPC
     factory_calibrated: 'Yes'
-    calibration_date: '2021-03-22'
+    calibration_date: '2020-12-22'
     calibration_parameters:
-      Chl_DarkCounts: 48
+      Chl_DarkCounts: 46
       Chl_SF: 0.0073
-      PC_DarkCounts: 44
-      PC_SF: 0.0424
-      SIG_DarkCounts: 46
-      SIG_SF: 1.783e-06
+      PC_DarkCounts: 47
+      PC_SF: 0.0388
+      SIG_DarkCounts: 47
+      SIG_SF: 1.81e-06
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0050'
+    serial: '0081'
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    calibration_date: '2024-01-26'
+    calibration_date: '2023-04-01'
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '105524'
+    serial: '103355'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2024-02-10'
+    calibration_date: '2022-03-17'
   irradiance:
     make: Biospherical
     model: MPE-PAR
-    serial: '3201'
+    serial: '2984'
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
     factory_calibrated: 'Yes'
-    calibration_date: '2024-07-25'
+    calibration_date: '2023-02-21'
 netcdf_variables:
   keep_variables:
   - temperature
@@ -460,3 +460,4 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_thermistor
     observation_type: measured
+
