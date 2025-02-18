@@ -29,7 +29,7 @@ metadata:
   glider_name: Ljung
   glider_serial: '63'
   wmo_id: '6801707'
-  comment: ' '
+  comment: ' Glider loitered for periods at the end of the mission to save battery. The ADCP stopped collecting data for a period between 8-9/2. The Legato stopped working on the 15/2.'
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -440,3 +440,24 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_thermistor
     observation_type: measured
+qc:
+  conductivity:
+    value: 4
+    comment: "Legato CTD broke on 2025-02-15 "
+    start: '2025-02-15'
+    end: '2025-02-19'
+  temperature:
+    value: 4
+    comment: "Legato CTD broke on 2025-02-15 "
+    start: '2025-02-15'
+    end: '2025-02-19'
+  pressure:
+    value: 4
+    comment: "Legato CTD broke on 2025-02-15 "
+    start: '2025-02-15'
+    end: '2025-02-19'
+  oxygen_concentration:
+    value: 3
+    comment: "Legato CTD broke on 2025-02-15 "
+    start: '2025-02-15'
+    end: '2025-02-19'
