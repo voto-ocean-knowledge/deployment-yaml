@@ -29,7 +29,7 @@ metadata:
   glider_name: Kaprifol
   glider_serial: '55'
   wmo_id: '6801674'
-  comment: 'Part of the TurboMix mission, deployed with Legato Tridente and a MicroRider-1000-G sensor. MR1000G was set to sample every 2nd dive downcast + up to 40 m upcast, although it sampled below 40 m every dive. Glider did afternoon/night lotiering for an extended time to extend battery to fit with operations logistics. Glider did not collect data from the 15/2-2025 to save battery. '
+  comment: 'Part of the TurboMix mission, deployed with Legato Tridente and a MicroRider-1000-G sensor. MR1000G was set to sample every 2nd dive downcast + up to 40 m upcast, although it sampled below 40 m every dive. Glider did afternoon/night lotiering for an extended time to extend battery to fit with operations logistics. Glider did not collect data from the 2025-02-15 to save battery. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
