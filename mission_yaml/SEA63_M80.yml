@@ -443,4 +443,11 @@ netcdf_variables:
 qc:
   conductivity:
     value: 4
-    comment: " Broken for the majority of mission duration "
+    comment: "Legato conductivity cell broke on 2024-12-18, but should be treated as suscpect for the full mission "
+    start: '2024-12-17'
+    end: '2025-01-09'
+  oxygen_concentration:
+    value: 3
+    comment: "Legato conductivity cell broke on 2024-12-18, but should be treated as suscpect for the full mission"
+    start: '2024-12-17'
+    end: '2025-01-09'
