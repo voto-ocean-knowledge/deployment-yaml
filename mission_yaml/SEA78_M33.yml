@@ -29,7 +29,7 @@ metadata:
   glider_name: Vresros
   glider_serial: '78'
   wmo_id: '8901000'
-  comment: ' '
+  comment: ' Too high oxygen values for SEA078 M33. See qc'
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -460,4 +460,7 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_thermistor
     observation_type: measured
-
+qc:
+  oxygen_concentration:
+    value: 3
+    comment: “Very high oxygen concentration values compared to previous missions. Variability is still present and the matter will be investigated closer after recovery. May be due to physical damage to the sensor.“
