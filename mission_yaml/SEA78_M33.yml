@@ -50,7 +50,7 @@ glider_devices:
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2024-02-22'
+    calibration_date: '2024-02-23'
   optics:
     make: Wetlabs
     model: FLBBPC
@@ -463,4 +463,4 @@ netcdf_variables:
 qc:
   oxygen_concentration:
     value: 3
-    comment: “Very high oxygen concentration values compared to previous missions. Variability is still present and the matter will be investigated closer after recovery. May be due to physical damage to the sensor.“
+    comment: “Very high oxygen concentration values compared to previous missions. Probably due to a config setting. Under investigation.“
