@@ -440,3 +440,7 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_thermistor
     observation_type: measured
+qc:
+  oxygen_concentration:
+    value: 3
+    comment: “Very high oxygen concentration values compared to previous missions. Due to issue in glider payload software 2.24.2-r.“

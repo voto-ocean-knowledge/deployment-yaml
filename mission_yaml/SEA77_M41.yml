@@ -29,7 +29,7 @@ metadata:
   glider_name: Smilla
   glider_serial: '77'
   wmo_id: '8901050'
-  comment: ' '
+  comment: ' Due to an error in the candidate firmware, raw counts for chlorophyll, cdom and backscatter are not availalable for this mission. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -440,3 +440,7 @@ netcdf_variables:
     standard_name: platform_beam1_measure_ad2cp_cell1
     units: m s-1
     coordinates: time depth latitude longitude
+qc:
+  oxygen_concentration:
+    value: 3
+    comment: “Very high oxygen concentration values compared to previous missions. Due to issue in glider payload software 2.24.2-r.“
