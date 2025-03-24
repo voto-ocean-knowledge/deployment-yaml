@@ -40,48 +40,48 @@ metadata:
   deployment_id: '40'
   deployment_name: SAMBA
   project: SAMBA
-  project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
+  project_url: https://voiceoftheocean.org/ocean-observatories/
   summary: ' Part of SAMBA continuous monitoring'
 glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '212532'
+    serial: '206523'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2022-10-21'
+    calibration_date: '2024-02-23'
   optics:
     make: Wetlabs
-    model: FLBBCD
-    serial: '7563'
-    long_name: Wetlabs ECO Puck FLBBCD
-    make_model: Wetlabs FLBBCD
+    model: FLBBPC
+    serial: '6598'
+    long_name: Wetlabs ECO Puck FLBBPC
+    make_model: Wetlabs FLBBPC
     factory_calibrated: 'Yes'
-    calibration_date: '2022-05-10'
+    calibration_date: '2021-03-22'
     calibration_parameters:
-      Chl_DarkCounts: 49
-      Chl_SF: 0.0121
-      CDOM_DarkCounts: 49
-      CDOM_SF: 0.0904
-      SIG_DarkCounts: 46
-      SIG_SF: 3.145e-06
+      Chl_DarkCounts: 46
+      Chl_SF: 0.0073
+      PC_DarkCounts: 47
+      PC_SF: 0.0388
+      SIG_DarkCounts: 47
+      SIG_SF: 1.815e-06
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0071'
+    serial: '0081'
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    calibration_date: '2024-02-15'
+    calibration_date: '2023-04-01'
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '104646'
+    serial: '103355'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2022-07-18'
+    calibration_date: '2022-03-17'
 netcdf_variables:
   keep_variables:
   - temperature

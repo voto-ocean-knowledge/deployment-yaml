@@ -29,7 +29,7 @@ metadata:
   glider_name: Fibbla
   glider_serial: '76'
   wmo_id: '6801665'
-  comment:  " "
+  comment:  " Due to an error in the candidate firmware, raw counts for chlorophyll, cdom and backscatter are not availalable for this mission. "
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -442,3 +442,7 @@ qc:
     value: 4
     comment: High values of CDOM raw counts. The cause of the issue is still unknown.
       The relative variability may be intact but absolute values are unreliable.
+  oxygen_concentration:
+    value: 3
+    comment: “Very high oxygen concentration values compared to previous missions. Due to issue in glider payload software 2.24.2-r.“
+
