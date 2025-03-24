@@ -301,7 +301,7 @@ netcdf_variables:
     accuracy: '0.02'
     resolution: '0.01'
   chlorophyll:
-    source: FLBBCD_CHL_SCALED
+    source: FLBBPC_CHL_SCALED
     long_name: chlorophyll
     standard_name: concentration_of_chlorophyll_in_sea_water
     units: mg m-3
@@ -312,7 +312,7 @@ netcdf_variables:
     observation_type: calculated
     sensitivity: '0.025'
   chlorophyll_raw:
-    source: FLBBCD_CHL_COUNT
+    source: FLBBPC_CHL_COUNT
     long_name: raw chlorophyll
     standard_name: raw_chlorophyll_in_sea_water
     units: counts
@@ -337,7 +337,7 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_flourometer
   backscatter_scaled:
-    source: FLBBCD_BB_700_SCALED
+    source: FLBBPC_BB_700_SCALED
     long_name: "700 nm \u03B2 total volume scattering coefficient at 117 degree angle"
     standard_name: 700_nm_wavelength_total_volume_scattering_coefficient
     units: m-1 sr-1
@@ -348,7 +348,7 @@ netcdf_variables:
     observation_type: calculated
     sensitivity: '0.002'
   backscatter_raw:
-    source: FLBBCD_BB_700_COUNT
+    source: FLBBPC_BB_700_COUNT
     long_name: raw 700 nm wavelength backscatter
     standard_name: raw_700_nm_wavelength_backscatter_in_sea_water
     units: counts
@@ -433,3 +433,7 @@ netcdf_variables:
     standard_name: platform_beam1_measure_ad2cp_cell1
     units: m s-1
     coordinates: time depth latitude longitude
+qc:
+  oxygen_concentration:
+    value: 3
+    comment: “Very high oxygen concentration values compared to previous missions. Due to issue in glider payload software 2.24.2-r.“
