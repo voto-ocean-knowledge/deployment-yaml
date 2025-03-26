@@ -444,5 +444,5 @@ qc:
       The relative variability may be intact but absolute values are unreliable.
   oxygen_concentration:
     value: 3
-    comment: “Very high oxygen concentration values compared to previous missions. Due to issue in glider payload software 2.24.2-r.“
+    comment: “Very high oxygen concentration values compared to previous missions. Due to issue in glider payload software.“
 
