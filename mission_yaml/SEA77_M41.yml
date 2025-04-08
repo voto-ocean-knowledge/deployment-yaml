@@ -29,7 +29,7 @@ metadata:
   glider_name: Smilla
   glider_serial: '77'
   wmo_id: '8901050'
-  comment: ' Due to an error in the candidate firmware, raw counts for chlorophyll, cdom and backscatter are not availalable for this mission. '
+  comment: ' Glider flew on zt/zs/alt=2 for the full mission duration. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider

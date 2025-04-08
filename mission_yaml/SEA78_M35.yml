@@ -463,4 +463,4 @@ netcdf_variables:
 qc:
   oxygen_concentration:
     value: 3
-    comment: “Very high oxygen concentration values compared to previous missions. Probably due to a config setting. Under investigation.“
+    comment: “Very high oxygen concentration values compared to previous missions. Due to an issue in the payload software.“
