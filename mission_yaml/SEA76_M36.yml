@@ -27,7 +27,7 @@ metadata:
   sea_name: Baltic
   transmission_system: IRIDIUM
   glider_name: Fibbla
-  glider_serial: '78'
+  glider_serial: '76'
   wmo_id: '6801665'
   comment:  "  "
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
@@ -82,12 +82,21 @@ glider_devices:
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
     calibration_date: '2023-08-16'
+  irradiance:
+    make: Biospherical
+    model: MPE-PAR
+    serial: '3197'
+    long_name: Biospherical MPE-PAR
+    make_model: Biospherical MPE-PAR
+    factory_calibrated: 'Yes'
+    calibration_date: '2024-05-02'
 netcdf_variables:
   keep_variables:
   - temperature
   - oxygen_concentration
   - chlorophyll
   - ad2cp_heading
+  - downwelling_PAR
   timebase:
     source: NAV_LATITUDE
   time:
@@ -433,6 +442,24 @@ netcdf_variables:
     standard_name: platform_beam1_measure_ad2cp_cell1
     units: m s-1
     coordinates: time depth latitude longitude
+  downwelling_PAR:
+    source: MPE-PAR_IRRADIANCE
+    long_name: Downwelling PAR (Photosynthetically Active Radiation) in range 400-700
+      nm
+    standard_name: downwelling_PAR
+    units: "\u03BCE cm-2 s-1"
+    average_method: geometric mean
+    coordinates: time depth latitude longitude
+    instrument: instrument_radiometer
+    observation_type: measured
+  internal_temperature_PAR:
+    source: MPE-PAR_TEMPERATURE
+    long_name: Sensor internal temperature
+    standard_name: internal_temperature_PAR
+    units: Celsius
+    coordinates: time depth latitude longitude
+    instrument: instrument_thermistor
+    observation_type: measured
 qc:
   cdom:
     value: 4
