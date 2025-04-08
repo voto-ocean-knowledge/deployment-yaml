@@ -421,11 +421,11 @@ netcdf_variables:
     source: MR1000G-RDL_LOG10_EPS1
     long_name: log10 of turbulent kinetic energy dissipation shear 1
     standard_name: turbulent_kinetic_energy_dissipation_shear_1
-    units: W kg-1
+    units: log10 W kg-1
     coordinates: time depth latitude longitude
   tke_dissipation_shear_2:
     source: MR1000G-RDL_LOG10_EPS1
     long_name: log10 of turbulent kinetic energy dissipation shear 2
     standard_name: turbulent_kinetic_energy_dissipation_shear_2
-    units: W kg-1
+    units: log10 W kg-1
     coordinates: time depth latitude longitude
