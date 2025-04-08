@@ -29,7 +29,7 @@ metadata:
   glider_name: Fibbla
   glider_serial: '76'
   wmo_id: '6801665'
-  comment:  " Due to an error in the candidate firmware, raw counts for chlorophyll, cdom and backscatter are not availalable for this mission. Glider performed two evening drifts with the payload turned off at the end of the mission. "
+  comment:  " Glider performed two evening drifts with the payload turned off at the end of the mission. "
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
