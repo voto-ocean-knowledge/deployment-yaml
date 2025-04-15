@@ -46,7 +46,7 @@ glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '206612'
+    serial: '206613'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
