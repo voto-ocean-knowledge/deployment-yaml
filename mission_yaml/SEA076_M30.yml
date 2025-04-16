@@ -6,8 +6,8 @@ metadata:
     This study used data collected and made freely available by Voice of the Ocean
     Foundation (https://voiceoftheocean.org) accessed from https://erddap.observations.voiceoftheocean.org/erddap/index.html
   format_version: IOOS_Glider_NetCDF_v2.0.nc
-  glider_model: SeaExplorer Shallow
-  glider_instrument_name: shallowexplorer
+  glider_model: SeaExplorer
+  glider_instrument_name: seaexplorer
   keywords: AUVS, Autonomous Underwater Vehicles, Oceans, Ocean Pressure, Water Pressure,
     Ocean Temperature, Water Temperature, Salinity/Density, Conductivity, Density,
     Salinity
@@ -15,7 +15,7 @@ metadata:
   metadata_link: http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html
   Metadata_Conventions: CF-1.6, Unidata Dataset Discovery v1.0
   naming_authority: Voice of the Ocean Foundation
-  platform: SeaExplorer Shallow
+  platform: SeaExplorer Glider
   processing_level: Data provided as is with no expressed or implied assurance of
     quality assurance or quality control. L0
   publisher_email: callum.rollo@voiceoftheocean.org
@@ -26,44 +26,68 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: ShallowExplorer_001
-  wmo_id: '8901001'
-  comment: ' This mission is part of testing the new ShallowExplorer in the Baltic
-    Sea. This deployment is at the SAMBA_02 transect in the Bornholm Basin. '
+  glider_name: Fibbla
+  wmo_id: '6801665'
+  comment: 'ADCP was partly covered in mud upon recovery. May affect the data, but
+    most likely not. Glider flew on zt/zs=2 and alt=2 fo full mission duration. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
+    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
-    Technician, Glider Technician, Glider Technician, Glider Technician, Platform
-    Coordinator
+    Technician, Glider Technician, Glider Technician, Platform Coordinator
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '34'
+  deployment_id: '30'
   deployment_name: SAMBA
   project: SAMBA
-  project_url: https://voiceoftheocean.org/
-  summary: ' Test deployment of the ShallowExplorer '
-  platform_serial: SHW001
+  project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
+  summary: ' Part of SAMBA continuous monitoring'
+  platform_serial: SEA076
 glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '234334'
+    serial: '205046'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2023-08-24'
+    calibration_date: '2023-09-05'
+  optics:
+    make: Wetlabs
+    model: FLBBCD
+    serial: '8201'
+    long_name: Wetlabs ECO Puck FLBBCD
+    make_model: Wetlabs FLBBCD
+    factory_calibrated: 'Yes'
+    calibration_date: '2023-04-27'
+    calibration_parameters:
+      Chl_DarkCounts: 47
+      Chl_SF: 0.0121
+      CDOM_DarkCounts: 47
+      CDOM_SF: 0.0908
+      SIG_DarkCounts: 48
+      SIG_SF: 3.115e-06
+  oxygen:
+    make: JFE Advantech
+    model: AROD-FT
+    serial: '0070'
+    long_name: JFE Advantech RINKO-FT
+    make_model: JFE Advantech AROD_FT
+    factory_calibrated: 'Yes'
+    calibration_date: '2023-08-26'
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '106378'
+    serial: '104648'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2024-03-27'
+    calibration_date: '2023-08-16'
 netcdf_variables:
   keep_variables:
   - temperature
+  - oxygen_concentration
+  - chlorophyll
   - ad2cp_heading
   timebase:
     source: NAV_LATITUDE
@@ -277,6 +301,86 @@ netcdf_variables:
     observation_type: calculated
     accuracy: '0.02'
     resolution: '0.01'
+  chlorophyll:
+    source: FLBBCD_CHL_SCALED
+    long_name: chlorophyll
+    standard_name: concentration_of_chlorophyll_in_sea_water
+    units: mg m-3
+    coordinates: time depth latitude longitude
+    instrument: instrument_flourometer
+    valid_min: '0.'
+    valid_max: '50.'
+    observation_type: calculated
+    sensitivity: '0.025'
+  chlorophyll_raw:
+    source: FLBBCD_CHL_COUNT
+    long_name: raw chlorophyll
+    standard_name: raw_chlorophyll_in_sea_water
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_flourometer
+  cdom:
+    source: FLBBCD_CDOM_SCALED
+    long_name: colored dissolved organic matter
+    standard_name: concentration_of_colored_dissolved_organic_matter_in_sea_water
+    units: mg m-3
+    coordinates: time depth latitude longitude
+    instrument: instrument_flourometer
+    valid_min: '0.'
+    valid_max: '375.'
+    observation_type: calculated
+    sensitivity: '0.28'
+  cdom_raw:
+    source: FLBBCD_CDOM_COUNT
+    long_name: raw colored dissolved organic matter
+    standard_name: raw_colored_dissolved_organic_matter_in_sea_water
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_scatterometer
+  backscatter_scaled:
+    source: FLBBCD_BB_700_SCALED
+    long_name: "700 nm \u03B2 total volume scattering coefficient at 117 degree angle"
+    standard_name: 700_nm_wavelength_total_volume_scattering_coefficient
+    units: m-1 sr-1
+    coordinates: time depth latitude longitude
+    instrument: instrument_scatterometer
+    valid_min: '0.'
+    valid_max: '3.'
+    observation_type: calculated
+    sensitivity: '0.002'
+  backscatter_raw:
+    source: FLBBCD_BB_700_COUNT
+    long_name: raw 700 nm wavelength backscatter
+    standard_name: raw_700_nm_wavelength_backscatter_in_sea_water
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_scatterometer
+  oxygen_concentration:
+    source: AROD_FT_DO
+    long_name: oxygen concentration
+    standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
+    units: mmol m-3
+    coordinates: time depth latitude longitude
+    correct_oxygen: 'True'
+    reference_salinity: '0'
+    instrument: instrument_phosphorescence
+    valid_min: '0.'
+    valid_max: '425.'
+    observation_type: calculated
+    accuracy: 2% or 2.0
+    resolution: '0.01'
+  temperature_oxygen:
+    source: AROD_FT_TEMP
+    long_name: oxygen sensor temperature
+    standard_name: temperature_of_sensor_for_oxygen_in_sea_water
+    units: Celsius
+    coordinates: time depth latitude longitude
+    instrument: instrument_thermistor
+    valid_min: '-3.'
+    valid_max: '45.'
+    observation_type: measured
+    accuracy: '0.01'
+    resolution: '0.001'
   ad2cp_heading:
     source: AD2CP_HEADING
     long_name: glider heading angle from AD2CP
@@ -330,3 +434,12 @@ netcdf_variables:
     standard_name: platform_beam1_measure_ad2cp_cell1
     units: m s-1
     coordinates: time depth latitude longitude
+qc:
+  cdom:
+    value: 4
+    comment: High values of CDOM raw counts. The cause of the issue is still unknown.
+      The relative variability may be intact but absolute values are unreliable.
+  cdom_raw:
+    value: 4
+    comment: High values of CDOM raw counts. The cause of the issue is still unknown.
+      The relative variability may be intact but absolute values are unreliable.

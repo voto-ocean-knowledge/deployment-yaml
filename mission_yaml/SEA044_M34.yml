@@ -6,8 +6,8 @@ metadata:
     This study used data collected and made freely available by Voice of the Ocean
     Foundation (https://voiceoftheocean.org) accessed from https://erddap.observations.voiceoftheocean.org/erddap/index.html
   format_version: IOOS_Glider_NetCDF_v2.0.nc
-  glider_model: SeaExplorer Shallow
-  glider_instrument_name: shallowexplorer
+  glider_model: SeaExplorer
+  glider_instrument_name: seaexplorer
   keywords: AUVS, Autonomous Underwater Vehicles, Oceans, Ocean Pressure, Water Pressure,
     Ocean Temperature, Water Temperature, Salinity/Density, Conductivity, Density,
     Salinity
@@ -15,7 +15,7 @@ metadata:
   metadata_link: http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html
   Metadata_Conventions: CF-1.6, Unidata Dataset Discovery v1.0
   naming_authority: Voice of the Ocean Foundation
-  platform: SeaExplorer Shallow
+  platform: SeaExplorer Glider
   processing_level: Data provided as is with no expressed or implied assurance of
     quality assurance or quality control. L0
   publisher_email: callum.rollo@voiceoftheocean.org
@@ -26,45 +26,73 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: ShallowExplorer_001
-  wmo_id: '8901001'
-  comment: ' This mission is part of testing the new ShallowExplorer in the Baltic
-    Sea. This deployment is at the SAMBA_02 transect in the Bornholm Basin. '
+  glider_name: Martorn
+  wmo_id: '6801672'
+  comment: Altitude set to 12m for the entire mission duration. Zt/zs swas often changed
+    and was always set between 10 and 25m
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
+    Marcus Melin
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
-    Technician, Glider Technician, Glider Technician, Glider Technician, Platform
-    Coordinator
+    Technician
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
   deployment_id: '34'
   deployment_name: SAMBA
   project: SAMBA
-  project_url: https://voiceoftheocean.org/
-  summary: ' Test deployment of the ShallowExplorer '
-  platform_serial: SHW001
+  project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
+  summary: ' Part of SAMBA continuous monitoring'
+  platform_serial: SEA044
 glider_devices:
+  altimeter:
+    make: UNKNOWN
+    model: UNKNOWN
+    serial: '34'
   ctd:
     make: RBR
     model: legato
-    serial: '234334'
+    serial: '205047'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2023-08-24'
-  AD2CP:
-    make: Nortek
-    model: AD2CP
-    serial: '106378'
-    long_name: Nortek Glider1000 AD2CP
-    make_model: Nortek AD2CP
+    calibration_date: '2020-07-21'
+  optics:
+    make: Wetlabs
+    model: FLBBPC
+    serial: '6597'
+    long_name: Wetlabs ECO Puck FLBBPC
+    make_model: Wetlabs FLBBPC
     factory_calibrated: 'Yes'
-    calibration_date: '2024-03-27'
+    calibration_date: '2020-12-22'
+    calibration_parameters:
+      Chl_DarkCounts: 46
+      Chl_SF: 0.0072
+      PC_DarkCounts: 45
+      PC_SF: 0.0386
+      SIG_DarkCounts: 45
+      SIG_SF: 1.722e-06
+  oxygen:
+    make: JFE Advantech
+    model: AROD-FT
+    serial: '0041'
+    long_name: JFE Advantech RINKO-FT
+    make_model: JFE Advantech AROD_FT
+    factory_calibrated: 'Yes'
+    calibration_date: '2020-02-08'
+  irradiance:
+    make: SeaBird
+    model: OCR504
+    serial: '2044'
+    long_name: SeaBird OCR504
+    make_model: SeaBird OCR504
+    factory_calibrated: 'Yes'
+    calibration_date: '2020-02-21'
 netcdf_variables:
   keep_variables:
   - temperature
-  - ad2cp_heading
+  - oxygen_concentration
+  - chlorophyll
+  - downwelling_PAR
   timebase:
     source: NAV_LATITUDE
   time:
@@ -277,56 +305,120 @@ netcdf_variables:
     observation_type: calculated
     accuracy: '0.02'
     resolution: '0.01'
-  ad2cp_heading:
-    source: AD2CP_HEADING
-    long_name: glider heading angle from AD2CP
-    standard_name: platform_orientation_ad2cp
-    units: degrees
+  chlorophyll:
+    source: FLBBPC_CHL_SCALED
+    long_name: chlorophyll
+    standard_name: concentration_of_chlorophyll_in_sea_water
+    units: mg m-3
     coordinates: time depth latitude longitude
-  ad2cp_pitch:
-    source: AD2CP_PITCH
-    long_name: glider pitch angle from AD2CP
-    standard_name: platform_pitch_angle_ad2cp
-    units: degrees
+    instrument: instrument_flourometer
+    valid_min: '0.'
+    valid_max: '50.'
+    observation_type: calculated
+    sensitivity: '0.025'
+  chlorophyll_raw:
+    source: FLBBPC_CHL_COUNT
+    long_name: raw chlorophyll
+    standard_name: raw_chlorophyll_in_sea_water
+    units: counts
     coordinates: time depth latitude longitude
-  ad2cp_roll:
-    source: AD2CP_ROLL
-    long_name: glider roll angle from AD2CP
-    standard_name: platform_roll_angle_ad2cp
-    units: degrees
+    instrument: instrument_flourometer
+  phycocyanin:
+    source: FLBBPC_PC_SCALED
+    long_name: phycocyanin
+    standard_name: concentration_of_phycocyanin_in_sea_water
+    units: mg m-3
     coordinates: time depth latitude longitude
-  ad2cp_pressure:
-    source: AD2CP_PRESSURE
-    long_name: glider pressure from AD2CP
-    standard_name: platform_pressure_ad2cp
-    units: dbar
+    instrument: instrument_flourometer
+    valid_min: '0.'
+    valid_max: '175.'
+    observation_type: calculated
+    sensitivity: '0.09'
+  phycocyanin_raw:
+    source: FLBBPC_PC_COUNT
+    long_name: raw phycocyanin
+    standard_name: raw_phycocyanin_in_sea_water
+    units: counts
     coordinates: time depth latitude longitude
-  ad2cp_time:
-    source: AD2CP_TIME
-    long_name: AD2CP recorded time
-    standard_name: ad2cp_recorded_time
+    instrument: instrument_flourometer
+  backscatter_scaled:
+    source: FLBBPC_BB_700_SCALED
+    long_name: "700 nm \u03B2 total volume scattering coefficient at 117 degree angle"
+    standard_name: 700_nm_wavelength_total_volume_scattering_coefficient
+    units: m-1 sr-1
     coordinates: time depth latitude longitude
-  ad2cp_beam1_cell_number1:
-    source: AD2CP_V1_CN1
-    long_name: glider beam 1 measure from AD2CP in cell 1
-    standard_name: platform_beam1_measure_ad2cp_cell1
-    units: m s-1
+    instrument: instrument_scatterometer
+    valid_min: '0.'
+    valid_max: '3.'
+    observation_type: calculated
+    sensitivity: '0.002'
+  backscatter_raw:
+    source: FLBBPC_BB_700_COUNT
+    long_name: raw 700 nm wavelength backscatter
+    standard_name: raw_700_nm_wavelength_backscatter_in_sea_water
+    units: counts
     coordinates: time depth latitude longitude
-  ad2cp_beam2_cell_number1:
-    source: AD2CP_V2_CN1
-    long_name: glider beam 2 measure from AD2CP in cell 1
-    standard_name: platform_beam1_measure_ad2cp_cell1
-    units: m s-1
+    instrument: instrument_scatterometer
+  oxygen_concentration:
+    source: AROD_FT_DO
+    long_name: oxygen concentration
+    standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
+    units: mmol m-3
     coordinates: time depth latitude longitude
-  ad2cp_beam3_cell_number1:
-    source: AD2CP_V3_CN1
-    long_name: glider beam 3 measure from AD2CP in cell 1
-    standard_name: platform_beam1_measure_ad2cp_cell1
-    units: m s-1
+    correct_oxygen: 'True'
+    reference_salinity: '0'
+    instrument: instrument_phosphorescence
+    valid_min: '0.'
+    valid_max: '425.'
+    observation_type: calculated
+    accuracy: 2% or 2.0
+    resolution: '0.01'
+  temperature_oxygen:
+    source: AROD_FT_TEMP
+    long_name: oxygen sensor temperature
+    standard_name: temperature_of_sensor_for_oxygen_in_sea_water
+    units: Celsius
     coordinates: time depth latitude longitude
-  ad2cp_beam4_cell_number1:
-    source: AD2CP_V4_CN1
-    long_name: glider beam 4 measure from AD2CP in cell 1
-    standard_name: platform_beam1_measure_ad2cp_cell1
-    units: m s-1
+    instrument: instrument_thermistor
+    valid_min: '-3.'
+    valid_max: '45.'
+    observation_type: measured
+    accuracy: '0.01'
+    resolution: '0.001'
+  down_irradiance_380:
+    source: OCR504_Ed1
+    long_name: Downwelling irradiance value of the 380 nm wavelength
+    standard_name: 380nm_downwelling_irradiance
+    units: W m-2 nm-1
+    average_method: geometric mean
     coordinates: time depth latitude longitude
+    instrument: instrument_radiometer
+    observation_type: measured
+  down_irradiance_490:
+    source: OCR504_Ed2
+    long_name: Downwelling irradiance value of the 490 nm wavelength
+    standard_name: 490nm_downwelling_irradiance
+    units: W m-2 nm-1
+    average_method: geometric mean
+    coordinates: time depth latitude longitude
+    instrument: instrument_radiometer
+    observation_type: measured
+  down_irradiance_532:
+    source: OCR504_Ed3
+    long_name: Downwelling irradiance value of the 532 nm wavelength
+    standard_name: 532nm_downwelling_irradiance
+    units: W m-2 nm-1
+    average_method: geometric mean
+    coordinates: time depth latitude longitude
+    instrument: instrument_radiometer
+    observation_type: measured
+  downwelling_PAR:
+    source: OCR504_Ed4
+    long_name: Downwelling PAR (Photosynthetically Active Radiation) in range 400-700
+      nm
+    standard_name: downwelling_PAR
+    units: "\u03BCE m-2 s-1"
+    average_method: geometric mean
+    coordinates: time depth latitude longitude
+    instrument: instrument_radiometer
+    observation_type: measured
