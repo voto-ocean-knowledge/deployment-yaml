@@ -29,10 +29,11 @@ metadata:
   glider_name: Kaprifol
   glider_serial: '55'
   wmo_id: '6801674'
-  comment: 'Part of the TurboMix mission, deployed with Legato Tridente and a MicroRider-1000-G sensor. MR1000G was set to sample every 2nd dive downcast + up to 40 m upcast. '
+  comment: 'Part of the TurboMix mission, deployed with Legato Tridente and a MicroRider-1000-G sensor. MR1000G was set to sample every 2nd dive downcast + up to 40 m upcast, although it sampled at all times due to a conflict in the softwares of the glider payload and MicroRider sensor which lead to an increased battery consumption. Part-time loitering was performed during the last part of the mission to save battery. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Michaela Edwinson
+    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
+    Technician, Glider Technician, Glider Technician, Glider Technician, Platform Coordinator
     Technician, Glider Technician, Platform Coordinator
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
