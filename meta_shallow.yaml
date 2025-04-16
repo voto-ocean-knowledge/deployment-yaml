@@ -1,0 +1,45 @@
+metadata:
+  acknowledgement: This study used data collected and made freely available by Voice of the Ocean Foundation 
+                   (https://voiceoftheocean.org) accessed from https://erddap.observations.voiceoftheocean.org/erddap/index.html
+  institution: Voice of the Ocean Foundation
+  license: Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/)
+    This study used data collected and made freely available by Voice of the Ocean Foundation
+    (https://voiceoftheocean.org) accessed from https://erddap.observations.voiceoftheocean.org/erddap/index.html
+  format_version: IOOS_Glider_NetCDF_v2.0.nc
+  glider_model: SeaExplorer Shallow
+  glider_instrument_name: shallowexplorer
+  keywords: "AUVS, Autonomous Underwater Vehicles, Oceans, Ocean Pressure,
+             Water Pressure, Ocean Temperature, Water Temperature,
+             Salinity/Density, Conductivity, Density, Salinity"
+  keywords_vocabulary: GCMD Science Keywords
+  metadata_link: http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html
+  Metadata_Conventions: CF-1.6, Unidata Dataset Discovery v1.0
+  naming_authority: Voice of the Ocean Foundation
+  platform:    "SeaExplorer Shallow"
+  processing_level: "Data provided as is with no expressed or implied
+                     assurance of quality assurance or quality control. L0"
+  publisher_email: callum.rollo@voiceoftheocean.org
+  publisher_name:  Callum Rollo
+  publisher_url:   https://voiceoftheocean.org
+  references:     "created with pyglider https://github.com/c-proof/pyglider"
+  source:     Observational data from a profiling glider.
+  standard_name_vocabulary: CF STandard Name Table v49
+  sea_name: Baltic
+  transmission_system: IRIDIUM
+  glider_name: <glider name>
+  glider_serial: <glider number>
+  wmo_id: <glider wmo>
+  comment: <Any other relevant info. Fine to leave blank>
+  contributor_name: Callum Rollo, <PI name>, <glider techinician name>
+  contributor_role: Data Processor, Principal Investigator, Glider Technician
+  creator_email: <your email>
+  creator_name: <your name>
+  creator_url: <your website>
+  deployment_id: <mission number>
+  deployment_name: <mission name>
+  # date format 'yyyy-mm-dd'
+  deployment_start: <start date>
+  deployment_end: <end date (approx)>
+  project: <project name>
+  project_url: <project url>
+  summary: <mission summary>

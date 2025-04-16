@@ -223,8 +223,11 @@ def check_qc(deployment, _log):
     
 
 def check_against_meta(deployment_meta, _log):
+    meta_file = 'meta.yaml'
+    if 'shallow' in deployment_meta['glider_model'].lower():
+        meta_file = 'meta_shallow.yaml'
     _log.info('Checking against meta.yaml')
-    with open('meta.yaml') as fin:
+    with open(meta_file) as fin:
         meta = yaml.safe_load(fin)['metadata']
     constant_vals = ('acknowledgement', 'institution', 'license', 'format_version', 'glider_model',
                      'glider_instrument_name', 'keywords', 'keywords_vocabulary', 'metadata_link',
