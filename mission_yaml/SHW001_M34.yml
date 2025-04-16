@@ -6,8 +6,8 @@ metadata:
     This study used data collected and made freely available by Voice of the Ocean
     Foundation (https://voiceoftheocean.org) accessed from https://erddap.observations.voiceoftheocean.org/erddap/index.html
   format_version: IOOS_Glider_NetCDF_v2.0.nc
-  glider_model: SeaExplorer
-  glider_instrument_name: seaexplorer
+  glider_model: SeaExplorer Shallow
+  glider_instrument_name: shallowexplorer
   keywords: AUVS, Autonomous Underwater Vehicles, Oceans, Ocean Pressure, Water Pressure,
     Ocean Temperature, Water Temperature, Salinity/Density, Conductivity, Density,
     Salinity
@@ -15,7 +15,7 @@ metadata:
   metadata_link: http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html
   Metadata_Conventions: CF-1.6, Unidata Dataset Discovery v1.0
   naming_authority: Voice of the Ocean Foundation
-  platform: SeaExplorer Glider
+  platform: SeaExplorer Shallow
   processing_level: Data provided as is with no expressed or implied assurance of
     quality assurance or quality control. L0
   publisher_email: callum.rollo@voiceoftheocean.org
