@@ -6,8 +6,8 @@ metadata:
     This study used data collected and made freely available by Voice of the Ocean
     Foundation (https://voiceoftheocean.org) accessed from https://erddap.observations.voiceoftheocean.org/erddap/index.html
   format_version: IOOS_Glider_NetCDF_v2.0.nc
-  glider_model: SeaExplorer Shallow
-  glider_instrument_name: shallowexplorer
+  glider_model: SeaExplorer
+  glider_instrument_name: seaexplorer
   keywords: AUVS, Autonomous Underwater Vehicles, Oceans, Ocean Pressure, Water Pressure,
     Ocean Temperature, Water Temperature, Salinity/Density, Conductivity, Density,
     Salinity
@@ -15,7 +15,7 @@ metadata:
   metadata_link: http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html
   Metadata_Conventions: CF-1.6, Unidata Dataset Discovery v1.0
   naming_authority: Voice of the Ocean Foundation
-  platform: SeaExplorer Shallow
+  platform: SeaExplorer Glider
   processing_level: Data provided as is with no expressed or implied assurance of
     quality assurance or quality control. L0
   publisher_email: callum.rollo@voiceoftheocean.org
@@ -26,45 +26,65 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: ShallowExplorer_001
-  wmo_id: '8901001'
-  comment: ' This mission is part of testing the new ShallowExplorer in the Baltic
-    Sea. This deployment is at the SAMBA_02 transect in the Bornholm Basin. '
+  glider_name: Kalmus
+  wmo_id: '6801506'
+  comment: Altitude set to 2m for the entire mission duration . Zt/zs set to 2m for
+    most of the mission but occasionally increased to 10 and 20m when the glider struggled
+    with strong currents
   contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
+    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Chiara Monforte
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
-    Technician, Glider Technician, Glider Technician, Glider Technician, Platform
-    Coordinator
+    Technician, Glider Technician, Glider Technician, Glider Pilot
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '34'
+  deployment_id: '19'
   deployment_name: SAMBA
   project: SAMBA
-  project_url: https://voiceoftheocean.org/
-  summary: ' Test deployment of the ShallowExplorer '
-  platform_serial: SHW001
+  project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
+  summary: ' Part of SAMBA continuous monitoring'
+  platform_serial: SEA069
 glider_devices:
+  altimeter:
+    make: UNKNOWN
+    model: UNKNOWN
+    serial: '52'
   ctd:
     make: RBR
     model: legato
-    serial: '234334'
+    serial: '206613'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2023-08-24'
-  AD2CP:
-    make: Nortek
-    model: AD2CP
-    serial: '106378'
-    long_name: Nortek Glider1000 AD2CP
-    make_model: Nortek AD2CP
+    calibration_date: '2023-06-02'
+  optics:
+    make: Wetlabs
+    model: FLBBPC
+    serial: '6754'
+    long_name: Wetlabs ECO Puck FLBBPC
+    make_model: Wetlabs FLBBPC
     factory_calibrated: 'Yes'
-    calibration_date: '2024-03-27'
+    calibration_date: '2021-03-22'
+    calibration_parameters:
+      Chl_DarkCounts: 48
+      Chl_SF: 0.0073
+      PC_DarkCounts: 44
+      PC_SF: 0.0424
+      SIG_DarkCounts: 46
+      SIG_SF: 1.783e-06
+  oxygen:
+    make: JFE Advantech
+    model: AROD-FT
+    serial: 0068
+    long_name: JFE Advantech RINKO-FT
+    make_model: JFE Advantech AROD_FT
+    factory_calibrated: 'Yes'
+    calibration_date: '2022-11-08'
 netcdf_variables:
   keep_variables:
   - temperature
-  - ad2cp_heading
+  - oxygen_concentration
+  - chlorophyll
   timebase:
     source: NAV_LATITUDE
   time:
@@ -277,56 +297,94 @@ netcdf_variables:
     observation_type: calculated
     accuracy: '0.02'
     resolution: '0.01'
-  ad2cp_heading:
-    source: AD2CP_HEADING
-    long_name: glider heading angle from AD2CP
-    standard_name: platform_orientation_ad2cp
-    units: degrees
+  chlorophyll:
+    source: FLBBPC_CHL_SCALED
+    long_name: chlorophyll
+    standard_name: concentration_of_chlorophyll_in_sea_water
+    units: mg m-3
     coordinates: time depth latitude longitude
-  ad2cp_pitch:
-    source: AD2CP_PITCH
-    long_name: glider pitch angle from AD2CP
-    standard_name: platform_pitch_angle_ad2cp
-    units: degrees
+    instrument: instrument_flourometer
+    valid_min: '0.'
+    valid_max: '50.'
+    observation_type: calculated
+    sensitivity: '0.025'
+  chlorophyll_raw:
+    source: FLBBPC_CHL_COUNT
+    long_name: raw chlorophyll
+    standard_name: raw_chlorophyll_in_sea_water
+    units: counts
     coordinates: time depth latitude longitude
-  ad2cp_roll:
-    source: AD2CP_ROLL
-    long_name: glider roll angle from AD2CP
-    standard_name: platform_roll_angle_ad2cp
-    units: degrees
+    instrument: instrument_flourometer
+  phycocyanin:
+    source: FLBBPC_PC_SCALED
+    long_name: phycocyanin
+    standard_name: concentration_of_phycocyanin_in_sea_water
+    units: mg m-3
     coordinates: time depth latitude longitude
-  ad2cp_pressure:
-    source: AD2CP_PRESSURE
-    long_name: glider pressure from AD2CP
-    standard_name: platform_pressure_ad2cp
-    units: dbar
+    instrument: instrument_flourometer
+    valid_min: '0.'
+    valid_max: '175.'
+    observation_type: calculated
+    sensitivity: '0.09'
+  phycocyanin_raw:
+    source: FLBBPC_PC_COUNT
+    long_name: raw phycocyanin
+    standard_name: raw_phycocyanin_in_sea_water
+    units: counts
     coordinates: time depth latitude longitude
-  ad2cp_time:
-    source: AD2CP_TIME
-    long_name: AD2CP recorded time
-    standard_name: ad2cp_recorded_time
+    instrument: instrument_flourometer
+  backscatter_scaled:
+    source: FLBBPC_BB_700_SCALED
+    long_name: "700 nm \u03B2 total volume scattering coefficient at 117 degree angle"
+    standard_name: 700_nm_wavelength_total_volume_scattering_coefficient
+    units: m-1 sr-1
     coordinates: time depth latitude longitude
-  ad2cp_beam1_cell_number2:
-    source: AD2CP_V1_CN2
-    long_name: glider beam 1 measure from AD2CP in cell 2
-    standard_name: platform_beam1_measure_ad2cp_cell2
-    units: m s-1
+    instrument: instrument_scatterometer
+    valid_min: '0.'
+    valid_max: '3.'
+    observation_type: calculated
+    sensitivity: '0.002'
+  backscatter_raw:
+    source: FLBBPC_BB_700_COUNT
+    long_name: raw 700 nm wavelength backscatter
+    standard_name: raw_700_nm_wavelength_backscatter_in_sea_water
+    units: counts
     coordinates: time depth latitude longitude
-  ad2cp_beam2_cell_number2:
-    source: AD2CP_V2_CN2
-    long_name: glider beam 2 measure from AD2CP in cell 2
-    standard_name: platform_beam1_measure_ad2cp_cell2
-    units: m s-1
+    instrument: instrument_scatterometer
+  oxygen_concentration:
+    source: AROD_FT_DO
+    long_name: oxygen concentration
+    standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
+    units: mmol m-3
     coordinates: time depth latitude longitude
-  ad2cp_beam3_cell_number2:
-    source: AD2CP_V3_CN2
-    long_name: glider beam 3 measure from AD2CP in cell 2
-    standard_name: platform_beam1_measure_ad2cp_cell2
-    units: m s-1
+    correct_oxygen: 'True'
+    reference_salinity: '0'
+    instrument: instrument_phosphorescence
+    valid_min: '0.'
+    valid_max: '425.'
+    observation_type: calculated
+    accuracy: 2% or 2.0
+    resolution: '0.01'
+  temperature_oxygen:
+    source: AROD_FT_TEMP
+    long_name: oxygen sensor temperature
+    standard_name: temperature_of_sensor_for_oxygen_in_sea_water
+    units: Celsius
     coordinates: time depth latitude longitude
-  ad2cp_beam4_cell_number2:
-    source: AD2CP_V4_CN2
-    long_name: glider beam 4 measure from AD2CP in cell 2
-    standard_name: platform_beam1_measure_ad2cp_cell2
-    units: m s-1
-    coordinates: time depth latitude longitude
+    instrument: instrument_thermistor
+    valid_min: '-3.'
+    valid_max: '45.'
+    observation_type: measured
+    accuracy: '0.01'
+    resolution: '0.001'
+qc:
+  oxygen_concentration:
+    value: 4
+    comment: "Following issues with the oxygen sensor, a 2-point calibration has been\
+      \ performed on date {2023-06-15}. The values at 0 and 100 % saturation are accurate.\
+      \ Absolute Values between these two extremes may be inaccurate. The relative\
+      \ variability is confirmed to be valid and no temporal drift occurs. During\
+      \ tests values that can be outside the manufacturer acceptance range have been\
+      \ observed when compared to the output from a reference sensor. This issue is\
+      \ particularly evident around 100\u03BCmol/l. More information on the history\
+      \ and updates regarding this issue (https://observations.voiceoftheocean.org/data/updates)."

@@ -6,8 +6,8 @@ metadata:
     This study used data collected and made freely available by Voice of the Ocean
     Foundation (https://voiceoftheocean.org) accessed from https://erddap.observations.voiceoftheocean.org/erddap/index.html
   format_version: IOOS_Glider_NetCDF_v2.0.nc
-  glider_model: SeaExplorer Shallow
-  glider_instrument_name: shallowexplorer
+  glider_model: SeaExplorer
+  glider_instrument_name: seaexplorer
   keywords: AUVS, Autonomous Underwater Vehicles, Oceans, Ocean Pressure, Water Pressure,
     Ocean Temperature, Water Temperature, Salinity/Density, Conductivity, Density,
     Salinity
@@ -15,7 +15,7 @@ metadata:
   metadata_link: http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html
   Metadata_Conventions: CF-1.6, Unidata Dataset Discovery v1.0
   naming_authority: Voice of the Ocean Foundation
-  platform: SeaExplorer Shallow
+  platform: SeaExplorer Glider
   processing_level: Data provided as is with no expressed or implied assurance of
     quality assurance or quality control. L0
   publisher_email: callum.rollo@voiceoftheocean.org
@@ -24,47 +24,77 @@ metadata:
   references: created with pyglider https://github.com/c-proof/pyglider
   source: Observational data from a profiling glider.
   standard_name_vocabulary: CF STandard Name Table v49
-  sea_name: Baltic
+  sea_name: South Atlantic
   transmission_system: IRIDIUM
-  glider_name: ShallowExplorer_001
-  wmo_id: '8901001'
-  comment: ' This mission is part of testing the new ShallowExplorer in the Baltic
-    Sea. This deployment is at the SAMBA_02 transect in the Bornholm Basin. '
-  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
-  contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
-    Technician, Glider Technician, Glider Technician, Glider Technician, Platform
-    Coordinator
+  glider_name: King Tubby
+  wmo_id: '2801950'
+  comment: Missing info for MR1000G. Calibration date unknown
+  contributor_name: Callum Rollo, Bastien Queste, Estel Font
+  contributor_role: Data Processor, PI, Glider Technician
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '34'
-  deployment_name: SAMBA
-  project: SAMBA
-  project_url: https://voiceoftheocean.org/
-  summary: ' Test deployment of the ShallowExplorer '
-  platform_serial: SHW001
+  deployment_id: '58'
+  deployment_name: QUICCHE
+  project: QUICCHE
+  project_url: https://beal-agulhas.earth.miami.edu/research/projects/quicche/index.html
+  summary: Deployment part of QUICCHE cruise from Cape Town
+  platform_serial: SEA057
 glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '234334'
+    serial: '204951'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2023-08-24'
+    calibration_date: '2020-07-06'
+  optics:
+    make: Wetlabs
+    model: FLBBPE
+    serial: '6480'
+    long_name: Wetlabs ECO Puck FLBBPE
+    make_model: Wetlabs FLBBPE
+    factory_calibrated: 'Yes'
+    calibration_date: '2020-08-21'
+    calibration_parameters:
+      Chl_DarkCounts: 44
+      Chl_SF: 0.0073
+      PE_DarkCounts: 47
+      PE_SF: 0.0424
+      SIG_DarkCounts: 43
+      SIG_SF: 1.85e-06
+  oxygen:
+    make: JFE Advantech
+    model: AROD-FT
+    serial: '0042'
+    long_name: JFE Advantech RINKO-FT
+    make_model: JFE Advantech AROD_FT
+    factory_calibrated: 'Yes'
+    calibration_date: '2020-05-22'
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '106378'
+    serial: '101594'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2024-03-27'
+    calibration_date: '2020-06-10'
+  turbulence:
+    make: Rockland Scientific
+    model: Microrider-1000G
+    serial: '458'
+    long_name: Rockland Scientific Microrider-1000G
+    make_model: Rockland Scientific MR1000G-RDL
+    factory_calibrated: 'Yes'
+    calibration_date: '2020-06-10'
 netcdf_variables:
   keep_variables:
   - temperature
+  - oxygen_concentration
+  - chlorophyll
   - ad2cp_heading
+  - tke_dissipation_shear_1
   timebase:
     source: NAV_LATITUDE
   time:
@@ -208,12 +238,6 @@ netcdf_variables:
     standard_name: platform_voltage
     units: V
     coordinates: time depth latitude longitude
-  altimeter:
-    source: Altitude
-    long_name: glider altimeter reading
-    standard_name: glider_altimeter_reading
-    units: m
-    coordinates: time depth latitude longitude
   dead_reckoning:
     source: DeadReckoning
     long_name: dead reckoning
@@ -277,6 +301,86 @@ netcdf_variables:
     observation_type: calculated
     accuracy: '0.02'
     resolution: '0.01'
+  chlorophyll:
+    source: FLBBPE_CHL_SCALED
+    long_name: chlorophyll
+    standard_name: concentration_of_chlorophyll_in_sea_water
+    units: mg m-3
+    coordinates: time depth latitude longitude
+    instrument: instrument_flourometer
+    valid_min: '0.'
+    valid_max: '50.'
+    observation_type: calculated
+    sensitivity: '0.025'
+  chlorophyll_raw:
+    source: FLBBPE_CHL_COUNT
+    long_name: raw chlorophyll
+    standard_name: raw_chlorophyll_in_sea_water
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_flourometer
+  phycoerythrin:
+    source: FLBBPE_PE_SCALED
+    long_name: phycoerythrin
+    standard_name: concentration_of_phycoerythrin_in_sea_water
+    units: mg m-3
+    coordinates: time depth latitude longitude
+    instrument: instrument_flourometer
+    valid_min: Nan
+    valid_max: Nan
+    observation_type: calculated
+    sensitivity: Nan
+  phycoerythrin_raw:
+    source: FLBBPE_PE_COUNT
+    long_name: raw phycoerythrin
+    standard_name: raw_phycoerythrin_in_sea_water
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_flourometer
+  backscatter_scaled:
+    source: FLBBPE_BB_700_SCALED
+    long_name: "700 nm \u03B2 total volume scattering coefficient at 117 degree angle"
+    standard_name: 700_nm_wavelength_total_volume_scattering_coefficient
+    units: m-1 sr-1
+    coordinates: time depth latitude longitude
+    instrument: instrument_scatterometer
+    valid_min: '0.'
+    valid_max: '3.'
+    observation_type: calculated
+    sensitivity: '0.002'
+  backscatter_raw:
+    source: FLBBPE_BB_700_COUNT
+    long_name: raw 700 nm wavelength backscatter
+    standard_name: raw_700_nm_wavelength_backscatter_in_sea_water
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_scatterometer
+  oxygen_concentration:
+    source: AROD_FT_DO
+    long_name: oxygen concentration
+    standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
+    units: mmol m-3
+    coordinates: time depth latitude longitude
+    correct_oxygen: 'True'
+    reference_salinity: '0'
+    instrument: instrument_phosphorescence
+    valid_min: '0.'
+    valid_max: '425.'
+    observation_type: calculated
+    accuracy: 2% or 2.0
+    resolution: '0.01'
+  temperature_oxygen:
+    source: AROD_FT_TEMP
+    long_name: oxygen sensor temperature
+    standard_name: temperature_of_sensor_for_oxygen_in_sea_water
+    units: Celsius
+    coordinates: time depth latitude longitude
+    instrument: instrument_thermistor
+    valid_min: '-3.'
+    valid_max: '45.'
+    observation_type: measured
+    accuracy: '0.01'
+    resolution: '0.001'
   ad2cp_heading:
     source: AD2CP_HEADING
     long_name: glider heading angle from AD2CP
@@ -306,27 +410,39 @@ netcdf_variables:
     long_name: AD2CP recorded time
     standard_name: ad2cp_recorded_time
     coordinates: time depth latitude longitude
-  ad2cp_beam1_cell_number2:
-    source: AD2CP_V1_CN2
-    long_name: glider beam 1 measure from AD2CP in cell 2
-    standard_name: platform_beam1_measure_ad2cp_cell2
+  ad2cp_beam1_cell_number1:
+    source: AD2CP_V1_CN1
+    long_name: glider beam 1 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
     units: m s-1
     coordinates: time depth latitude longitude
-  ad2cp_beam2_cell_number2:
-    source: AD2CP_V2_CN2
-    long_name: glider beam 2 measure from AD2CP in cell 2
-    standard_name: platform_beam1_measure_ad2cp_cell2
+  ad2cp_beam2_cell_number1:
+    source: AD2CP_V2_CN1
+    long_name: glider beam 2 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
     units: m s-1
     coordinates: time depth latitude longitude
-  ad2cp_beam3_cell_number2:
-    source: AD2CP_V3_CN2
-    long_name: glider beam 3 measure from AD2CP in cell 2
-    standard_name: platform_beam1_measure_ad2cp_cell2
+  ad2cp_beam3_cell_number1:
+    source: AD2CP_V3_CN1
+    long_name: glider beam 3 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
     units: m s-1
     coordinates: time depth latitude longitude
-  ad2cp_beam4_cell_number2:
-    source: AD2CP_V4_CN2
-    long_name: glider beam 4 measure from AD2CP in cell 2
-    standard_name: platform_beam1_measure_ad2cp_cell2
+  ad2cp_beam4_cell_number1:
+    source: AD2CP_V4_CN1
+    long_name: glider beam 4 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
     units: m s-1
+    coordinates: time depth latitude longitude
+  tke_dissipation_shear_1:
+    source: MR1000G-RDL_EPS1
+    long_name: Turbulent kinetic energy dissipation shear 1
+    standard_name: turbulent_kinetic_energy_dissipation_shear_1
+    units: W kg-1
+    coordinates: time depth latitude longitude
+  tke_dissipation_shear_2:
+    source: MR1000G-RDL_EPS2
+    long_name: Turbulent kinetic energy dissipation shear 2
+    standard_name: turbulent_kinetic_energy_dissipation_shear_2
+    units: W kg-1
     coordinates: time depth latitude longitude

@@ -1,6 +1,7 @@
 import datetime
 import yaml
 import pandas as pd
+import os
 from pathlib import Path
 df_cal = pd.read_csv('new_cal.csv')
 df_comments = pd.read_csv('piloting_comments.csv')
@@ -104,6 +105,26 @@ def correct_units(yaml_path):
        yaml.dump(deployment, fout, sort_keys=False)
 
 
+
+def zero_pad(yaml_path):
+    with open(yaml_path) as fin:
+        deployment = yaml.safe_load(fin)
+    if 'glider_serial' not in deployment['metadata'].keys():
+        return
+    glider_num = deployment['metadata']['glider_serial']
+    if len (glider_num) > 4:
+        platform_serial = glider_num
+    else:
+        platform_serial = f"SEA{glider_num.zfill(3)}"
+    deployment['metadata']['platform_serial'] = platform_serial
+    deployment['metadata'].pop('glider_serial')
+    with open(yaml_path, "w") as fout:
+        yaml.dump(deployment, fout, sort_keys=False)
+    yaml_parts = list(yaml_path.parts)
+    yaml_parts[-1] = f"{platform_serial}_M{deployment['metadata']['deployment_id']}.yml"
+    os.rename(yaml_path, Path("/".join(yaml_parts)))
+
+
 if __name__ == '__main__':
     for yml in list(Path("../mission_yaml").glob("*.yml")):
-        correct_units(yml)
+        zero_pad(yml)
