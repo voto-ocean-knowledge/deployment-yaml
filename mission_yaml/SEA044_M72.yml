@@ -32,7 +32,7 @@ metadata:
     the entire mission duration. The acquisition settings for the oxygen sensor (JFE
     AROD-FT) were changed towards the end of the mission. Instead of fast sampling
     all the time, while at surface, the sensor was set to sample  every 30s
-  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Chiara Monforte
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Pilot

@@ -31,7 +31,7 @@ metadata:
   comment: Altitude set to 2m for the entire mission duration . Zt/zs set to 2m for
     most of the mission but occasionally increased to 15m and 8m when the glider struggled
     with strong currents
-  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Chiara Monforte
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Glider Pilot

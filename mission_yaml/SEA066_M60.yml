@@ -31,7 +31,7 @@ metadata:
   comment: Voltage drops throughout mission resulted in a few 1 Alarms. Navigation
     pressure sensor (not legato) showing negative values occationally at the surface.
     zt/zs=2 and alt=2 throughout the full mission.
-  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator

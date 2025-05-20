@@ -30,7 +30,7 @@ metadata:
   wmo_id: '8901001'
   comment: Altitude set to 2m for the entire mission duration. Zt/zs set to 2m for
     the entire mission duration
-  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Chiara Monforte
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Pilot

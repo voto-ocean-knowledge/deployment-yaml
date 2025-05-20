@@ -31,7 +31,7 @@ metadata:
   comment: ' Glider loitered for periods at the end of the mission to save battery.
     The ADCP stopped collecting data for a period between 2025-02-08 to 2025-02-09.
     The Legato stopped working on the 2025-02-15.'
-  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator

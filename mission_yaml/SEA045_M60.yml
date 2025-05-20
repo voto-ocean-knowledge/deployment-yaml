@@ -33,7 +33,7 @@ metadata:
     other sensor kept working but the pressure comes from the LEGATO therefore no
     data from the other sensors can be processed. Data from the other sensors can
     be shared upon request
-  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician

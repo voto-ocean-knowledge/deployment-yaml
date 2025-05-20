@@ -31,7 +31,7 @@ metadata:
   comment: ' Glider flew on zt/zs=2 and alt=2 for full mission duration. Occationally
     it flew on a faster vertical speed. Be aware of negative values of legato pressure.
     This affects legato temperature and salinity data for these instances, see qc '
-  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator

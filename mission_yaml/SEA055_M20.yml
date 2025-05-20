@@ -32,7 +32,7 @@ metadata:
     the entire mission duration. At cycle 1037 the acquiisition settings of the CTD
     (RBR LEGATO) were changed. The sensor sampling frequency was changed from 1Hz
     to the fastest possible
-  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician
