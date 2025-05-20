@@ -40,7 +40,7 @@ metadata:
   deployment_id: '23'
   deployment_name: AUV_project
   project: AUV project
-  project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
+  project_url: voiceoftheocean.org/ocean-observatories/
   summary: ' Part of AUV project'
   platform_serial: SEA055
 glider_devices:
