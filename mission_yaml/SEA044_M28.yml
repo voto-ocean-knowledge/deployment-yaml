@@ -32,7 +32,7 @@ metadata:
     25m and occasionally at 30 and 35m. Irradiance acqusition settings set to collect
     data only from 0 to 100m and for the last week of this mission the settinsg were
     changed to collected data all the way to 150m
-  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician
@@ -42,7 +42,7 @@ metadata:
   deployment_id: '28'
   deployment_name: SAMBA
   project: SAMBA
-  project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
+  project_url: voiceoftheocean.org/ocean-observatories/
   summary: ' Part of SAMBA continuous monitoring'
   platform_serial: SEA044
 glider_devices:

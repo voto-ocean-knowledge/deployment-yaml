@@ -32,7 +32,7 @@ metadata:
     the start of the mission and it was then decreased to 2m for the rest of them
     mission. The glider was set to drift at depth with payload switched off to save
     battery for the last few days of the mission. No data is available for this period
-  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician
@@ -42,7 +42,7 @@ metadata:
   deployment_id: '12'
   deployment_name: SAMBA
   project: SAMBA
-  project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
+  project_url: voiceoftheocean.org/ocean-observatories/
   summary: ' Part of SAMBA continuous monitoring'
   platform_serial: SEA066
 glider_devices:

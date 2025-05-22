@@ -31,7 +31,7 @@ metadata:
   comment: 'zt=2 for the entire mission. Glider flew on bu/bd +-1006 and pu/pd +-1020
     since 2024-07-02 and loiterd during the afternoons with payload off since 2024-07-11
     to preserve battery. '
-  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator
@@ -41,7 +41,7 @@ metadata:
   deployment_id: '26'
   deployment_name: SAMBA
   project: SAMBA
-  project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
+  project_url: voiceoftheocean.org/ocean-observatories/
   summary: ' Part of SAMBA continuous monitoring'
   platform_serial: SEA076
 glider_devices:

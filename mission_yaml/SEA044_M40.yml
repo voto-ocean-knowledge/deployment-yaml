@@ -34,7 +34,7 @@ metadata:
     possible collisions with the seabed. The glider maximum diving depth was set to
     65 or 75m depending on the section of the transect, therefore the glider often
     turned back well before 6m from the seabed
-  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician
@@ -44,7 +44,7 @@ metadata:
   deployment_id: '40'
   deployment_name: SAMBA
   project: SAMBA
-  project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
+  project_url: voiceoftheocean.org/ocean-observatories/
   summary: ' Part of SAMBA continuous monitoring'
   platform_serial: SEA044
 glider_devices:

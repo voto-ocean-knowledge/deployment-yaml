@@ -33,7 +33,7 @@ metadata:
     some dives have steeper pitch than usual. The glider was put on drift mode for
     the last part of the mission with payload switched off causing gaps in the dataset.
     The glider collected data at least once a day in between drifting dives
-  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Chiara Monforte
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Glider Pilot
@@ -43,7 +43,7 @@ metadata:
   deployment_id: '66'
   deployment_name: SAMBA
   project: SAMBA
-  project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
+  project_url: voiceoftheocean.org/ocean-observatories/
   summary: ' Part of SAMBA continuous monitoring'
   platform_serial: SEA056
 glider_devices:

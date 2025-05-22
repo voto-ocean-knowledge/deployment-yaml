@@ -31,7 +31,7 @@ metadata:
   comment: Issue on first deployment so glider was recovered and redeployed 8 days
     later with the same mission number. Altitude set to 12m for the entire mission
     duration. Zt/zs set to 15m for the entire mission duration
-  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur,
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician
@@ -41,7 +41,7 @@ metadata:
   deployment_id: '25'
   deployment_name: SAMBA
   project: SAMBA
-  project_url: https://voiceoftheocean.org/samba-smart-autonomous-monitoring-of-the-baltic-sea/
+  project_url: voiceoftheocean.org/ocean-observatories/
   summary: ' Part of SAMBA continuous monitoring'
   platform_serial: SEA044
 glider_devices:
