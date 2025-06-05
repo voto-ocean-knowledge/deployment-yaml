@@ -481,7 +481,7 @@ qc:
     comment: "Biofouling on wetlabs FLBBPC"
     start: '2025-05-26'
     end: '2025-06-04'
-  backscatter:
+  backscatter_raw:
     value: 4
     comment: "Biofouling on wetlabs FLBBPC"
     start: '2025-05-26'
