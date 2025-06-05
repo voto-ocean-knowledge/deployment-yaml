@@ -466,12 +466,12 @@ qc:
     value: 3
     comment: "\u201CVery high oxygen concentration values compared to previous missions.\
       \ Due to issue in glider payload software.\u201C"
-  cholorophyll:
+  chlorophyll:
     value: 3
     comment: "Biofouling on wetlabs FLBBPC suspected to also affect chlorophyll"
     start: '2025-05-26'
     end: '2025-06-04'
-  cholorophyll_raw:
+  chlorophyll_raw:
     value: 3
     comment: "Biofouling on wetlabs FLBBPC suspected to also affect chlorophyll"
     start: '2025-05-26'
