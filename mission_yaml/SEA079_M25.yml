@@ -26,7 +26,7 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Loka
+  glider_name: Minna
   wmo_id: '8901001'
   comment: Glider flew on zt/zs=2 and alt=2 for full mission duration.
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
