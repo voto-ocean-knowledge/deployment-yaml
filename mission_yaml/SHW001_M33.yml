@@ -27,7 +27,7 @@ metadata:
   sea_name: Baltic
   transmission_system: IRIDIUM
   glider_name: ShallowExplorer_001
-  wmo_id: '8901001'
+  wmo_id: '8901081'
   comment: ' This mission is part of testing the new ShallowExplorer in the Baltic
     Sea.'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
