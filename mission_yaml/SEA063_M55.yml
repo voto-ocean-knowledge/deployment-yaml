@@ -83,7 +83,7 @@ glider_devices:
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2021-02-02'
+    calibration_date: '2021-02-03'
 netcdf_variables:
   keep_variables:
   - temperature

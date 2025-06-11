@@ -28,34 +28,29 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Ljung
   wmo_id: '6801707'
-  comment: Altitude set to 12m for the entire mission duration. Zt/zs set to 5m for
-    most of the mission and occasionally increased to up to 20m
+  comment: ' Mission part of the inTail project with testing the new oxygen sensor. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin
+    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
-    Technician
+    Technician, Glider Technician, Glider Technician, Platform Coordinator
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '24'
-  deployment_name: SAMBA
-  project: SAMBA
-  project_url: voiceoftheocean.org/ocean-observatories/
-  summary: ' Part of SAMBA continuous monitoring'
+  deployment_id: '88'
+  deployment_name: InTail
+  project: InTail
+  project_url: https://voiceoftheocean.org/ocean-observatories/
+  summary: ' Part of the InTail project '
   platform_serial: SEA063
 glider_devices:
-  altimeter:
-    make: UNKNOWN
-    model: UNKNOWN
-    serial: '42'
   ctd:
     make: RBR
     model: legato
-    serial: '206523'
+    serial: '206612'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2021-03-01'
+    calibration_date: '2024-02-23'
   optics:
     make: Wetlabs
     model: FLNTU
@@ -72,11 +67,11 @@ glider_devices:
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0044'
+    serial: '0040'
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    calibration_date: '2021-01-23'
+    calibration_date: '2023-08-11'
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -85,12 +80,21 @@ glider_devices:
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
     calibration_date: '2021-02-03'
+  irradiance:
+    make: Biospherical
+    model: MPE-PAR
+    serial: '2983'
+    long_name: Biospherical MPE-PAR
+    make_model: Biospherical MPE-PAR
+    factory_calibrated: 'Yes'
+    calibration_date: '2023-02-21'
 netcdf_variables:
   keep_variables:
   - temperature
   - oxygen_concentration
   - chlorophyll
   - ad2cp_heading
+  - downwelling_PAR
   timebase:
     source: NAV_LATITUDE
   time:
@@ -418,3 +422,26 @@ netcdf_variables:
     standard_name: platform_beam1_measure_ad2cp_cell1
     units: m s-1
     coordinates: time depth latitude longitude
+  downwelling_PAR:
+    source: MPE-PAR_IRRADIANCE
+    long_name: Downwelling PAR (Photosynthetically Active Radiation) in range 400-700
+      nm
+    standard_name: downwelling_PAR
+    units: "\u03BCE cm-2 s-1"
+    average_method: geometric mean
+    coordinates: time depth latitude longitude
+    instrument: instrument_radiometer
+    observation_type: measured
+  internal_temperature_PAR:
+    source: MPE-PAR_TEMPERATURE
+    long_name: Sensor internal temperature
+    standard_name: internal_temperature_PAR
+    units: Celsius
+    coordinates: time depth latitude longitude
+    instrument: instrument_thermistor
+    observation_type: measured
+qc:
+  oxygen_concentration:
+    value: 3
+    comment: "\u201CVery high oxygen concentration values compared to previous missions.\
+      \ Due to issue in glider payload software.\u201C"

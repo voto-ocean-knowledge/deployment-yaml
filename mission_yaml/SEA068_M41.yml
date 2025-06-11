@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Aster
   wmo_id: '6801602'
-  comment: ' '
+  comment: 'Glider flew on higher bu/bd and increased zt at the end of mission to fight current. This dataset is currently under investigation due to high biofouling affecting the wetlabs data (chlorophyll, backscatter, phycocyanin). Data from the 26th is currently flagged as suspicious (3) or bad (4), but the dates may be adjusted to start a few days later, see qc. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -466,3 +466,33 @@ qc:
     value: 3
     comment: "\u201CVery high oxygen concentration values compared to previous missions.\
       \ Due to issue in glider payload software.\u201C"
+  chlorophyll:
+    value: 3
+    comment: "Biofouling on wetlabs FLBBPC suspected to also affect chlorophyll"
+    start: '2025-05-26'
+    end: '2025-06-04'
+  chlorophyll_raw:
+    value: 3
+    comment: "Biofouling on wetlabs FLBBPC suspected to also affect chlorophyll"
+    start: '2025-05-26'
+    end: '2025-06-04'
+  backscatter_scaled:
+    value: 4
+    comment: "Biofouling on wetlabs FLBBPC"
+    start: '2025-05-26'
+    end: '2025-06-04'
+  backscatter_raw:
+    value: 4
+    comment: "Biofouling on wetlabs FLBBPC"
+    start: '2025-05-26'
+    end: '2025-06-04'
+  phycocyanin:
+    value: 4
+    comment: "Biofouling on wetlabs FLBBPC"
+    start: '2025-05-26'
+    end: '2025-06-04'
+  phycocyanin_raw:
+    value: 4
+    comment: "Biofouling on wetlabs FLBBPC"
+    start: '2025-05-26'
+    end: '2025-06-04'
