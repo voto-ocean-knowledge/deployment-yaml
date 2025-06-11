@@ -51,19 +51,6 @@ glider_devices:
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
     calibration_date: '2024-02-23'
-  optics:
-    make: Wetlabs
-    model: FLNTU
-    serial: '6661'
-    long_name: Wetlabs ECO Puck FLNTU
-    make_model: Wetlabs FLNTU
-    factory_calibrated: 'Yes'
-    calibration_date: '2021-02-01'
-    calibration_parameters:
-      Chl_DarkCounts: 48
-      Chl_SF: 0.0121
-      NTU_DarkCounts: 49
-      NTU_SF: 0.006
   oxygen:
     make: JFE Advantech
     model: AROD-FT
@@ -92,7 +79,6 @@ netcdf_variables:
   keep_variables:
   - temperature
   - oxygen_concentration
-  - chlorophyll
   - ad2cp_heading
   - downwelling_PAR
   timebase:
@@ -307,42 +293,6 @@ netcdf_variables:
     observation_type: calculated
     accuracy: '0.02'
     resolution: '0.01'
-  chlorophyll:
-    source: FLNTU_CHL_SCALED
-    long_name: chlorophyll
-    standard_name: concentration_of_chlorophyll_in_sea_water
-    units: mg m-3
-    coordinates: time depth latitude longitude
-    instrument: instrument_flourometer
-    valid_min: '0.'
-    valid_max: '50.'
-    observation_type: calculated
-    sensitivity: '0.025'
-  chlorophyll_raw:
-    source: FLNTU_CHL_COUNT
-    long_name: raw chlorophyll
-    standard_name: raw_chlorophyll_in_sea_water
-    units: counts
-    coordinates: time depth latitude longitude
-    instrument: instrument_flourometer
-  turbidity:
-    source: FLNTU_NTU_SCALED
-    long_name: turbidity
-    standard_name: turbidity_in_sea_water
-    units: NTU
-    coordinates: time depth latitude longitude
-    instrument: instrument_turbidity_meter
-    valid_min: '0.'
-    valid_max: '25.'
-    observation_type: calculated
-    sensitivity: '0.01'
-  turbidity_raw:
-    source: FLNTU_NTU_COUNT
-    long_name: raw turbidity
-    standard_name: raw_turbidity_in_sea_water
-    units: counts
-    coordinates: time depth latitude longitude
-    instrument: instrument_flourometer
   oxygen_concentration:
     source: AROD_FT_DO
     long_name: oxygen concentration
