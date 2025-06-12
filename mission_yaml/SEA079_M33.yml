@@ -460,8 +460,3 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_thermistor
     observation_type: measured
-qc:
-  oxygen_concentration:
-    value: 3
-    comment: "\u201CVery high oxygen concentration values compared to previous missions.\
-      \ Due to an issue in the payload software.\u201C"
