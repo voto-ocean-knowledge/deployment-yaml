@@ -1,0 +1,449 @@
+metadata:
+  acknowledgement: This study used data collected and made freely available by Voice
+    of the Ocean Foundation (https://voiceoftheocean.org) accessed from https://erddap.observations.voiceoftheocean.org/erddap/index.html
+  institution: Voice of the Ocean Foundation
+  license: Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/)
+    This study used data collected and made freely available by Voice of the Ocean
+    Foundation (https://voiceoftheocean.org) accessed from https://erddap.observations.voiceoftheocean.org/erddap/index.html
+  format_version: IOOS_Glider_NetCDF_v2.0.nc
+  glider_model: SeaExplorer
+  glider_instrument_name: seaexplorer
+  keywords: AUVS, Autonomous Underwater Vehicles, Oceans, Ocean Pressure, Water Pressure,
+    Ocean Temperature, Water Temperature, Salinity/Density, Conductivity, Density,
+    Salinity
+  keywords_vocabulary: GCMD Science Keywords
+  metadata_link: http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html
+  Metadata_Conventions: CF-1.6, Unidata Dataset Discovery v1.0
+  naming_authority: Voice of the Ocean Foundation
+  platform: SeaExplorer Glider
+  processing_level: Data provided as is with no expressed or implied assurance of
+    quality assurance or quality control. L0
+  publisher_email: callum.rollo@voiceoftheocean.org
+  publisher_name: Callum Rollo
+  publisher_url: https://voiceoftheocean.org
+  references: created with pyglider https://github.com/c-proof/pyglider
+  source: Observational data from a profiling glider.
+  standard_name_vocabulary: CF STandard Name Table v49
+  sea_name: Baltic
+  transmission_system: IRIDIUM
+  glider_name: Smilla
+  wmo_id: '8901050'
+  comment: ' Part of the PhycoGlider II mission. TRIDENTE_FDOM channel is in reality displaying TRIDENTE_PHYCOCYANIN '
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
+    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
+  contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
+    Technician, Glider Technician, Glider Technician, Platform Coordinator
+  creator_email: callum.rollo@voiceoftheocean.org
+  creator_name: Callum Rollo
+  creator_url: https://observations.voiceoftheocean.org
+  deployment_id: '44'
+  deployment_name: PhycoGlider II
+  project: PhycoGlider II
+  project_url: voiceoftheocean.org/ocean-observatories/
+  summary: ' Part of PhycoGlider II'
+  platform_serial: SEA077
+glider_devices:
+  ctd:
+    make: RBR
+    model: legato
+    serial: '205048'
+    long_name: RBR legato CTD
+    make_model: RBR legato CTD
+    factory_calibrated: 'Yes'
+    calibration_date: '2025-01-13'
+  optics:
+    make: RBR
+    model: Tridente
+    serial: '238732'
+    long_name: RBR Tridente
+    make_model: RBR Tridente
+    factory_calibrated: 'Yes'
+    calibration_date: '2025-05-27'
+    calibration_parameters:
+      Chl_C0: 19.609326e-03
+      Chl_C1: 2.4724888e06
+      Chl_C2: 103.31017e-03
+      fdom_C0: 92.00525e-03
+      fdom_C1: 4.0099958e06
+#      fdom_C2: 1.0
+      backscatter_C0: 282.882e-09
+      backscatter_C1: 11.481439
+  oxygen:
+    make: JFE Advantech
+    model: AROD-FT
+    serial: 0068
+    long_name: JFE Advantech RINKO-FT
+    make_model: JFE Advantech AROD_FT
+    factory_calibrated: 'Yes'
+    calibration_date: '2024-01-26'
+  AD2CP:
+    make: Nortek
+    model: AD2CP
+    serial: '103363'
+    long_name: Nortek Glider1000 AD2CP
+    make_model: Nortek AD2CP
+    factory_calibrated: 'Yes'
+    calibration_date: '2022-05-25'
+  irradiance:
+    make: Biospherical
+    model: MPE-PAR
+    serial: '3191'
+    long_name: Biospherical MPE-PAR
+    make_model: Biospherical MPE-PAR
+    factory_calibrated: 'Yes'
+    calibration_date: '2024-05-02'
+netcdf_variables:
+  keep_variables:
+  - temperature
+  - oxygen_concentration
+  - chlorophyll
+  - ad2cp_heading
+  - downwelling_PAR
+  timebase:
+    source: NAV_LATITUDE
+  time:
+    source: time
+    long_name: Time
+    standard_name: time
+    calendar: gregorian
+    units: seconds since 1970-01-01T00:00:00Z
+    axis: T
+    observation_type: measured
+    coordinates: time depth latitude longitude
+  latitude:
+    source: NAV_LATITUDE
+    long_name: latitude
+    standard_name: latitude
+    units: degrees_north
+    axis: Y
+    coordinates: time depth latitude longitude
+    conversion: nmea2deg
+    comment: Estimated between surface fixes
+    observation_type: measured
+    platform: platform
+    reference: WGS84
+    valid_max: '90.0'
+    valid_min: '-90.0'
+    coordinate_reference_frame: urn:ogc:crs:EPSG::4326
+  longitude:
+    source: NAV_LONGITUDE
+    long_name: longitude
+    standard_name: longitude
+    units: degrees_east
+    axis: X
+    coordinates: time depth latitude longitude
+    conversion: nmea2deg
+    comment: Estimated between surface fixes
+    observation_type: measured
+    platform: platform
+    reference: WGS84
+    valid_max: '180.0'
+    valid_min: '-180.0'
+    coordinate_reference_frame: urn:ogc:crs:EPSG::4326
+  nav_state:
+    source: NAV_RESOURCE
+    long_name: seaexplorer navigation state
+    standard_name: navigation_state
+    units: None
+    coordinates: time depth latitude longitude
+  heading:
+    source: Heading
+    long_name: glider heading angle
+    standard_name: platform_orientation
+    units: degrees
+    coordinates: time depth latitude longitude
+  pitch:
+    source: Pitch
+    long_name: glider pitch angle
+    standard_name: platform_pitch_angle
+    units: degrees
+    coordinates: time depth latitude longitude
+  roll:
+    source: Roll
+    long_name: glider roll angle
+    standard_name: platform_roll_angle
+    units: degrees
+    coordinates: time depth latitude longitude
+  dive_num:
+    source: fnum
+    long_name: glider dive number from original SeaExplorer filename
+    standard_name: dive_number
+    units: None
+    coordinates: time depth latitude longitude
+  security_level:
+    source: SecurityLevel
+    long_name: security level
+    standard_name: security_level
+    units: None
+    coordinates: time depth latitude longitude
+  declination:
+    source: Declination
+    long_name: declination
+    standard_name: declination
+    units: degrees
+    coordinates: time depth latitude longitude
+  internal_temperature:
+    source: Temperature
+    long_name: internal temperature
+    standard_name: internal_temperature
+    units: Celsius
+    coordinates: time depth latitude longitude
+  internal_pressure:
+    source: Pa
+    long_name: internal pressure
+    standard_name: internal_pressure
+    units: Pa
+    coordinates: time depth latitude longitude
+  desired_heading:
+    source: DesiredH
+    long_name: glider desired heading angle
+    standard_name: platform_desired_orientation
+    units: degrees
+    coordinates: time depth latitude longitude
+  ballast_cmd:
+    source: BallastCmd
+    long_name: glider ballast command
+    standard_name: ballast_command
+    units: ml
+    coordinates: time depth latitude longitude
+  ballast_pos:
+    source: BallastPos
+    long_name: glider ballast position
+    standard_name: ballast_position
+    units: ml
+    coordinates: time depth latitude longitude
+  linear_cmd:
+    source: LinCmd
+    long_name: glider linear command
+    standard_name: linear_command
+    units: cm
+    coordinates: time depth latitude longitude
+  linear_pos:
+    source: LinPos
+    long_name: glider linear position
+    standard_name: linear_position
+    units: cm
+    coordinates: time depth latitude longitude
+  angular_cmd:
+    source: AngCmd
+    long_name: glider angular command
+    standard_name: angular_command
+    units: degrees
+    coordinates: time depth latitude longitude
+  angular_pos:
+    source: AngPos
+    long_name: glider angular position
+    standard_name: angular_position
+    units: degrees
+    coordinates: time depth latitude longitude
+  voltage:
+    source: Voltage
+    long_name: glider voltage
+    standard_name: platform_voltage
+    units: V
+    coordinates: time depth latitude longitude
+  altimeter:
+    source: Altitude
+    long_name: glider altimeter reading
+    standard_name: glider_altimeter_reading
+    units: m
+    coordinates: time depth latitude longitude
+  dead_reckoning:
+    source: DeadReckoning
+    long_name: dead reckoning
+    standard_name: dead_reckoning
+    units: None
+    coordinates: time depth latitude longitude
+  nav_resource:
+    source: NAV_RESOURCE
+    long_name: nav resource
+    standard_name: nav_resource
+    units: None
+    coordinates: time depth latitude longitude
+  conductivity:
+    source: LEGATO_CONDUCTIVITY
+    long_name: water conductivity
+    standard_name: sea_water_electrical_conductivity
+    units: mS cm-1
+    coordinates: time depth latitude longitude
+    instrument: instrument_ctd
+    valid_min: '0.'
+    valid_max: '85.'
+    observation_type: measured
+    accuracy: '0.003'
+    resolution: '0.001'
+  temperature:
+    source: LEGATO_TEMPERATURE
+    long_name: water temperature
+    standard_name: sea_water_temperature
+    units: Celsius
+    coordinates: time depth latitude longitude
+    instrument: instrument_ctd
+    valid_min: '-5'
+    valid_max: '42'
+    observation_type: measured
+    accuracy: '0.002'
+    resolution: '0.00005'
+  pressure:
+    source: LEGATO_PRESSURE
+    long_name: water pressure
+    standard_name: sea_water_pressure
+    units: dbar
+    coordinates: time depth latitude longitude
+    valid_min: '0'
+    valid_max: '1000'
+    positive: down
+    reference_datum: sea-surface
+    instrument: instrument_ctd
+    observation_type: measured
+    accuracy: '0.5'
+    resolution: '0.01'
+    comment: ctd pressure sensor
+  salinity:
+    source: LEGATO_SALINITY
+    long_name: water salinity
+    standard_name: sea_water_salinity
+    units: PSU
+    coordinates: time depth latitude longitude
+    instrument: instrument_ctd
+    valid_min: '0.'
+    valid_max: '50.'
+    observation_type: calculated
+    accuracy: '0.02'
+    resolution: '0.01'
+  chlorophyll:
+    source: TRIDENTE_CHLOROPHYLL
+    long_name: 470 nm wavelength chlorophyll
+    standard_name: concentration_of_chlorophyll_in_sea_water
+    units: mg m-3
+    coordinates: time depth latitude longitude
+    instrument: instrument_flourometer
+    valid_min: '0.'
+    valid_max: '50.'
+    observation_type: calculated
+  backscatter:
+    source: TRIDENTE_BACKSCATTER
+    long_name: 700 nm wavelength backscatter
+    standard_name: 700_nm_wavelength_backscatter_in_sea_water
+    units: m-1 sr-1
+    valid_min: '0.'
+    valid_max: '0.05'
+    coordinates: time depth latitude longitude
+    instrument: instrument_scatterometer
+  fdom:
+    source: TRIDENTE_FDOM
+    long_name: fdom
+    standard_name: fdom
+    units: ppb
+    valid_min: '0.'
+    valid_max: '500.'
+    coordinates: time depth latitude longitude
+    instrument: instrument_flourometer
+  oxygen_concentration:
+    source: AROD_FT_DO
+    long_name: oxygen concentration
+    standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
+    units: mmol m-3
+    coordinates: time depth latitude longitude
+    correct_oxygen: 'True'
+    reference_salinity: '0'
+    instrument: instrument_phosphorescence
+    valid_min: '0.'
+    valid_max: '425.'
+    observation_type: calculated
+    accuracy: 2% or 2.0
+    resolution: '0.01'
+  temperature_oxygen:
+    source: AROD_FT_TEMP
+    long_name: oxygen sensor temperature
+    standard_name: temperature_of_sensor_for_oxygen_in_sea_water
+    units: Celsius
+    coordinates: time depth latitude longitude
+    instrument: instrument_thermistor
+    valid_min: '-3.'
+    valid_max: '45.'
+    observation_type: measured
+    accuracy: '0.01'
+    resolution: '0.001'
+  oxygen_phase:
+    source: LEGATO_CODA_CORR_PHASE
+    long_name: oxygen phase
+    standard_name: oxygen_phase_in_sea_water
+    units: degrees
+    coordinates: time depth latitude longitude
+    instrument: instrument_optode
+  ad2cp_heading:
+    source: AD2CP_HEADING
+    long_name: glider heading angle from AD2CP
+    standard_name: platform_orientation_ad2cp
+    units: degrees
+    coordinates: time depth latitude longitude
+  ad2cp_pitch:
+    source: AD2CP_PITCH
+    long_name: glider pitch angle from AD2CP
+    standard_name: platform_pitch_angle_ad2cp
+    units: degrees
+    coordinates: time depth latitude longitude
+  ad2cp_roll:
+    source: AD2CP_ROLL
+    long_name: glider roll angle from AD2CP
+    standard_name: platform_roll_angle_ad2cp
+    units: degrees
+    coordinates: time depth latitude longitude
+  ad2cp_pressure:
+    source: AD2CP_PRESSURE
+    long_name: glider pressure from AD2CP
+    standard_name: platform_pressure_ad2cp
+    units: dbar
+    coordinates: time depth latitude longitude
+  ad2cp_time:
+    source: AD2CP_TIME
+    long_name: AD2CP recorded time
+    standard_name: ad2cp_recorded_time
+    coordinates: time depth latitude longitude
+  ad2cp_beam1_cell_number1:
+    source: AD2CP_V1_CN1
+    long_name: glider beam 1 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
+    units: m s-1
+    coordinates: time depth latitude longitude
+  ad2cp_beam2_cell_number1:
+    source: AD2CP_V2_CN1
+    long_name: glider beam 2 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
+    units: m s-1
+    coordinates: time depth latitude longitude
+  ad2cp_beam3_cell_number1:
+    source: AD2CP_V3_CN1
+    long_name: glider beam 3 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
+    units: m s-1
+    coordinates: time depth latitude longitude
+  ad2cp_beam4_cell_number1:
+    source: AD2CP_V4_CN1
+    long_name: glider beam 4 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
+    units: m s-1
+    coordinates: time depth latitude longitude
+  downwelling_PAR:
+    source: MPE-PAR_IRRADIANCE
+    long_name: Downwelling PAR (Photosynthetically Active Radiation) in range 400-700
+      nm
+    standard_name: downwelling_PAR
+    units: "\u03BCE cm-2 s-1"
+    average_method: geometric mean
+    coordinates: time depth latitude longitude
+    instrument: instrument_radiometer
+    observation_type: measured
+  internal_temperature_PAR:
+    source: MPE-PAR_TEMPERATURE
+    long_name: Sensor internal temperature
+    standard_name: internal_temperature_PAR
+    units: Celsius
+    coordinates: time depth latitude longitude
+    instrument: instrument_thermistor
+    observation_type: measured
+qc:
+  fdom:
+    value: 1
+    comment: "TRIDENTE_FDOM is displaying TRIDENTE_Phycocyanin"
