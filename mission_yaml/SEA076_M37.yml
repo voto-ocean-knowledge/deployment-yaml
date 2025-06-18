@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Fibbla
   wmo_id: '6801665'
-  comment: ' '
+  comment: ' Glider flew of zt/zs and alt=2 for full mission duration. Some gps locations are displayed incorrectly due to a temporary gps issue that was affecting the area. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
