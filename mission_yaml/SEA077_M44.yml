@@ -26,67 +26,68 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Fibbla
-  wmo_id: '6801665'
-  comment: ' Glider flew of zt/zs and alt=2 for full mission duration. Some gps locations are displayed incorrectly due to a temporary gps issue that was affecting the area. '
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
+  glider_name: Smilla
+  wmo_id: '8901050'
+  comment: ' Part of the PhycoGlider II mission. TRIDENTE_FDOM channel is in reality displaying TRIDENTE_PHYCOCYANIN '
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
+    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
-    Technician, Glider Technician, Glider Technician, Glider Technician, Platform
-    Coordinator
+    Technician, Glider Technician, Glider Technician, Platform Coordinator
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '37'
-  deployment_name: SAMBA
-  project: SAMBA
-  project_url: https://voiceoftheocean.org/ocean-observatories/
-  summary: ' Part of SAMBA continuous monitoring'
-  platform_serial: SEA076
+  deployment_id: '44'
+  deployment_name: PhycoGlider II
+  project: PhycoGlider II
+  project_url: voiceoftheocean.org/ocean-observatories/
+  summary: ' Part of PhycoGlider II'
+  platform_serial: SEA077
 glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '205046'
+    serial: '205048'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2023-09-05'
+    calibration_date: '2025-01-13'
   optics:
-    make: Wetlabs
-    model: FLBBCD
-    serial: '8201'
-    long_name: Wetlabs ECO Puck FLBBCD
-    make_model: Wetlabs FLBBCD
+    make: RBR
+    model: Tridente
+    serial: '238732'
+    long_name: RBR Tridente
+    make_model: RBR Tridente
     factory_calibrated: 'Yes'
-    calibration_date: '2023-04-27'
+    calibration_date: '2025-05-27'
     calibration_parameters:
-      Chl_DarkCounts: 47
-      Chl_SF: 0.0121
-      CDOM_DarkCounts: 47
-      CDOM_SF: 0.0908
-      SIG_DarkCounts: 48
-      SIG_SF: 3.115e-06
+      Chl_C0: 19.609326e-03
+      Chl_C1: 2.4724888e06
+      Chl_C2: 103.31017e-03
+      fdom_C0: 92.00525e-03
+      fdom_C1: 4.0099958e06
+#      fdom_C2: 1.0
+      backscatter_C0: 282.882e-09
+      backscatter_C1: 11.481439
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0070'
+    serial: 0068
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    calibration_date: '2023-08-26'
+    calibration_date: '2024-01-26'
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '104648'
+    serial: '103363'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2023-08-16'
+    calibration_date: '2022-05-25'
   irradiance:
     make: Biospherical
     model: MPE-PAR
-    serial: '3197'
+    serial: '3191'
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
     factory_calibrated: 'Yes'
@@ -311,8 +312,8 @@ netcdf_variables:
     accuracy: '0.02'
     resolution: '0.01'
   chlorophyll:
-    source: FLBBCD_CHL_SCALED
-    long_name: chlorophyll
+    source: TRIDENTE_CHLOROPHYLL
+    long_name: 470 nm wavelength chlorophyll
     standard_name: concentration_of_chlorophyll_in_sea_water
     units: mg m-3
     coordinates: time depth latitude longitude
@@ -320,50 +321,24 @@ netcdf_variables:
     valid_min: '0.'
     valid_max: '50.'
     observation_type: calculated
-    sensitivity: '0.025'
-  chlorophyll_raw:
-    source: FLBBCD_CHL_COUNT
-    long_name: raw chlorophyll
-    standard_name: raw_chlorophyll_in_sea_water
-    units: counts
-    coordinates: time depth latitude longitude
-    instrument: instrument_flourometer
-  cdom:
-    source: FLBBCD_CDOM_SCALED
-    long_name: colored dissolved organic matter
-    standard_name: concentration_of_colored_dissolved_organic_matter_in_sea_water
-    units: mg m-3
-    coordinates: time depth latitude longitude
-    instrument: instrument_flourometer
-    valid_min: '0.'
-    valid_max: '375.'
-    observation_type: calculated
-    sensitivity: '0.28'
-  cdom_raw:
-    source: FLBBCD_CDOM_COUNT
-    long_name: raw colored dissolved organic matter
-    standard_name: raw_colored_dissolved_organic_matter_in_sea_water
-    units: counts
-    coordinates: time depth latitude longitude
-    instrument: instrument_scatterometer
-  backscatter_scaled:
-    source: FLBBCD_BB_700_SCALED
-    long_name: "700 nm \u03B2 total volume scattering coefficient at 117 degree angle"
-    standard_name: 700_nm_wavelength_total_volume_scattering_coefficient
+  backscatter:
+    source: TRIDENTE_BACKSCATTER
+    long_name: 700 nm wavelength backscatter
+    standard_name: 700_nm_wavelength_backscatter_in_sea_water
     units: m-1 sr-1
-    coordinates: time depth latitude longitude
-    instrument: instrument_scatterometer
     valid_min: '0.'
-    valid_max: '3.'
-    observation_type: calculated
-    sensitivity: '0.002'
-  backscatter_raw:
-    source: FLBBCD_BB_700_COUNT
-    long_name: raw 700 nm wavelength backscatter
-    standard_name: raw_700_nm_wavelength_backscatter_in_sea_water
-    units: counts
+    valid_max: '0.05'
     coordinates: time depth latitude longitude
     instrument: instrument_scatterometer
+  fdom:
+    source: TRIDENTE_FDOM
+    long_name: fdom
+    standard_name: fdom
+    units: ppb
+    valid_min: '0.'
+    valid_max: '500.'
+    coordinates: time depth latitude longitude
+    instrument: instrument_flourometer
   oxygen_concentration:
     source: AROD_FT_DO
     long_name: oxygen concentration
@@ -390,6 +365,13 @@ netcdf_variables:
     observation_type: measured
     accuracy: '0.01'
     resolution: '0.001'
+  oxygen_phase:
+    source: LEGATO_CODA_CORR_PHASE
+    long_name: oxygen phase
+    standard_name: oxygen_phase_in_sea_water
+    units: degrees
+    coordinates: time depth latitude longitude
+    instrument: instrument_optode
   ad2cp_heading:
     source: AD2CP_HEADING
     long_name: glider heading angle from AD2CP
@@ -462,15 +444,6 @@ netcdf_variables:
     instrument: instrument_thermistor
     observation_type: measured
 qc:
-  cdom:
-    value: 4
-    comment: High values of CDOM raw counts. The cause of the issue is still unknown.
-      The relative variability may be intact but absolute values are unreliable.
-  cdom_raw:
-    value: 4
-    comment: High values of CDOM raw counts. The cause of the issue is still unknown.
-      The relative variability may be intact but absolute values are unreliable.
-  oxygen_concentration:
-    value: 3
-    comment: "\u201CVery high oxygen concentration values compared to previous missions.\
-      \ Due to issue in glider payload software.\u201C"
+  fdom:
+    value: 1
+    comment: "TRIDENTE_FDOM is displaying TRIDENTE_Phycocyanin"
