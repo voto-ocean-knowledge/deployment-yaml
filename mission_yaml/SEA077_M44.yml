@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Smilla
   wmo_id: '8901050'
-  comment: ' Part of the PhycoGlider II mission. TRIDENTE_FDOM channel is in reality displaying TRIDENTE_PHYCOCYANIN '
+  comment: ' Part of the PhycoGlider II mission. TRIDENTE_FDOM channel is in reality displaying TRIDENTE_PHYCOCYANIN. ph_C2 will be added '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -37,10 +37,10 @@ metadata:
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
   deployment_id: '44'
-  deployment_name: PhycoGlider II
-  project: PhycoGlider II
+  deployment_name: PhycoGliderII
+  project: PhycoGliderII
   project_url: voiceoftheocean.org/ocean-observatories/
-  summary: ' Part of PhycoGlider II'
+  summary: ' Part of PhycoGlider II '
   platform_serial: SEA077
 glider_devices:
   ctd:
@@ -65,7 +65,6 @@ glider_devices:
       Chl_C2: 103.31017e-03
       fdom_C0: 92.00525e-03
       fdom_C1: 4.0099958e06
-#      fdom_C2: 1.0
       backscatter_C0: 282.882e-09
       backscatter_C1: 11.481439
   oxygen:
