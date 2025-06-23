@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Smilla
   wmo_id: '8901050'
-  comment: ' Part of the PhycoGlider II mission. TRIDENTE_FDOM channel is in reality displaying TRIDENTE_PHYCOCYANIN. ph_C2 will be added '
+  comment: ' Part of the PhycoGlider II project. TRIDENTE_FDOM channel is in reality displaying TRIDENTE_PHYCOCYANIN. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -65,6 +65,7 @@ glider_devices:
       Chl_C2: 103.31017e-03
       fdom_C0: 92.00525e-03
       fdom_C1: 4.0099958e06
+      fdom_C2: 1.0
       backscatter_C0: 282.882e-09
       backscatter_C1: 11.481439
   oxygen:
@@ -364,13 +365,6 @@ netcdf_variables:
     observation_type: measured
     accuracy: '0.01'
     resolution: '0.001'
-  oxygen_phase:
-    source: LEGATO_CODA_CORR_PHASE
-    long_name: oxygen phase
-    standard_name: oxygen_phase_in_sea_water
-    units: degrees
-    coordinates: time depth latitude longitude
-    instrument: instrument_optode
   ad2cp_heading:
     source: AD2CP_HEADING
     long_name: glider heading angle from AD2CP
@@ -442,7 +436,3 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_thermistor
     observation_type: measured
-qc:
-  fdom:
-    value: 1
-    comment: "TRIDENTE_FDOM is displaying TRIDENTE_Phycocyanin"
