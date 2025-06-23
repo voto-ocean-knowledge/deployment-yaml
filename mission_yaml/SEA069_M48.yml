@@ -450,11 +450,6 @@ qc:
     comment: "Probable biofouling on wetlabs FLBBPC"
     start: '2025-06-18'
     end: '2025-06-22'
-  backscatter_raw:
-    value: 3
-    comment: "Probable biofouling on wetlabs FLBBPC"
-    start: '2025-06-18'
-    end: '2025-06-22'
   phycocyanin:
     value: 3
     comment: "Probable biofouling on wetlabs FLBBPC"
