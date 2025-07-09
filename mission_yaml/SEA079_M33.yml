@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Minna
   wmo_id: '8901001'
-  comment: ' Occationally failed bottom tracking and diving on a save depth profile around c. 304. zt/zs=2 and alt=2 for the remainer of the mission. AROD_FT Analogue values not available. '
+  comment: ' Occasionally failed bottom tracking and diving on a safe depth profile from around cycle 304. zt/zs=2 and alt=2 for the remainer of the mission. AROD_FT Analogue values not available. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
