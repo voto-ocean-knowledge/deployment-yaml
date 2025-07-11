@@ -26,67 +26,66 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Fibbla
-  wmo_id: '6801665'
-  comment: ' Glider was recovered shortly after deployment due to getting stuck in the muddy bottom and releasing the emergency dropweight. '
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
+  glider_name: Minna
+  wmo_id: '8901001'
+  comment: '  '
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
+    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
-    Technician, Glider Technician, Glider Technician, Glider Technician, Platform
-    Coordinator
+    Technician, Glider Technician, Glider Technician, Platform Coordinator
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '38'
+  deployment_id: '34'
   deployment_name: SAMBA
   project: SAMBA
-  project_url: https://voiceoftheocean.org/ocean-observatories/
+  project_url: voiceoftheocean.org/ocean-observatories/
   summary: ' Part of SAMBA continuous monitoring'
-  platform_serial: SEA076
+  platform_serial: SEA079
 glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '205046'
+    serial: '212534'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2023-09-05'
+    calibration_date: '2022-10-21'
   optics:
     make: Wetlabs
     model: FLBBCD
-    serial: '8201'
+    serial: '7619'
     long_name: Wetlabs ECO Puck FLBBCD
     make_model: Wetlabs FLBBCD
     factory_calibrated: 'Yes'
-    calibration_date: '2023-04-27'
+    calibration_date: '2022-06-21'
     calibration_parameters:
       Chl_DarkCounts: 47
       Chl_SF: 0.0121
-      CDOM_DarkCounts: 47
-      CDOM_SF: 0.0908
-      SIG_DarkCounts: 48
-      SIG_SF: 3.115e-06
+      CDOM_DarkCounts: 50
+      CDOM_SF: 0.0909
+      SIG_DarkCounts: 50
+      SIG_SF: 3.108e-06
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0070'
+    serial: 0069
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    calibration_date: '2023-08-26'
+    calibration_date: '2024-06-06'
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '104648'
+    serial: '104649'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2023-08-16'
+    calibration_date: '2022-07-18'
   irradiance:
     make: Biospherical
     model: MPE-PAR
-    serial: '3197'
+    serial: '3195'
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
     factory_calibrated: 'Yes'
@@ -461,12 +460,3 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_thermistor
     observation_type: measured
-qc:
-  cdom:
-    value: 4
-    comment: High values of CDOM raw counts. The cause of the issue is still unknown.
-      The relative variability may be intact but absolute values are unreliable.
-  cdom_raw:
-    value: 4
-    comment: High values of CDOM raw counts. The cause of the issue is still unknown.
-      The relative variability may be intact but absolute values are unreliable.
