@@ -72,7 +72,7 @@ glider_devices:
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: 0066
+    serial: '0066'
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
