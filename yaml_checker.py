@@ -103,7 +103,9 @@ expected_units = {'AD2CP_HEADING': 'degrees',
                   'SecurityLevel': 'None',
                   'Temperature': 'Celsius',
                   'Voltage': 'V',
- }
+                  'AROD_FT_DO_AN': 'counts',
+                  'AROD_FT_LED': 'counts',
+                  }
 
 
 def check_yaml(yaml_path, check_urls=False, log_level='INFO'):
@@ -264,6 +266,8 @@ def check_strings(d, _log):
         if isinstance(v, dict):
             _log = check_strings(v, _log)
         else:
+            if type(v) is float:
+                continue
             if not bool(v):
                 _log.error(f'{k} is empty')
     return _log

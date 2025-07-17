@@ -76,6 +76,23 @@ glider_devices:
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     calibration_date: '2023-08-26'
+    calibration_parameters:
+      d0: 6.707286e-05
+      d1: -0.181252
+      d2: 0.1963972
+      d3: 0.0
+      d4: 0.0
+      c0: 0.002911369
+      c1: 0.0001243058
+      c2: 2.561515e-06
+      e0: 1.0
+      Cp: 0.004
+      A: -12.9157
+      B: 0.001475098
+      C: -2.62001e-08
+      D: 6.117645e-13
+      E: -7.783219e-18
+      F: 5.064287e-23
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -462,6 +479,22 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_thermistor
     observation_type: measured
+  oxygen_ad_counts:
+    source: AROD_FT_DO_AN
+    long_name: oxygen sensor raw analogue counts
+    standard_name: oxygen_sensor_ad_counts
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_phosphorescence
+    observation_type: measured
+  oxygen_led_counts:
+    source: AROD_FT_LED
+    long_name: oxygen sensor LED counts
+    standard_name: oxygen_sensor_led_value
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_phosphorescence
+    observation_type: measured
 qc:
   cdom:
     value: 4
@@ -471,7 +504,3 @@ qc:
     value: 4
     comment: High values of CDOM raw counts. The cause of the issue is still unknown.
       The relative variability may be intact but absolute values are unreliable.
-  oxygen_concentration:
-    value: 3
-    comment: "\u201CVery high oxygen concentration values compared to previous missions.\
-      \ Due to issue in glider payload software.\u201C"
