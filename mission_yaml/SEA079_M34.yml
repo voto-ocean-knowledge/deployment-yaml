@@ -29,8 +29,8 @@ metadata:
   glider_name: Minna
   wmo_id: '8901001'
   comment: '  '
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator
   creator_email: callum.rollo@voiceoftheocean.org
@@ -74,6 +74,23 @@ glider_devices:
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     calibration_date: '2024-06-06'
+    calibration_parameters:
+      d0: 6.516091e-05
+      d1: -0.1589679
+      d2: 0.1940616
+      d3: 0.0
+      d4: 0.0
+      c0: 0.002988351
+      c1: 0.0001271127
+      c2: 2.792309e-06
+      e0: 1.0
+      Cp: 0.0038
+      A: -12.91523
+      B: 0.001481117
+      C: -2.674323e-08
+      D: 6.329282e-13
+      E: -8.164567e-18
+      F: 5.323646e-23
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -459,4 +476,20 @@ netcdf_variables:
     units: Celsius
     coordinates: time depth latitude longitude
     instrument: instrument_thermistor
+    observation_type: measured
+  oxygen_ad_counts:
+    source: AROD_FT_DO_AN
+    long_name: oxygen sensor raw analogue counts
+    standard_name: oxygen_sensor_ad_counts
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_phosphorescence
+    observation_type: measured
+  oxygen_led_counts:
+    source: AROD_FT_LED
+    long_name: oxygen sensor LED counts
+    standard_name: oxygen_sensor_led_value
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_phosphorescence
     observation_type: measured

@@ -28,8 +28,8 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Marviol
   wmo_id: '6801507'
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator
   creator_email: callum.rollo@voiceoftheocean.org
@@ -72,6 +72,23 @@ glider_devices:
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     calibration_date: '2024-06-06'
+    calibration_parameters:
+      d0: 8.006861e-05
+      d1: -0.1662231
+      d2: 0.1927369
+      d3: 0.0
+      d4: 0.0
+      c0: 0.002910576
+      c1: 0.000124715
+      c2: 2.715957e-06
+      e0: 1.0
+      Cp: 0.0038
+      A: -12.85995
+      B: 0.001482147
+      C: -2.664719e-08
+      D: 6.256232e-13
+      E: -7.984048e-18
+      F: 5.175089e-23
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -439,4 +456,20 @@ netcdf_variables:
     units: Celsius
     coordinates: time depth latitude longitude
     instrument: instrument_thermistor
+    observation_type: measured
+  oxygen_ad_counts:
+    source: AROD_FT_DO_AN
+    long_name: oxygen sensor raw analogue counts
+    standard_name: oxygen_sensor_ad_counts
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_phosphorescence
+    observation_type: measured
+  oxygen_led_counts:
+    source: AROD_FT_LED
+    long_name: oxygen sensor LED counts
+    standard_name: oxygen_sensor_led_value
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_phosphorescence
     observation_type: measured

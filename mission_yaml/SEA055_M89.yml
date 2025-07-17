@@ -34,8 +34,8 @@ metadata:
     payload and MicroRider sensor which lead to an increased battery consumption.
     Part-time loitering was performed during the last part of the mission to save
     battery. '
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Glider Technician, Platform
     Coordinator Technician, Glider Technician, Platform Coordinator
@@ -89,6 +89,23 @@ glider_devices:
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     calibration_date: '2024-01-13'
+    calibration_parameters:
+      d0: 0.0002122214
+      d1: -0.2407314
+      d2: 0.2160254
+      d3: 0.0
+      d4: 0.0
+      c0: 0.002955601
+      c1: 0.0001240437
+      c2: 2.690884e-06
+      e0: 1.0
+      Cp: 0.0037
+      A: -12.75913
+      B: 0.001480854
+      C: -2.638831e-08
+      D: 6.137363e-13
+      E: -7.744244e-18
+      F: 4.990697e-23
   turbulence:
     make: Rockland scientific
     model: MicroRider-1000G

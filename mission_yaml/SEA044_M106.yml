@@ -29,9 +29,13 @@ metadata:
   glider_name: Martorn
   wmo_id: '6801672'
   comment: 'Part of the TurboMix mission, deployed with Legato Tridente and a MicroRider-1000-G
-    sensors. Due to GPS-spoofing the position of cycles 245, 251, 263, 267, 279, 283, 287, 307, 323, 333, 351, 363 and 375 are affected. Between these cycle the glider occationally flew on a slower profile to protect the sensor when location was uncertain. Safe zb and alt=7 was set for full mission duration. MR was turned on every full downcast + up to 40 m on the upcast. '
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
+    sensors. Due to GPS-spoofing the position of cycles 245, 251, 263, 267, 279, 283,
+    287, 307, 323, 333, 351, 363 and 375 are affected. Between these cycle the glider
+    occationally flew on a slower profile to protect the sensor when location was
+    uncertain. Safe zb and alt=7 was set for full mission duration. MR was turned
+    on every full downcast + up to 40 m on the upcast. '
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Glider Technician, Platform
     Coordinator Technician, Glider Technician, Platform Coordinator
@@ -85,6 +89,23 @@ glider_devices:
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     calibration_date: '2024-01-13'
+    calibration_parameters:
+      d0: 0.0002122214
+      d1: -0.2407314
+      d2: 0.2160254
+      d3: 0.0
+      d4: 0.0
+      c0: 0.002955601
+      c1: 0.0001240437
+      c2: 2.690884e-06
+      e0: 1.0
+      Cp: 0.0037
+      A: -12.75913
+      B: 0.001480854
+      C: -2.638831e-08
+      D: 6.137363e-13
+      E: -7.744244e-18
+      F: 4.990697e-23
   turbulence:
     make: Rockland scientific
     model: MicroRider-1000G
@@ -431,8 +452,19 @@ netcdf_variables:
     standard_name: turbulent_kinetic_energy_dissipation_shear_2
     units: log10 W kg-1
     coordinates: time depth latitude longitude
-qc:
-  oxygen_concentration:
-    value: 3
-    comment: "\u201CVery high oxygen concentration values compared to previous missions.\
-      \ Due to issue in glider payload software.\u201C"
+  oxygen_ad_counts:
+    source: AROD_FT_DO_AN
+    long_name: oxygen sensor raw analogue counts
+    standard_name: oxygen_sensor_ad_counts
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_phosphorescence
+    observation_type: measured
+  oxygen_led_counts:
+    source: AROD_FT_LED
+    long_name: oxygen sensor LED counts
+    standard_name: oxygen_sensor_led_value
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_phosphorescence
+    observation_type: measured

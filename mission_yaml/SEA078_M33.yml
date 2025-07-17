@@ -29,8 +29,8 @@ metadata:
   glider_name: Vresros
   wmo_id: '8901000'
   comment: ' Too high oxygen values. See qc'
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator
   creator_email: callum.rollo@voiceoftheocean.org
@@ -74,6 +74,23 @@ glider_devices:
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     calibration_date: '2023-04-01'
+    calibration_parameters:
+      d0: 0.0001534826
+      d1: -0.1937578
+      d2: 0.1907084
+      d3: 0.0
+      d4: 0.0
+      c0: 0.002981258
+      c1: 0.0001269313
+      c2: 2.701816e-06
+      e0: 1.0
+      Cp: 0.004
+      A: -12.79867
+      B: 0.001471221
+      C: -2.559432e-08
+      D: 5.819505e-13
+      E: -7.142082e-18
+      F: 4.564357e-23
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -460,8 +477,19 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_thermistor
     observation_type: measured
-qc:
-  oxygen_concentration:
-    value: 3
-    comment: "\u201CVery high oxygen concentration values compared to previous missions.\
-      \ Due to issue in glider payload software.\u201C"
+  oxygen_ad_counts:
+    source: AROD_FT_DO_AN
+    long_name: oxygen sensor raw analogue counts
+    standard_name: oxygen_sensor_ad_counts
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_phosphorescence
+    observation_type: measured
+  oxygen_led_counts:
+    source: AROD_FT_LED
+    long_name: oxygen sensor LED counts
+    standard_name: oxygen_sensor_led_value
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_phosphorescence
+    observation_type: measured

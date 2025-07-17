@@ -29,8 +29,8 @@ metadata:
   glider_name: Smilla
   wmo_id: '8901050'
   comment: ' Glider flew on zt/zs/alt=2 for the full mission duration. '
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator
   creator_email: callum.rollo@voiceoftheocean.org
@@ -74,6 +74,23 @@ glider_devices:
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     calibration_date: '2024-01-26'
+    calibration_parameters:
+      d0: -0.0002158511
+      d1: -0.2193035
+      d2: 0.1982276
+      d3: 0.0
+      d4: 0.0
+      c0: 0.003092576
+      c1: 0.0001314481
+      c2: 2.420729e-06
+      e0: 1.0
+      Cp: 0.0037
+      A: -12.61686
+      B: 0.001469161
+      C: -2.550187e-08
+      D: 5.815232e-13
+      E: -7.188652e-18
+      F: 4.627832e-23
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -440,8 +457,19 @@ netcdf_variables:
     standard_name: platform_beam1_measure_ad2cp_cell1
     units: m s-1
     coordinates: time depth latitude longitude
-qc:
-  oxygen_concentration:
-    value: 3
-    comment: "\u201CVery high oxygen concentration values compared to previous missions.\
-      \ Due to issue in glider payload software.\u201C"
+  oxygen_ad_counts:
+    source: AROD_FT_DO_AN
+    long_name: oxygen sensor raw analogue counts
+    standard_name: oxygen_sensor_ad_counts
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_phosphorescence
+    observation_type: measured
+  oxygen_led_counts:
+    source: AROD_FT_LED
+    long_name: oxygen sensor LED counts
+    standard_name: oxygen_sensor_led_value
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_phosphorescence
+    observation_type: measured

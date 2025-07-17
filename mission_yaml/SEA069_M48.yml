@@ -28,9 +28,13 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Kalmus
   wmo_id: '6801506'
-  comment: ' Glider occasionally flew on increased vspeed due to strong currents. zs/zt and alt=2 for full mission duration.  This dataset is currently under investigation due to high biofouling affecting the wetlabs data (backscatter, phycocyanin). Data from the 2025-06-18 is currently flagged as suspicious (3), but the dates may be adjusted to start a few days later, see qc. '
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
+  comment: ' Glider occasionally flew on increased vspeed due to strong currents.
+    zs/zt and alt=2 for full mission duration.  This dataset is currently under investigation
+    due to high biofouling affecting the wetlabs data (backscatter, phycocyanin).
+    Data from the 2025-06-18 is currently flagged as suspicious (3), but the dates
+    may be adjusted to start a few days later, see qc. '
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Glider Technician, Platform
     Coordinator
@@ -75,6 +79,23 @@ glider_devices:
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     calibration_date: '2024-01-26'
+    calibration_parameters:
+      d0: 8.562884e-05
+      d1: -0.1777866
+      d2: 0.1915917
+      d3: 0.0
+      d4: 0.0
+      c0: 0.002945188
+      c1: 0.0001272086
+      c2: 2.523607e-06
+      e0: 1.0
+      Cp: 0.0037
+      A: -12.83706
+      B: 0.001482922
+      C: -2.668022e-08
+      D: 6.271794e-13
+      E: -8.023481e-18
+      F: 5.211949e-23
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -461,28 +482,40 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_thermistor
     observation_type: measured
+  oxygen_ad_counts:
+    source: AROD_FT_DO_AN
+    long_name: oxygen sensor raw analogue counts
+    standard_name: oxygen_sensor_ad_counts
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_phosphorescence
+    observation_type: measured
+  oxygen_led_counts:
+    source: AROD_FT_LED
+    long_name: oxygen sensor LED counts
+    standard_name: oxygen_sensor_led_value
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_phosphorescence
+    observation_type: measured
 qc:
-  oxygen_concentration:
-    value: 3
-    comment: "\u201CVery high oxygen concentration values compared to previous missions.\
-      \ Due to issue in glider payload software.\u201C"
   backscatter_scaled:
     value: 3
-    comment: "Probable biofouling on wetlabs FLBBPC"
+    comment: Probable biofouling on wetlabs FLBBPC
     start: '2025-06-18'
     end: '2025-06-22'
   backscatter_raw:
     value: 3
-    comment: "Probable biofouling on wetlabs FLBBPC"
+    comment: Probable biofouling on wetlabs FLBBPC
     start: '2025-06-18'
     end: '2025-06-22'
   phycocyanin:
     value: 3
-    comment: "Probable biofouling on wetlabs FLBBPC"
+    comment: Probable biofouling on wetlabs FLBBPC
     start: '2025-06-18'
     end: '2025-06-22'
   phycocyanin_raw:
     value: 3
-    comment: "Probable biofouling on wetlabs FLBBPC"
+    comment: Probable biofouling on wetlabs FLBBPC
     start: '2025-06-18'
     end: '2025-06-22'

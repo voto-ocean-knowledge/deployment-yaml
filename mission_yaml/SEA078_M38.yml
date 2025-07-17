@@ -29,8 +29,8 @@ metadata:
   glider_name: Vresros
   wmo_id: '8901000'
   comment: ' '
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Glider Technician, Platform
     Coordinator
@@ -75,6 +75,23 @@ glider_devices:
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     calibration_date: '2024-02-15'
+    calibration_parameters:
+      d0: 0.0001329873
+      d1: -0.169747
+      d2: 0.1928429
+      d3: 0.0
+      d4: 0.0
+      c0: 0.002997305
+      c1: 0.0001273955
+      c2: 2.813017e-06
+      e0: 1.0
+      Cp: 0.0039
+      A: -13.01016
+      B: 0.001457255
+      C: -2.478866e-08
+      D: 5.583178e-13
+      E: -6.849273e-18
+      F: 4.447e-23
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -460,4 +477,20 @@ netcdf_variables:
     units: Celsius
     coordinates: time depth latitude longitude
     instrument: instrument_thermistor
+    observation_type: measured
+  oxygen_ad_counts:
+    source: AROD_FT_DO_AN
+    long_name: oxygen sensor raw analogue counts
+    standard_name: oxygen_sensor_ad_counts
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_phosphorescence
+    observation_type: measured
+  oxygen_led_counts:
+    source: AROD_FT_LED
+    long_name: oxygen sensor LED counts
+    standard_name: oxygen_sensor_led_value
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_phosphorescence
     observation_type: measured
