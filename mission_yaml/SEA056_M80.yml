@@ -43,6 +43,8 @@ metadata:
   project_url: https://voiceoftheocean.org/ocean-observatories/
   summary: ' Part of SAMBA continuous monitoring'
   platform_serial: SEA056
+  seanav: 3.8.2 -r
+  seapld: 2.24.2 -r
 glider_devices:
   ctd:
     make: RBR

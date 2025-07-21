@@ -28,8 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Vresros
   wmo_id: '8901000'
-  comment: ' Glider flew on alt/zt/zs=2 for full mission duration. See qc for dissolved
-    oxygen values.'
+  comment: ' Glider flew on alt/zt/zs=2 for full mission duration. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -44,6 +43,8 @@ metadata:
   project_url: voiceoftheocean.org/ocean-observatories/
   summary: ' Part of SAMBA continuous monitoring '
   platform_serial: SEA078
+  seanav: 3.8.2 -r
+  seapld: 2.25.1 -cr
 glider_devices:
   ctd:
     make: RBR
