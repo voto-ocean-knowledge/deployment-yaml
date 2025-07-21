@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Kaprifol
   wmo_id: '6801674'
-  comment: 'TRIDENTE_FDOM channel is in reality displaying TRIDENTE_PHYCOCYANIN. '
+  comment: ' '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
     Marcus Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -43,6 +43,8 @@ metadata:
   project_url: https://voiceoftheocean.org
   summary: ' Part of SAMBA continuous monitoring '
   platform_serial: SEA055
+  seanav: 3.8.2 -r
+  seapld: 2.25.2 -r
 glider_devices:
   ctd:
     make: RBR
@@ -64,9 +66,9 @@ glider_devices:
       Chl_C0: 30.365441e-03
       Chl_C1: 2.4691522e06
       Chl_C2: 103.31017e-03
-      fdom_C0: -262.03474e-03
-      fdom_C1: 3.6712498e06
-      fdom_C2: 1.0
+      PC_C0: -262.03474e-03
+      PC_C1: 3.6712498e06
+      PC_C2: 1.0
       backscatter_C0: 55.214777e-09
       backscatter_C1: 10.832467
   oxygen:
@@ -331,10 +333,10 @@ netcdf_variables:
     valid_max: '0.05'
     coordinates: time depth latitude longitude
     instrument: instrument_scatterometer
-  fdom:
+  phycocyanin:
     source: TRIDENTE_FDOM
-    long_name: fdom
-    standard_name: fdom
+    long_name: phycocyanin
+    standard_name: phycocyanin
     units: ppb
     valid_min: '0.'
     valid_max: '500.'
