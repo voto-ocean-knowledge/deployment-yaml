@@ -31,10 +31,10 @@ metadata:
   comment: 'Part of the TurboMix mission, deployed with Legato Tridente and a MicroRider-1000-G
     sensor. Flew with fixed linear and fixed ballast for a large part of the mission
     with safe zt in regards to bathymetry due to the delicate probes of the MicroRider. '
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Michaela Edwinson
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Michaela Edwinson, Anna Willstrand Wranne
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
-    Technician, Glider Technician, Platform Coordinator
+    Technician, Glider Technician, Platform Coordinator, Project Manager
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org

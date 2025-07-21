@@ -32,10 +32,11 @@ metadata:
     afternoon loitering with payload off towards the end of the mission to preserve
     battery. ADCP was turned off between 2025-02-22 to 2025-02-24 due to a probable
     software issue. '
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
-    Technician, Glider Technician, Glider Technician, Platform Coordinator
+    Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
+    Manager
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org

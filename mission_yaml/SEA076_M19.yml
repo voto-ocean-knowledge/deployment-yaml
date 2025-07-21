@@ -34,10 +34,10 @@ metadata:
     ADCP stopped recording data at C146 and glider hit the seabed. Glider recover
     right after the issues with the ADCP. After recovery, water was found in the payload
     bay which caused the issues with the FLBBCD and ADCP
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Chiara Monforte
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Andrew Birkett, Chiara Monforte, Anna Willstrand Wranne
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
-    Technician, Glider Technician, Glider Technician, Glider Pilot
+    Technician, Glider Technician, Glider Technician, Glider Pilot, Project Manager
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org

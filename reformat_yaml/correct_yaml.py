@@ -7,7 +7,7 @@ from coefficients import arod_coefficients, glider_missions_affected
 
 df_cal = pd.read_csv('new_cal.csv')
 df_comments = pd.read_csv('piloting_comments.csv')
-df_missions = pd.read_csv('https://erddap.observations.voiceoftheocean.org/erddap/tabledap/meta_users_table.csv')
+df_missions = pd.read_csv('https://erddap.observations.voiceoftheocean.org/erddap/tabledap/meta_users_table.csvp')
 expected_failures = [(70, 29), (57, 58), (57, 75)]
 import sys
 
@@ -239,10 +239,24 @@ def add_oxygen_vars(yaml_path):
         yaml.dump(deployment, fout, sort_keys=False)
     return
 
+anna_start = '2023-08-16'
+anna_missions = df_missions[df_missions['deployment_start (UTC)'].str[:10] > anna_start]
+
+def add_anna(yaml_path):
+    with open(yaml_path) as fin:
+        deployment = yaml.safe_load(fin)
+    glider_mission = yaml_path.name.split('.')[0]
+    if glider_mission not in list(anna_missions.datasetID.str[4:]):
+        return
+
+    if "Wranne" not in  deployment['metadata']['contributor_name']:
+        deployment['metadata']['contributor_name'] +=  ', Anna Willstrand Wranne'
+    deployment['metadata']['contributor_role'] += ', Project Manager'
+    with open(yaml_path, "w") as fout:
+        yaml.dump(deployment, fout, sort_keys=False)
 
 if __name__ == '__main__':
     yaml_files = list(Path("../mission_yaml").glob("*.yml"))
     yaml_files.sort()
     for yml in yaml_files:
-        add_oxygen_calibrations(yml)
-        add_oxygen_vars(yml)
+        add_anna(yml)
