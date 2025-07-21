@@ -31,10 +31,11 @@ metadata:
   comment: 'Glider recovered as it did not fly as intended. Reached only about 30
     m on the last 2 days of mission. Lost one fin and nose cone. Prior to this parameters
     were adapted for a major part as the glider struggled in currents. '
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
-    Technician, Glider Technician, Glider Technician, Platform Coordinator
+    Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
+    Manager
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org

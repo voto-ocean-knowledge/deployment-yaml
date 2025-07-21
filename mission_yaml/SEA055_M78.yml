@@ -32,10 +32,10 @@ metadata:
     virtual mooring at BY38 during the 18/7-24 for calibration with R/V Svea. In connection
     to that bottom tracking failed during dives 612 and 613 and following two dives
     went to 100 m. Apart from that zt/zs=2 and alt=2 for full mission duration. '
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Michaela Edwinson
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Michaela Edwinson, Anna Willstrand Wranne
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
-    Technician, Glider Technician, Platform Coordinator
+    Technician, Glider Technician, Platform Coordinator, Project Manager
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org

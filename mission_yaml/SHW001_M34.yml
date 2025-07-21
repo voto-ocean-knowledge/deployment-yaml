@@ -30,11 +30,12 @@ metadata:
   wmo_id: '8901081'
   comment: ' This mission is part of testing the new ShallowExplorer in the Baltic
     Sea. This deployment is at the SAMBA_02 transect in the Bornholm Basin. '
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Andrew Birkett, Adele Maciute, Michaela Edwinson, Anna
+    Willstrand Wranne
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Glider Technician, Platform
-    Coordinator
+    Coordinator, Project Manager
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org

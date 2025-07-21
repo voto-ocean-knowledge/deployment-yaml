@@ -33,10 +33,11 @@ metadata:
     of hitting the seabed due to failed bottom tracking glider flew only to a limited
     depth at the end of mission. Apart from that the glider flew on alt=2 and zb/zs=2
     for the full mission duration. '
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
-    Technician, Glider Technician, Glider Technician, Platform Coordinator
+    Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
+    Manager
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
