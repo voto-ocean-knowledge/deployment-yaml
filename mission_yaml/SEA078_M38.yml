@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Vresros
   wmo_id: '8901000'
-  comment: ' '
+  comment: ' gLider flew on a higher vertical speed towards the end of misison for logistical reasons. zt/zs=2 and alt=2 for full mission duration. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -76,6 +76,7 @@ glider_devices:
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
+    two_point_calibrated: 'Yes'
     calibration_date: '2024-02-15'
     calibration_parameters:
       d0: 0.0001329873

@@ -78,11 +78,12 @@ glider_devices:
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
+    two_point_calibrated: 'yes'
     calibration_date: '2024-02-15'
     calibration_parameters:
       d0: 0.0001817772
-      d1: -0.1665615
-      d2: 0.1915802
+      d1: -1.692622e-01
+      d2: +1.927389e-01
       d3: 0.0
       d4: 0.0
       c0: 0.002973652
