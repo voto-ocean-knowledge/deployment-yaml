@@ -303,8 +303,12 @@ def check_units(variables, _log):
         if source not in expected_units.keys():
             _log.error(f"No unit found for {source}")
             continue
-        if expected_units[source] != unit:
-            _log.error(f"Bad unit {source}: {unit}")
+        if source == 'TRIDENTE_FDOM':
+            if unit not in ['ppb', 'mg m-3']:
+                _log.error(f"Bad unit {source}: {unit}")
+        else:
+            if expected_units[source] != unit:
+                _log.error(f"Bad unit {source}: {unit}")
 
 
 if __name__ == '__main__':
