@@ -78,6 +78,7 @@ glider_devices:
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
+    two_point_calibrated: 'Yes'
     calibration_date: '2024-01-26'
     calibration_parameters:
       d0: -0.0002158511
@@ -354,7 +355,7 @@ netcdf_variables:
     source: TRIDENTE_FDOM
     long_name: phycocyanin
     standard_name: phycocyanin
-    units: ppb
+    units: mg m-3
     valid_min: '0.'
     valid_max: '500.'
     coordinates: time depth latitude longitude
