@@ -186,19 +186,19 @@ class ConfigReader:
         self.yaml_dir =  module_dir /'yaml_from_cfg'
         self.yaml_path = self.yaml_dir  / f"{self.mission_str}.yml"
         self.write_yaml_to_mission_dir = False
-        log_formatter = logging.Formatter(f"[%(levelname)s] {self.mission_str} %(message)s")
-        for handler in _log.handlers:
-            handler.setFormatter(log_formatter)
+        class ContextFilter(logging.Filter):
+            def filter(self, record):
+                record.mission_str = mission_str_raw
+                return True
+        f = ContextFilter()
+        _log.addFilter(f)
 
     def init_local_logger(self):
-        logging.basicConfig(
-            level=logging.INFO,
-            format=f"[%(levelname)s] {self.mission_str} %(message)s",
-            handlers=[
-                logging.FileHandler(f"{str(self.mission_dir / 'config_check.log')}", mode='w'),
-                logging.StreamHandler()
-            ]
-        )
+        ch = logging.FileHandler(f"{str(self.mission_dir / 'config_check.log')}", mode='w')
+        ch.setLevel(logging.INFO)
+        ch.setFormatter(logging.Formatter(f"%(levelname)-10s %(mission_str)-12s %(message)s"))
+        _log.addHandler(ch)
+
     def read_configs(self):
         if 'docs/1_Operations' in str(self.mission_dir):
             sea_msn = self.mission_dir / 'sea.msn'
@@ -278,10 +278,10 @@ class ConfigReader:
                             continue
                         if previous[key][sub_key] != sub_var:
                             _log.warning(
-                                f"Changed value. {key}: {sub_key} = {sub_var}. Previous mission (M{prev}) {key}: {sub_key}  = {previous[key][sub_key]}")
+                                f"Changed value {key}: {sub_key} = {sub_var}. Previous mission (M{prev}) {key}: {sub_key}  = {previous[key][sub_key]}")
                     continue
                 if previous[key] != cfg[key]:
-                    _log.warning(f"Changed value. {key} = {cfg[key]}. Previous mission (M{prev}) {key} = {previous[key]}")
+                    _log.warning(f"Changed value {key} = {cfg[key]}. Previous mission (M{prev}) {key} = {previous[key]}")
 
     def compare_pyglider_yaml(self):
         pyglider_yaml = module_dir / "mission_yaml" / self.yaml_path.name
@@ -297,9 +297,11 @@ class ConfigReader:
                 _log.error(f"missing calib info for {key}")
             for cal_key, cal_val in val.items():
                 if cal_val != devices[key][cal_key]:
-                    _log.error(f"Missmatch calibration value {key}: {cal_key}: {cal_val}. Expected {devices[key][cal_key]} from pyglider yaml")
-
-
+                    msg = f"Missmatch calibration value {key}: {cal_key}: {cal_val}. Expected {devices[key][cal_key]} from pyglider yaml"
+                    if cal_key=='calibration_date':
+                        _log.warning(msg)
+                    else:
+                        _log.error(msg)
         return
 
     def write_configs(self):
@@ -321,16 +323,22 @@ class ConfigReader:
         _log.info(f"COMPLETE check at {str(datetime.datetime.now())[:19]}")
 
 
-sensors_converrsion_dict = {
+sensors_conversion_dict = {
     'LEGATO': {'dict_name': 'ctd'},
+    'GPCTD': {'dict_name': 'ctd'},
     'TRIDENTE': {'dict_name': 'optics'},
     'FLBBCD': {'dict_name': 'optics'},
     'FLNTU': {'dict_name': 'optics'},
     'FLBBPC': {'dict_name': 'optics'},
+    'SEAOWL': {'dict_name': 'optics'},
+    'NANOFLU': {'dict_name': 'optics_nanoflu'},
+    'SUNA': {'dict_name': 'nitrate'},
     'AROD_FT': {'dict_name': 'oxygen'},
     'MPE-PAR': {'dict_name': 'irradiance'},
     'OCR504': {'dict_name': 'irradiance'},
     'AD2CP': {'dict_name': 'AD2CP'},
+    'METS': {'dict_name': 'methane'},
+    'MR1000G-RDL': {'dict_name': 'turbulence'},
 }
 
 def convert_sensors_dict(config_dict):
@@ -341,10 +349,10 @@ def convert_sensors_dict(config_dict):
         sensors_dict[key] = val
     dict_out = {}
     for key, sensor_orig in sensors_dict.items():
-        if key not in sensors_converrsion_dict.keys():
+        if key not in sensors_conversion_dict.keys():
             _log.error(f"{key} sensor not found in conversion table")
             continue
-        conversion_dict = sensors_converrsion_dict[key]
+        conversion_dict = sensors_conversion_dict[key]
         sensor_new = {}
         calib_date = ''
         if 'calibrationdate' in sensor_orig.keys():
@@ -390,13 +398,19 @@ def missions_without_cfg():
     missing_yaml = set(mission_yaml).difference(cfg_yaml)
     failed_str = [f"{glider_mission[0]}_M{glider_mission[1]}" for glider_mission in failed_or_nonvoto_missions]
     unexplained_yaml = missing_yaml.difference(failed_str)
-    _log.error(f"Missing yaml from {unexplained_yaml}")
+    _log.error(f"Missing config files from missions: {unexplained_yaml}")
 
 def run_all():
     run_all_docs_dir()
     missions_without_cfg()
     run_all_samba()
     missions_without_cfg()
+
+def run_local():
+    conf = ConfigReader("/mnt/docs/1_Operations/Missions/23_Phycoglider_2/SEA077_PLD094/SEA077_M44")
+    conf.init_local_logger()
+    conf.run()
+
 
 if __name__ == '__main__':
 
@@ -407,10 +421,15 @@ if __name__ == '__main__':
         config.write_yaml_to_mission_dir = True
         config.run()
     else:
-
+        class ContextFilter(logging.Filter):
+            def filter(self, record):
+                record.mission_str = ""
+                return True
+        f = ContextFilter()
+        _log.addFilter(f)
         logging.basicConfig(
-            level=logging.INFO,
-            format=f"[%(levelname)s] %(message)s",
+            level=logging.ERROR,
+            format=f"%(levelname)-10s %(mission_str)-12s %(message)s",
             handlers=[
                 logging.FileHandler(f'all_files.log', mode='w'),
                 logging.StreamHandler()
