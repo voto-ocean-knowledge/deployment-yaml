@@ -157,6 +157,7 @@ def read_pld_config(config_file):
 class ConfigReader:
     def __init__(self, mission_dir):
         self.mission_dir = Path(mission_dir)
+        self.invalid_mission = False
         if 'SEA' in self.mission_dir.parts[-1] or 'SHW' in self.mission_dir.parts[-1] :
             mission_str_raw = self.mission_dir.parts[-1]
             raw_mission_dirs = list(self.mission_dir.glob("20*"))
@@ -174,7 +175,10 @@ class ConfigReader:
                 mission_str_raw = list(self.mission_dir.glob("SEA*docx"))[0].name.split('.')[0]
             else:
                 mission_str_raw = ""
-
+        if not mission_str_raw or "XX" in mission_str_raw:
+            _log.error(f"No valid files found in {mission_dir}. ABORT")
+            self.invalid_mission = True
+            return
         self.platform_id =  mission_str_raw.split('_')[0]
         self.mission_num = int(mission_str_raw.split('_M')[-1])
         self.mission_str = f"{self.platform_id}_M{self.mission_num}"
@@ -182,6 +186,10 @@ class ConfigReader:
         self.yaml_dir =  module_dir /'yaml_from_cfg'
         self.yaml_path = self.yaml_dir  / f"{self.mission_str}.yml"
         self.write_yaml_to_mission_dir = False
+        log_formatter = logging.Formatter(f"[%(levelname)s] {self.mission_str} %(message)s")
+        for handler in _log.handlers:
+            handler.setFormatter(log_formatter)
+
     def init_local_logger(self):
         logging.basicConfig(
             level=logging.INFO,
@@ -318,8 +326,10 @@ sensors_converrsion_dict = {
     'TRIDENTE': {'dict_name': 'optics'},
     'FLBBCD': {'dict_name': 'optics'},
     'FLNTU': {'dict_name': 'optics'},
+    'FLBBPC': {'dict_name': 'optics'},
     'AROD_FT': {'dict_name': 'oxygen'},
     'MPE-PAR': {'dict_name': 'irradiance'},
+    'OCR504': {'dict_name': 'irradiance'},
     'AD2CP': {'dict_name': 'AD2CP'},
 }
 
@@ -336,8 +346,13 @@ def convert_sensors_dict(config_dict):
             continue
         conversion_dict = sensors_converrsion_dict[key]
         sensor_new = {}
-        calib_date = sensor_orig['dateofcalibration']
-        sensor_new['calibration_date'] = f"{calib_date[:4]}-{calib_date[4:6]}-{calib_date[6:8]}"
+        calib_date = ''
+        if 'calibrationdate' in sensor_orig.keys():
+            calib_date = sensor_orig['calibrationdate']
+        elif 'dateofcalibration' in sensor_orig.keys():
+            calib_date = sensor_orig['dateofcalibration']
+        if calib_date:
+            sensor_new['calibration_date'] = f"{calib_date[:4]}-{calib_date[4:6]}-{calib_date[6:8]}"
         sensor_new['serial'] = sensor_orig['serialnumber']
         dict_out[conversion_dict['dict_name']] = sensor_new
     return dict_out
@@ -348,6 +363,8 @@ def run_all_samba():
     missions = list_missions(to_skip=skip_projects)
     for mission in missions:
         conf = ConfigReader(mission)
+        if conf.invalid_mission:
+            continue
         if (conf.platform_id, conf.mission_num) in explained_missions:
             _log.debug(f"Known bad mission {conf.mission_str}. Skipping")
             continue
@@ -360,6 +377,8 @@ def run_all_docs_dir():
     for fn in msn_files:
         mission = fn.parent
         conf = ConfigReader(mission)
+        if conf.invalid_mission:
+            continue
         if not conf.yaml_path.exists():
             conf.run()
 
@@ -388,6 +407,7 @@ if __name__ == '__main__':
         config.write_yaml_to_mission_dir = True
         config.run()
     else:
+
         logging.basicConfig(
             level=logging.INFO,
             format=f"[%(levelname)s] %(message)s",
