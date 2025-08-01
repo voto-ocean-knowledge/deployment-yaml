@@ -24,30 +24,39 @@ dir_path = Path(dir_string)
 if dir_path.is_file():
     dir_path = dir_path.parent
 
-multi_line = r'''Please enter a directory with config files. Acceptable formats include:  
+multi_line = r'''Please enter a directory which contains glider config files. Acceptable formats include:  
 - `/mnt/docs/1_Operations/Missions/23_Phycoglider_2/SEA077_PLD094/SEA077_M44`  
-- `\docs\1_Operations\Missions\07_SAMBA_05\02_SAMBA_05_002\SEA076_PLD093\YYYYMMDD_M41`  
+- `\docs\1_Operations\Missions\07_SAMBA_05\02_SAMBA_05_002\SEA079_PLD096\20250710_M34`  
      '''
 
 if dir_path == Path(""):
     st.markdown(multi_line)
 elif dir_path.is_dir():
+    runnable = True
     file_paths = dir_path.glob("*")
     files = [file_path.name for file_path in file_paths]
     st.write("The selected directory is ", dir_path)
     st.write("The directory contains ", files)
-    missing_files = {"sea.cfg", "sea.msn", "seapayload.cfg"}.difference(files)
+    essential_files =  {"sea.cfg", "sea.msn", "seapayload.cfg"}
+    if list(dir_path.glob("seapayload*cfg")):
+        essential_files.remove("seapayload.cfg")
+        essential_files.add(list(dir_path.glob("seapayload*cfg"))[0].name)
+    missing_files = essential_files.difference(files)
     if missing_files:
-        st.write(f":red[Supplied directory is missing config files: {missing_files}]")
+        st.write(f":red[Supplied directory is missing config files: {missing_files}]. The checker may not work!")
     else:
-        runnable = True
+        st.write(f"Found all three config files needed by the checker {tuple(essential_files)} 👍")
+
+    sea_files = list(dir_path.glob("SEA*"))
+    if sea_files:
+        st.write(f"It looks like this is the directory of {sea_files[0].name.split('.')[0]}")
     if "config_check.log" in files:
         with open(dir_path / "config_check.log") as fin:
             for line in fin.readlines():
                 if "START" in line:
                     last_check = line.split('check at ')[1][:20]
                     if last_check[:2] == "20":
-                        st.write(f":green[ Config checker last ran at {last_check}]")
+                        st.write(f"Config checker last ran at {last_check}")
 
 else:
     st.write(f":red[Supplied directory `{dir_string}` not found. Please follow the format below]")
