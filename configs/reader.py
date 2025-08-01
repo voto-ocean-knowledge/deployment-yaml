@@ -429,7 +429,7 @@ def run_checker_on_dir(file_dir):
         level=logging.INFO,
         format=f"%(levelname)-10s %(mission_str)-12s %(message)s",
         handlers=[
-            logging.FileHandler(f'all_files.log', mode='w'),
+            logging.FileHandler(f'/data/log/config_checker_all_files.log', mode='a'),
             logging.StreamHandler()
         ]
     )
@@ -469,7 +469,7 @@ if __name__ == '__main__':
             level=logging.INFO,
             format=f"%(levelname)-10s %(mission_str)-12s %(message)s",
             handlers=[
-                logging.FileHandler(f'all_files.log', mode='w'),
+                logging.FileHandler(f'/data/log/config_checker_all_files.log', mode='a'),
                 logging.StreamHandler()
             ]
         )

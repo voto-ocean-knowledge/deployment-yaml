@@ -6,10 +6,9 @@ After=syslog.target
 ExecStart=/home/pipeline/miniforge3/envs/checker/bin/streamlit run /mnt/samba/scripts/deployment-yaml/configs/app.py
 RuntimeDirectory=/mnt/samba/scripts/deployment-yaml/
 Restart=always
-KillSignal=SIGQUIT
-Type=notify
-StandardError=syslog
-NotifyAccess=all
+RestartSec=5
+User=pipeline
+Group=pipeline
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
