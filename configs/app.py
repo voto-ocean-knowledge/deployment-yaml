@@ -14,9 +14,11 @@ st.title("Config Checker for SeaExplorer")
 dir_string = st.text_input(r'Input directory path ')
 if "\\" in dir_string:
     dir_string = dir_string.replace("\\", "/")
-    if dir_string[:4] != "/mnt":
-        dir_base, dir_append = dir_string.split('docs/')
-        dir_string = "/mnt/docs/" + dir_append
+    
+if dir_string[:4] != "/mnt":
+    if '1_Operations/' in dir_string:
+        dir_base, dir_append = dir_string.split('1_Operations/')
+        dir_string = "/mnt/docs/1_Operations/" + dir_append
 
 dir_path = Path(dir_string)
 if dir_path.is_file():
@@ -40,21 +42,16 @@ elif dir_path.is_dir():
     else:
         runnable = True
     if "config_check.log" in files:
-        print("one")
         with open(dir_path / "config_check.log") as fin:
             for line in fin.readlines():
                 if "START" in line:
-                    print("two")
                     last_check = line.split('check at ')[1][:20]
-                    print(last_check)
                     if last_check[:2] == "20":
-                        print("three")
                         st.write(f":green[ Config checker last ran at {last_check}]")
 
 else:
     st.write(f":red[Supplied directory `{dir_string}` not found. Please follow the format below]")
     st.markdown(multi_line)
-    print(dir_path)
 
 
 
@@ -62,7 +59,7 @@ if runnable:
     if st.button("Run Checker", type="primary"):
         result = run_checker_on_dir(dir_path)
         if result:
-            st.badge("Success", icon=":material/check:", color="green")
+            st.badge("Success 🥳", icon=":material/check:", color="green")
             st.subheader("Checker output (also in file `config_checker.log`):")
             with open(dir_path / "config_check.log", 'r') as fin:
                 for line in fin.readlines():
@@ -71,7 +68,7 @@ if runnable:
                         line = f":{fmt_colors[first_word]}[{line}]"
                     st.write(line)
         else:
-            st.subheader(":red[Script Failed! :( contact Callum]")
+            st.subheader(":red[Script Failed! 😭 contact Callum]")
 
 st.markdown("-------------")
 st.markdown("Source code at [github.com/voto-ocean-knowledge/deployment-yaml](https://github.com/voto-ocean-knowledge/deployment-yaml)")

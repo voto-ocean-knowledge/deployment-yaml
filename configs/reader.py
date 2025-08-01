@@ -8,6 +8,9 @@ import logging
 _log = logging.getLogger(__name__)
 script_dir = Path(__file__).parent.resolve()
 module_dir = Path(__file__).parent.parent.resolve()
+yaml_dir = module_dir / 'yaml_from_cfg'
+if not yaml_dir.exists():
+    yaml_dir.mkdir(parents=True)
 
 skip_projects = [
     "1_Folder_Template",
@@ -185,7 +188,7 @@ class ConfigReader:
         self.mission_num = int(mission_str_raw.split('_M')[-1])
         self.mission_str = f"{self.platform_id}_M{self.mission_num}"
         self.config_dict = {}
-        self.yaml_dir =  module_dir /'yaml_from_cfg'
+        self.yaml_dir = yaml_dir
         self.yaml_path = self.yaml_dir  / f"{self.mission_str}.yml"
         self.write_yaml_to_mission_dir = False
         class ContextFilter(logging.Filter):
@@ -251,6 +254,7 @@ class ConfigReader:
     def compare_last_mission(self):
         existing_yml = list(self.yaml_dir.glob(f"{self.platform_id}*yml"))
         if len(existing_yml) < 2:
+            _log.error("No prior configs found for this glider! Cannot compare config values")
             return
         mission_numbers = [int(m_string.name.split('.')[0].split('_M')[-1]) for m_string in existing_yml]
         mission_numbers = np.array(mission_numbers)
