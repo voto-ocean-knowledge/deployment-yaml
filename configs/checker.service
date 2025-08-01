@@ -1,0 +1,14 @@
+[Unit]
+Description=streamlit app for checker
+After=syslog.target
+
+[Service]
+ExecStart=/home/pipeline/miniforge3/envs/checker/bin/streamlit run /mnt/samba/scripts/deployment-yaml/configs/app.py
+RuntimeDirectory=/mnt/samba/scripts/deployment-yaml/
+Restart=always
+RestartSec=5
+User=pipeline
+Group=pipeline
+
+[Install]
+WantedBy=default.target
