@@ -173,6 +173,8 @@ class ConfigReader:
                 mission_str_raw = list(self.mission_dir.glob("SEA*pdf"))[0].name.split('.')[0]
             elif list(self.mission_dir.glob("SEA*docx")):
                 mission_str_raw = list(self.mission_dir.glob("SEA*docx"))[0].name.split('.')[0]
+            elif list(self.mission_dir.glob("SEA*_M*.yml")):
+                mission_str_raw = list(self.mission_dir.glob("SEA*_M*.yml"))[0].name.split('.')[0]
             else:
                 mission_str_raw = ""
         if not mission_str_raw or "XX" in mission_str_raw:
@@ -212,11 +214,13 @@ class ConfigReader:
         for fn in [sea_msn, sea_cfg]:
             if not fn.exists():
                 _log.error(f"did not find input file {fn}")
+                self.invalid_mission = True
             else:
                 cfg_dict = read_nav_config(fn)
                 self.config_dict = self.config_dict | cfg_dict
         if not sea_pld.exists():
             _log.error(f"did not find input file {sea_pld}")
+            self.invalid_mission = True
         else:
             cfg_dict = read_pld_config(sea_pld)
             self.config_dict = self.config_dict | cfg_dict
@@ -407,9 +411,39 @@ def run_all():
     missions_without_cfg()
 
 def run_local():
-    conf = ConfigReader("/mnt/docs/1_Operations/Missions/23_Phycoglider_2/SEA077_PLD094/SEA077_M44")
+    for file_dir in [#"/mnt/docs/1_Operations/Missions/23_Phycoglider_2/SEA077_PLD094/SEA077_M44",
+                     "/mnt/docs/1_Operations/Missions/07_SAMBA_05/02_SAMBA_05_002/SEA076_PLD093/202508DD_M41",
+                    #"/mnt/docs/1_Operations/Missions/03_SAMBA_02/06_SAMBA_02_006/SEA067_PLD091/20250804_M78",
+    ]:
+        conf = ConfigReader(file_dir)
+        conf.init_local_logger()
+        conf.write_yaml_to_mission_dir = True
+        conf.run()
+
+def run_checker_on_dir(file_dir):
+    logging.basicConfig(
+        level=logging.INFO,
+        format=f"%(levelname)-10s %(mission_str)-12s %(message)s",
+        handlers=[
+            logging.FileHandler(f'all_files.log', mode='w'),
+            logging.StreamHandler()
+        ]
+    )
+    conf = ConfigReader(file_dir)
+    if conf.invalid_mission:
+        return False
+    conf.read_configs()
+    if conf.invalid_mission:
+        return False
     conf.init_local_logger()
+    conf.write_yaml_to_mission_dir = True
     conf.run()
+    handlers = _log.handlers[:]
+    for handler in handlers:
+        _log.removeHandler(handler)
+        handler.close()
+
+    return True
 
 
 if __name__ == '__main__':
@@ -428,7 +462,7 @@ if __name__ == '__main__':
         f = ContextFilter()
         _log.addFilter(f)
         logging.basicConfig(
-            level=logging.ERROR,
+            level=logging.INFO,
             format=f"%(levelname)-10s %(mission_str)-12s %(message)s",
             handlers=[
                 logging.FileHandler(f'all_files.log', mode='w'),
