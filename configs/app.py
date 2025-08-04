@@ -1,6 +1,8 @@
 from pathlib import Path
 import streamlit as st
 from reader import run_checker_on_dir
+st.set_page_config(page_title='Config Checker', page_icon = "🔥",)# layout = 'wide')
+st.title("Config Checker for SeaExplorer")
 
 runnable = False
 fmt_colors = {
@@ -8,7 +10,6 @@ fmt_colors = {
     'ERROR': 'red',
 }
 
-st.title("Config Checker for SeaExplorer")
 
 
 dir_string = st.text_input(r'Input directory path ')
