@@ -187,7 +187,7 @@ class ConfigReader:
         self.platform_id =  mission_str_raw.split('_')[0]
         self.mission_num = int(mission_str_raw.split('_M')[-1])
         self.mission_str = f"{self.platform_id}_M{self.mission_num}"
-        self.config_dict = {}
+        self.config_dict = {"config_file_directory": str(self.mission_dir)}
         self.yaml_dir = yaml_dir
         self.yaml_path = self.yaml_dir  / f"{self.mission_str}.yml"
         self.write_yaml_to_mission_dir = False
@@ -264,13 +264,16 @@ class ConfigReader:
         last_mission = max(previous_missions)
         last_yaml = self.yaml_path.parent / f'{self.platform_id}_M{last_mission}.yml'
         prev = last_yaml.name.split('.')[0].split('_M')[-1]
+        _log.info(f"Comparing to previous mission (M{prev}) file {last_yaml}")
         with open(last_yaml) as fin:
             previous = yaml.safe_load(fin)
 
         combi_dict = previous | self.config_dict
         cfg = self.config_dict
         for key in combi_dict.keys():
-            if key in ['mission.num', 'config_file_directory']:
+            if key == 'config_file_directory':
+                if previous[key] == cfg[key]:
+                    _log.error(f"Previous mission M{prev} was made in this directory! Consider deleting {last_yaml}")
                 continue
             if key not in cfg.keys() and key in previous.keys():
                     _log.warning(f"Removed value for {key}. Previous mission  (M{prev}). {key} = {previous[key]} in previous mission")
@@ -313,7 +316,6 @@ class ConfigReader:
         return
 
     def write_configs(self):
-        self.config_dict = {"config_file_directory": str(self.mission_dir)} | self.config_dict
         with open(self.yaml_path, "w") as fout:
             yaml.dump(self.config_dict, fout, sort_keys=False)
         if self.write_yaml_to_mission_dir:
