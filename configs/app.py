@@ -82,3 +82,4 @@ if runnable:
 
 st.markdown("-------------")
 st.markdown("Source code at [github.com/voto-ocean-knowledge/deployment-yaml](https://github.com/voto-ocean-knowledge/deployment-yaml)")
+st.markdown("You can find all of the output yaml files on the server in `data/scripts/deployment_yaml/yaml_from_config`")
