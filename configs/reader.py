@@ -299,6 +299,7 @@ class ConfigReader:
         if not pyglider_yaml.exists():
             _log.error(f"no pyglider yaml {pyglider_yaml} found")
             return
+        _log.info(f"Compare with pyglider yaml {pyglider_yaml}")
         with open(pyglider_yaml) as fin:
             deployment = yaml.safe_load(fin)
         devices = deployment['glider_devices']
