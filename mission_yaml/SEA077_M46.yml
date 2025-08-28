@@ -120,6 +120,7 @@ netcdf_variables:
   - chlorophyll
   - ad2cp_heading
   - downwelling_PAR
+  - nav_pressure
   timebase:
     source: NAV_LATITUDE
   time:
@@ -473,3 +474,18 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_phosphorescence
     observation_type: measured
+  nav_pressure:
+    source: NAV_DEPTH
+    long_name: water pressure
+    standard_name: sea_water_pressure
+    units: dbar
+    coordinates: time depth latitude longitude
+    valid_min: '0'
+    valid_max: '1000'
+    positive: down
+    reference_datum: sea-surface
+    instrument: navigation_pressure
+    observation_type: measured
+    accuracy: '0.5'
+    resolution: '0.01'
+    comment: seaexplorer navigation pressure sensor
