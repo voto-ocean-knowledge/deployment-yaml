@@ -473,9 +473,9 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_phosphorescence
     observation_type: measured
-  qc:
-    variable: pressure
-      value: 4
-      comment: “The legato pressure sensor fails occationally“
-      start: '2025-08-10'
-      end: '2025-08-22'
+qc:
+  pressure:
+    value: 4
+    comment: “The legato pressure sensor fails occationally“
+    start: '2025-08-10'
+    end: '2025-08-22'
