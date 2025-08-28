@@ -26,9 +26,9 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Saltarv
-  wmo_id: '6801505'
-  comment: ' Glider flew with zt/zs=2 and alt=2 for full mission duration. Vertical speed was increased towards the end of the mission to reach recovery waypoint in time. '
+  glider_name: Smilla
+  wmo_id: '8901050'
+  comment: ' Part of the PhycoGlider II project. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -37,81 +37,82 @@ metadata:
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '67'
-  deployment_name: SAMBA
-  project: SAMBA
+  deployment_id: '46'
+  deployment_name: PhycoGlider II
+  project: PhycoGlider II
   project_url: voiceoftheocean.org/ocean-observatories/
-  summary: ' Part of SAMBA continuous monitoring'
-  platform_serial: SEA066
+  summary: ' Part of PhycoGlider II '
+  platform_serial: SEA077
   seapld: 2.25.2 -r
   seanav: 3.8.2 -r
 glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '206610'
+    serial: '205048'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2021-03-01'
+    calibration_date: '2025-01-13'
   optics:
     make: RBR
     model: Tridente
-    serial: '238739'
+    serial: '238732'
     long_name: RBR Tridente
     make_model: RBR Tridente
     factory_calibrated: 'Yes'
-    calibration_date: '2025-06-25'
+    calibration_date: '2025-05-27'
     calibration_parameters:
-      Chl_C0: -738.94304e-03
-      Chl_C1: 2.5235072e06
-      Chl_C2: 103.31017e-03
-      PC_C0: -1.0925524
-      PC_C1: 2.9347115e06
+      Chl_C0: 0.019609326
+      Chl_C1: 2.4724888e06
+      Chl_C2: 0.10331017
+      PC_C0: 0.09200525
+      PC_C1: 4.0099958e06
       PC_C2: 1.0
-      backscatter_C0: 999.0388e-09
-      backscatter_C1: 12.705978
+      backscatter_C0: 2.82882e-07
+      backscatter_C1: 11.481439
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0067'
+    serial: 0068
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    calibration_date: '2023-08-26'
+    two_point_calibrated: 'Yes'
+    calibration_date: '2024-01-26'
     calibration_parameters:
-      d0: -1.738649e-04 
-      d1: -1.929757e-01
-      d2: +1.925271e-01 
+      d0: -0.0002158511
+      d1: -0.2193035
+      d2: 0.1982276
       d3: 0.0
       d4: 0.0
-      c0: +3.092823e-03
-      c1: +1.329350e-04
-      c2: +2.414648e-06
+      c0: 0.003092576
+      c1: 0.0001314481
+      c2: 2.420729e-06
       e0: 1.0
-      Cp: +4.000000e-03
-      A: -1.288162e+01 
-      B: +1.467866e-03 
-      C: -2.550103e-08 
-      D: +5.835115e-13
-      E: -7.257766e-18
-      F: +4.697937e-23
+      Cp: 0.0037
+      A: -12.61686
+      B: 0.001469161
+      C: -2.550187e-08
+      D: 5.815232e-13
+      E: -7.188652e-18
+      F: 4.627832e-23
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '103360'
+    serial: '103363'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2022-03-15'
+    calibration_date: '2022-05-25'
   irradiance:
     make: Biospherical
     model: MPE-PAR
-    serial: '2983'
+    serial: '3191'
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
     factory_calibrated: 'Yes'
-    calibration_date: '2023-02-21'
+    calibration_date: '2024-05-02'
 netcdf_variables:
   keep_variables:
   - temperature
