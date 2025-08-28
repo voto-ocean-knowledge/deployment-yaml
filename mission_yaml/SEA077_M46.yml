@@ -120,7 +120,6 @@ netcdf_variables:
   - chlorophyll
   - ad2cp_heading
   - downwelling_PAR
-  - nav_pressure
   timebase:
     source: NAV_LATITUDE
   time:
