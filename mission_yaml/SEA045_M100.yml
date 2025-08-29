@@ -476,6 +476,6 @@ netcdf_variables:
 qc:
   pressure:
     value: 4
-    comment: “The legato pressure sensor fails occationally“
+    comment: “The legato pressure sensor fails occasionally“
     start: '2025-08-10'
     end: '2025-08-22'
