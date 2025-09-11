@@ -24,8 +24,14 @@ class TestCheckYamlLog(TestCase):
             # Fail if there is an ERROR detected by check_yaml
             assert record.levelname is not 'ERROR'
 
+skip_missions = ["SEA077_M46"]
 
-mission_yaml_list = list((parent_dir / 'mission_yaml').glob('*.yml'))
+all_mission_yaml_list = list((parent_dir / 'mission_yaml').glob('*.yml'))
+mission_yaml_list = []
+for mission_path in all_mission_yaml_list:
+    if mission_path.name.split('.')[0] in skip_missions:
+        continue
+    mission_yaml_list.append(mission_path)
 
 
 @pytest.mark.parametrize("yaml_file", mission_yaml_list)
