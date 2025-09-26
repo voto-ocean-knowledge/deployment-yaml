@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Aster
   wmo_id: '6801602'
-  comment: ' '
+  comment: ' Glider flew on faster vertical speed occasionally to account for currents or logistical reasons. zt/zs=2 and alt=2 for full mission duration. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider

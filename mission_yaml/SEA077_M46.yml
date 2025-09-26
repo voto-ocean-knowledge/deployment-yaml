@@ -28,12 +28,12 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Smilla
   wmo_id: '8901050'
-  comment: ' Part of the PhycoGlider II project. '
+  comment: ' Part of the PhycoGlider II project. Glider flew on zt/zs=2 and alt=2 for full mission duration. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
-    Manager
+    Manager, Glider Technician
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
@@ -473,7 +473,7 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_phosphorescence
     observation_type: measured
-  nav_pressure:
+  nav_depth:
     source: NAV_DEPTH
     long_name: water depth
     standard_name: sea_water_depth
