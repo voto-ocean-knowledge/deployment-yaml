@@ -29,18 +29,15 @@ metadata:
   glider_name: Marviol
   wmo_id: '6801507'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
-    Manager
+    Manager, Glider Technician
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '73'
-  comment: ' Due to GPS-spoofing the position of cycles 137, 177, 197, 201, 213 and
-    484 are affected. Vertical speed and zt temporarily increased towards the end
-    of mission to reach recovery waypoint in time. Apart from this zt/zs and alt=2
-    for full mission duration. '
+  deployment_id: '79'
+  comment: '  '
   deployment_name: SAMBA
   project: SAMBA
   project_url: voiceoftheocean.org/ocean-observatories/
@@ -56,20 +53,22 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2022-05-16'
   optics:
-    make: Wetlabs
-    model: FLBBPC
-    serial: '7313'
-    long_name: Wetlabs ECO Puck FLBBPC
-    make_model: Wetlabs FLBBPC
+    make: RBR
+    model: Tridente
+    serial: '238738'
+    long_name: RBR Tridente
+    make_model: RBR Tridente
     factory_calibrated: 'Yes'
-    calibration_date: '2022-01-11'
+    calibration_date: '2025-06-20'
     calibration_parameters:
-      Chl_DarkCounts: 44
-      Chl_SF: 0.0072
-      PC_DarkCounts: 51
-      PC_SF: 0.0423
-      SIG_DarkCounts: 48
-      SIG_SF: 1.899e-06
+      Chl_C0: 4.509943E-3
+      Chl_C1: 2.7024982E6
+      Chl_C2: 103.31017E-3
+      PC_C0: 20.063099E-3
+      PC_C1: 3.4030602E6
+      PC_C2: 1.0
+      backscatter_C0: -463.84545E-9
+      backscatter_C1: 11.237395
   oxygen:
     make: JFE Advantech
     model: AROD-FT
@@ -77,25 +76,24 @@ glider_devices:
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    two_point_calibrated: 'Yes'
     calibration_date: '2024-02-15'
     calibration_parameters:
-      d0: 0.0001817772
-      d1: -0.1692622
-      d2: 0.1927389
-      d3: 0.0
-      d4: 0.0
-      c0: 0.002973652
-      c1: 0.0001255534
-      c2: 2.89126e-06
-      e0: 1.0
-      Cp: 0.0039
-      A: -12.7743
-      B: 0.00147517
-      C: -2.594112e-08
-      D: 5.954839e-13
-      E: -7.392508e-18
-      F: 4.738719e-23
+       d0: 0.0001817772 
+       d1: -0.1706152
+       d2: 0.1926727
+       d3: 0.0
+       d4: 0.0
+       c0: 0.002973652
+       c1: 0.0001255534
+       c2: 2.89126e-06
+       e0: 1.0
+       Cp: 0.0039
+       A: -12.7743
+       B: 0.00147517
+       C: -2.594112e-08
+       D: 5.954839e-13
+       E: -7.392508e-18
+       F: 4.738719e-23
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -332,8 +330,8 @@ netcdf_variables:
     accuracy: '0.02'
     resolution: '0.01'
   chlorophyll:
-    source: FLBBPC_CHL_SCALED
-    long_name: chlorophyll
+    source: TRIDENTE_CHLOROPHYLL
+    long_name: 470 nm wavelength chlorophyll 
     standard_name: concentration_of_chlorophyll_in_sea_water
     units: mg m-3
     coordinates: time depth latitude longitude
@@ -341,50 +339,24 @@ netcdf_variables:
     valid_min: '0.'
     valid_max: '50.'
     observation_type: calculated
-    sensitivity: '0.025'
-  chlorophyll_raw:
-    source: FLBBPC_CHL_COUNT
-    long_name: raw chlorophyll
-    standard_name: raw_chlorophyll_in_sea_water
-    units: counts
-    coordinates: time depth latitude longitude
-    instrument: instrument_flourometer
-  phycocyanin:
-    source: FLBBPC_PC_SCALED
-    long_name: phycocyanin
-    standard_name: concentration_of_phycocyanin_in_sea_water
-    units: mg m-3
-    coordinates: time depth latitude longitude
-    instrument: instrument_flourometer
-    valid_min: '0.'
-    valid_max: '175.'
-    observation_type: calculated
-    sensitivity: '0.09'
-  phycocyanin_raw:
-    source: FLBBPC_PC_COUNT
-    long_name: raw phycocyanin
-    standard_name: raw_phycocyanin_in_sea_water
-    units: counts
-    coordinates: time depth latitude longitude
-    instrument: instrument_flourometer
-  backscatter_scaled:
-    source: FLBBPC_BB_700_SCALED
-    long_name: "700 nm \u03B2 total volume scattering coefficient at 117 degree angle"
-    standard_name: 700_nm_wavelength_total_volume_scattering_coefficient
+  backscatter:
+    source: TRIDENTE_BACKSCATTER
+    long_name: 700 nm wavelength backscatter
+    standard_name: 700_nm_wavelength_backscatter_in_sea_water
     units: m-1 sr-1
-    coordinates: time depth latitude longitude
-    instrument: instrument_scatterometer
     valid_min: '0.'
-    valid_max: '3.'
-    observation_type: calculated
-    sensitivity: '0.002'
-  backscatter_raw:
-    source: FLBBPC_BB_700_COUNT
-    long_name: raw 700 nm wavelength backscatter
-    standard_name: raw_700_nm_wavelength_backscatter_in_sea_water
-    units: counts
+    valid_max: '0.05'
     coordinates: time depth latitude longitude
     instrument: instrument_scatterometer
+  phycocyanin:
+    source: TRIDENTE_FDOM
+    long_name: phycocyanin
+    standard_name: phycocyanin
+    units: mg m-3
+    valid_min: '0.'
+    valid_max: '500.'
+    coordinates: time depth latitude longitude
+    instrument: instrument_flourometer
   oxygen_concentration:
     source: AROD_FT_DO
     long_name: oxygen concentration

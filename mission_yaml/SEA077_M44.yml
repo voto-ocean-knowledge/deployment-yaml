@@ -30,10 +30,10 @@ metadata:
   wmo_id: '8901050'
   comment: ' Part of the PhycoGlider II project. The glider timed a calibration profile at station BY38 with R/V SVEA 23:00 UTC on 2025-07-18 during SMHIs July expedition. Vertical speed was increased shortly before the calibration to make it to BY38 in time. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
-    Manager
+    Manager, Glider Technician
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
@@ -473,3 +473,18 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_phosphorescence
     observation_type: measured
+  nav_depth:
+    source: NAV_DEPTH
+    long_name: water depth
+    standard_name: sea_water_depth
+    units: m
+    coordinates: time depth latitude longitude
+    valid_min: '0'
+    valid_max: '1000'
+    positive: down
+    reference_datum: sea-surface
+    instrument: navigation_depth
+    observation_type: measured
+    accuracy: '0.5'
+    resolution: '0.01'
+    comment: seaexplorer navigation pressure sensor

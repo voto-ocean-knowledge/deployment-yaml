@@ -26,92 +26,93 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Marviol
-  wmo_id: '6801507'
+  glider_name: Minna
+  wmo_id: '8901001'
+  comment: '  '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
-    Manager
+    Manager, Glider Technician
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '73'
-  comment: ' Due to GPS-spoofing the position of cycles 137, 177, 197, 201, 213 and
-    484 are affected. Vertical speed and zt temporarily increased towards the end
-    of mission to reach recovery waypoint in time. Apart from this zt/zs and alt=2
-    for full mission duration. '
+  deployment_id: '36'
   deployment_name: SAMBA
   project: SAMBA
   project_url: voiceoftheocean.org/ocean-observatories/
-  summary: Part of SAMBA continuous monitoring
-  platform_serial: SEA067
+  summary: ' Part of SAMBA continuous monitoring'
+  platform_serial: SEA079
+  seanav: 3.8.2 -r
+  seapld: 2.25.2 -r
 glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '210555'
+    serial: '212534'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2022-05-16'
+    calibration_date: '2022-10-21'
   optics:
-    make: Wetlabs
-    model: FLBBPC
-    serial: '7313'
-    long_name: Wetlabs ECO Puck FLBBPC
-    make_model: Wetlabs FLBBPC
+    make: RBR
+    model: Tridente
+    serial: '238739'
+    long_name: RBR Tridente
+    make_model: RBR Tridente
     factory_calibrated: 'Yes'
-    calibration_date: '2022-01-11'
+    calibration_date: '2025-06-20'
     calibration_parameters:
-      Chl_DarkCounts: 44
-      Chl_SF: 0.0072
-      PC_DarkCounts: 51
-      PC_SF: 0.0423
-      SIG_DarkCounts: 48
-      SIG_SF: 1.899e-06
+      Chl_C0: -738.94304E-3
+      Chl_C1: 2.5235072E6
+      Chl_C2: 103.31017E-3
+      PC_C0: -1.0925524
+      PC_C1: 2.9347115E6
+      PC_C2: 1.0
+      backscatter_C0: 999.0388E-9
+      backscatter_C1: 12.705978
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0041'
+    serial: 0069
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     two_point_calibrated: 'Yes'
-    calibration_date: '2024-02-15'
+    calibration_date: '2024-06-06'
     calibration_parameters:
-      d0: 0.0001817772
-      d1: -0.1692622
-      d2: 0.1927389
+      d0: 6.516091e-05
+      d1: -1.693870e-01
+      d2: +1.965692e-01
       d3: 0.0
       d4: 0.0
-      c0: 0.002973652
-      c1: 0.0001255534
-      c2: 2.89126e-06
+      c0: 0.002988351
+      c1: 0.0001271127
+      c2: 2.792309e-06
       e0: 1.0
-      Cp: 0.0039
-      A: -12.7743
-      B: 0.00147517
-      C: -2.594112e-08
-      D: 5.954839e-13
-      E: -7.392508e-18
-      F: 4.738719e-23
+      Cp: 0.0038
+      A: -12.91523
+      B: 0.001481117
+      C: -2.674323e-08
+      D: 6.329282e-13
+      E: -8.164567e-18
+      F: 5.323646e-23
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '103354'
+    serial: '104649'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2022-01-11'
+    calibration_date: '2022-07-18'
   irradiance:
     make: Biospherical
     model: MPE-PAR
-    serial: '2874'
+    serial: '3195'
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
     factory_calibrated: 'Yes'
-    calibration_date: '2022-08-11'
+    calibration_date: '2024-05-02'
 netcdf_variables:
   keep_variables:
   - temperature
@@ -332,8 +333,8 @@ netcdf_variables:
     accuracy: '0.02'
     resolution: '0.01'
   chlorophyll:
-    source: FLBBPC_CHL_SCALED
-    long_name: chlorophyll
+    source: TRIDENTE_CHLOROPHYLL
+    long_name: 470 nm wavelength chlorophyll
     standard_name: concentration_of_chlorophyll_in_sea_water
     units: mg m-3
     coordinates: time depth latitude longitude
@@ -341,50 +342,24 @@ netcdf_variables:
     valid_min: '0.'
     valid_max: '50.'
     observation_type: calculated
-    sensitivity: '0.025'
-  chlorophyll_raw:
-    source: FLBBPC_CHL_COUNT
-    long_name: raw chlorophyll
-    standard_name: raw_chlorophyll_in_sea_water
-    units: counts
-    coordinates: time depth latitude longitude
-    instrument: instrument_flourometer
-  phycocyanin:
-    source: FLBBPC_PC_SCALED
-    long_name: phycocyanin
-    standard_name: concentration_of_phycocyanin_in_sea_water
-    units: mg m-3
-    coordinates: time depth latitude longitude
-    instrument: instrument_flourometer
-    valid_min: '0.'
-    valid_max: '175.'
-    observation_type: calculated
-    sensitivity: '0.09'
-  phycocyanin_raw:
-    source: FLBBPC_PC_COUNT
-    long_name: raw phycocyanin
-    standard_name: raw_phycocyanin_in_sea_water
-    units: counts
-    coordinates: time depth latitude longitude
-    instrument: instrument_flourometer
-  backscatter_scaled:
-    source: FLBBPC_BB_700_SCALED
-    long_name: "700 nm \u03B2 total volume scattering coefficient at 117 degree angle"
-    standard_name: 700_nm_wavelength_total_volume_scattering_coefficient
+  backscatter:
+    source: TRIDENTE_BACKSCATTER
+    long_name: 700 nm wavelength backscatter
+    standard_name: 700_nm_wavelength_backscatter_in_sea_water
     units: m-1 sr-1
-    coordinates: time depth latitude longitude
-    instrument: instrument_scatterometer
     valid_min: '0.'
-    valid_max: '3.'
-    observation_type: calculated
-    sensitivity: '0.002'
-  backscatter_raw:
-    source: FLBBPC_BB_700_COUNT
-    long_name: raw 700 nm wavelength backscatter
-    standard_name: raw_700_nm_wavelength_backscatter_in_sea_water
-    units: counts
+    valid_max: '0.05'
     coordinates: time depth latitude longitude
     instrument: instrument_scatterometer
+  phycocyanin:
+    source: TRIDENTE_FDOM
+    long_name: phycocyanin
+    standard_name: phycocyanin
+    units: mg m-3
+    valid_min: '0.'
+    valid_max: '500.'
+    coordinates: time depth latitude longitude
+    instrument: instrument_flourometer
   oxygen_concentration:
     source: AROD_FT_DO
     long_name: oxygen concentration
@@ -498,3 +473,7 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_phosphorescence
     observation_type: measured
+qc:
+  phycocyanin:
+    value: 4
+    comment: “Unusually high values and hysteresis“
