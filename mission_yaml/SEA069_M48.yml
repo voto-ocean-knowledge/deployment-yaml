@@ -29,15 +29,12 @@ metadata:
   glider_name: Kalmus
   wmo_id: '6801506'
   comment: ' Glider occasionally flew on increased vspeed due to strong currents.
-    zs/zt and alt=2 for full mission duration.  This dataset is currently under investigation
-    due to high biofouling affecting the wetlabs data (backscatter, phycocyanin).
-    Data from the 2025-06-18 is currently flagged as suspicious (3), but the dates
-    may be adjusted to start a few days later, see qc. '
+    zs/zt and alt=2 for full mission duration.  Biofouling affected the wetlabs data (backscatter, phycocyanin). See QC '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
-    Manager
+    Manager, Glider Technician
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
@@ -500,22 +497,22 @@ netcdf_variables:
     observation_type: measured
 qc:
   backscatter_scaled:
-    value: 3
-    comment: Probable biofouling on wetlabs FLBBPC
+    value: 4
+    comment:  Biofouling on wetlabs FLBBPC
     start: '2025-06-18'
     end: '2025-06-22'
   backscatter_raw:
-    value: 3
-    comment: Probable biofouling on wetlabs FLBBPC
+    value: 4
+    comment:  Biofouling on wetlabs FLBBPC
     start: '2025-06-18'
     end: '2025-06-22'
   phycocyanin:
-    value: 3
-    comment: Probable biofouling on wetlabs FLBBPC
+    value: 4
+    comment: Biofouling on wetlabs FLBBPC
     start: '2025-06-18'
     end: '2025-06-22'
   phycocyanin_raw:
-    value: 3
-    comment: Probable biofouling on wetlabs FLBBPC
+    value: 4
+    comment:  Biofouling biofouling on wetlabs FLBBPC
     start: '2025-06-18'
     end: '2025-06-22'
