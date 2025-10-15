@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Kvanne
   wmo_id: '6801673'
-  comment: ' Part of the PhycoGlider II project. The glider timed a calibration profile at station BY38 with R/V SVEA on 2025-08-13 during SMHIs August expedition. Glider was emergency recovered due to an issue with the linear motor movement. '
+  comment: ' Part of the PhycoGlider II project. The glider timed a calibration profile at station BY38 with R/V SVEA on 2025-08-13 during SMHIs August expedition. Glider was emergency recovered due to an issue with the linear motor movement. Pressure is sourced from the ADCP due to issues with the Legato pressure sensor'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -306,7 +306,7 @@ netcdf_variables:
     accuracy: '0.002'
     resolution: '0.00005'
   pressure:
-    source: LEGATO_PRESSURE
+    source: AD2CP_PRESSURE
     long_name: water pressure
     standard_name: sea_water_pressure
     units: dbar
@@ -315,11 +315,11 @@ netcdf_variables:
     valid_max: '1000'
     positive: down
     reference_datum: sea-surface
-    instrument: instrument_ctd
+    instrument: instrument_ad2cp
     observation_type: measured
     accuracy: '0.5'
     resolution: '0.01'
-    comment: ctd pressure sensor
+    comment: ad2cp pressure sensor
   salinity:
     source: LEGATO_SALINITY
     long_name: water salinity
