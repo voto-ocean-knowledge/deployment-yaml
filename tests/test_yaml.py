@@ -24,7 +24,7 @@ class TestCheckYamlLog(TestCase):
             # Fail if there is an ERROR detected by check_yaml
             assert record.levelname is not 'ERROR'
 
-skip_missions = ["SEA045_M100", "SEA077_M46", "SEA077_M44"]
+skip_missions = []
 
 all_mission_yaml_list = list((parent_dir / 'mission_yaml').glob('*.yml'))
 mission_yaml_list = []

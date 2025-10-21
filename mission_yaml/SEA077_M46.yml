@@ -473,18 +473,3 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_phosphorescence
     observation_type: measured
-  nav_depth:
-    source: NAV_DEPTH
-    long_name: water depth
-    standard_name: sea_water_depth
-    units: m
-    coordinates: time depth latitude longitude
-    valid_min: '0'
-    valid_max: '1000'
-    positive: down
-    reference_datum: sea-surface
-    instrument: navigation_depth
-    observation_type: measured
-    accuracy: '0.5'
-    resolution: '0.01'
-    comment: seaexplorer navigation pressure sensor
