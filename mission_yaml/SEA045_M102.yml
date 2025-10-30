@@ -26,9 +26,9 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Kaprifol
-  wmo_id: '6801674'
-  comment: ' Glider flew on zs/zt=2 and alt=2 for full mission duration. Faster vertical speed towards the end of the mission due to logistical reasons. '
+  glider_name: Kvanne
+  wmo_id: '6801673'
+  comment: ' '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -37,78 +37,78 @@ metadata:
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '97'
+  deployment_id: '102'
   deployment_name: SAMBA
   project: SAMBA
-  project_url: https://voiceoftheocean.org
+  project_url: voiceoftheocean.org/ocean-observatories/
   summary: ' Part of SAMBA continuous monitoring '
-  platform_serial: SEA055
-  seanav: 3.8.2 -r
+  platform_serial: SEA045
   seapld: 2.25.2 -r
+  seanav: 3.8.2 -r
 glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '206523'
+    serial: '206610'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2024-02-23'
+    calibration_date: '2021-03-01'
   optics:
     make: RBR
     model: Tridente
-    serial: '238734'
+    serial: '238742'
     long_name: RBR Tridente
     make_model: RBR Tridente
     factory_calibrated: 'Yes'
-    calibration_date: '2025-06-25'
+    calibration_date: '2025-06-19'
     calibration_parameters:
-      Chl_C0: 30.365441e-03
-      Chl_C1: 2.4691522e06
+      Chl_C0: -15.267585e-03
+      Chl_C1: 1.7750864e06
       Chl_C2: 103.31017e-03
-      PC_C0: -262.03474e-03
-      PC_C1: 3.6712498e06
+      PC_C0: -272.6416Ee03
+      PC_C1: 2.7452715e06
       PC_C2: 1.0
-      backscatter_C0: 55.214777e-09
-      backscatter_C1: 10.832467
+      backscatter_C0: 377.33747e-09
+      backscatter_C1: 14.131917
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0066'
+    serial: 0039
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     two_point_calibrated: 'Yes'
-    calibration_date: '2024-05-29'
+    calibration_date: '2024-06-06'
     calibration_parameters:
-      d0: 8.148819e-05
-      d1: -1.697061e-01
-      d2: 0.1950477
+      d0: +8.006861e-05
+      d1: -1.708346e-01
+      d2: +1.942610e-01
       d3: 0.0
       d4: 0.0
-      c0: 0.002875601
-      c1: 0.0001227918
-      c2: 2.748141e-06
+      c0: +2.910576e-03
+      c1: +1.247150e-04
+      c2: +2.715957e-06
       e0: 1.0
-      Cp: 0.0038
-      A: -12.45549
-      B: 0.001472191
-      C: -2.561056e-08
-      D: 5.818844e-13
-      E: -7.120555e-18
-      F: 4.532106e-23
+      Cp: +3.800000e-03
+      A: -1.285995e+01
+      B: +1.482147e-03
+      C: -2.664719e-08
+      D: +6.256232e-13
+      E: -7.984048e-18
+      F: +5.175089e-23
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '104640'
+    serial: '105526'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2024-02-10'
+    calibration_date: '2023-09-04'
   irradiance:
     make: Biospherical
     model: MPE-PAR
-    serial: '3194'
+    serial: '3198'
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
     factory_calibrated: 'Yes'
@@ -306,7 +306,7 @@ netcdf_variables:
     accuracy: '0.002'
     resolution: '0.00005'
   pressure:
-    source: LEGATO_PRESSURE
+    source: AD2CP_PRESSURE
     long_name: water pressure
     standard_name: sea_water_pressure
     units: dbar
@@ -315,11 +315,11 @@ netcdf_variables:
     valid_max: '1000'
     positive: down
     reference_datum: sea-surface
-    instrument: instrument_ctd
+    instrument: instrument_ad2cp
     observation_type: measured
     accuracy: '0.5'
     resolution: '0.01'
-    comment: ctd pressure sensor
+    comment: ad2cp pressure sensor
   salinity:
     source: LEGATO_SALINITY
     long_name: water salinity
@@ -473,7 +473,3 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_phosphorescence
     observation_type: measured
-qc:
-  phycocyanin:
-    value: 4
-    comment: “Full measurement exhibit a consistent pattern of relatively lower readings to 40 m which is inconsistent with upcast data at the same depths. The cause is unknown and under investigation to improve sensor performance. “

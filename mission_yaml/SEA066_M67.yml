@@ -472,3 +472,7 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_phosphorescence
     observation_type: measured
+qc:
+  phycocyanin:
+    value: 4
+    comment: “Full measurement exhibit a consistent pattern of relatively lower readings to 40 m which is inconsistent with upcast data at the same depths. The cause is unknown and under investigation to improve sensor performance. “
