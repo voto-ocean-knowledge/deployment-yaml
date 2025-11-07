@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Ljung
   wmo_id: '6801707'
-  comment: ' Sensor specifics to be updated. The mission is part of the inTail project with testing the new oxygen sensor.
+  comment: ' The mission is part of the inTail project with testing the new oxygen sensor.
     zt/zs=2 and alt=4-8 for full mission duration for the sake of the InTail sensor. During this mission the glider is flown over a bottom mounted ADCP for intercomparison to the onboard AD2CP. Faster vertical speeds and steeper pitches are used for these tests. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
@@ -50,11 +50,11 @@ glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '204958'
+    serial: '206612'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2025-03-13'
+    calibration_date: '2024-02-23'
   optics:
     make: RBR
     model: Tridente
@@ -75,45 +75,45 @@ glider_devices:
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0071'
+    serial: '0095'
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     two_point_calibrated: 'Yes'
-    calibration_date: '2024-02-15'
+    calibration_date: '2024-01-13'
     calibration_parameters:
-      d0: 0.0001329873
-      d1: -0.169747
-      d2: 0.1928429
+      d0: +2.122214e-04
+      d1: -2.307901e-01
+      d2: +2.127514e-01
       d3: 0.0
       d4: 0.0
-      c0: 0.002997305
-      c1: 0.0001273955
-      c2: 2.813017e-06
+      c0: 2.955601e-03
+      c1: 1.240437e-04
+      c2: 2.690884e-06
       e0: 1.0
-      Cp: 0.0039
-      A: -13.01016
-      B: 0.001457255
-      C: -2.478866e-08
-      D: 5.583178e-13
-      E: -6.849273e-18
-      F: 4.447e-23
+      Cp: +3.700000e-0
+      A: -1.275913e+01
+      B: 1.480854e-03
+      C: -2.638831e-08
+      D: 6.137363e-13
+      E: -7.744244e-1
+      F: 4.990697e-23
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '104646'
+    serial: '101589'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2022-07-18'
+    calibration_date: '2021-02-03'
   irradiance:
     make: Biospherical
     model: MPE-PAR
-    serial: '3203'
+    serial: '2983'
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
     factory_calibrated: 'Yes'
-    calibration_date: '2024-05-02'
+    calibration_date: '2023-02-21'
 netcdf_variables:
   keep_variables:
   - temperature
