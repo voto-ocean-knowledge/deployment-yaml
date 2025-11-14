@@ -334,7 +334,7 @@ netcdf_variables:
     accuracy: '0.02'
     resolution: '0.01'
   chlorophyll:
-    source: TRIDENTE_CHLOROPHYLL
+    source: LEGATO_TRIDENTE_CHLOROPHYLL
     long_name: 470 nm wavelength chlorophyll
     standard_name: concentration_of_chlorophyll_in_sea_water
     units: mg m-3
@@ -344,7 +344,7 @@ netcdf_variables:
     valid_max: '50.'
     observation_type: calculated
   backscatter:
-    source: TRIDENTE_BACKSCATTER
+    source: LEGATO_TRIDENTE_BACKSCATTER
     long_name: 700 nm wavelength backscatter
     standard_name: 700_nm_wavelength_backscatter_in_sea_water
     units: m-1 sr-1
@@ -353,7 +353,7 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_scatterometer
   phycocyanin:
-    source: TRIDENTE_FDOM
+    source: LEGATO_TRIDENTE_PHYCOCYANIN
     long_name: phycocyanin
     standard_name: phycocyanin
     units: mg m-3
