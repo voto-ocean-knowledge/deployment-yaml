@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Smilla
   wmo_id: '8901050'
-  comment: '  '
+  comment: ' Glider flew on alt=2, zt/zs=2 for full mission duration. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -473,3 +473,7 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_phosphorescence
     observation_type: measured
+qc:
+  phycocyanin:
+    value: 4
+    comment: “An investigation is ongoing on effects from temperature on the Tridente phycocyanin channel “

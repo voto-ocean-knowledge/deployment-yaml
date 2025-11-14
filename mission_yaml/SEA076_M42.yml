@@ -79,8 +79,8 @@ glider_devices:
     calibration_date: '2023-08-26'
     calibration_parameters:
       d0: 6.707286e-05
-      d1: -0.181252
-      d2: 0.1963972
+      d1: -0.1830777
+      d2: 0.1964218
       d3: 0.0
       d4: 0.0
       c0: 0.002911369
