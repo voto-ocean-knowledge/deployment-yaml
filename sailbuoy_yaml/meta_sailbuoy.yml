@@ -1,0 +1,16 @@
+metadata:  
+  acknowledgement: This study used data collected and made freely available by Voice of the Ocean Foundation (https://voiceoftheocean.org) accessed from https://erddap.observations.voiceoftheocean.org/erddap/index.html
+  institution: Voice of the Ocean Foundation
+  license: Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/) This study used data collected and made freely available by Voice of the Ocean Foundation (https://voiceoftheocean.org) accessed from https://erddap.observations.voiceoftheocean.org/erddap/index.html
+  platform: autonomous surface water vehicle
+  platform_vocabulary: https://vocab.nerc.ac.uk/collection/L06/current/3B/
+  cdm_data_type: TrajectoryProfile
+  keywords: CTD, Oceans, Ocean Pressure, Water Pressure, Ocean Temperature, Water Temperature, Salinity/Density, Conductivity, Density, Salinity
+  keywords_vocabulary: GCMD Science Keywords
+  QC_indicator: L1
+  creator_email: callum.rollo@voiceoftheocean.org
+  creator_name: Callum Rollo
+  creator_url: https://observations.voiceoftheocean.org
+  contributor_name: Callum Rollo, Louise Biddle, Olle Petersson, Aleksandra Mazur, Marcus Melin, Gunnar Johnsson, Andrew Birkett, Chiara Monforte
+  contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider Technician, Glider Technician, Glider Technician, Glider Pilot
+  title: Sailbuoy data
