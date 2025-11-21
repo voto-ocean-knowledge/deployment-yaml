@@ -109,7 +109,7 @@ glider_devices:
   irradiance:
     make: Biospherical
     model: MPE-PAR
-    serial: '2983'
+    serial: '3200'
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
     factory_calibrated: 'Yes'
