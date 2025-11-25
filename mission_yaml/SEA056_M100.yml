@@ -473,3 +473,6 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_phosphorescence
     observation_type: measured
+  phycocyanin:
+    value: 4
+    comment: “Tridente phycocyanin channel exhibits suspisious values. The cause is under investigation to improve sensor performance. “
