@@ -476,4 +476,4 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: “An investigation is ongoing on effects from temperature on the Tridente phycocyanin channel “
+    comment: “Suspicious values from the phycocyanin channel. The cause is unknown and under investigation“

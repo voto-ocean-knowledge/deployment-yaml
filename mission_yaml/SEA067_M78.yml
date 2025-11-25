@@ -471,3 +471,7 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_phosphorescence
     observation_type: measured
+qc:
+  phycocyanin:
+    value: 4
+    comment: “Suspicious values from the phycocyanin channel. The cause is unknown and under investigation“
