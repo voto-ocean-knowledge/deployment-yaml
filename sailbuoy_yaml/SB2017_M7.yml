@@ -1,0 +1,18 @@
+metadata:
+  platform_serial: SB2017
+  deployment_id: 7
+  start_date: '2025-07-07'
+  end_date: '2024-07-29'
+  comment: Deployment and recover north of coates island
+  project: Hudson Bay 2
+devices:
+  datalogger:
+    make_model: Sailbuoy datalogger
+  ctd:
+    make_model: Neil Brown 100
+    serial: 566
+    calibration_date: '2020-05-20'
+  meteorology:
+    make_model: Airmar 200WX
+    serial: 60139894
+    calibration_date: '2019-06-28'

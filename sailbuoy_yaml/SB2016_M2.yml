@@ -1,0 +1,22 @@
+metadata:
+  platform_serial: SB2016
+  deployment_id: 7
+  start_date: '2021-04-05'
+  end_date: '2021-06-23'
+  comment: Deployment and recovery east of Bornholm
+  project: Windwake
+devices:
+  datalogger:
+    make_model: Sailbuoy datalogger
+  ctd:
+    make_model: Aanderaa 4319A
+    serial: 1979
+    calibration_date: '2020-04-16'
+  meteorology:
+    make_model: Airmar 200WX
+    serial: 60139889
+    calibration_date: '2019-06-28'
+  adcp:
+    make_model: Aanderaa DCPS 5400
+    serial: 120
+    calibration_date: '2020-03-11'
