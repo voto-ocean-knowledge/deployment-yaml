@@ -29,7 +29,7 @@ metadata:
   glider_name: Ljung
   wmo_id: '6801707'
   comment: ' The mission is part of the inTail project with testing the new oxygen sensor.
-    zt/zs=2 and alt=4-8 for full mission duration for the sake of the InTail sensor. During this mission the glider is flown over a bottom mounted ADCP for intercomparison to the onboard AD2CP. Faster vertical speeds and steeper pitches are used for these tests. '
+    zt/zs=2 and alt=4-8 for full mission duration for the sake of the InTail sensor. During this mission the glider is flown over a bottom mounted ADCP for intercomparison to the onboard AD2CP. Faster vertical speeds and steeper pitches are used for these tests. Oxygen concentration is showing unrealistically high values around 80 m. See qc.'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -478,3 +478,6 @@ qc:
   phycocyanin:
     value: 4
     comment: “Suspicious values from the phycocyanin channel. The cause is unknown and under investigation“
+  oxygen_concentration:
+    value: 4
+    comment: “Unreal higher values around 80 m depth. “
