@@ -37,7 +37,7 @@ metadata:
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
   deployment_id: '81'
-  comment: '  '
+  comment: ' zt/zs=2 and alt=2 for full mission duration. bu/bd was increased occasionally to fight currents. Glider flew on increased bu/bd and pu/pd towards the end of the mission for logistical reasons.  '
   deployment_name: SAMBA
   project: SAMBA
   project_url: voiceoftheocean.org/ocean-observatories/
@@ -470,3 +470,10 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_phosphorescence
     observation_type: measured
+qc:
+  phycocyanin:
+    value: 4
+    comment: “Tridente phycocyanin channel exhibits suspisious values. The cause is under investigation to improve sensor performance. “
+  oxygen_concentration:
+    value: 4
+    comment: “Sensor cap was on for the full mission duration. “

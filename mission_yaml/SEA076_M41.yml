@@ -473,4 +473,4 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: “Unusually high values and hysteresis“
+    comment: “Suspicious values from the phycocyanin channel. The cause is unknown and under investigation“
