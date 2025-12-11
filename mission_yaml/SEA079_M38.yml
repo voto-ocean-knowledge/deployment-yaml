@@ -26,94 +26,93 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Ljung
-  wmo_id: '6801707'
-  comment: ' The mission is part of the inTail project with testing the new oxygen sensor.
-    zt/zs=2 and alt=4-8 for full mission duration for the sake of the InTail sensor. During this mission the glider is flown over a bottom mounted ADCP for intercomparison to the onboard AD2CP. Faster vertical speeds and steeper pitches are used for these tests. Oxygen concentration is showing unrealistically high values around 80 m. See qc. Sub sampling towards the end of the mission as well as a period with payload off to save battery to account for logistics.'
+  glider_name: Minna
+  wmo_id: '8901001'
+  comment: '   '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
-    Manager
+    Manager, Glider Technician
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '90'
-  deployment_name: InTail
-  project: InTail
-  project_url: https://voiceoftheocean.org/ocean-observatories/
-  summary: ' Part of the InTail project '
-  platform_serial: SEA063
+  deployment_id: '38'
+  deployment_name: SAMBA
+  project: SAMBA
+  project_url: voiceoftheocean.org/ocean-observatories/
+  summary: ' Part of SAMBA continuous monitoring'
+  platform_serial: SEA079
   seanav: 3.8.2 -r
   seapld: 2.25.2 -r
 glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '206612'
+    serial: '212534'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2024-02-23'
+    calibration_date: '2022-10-21'
   optics:
     make: RBR
     model: Tridente
-    serial: '238733'
+    serial: '238739'
     long_name: RBR Tridente
     make_model: RBR Tridente
     factory_calibrated: 'Yes'
-    calibration_date: '2025-06-19'
+    calibration_date: '2025-06-20'
     calibration_parameters:
-      Chl_C0: 13.258136e-03
-      Chl_C1: 2.2709605e06
-      Chl_C2: 103.31017e-03
-      PC_C0: -333.1373e-03
-      PC_C1: 2.998615e06
+      Chl_C0: -738.94304E-3
+      Chl_C1: 2.5235072E6
+      Chl_C2: 103.31017E-3
+      PC_C0: -1.0925524
+      PC_C1: 2.9347115E6
       PC_C2: 1.0
-      backscatter_C0: 244.28843e-09
-      backscatter_C1: 12.442607
+      backscatter_C0: 999.0388E-9
+      backscatter_C1: 12.705978
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0095'
+    serial: 0068
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     two_point_calibrated: 'Yes'
-    calibration_date: '2024-01-13'
+    calibration_date: '2024-01-26'
     calibration_parameters:
-      d0: +2.122214e-04
-      d1: -2.307901e-01
-      d2: +2.127514e-01
+      d0: -2.158511e-04
+      d1: -2.012382e-01 
+      d2: +1.941476e-01 
       d3: 0.0
       d4: 0.0
-      c0: 2.955601e-03
-      c1: 1.240437e-04
-      c2: 2.690884e-06
+      c0: +3.092576e-03
+      c1: +1.314481e-04
+      c2: +2.420729e-06
       e0: 1.0
-      Cp: +3.700000e-0
-      A: -1.275913e+01
-      B: 1.480854e-03
-      C: -2.638831e-08
-      D: 6.137363e-13
-      E: -7.744244e-1
-      F: 4.990697e-23
+      Cp: +3.700000e-03
+      A: -1.261686e+01
+      B: +1.469161e-03
+      C: -2.550187e-08
+      D: +5.815232e-13
+      E: -7.188652e-18
+      F: +4.627832e-23
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '101589'
+    serial: '104649'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2021-02-03'
+    calibration_date: '2022-07-18'
   irradiance:
     make: Biospherical
     model: MPE-PAR
-    serial: '3200'
+    serial: '3195'
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
     factory_calibrated: 'Yes'
-    calibration_date: '2023-02-21'
+    calibration_date: '2024-05-02'
 netcdf_variables:
   keep_variables:
   - temperature
@@ -334,7 +333,7 @@ netcdf_variables:
     accuracy: '0.02'
     resolution: '0.01'
   chlorophyll:
-    source: LEGATO_TRIDENTE_CHLOROPHYLL
+    source: TRIDENTE_CHLOROPHYLL
     long_name: 470 nm wavelength chlorophyll
     standard_name: concentration_of_chlorophyll_in_sea_water
     units: mg m-3
@@ -344,7 +343,7 @@ netcdf_variables:
     valid_max: '50.'
     observation_type: calculated
   backscatter:
-    source: LEGATO_TRIDENTE_BACKSCATTER
+    source: TRIDENTE_BACKSCATTER
     long_name: 700 nm wavelength backscatter
     standard_name: 700_nm_wavelength_backscatter_in_sea_water
     units: m-1 sr-1
@@ -353,7 +352,7 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_scatterometer
   phycocyanin:
-    source: LEGATO_TRIDENTE_PHYCOCYANIN
+    source: TRIDENTE_FDOM
     long_name: phycocyanin
     standard_name: phycocyanin
     units: mg m-3
@@ -477,7 +476,4 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: “Suspicious values from the phycocyanin channel. The cause is unknown and under investigation“
-  oxygen_concentration:
-    value: 4
-    comment: “Unreal higher values around 80 m depth. “
+    comment: “Full measurement exhibit generally high values, with a consistent lag between up- and downcast. “
