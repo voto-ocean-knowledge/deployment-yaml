@@ -39,7 +39,9 @@ metadata:
   creator_url: https://observations.voiceoftheocean.org
   deployment_id: '78'
   comment: ' Glider loitered during afternoons towards the end of the mission. zt/zs=2
-    and alt=2 for full mission duration. '
+    and alt=2 for full mission duration.  Tridente phycocyanin channel values are
+    suspect. The cause is under investigation and appears to be due to bad calibration
+    https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
   deployment_name: SAMBA
   project: SAMBA
   project_url: voiceoftheocean.org/ocean-observatories/
@@ -476,5 +478,5 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: " Suspicious values from the phycocyanin channel. The cause is unknown\
-      \ and under investigation "
+    comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
+      and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf

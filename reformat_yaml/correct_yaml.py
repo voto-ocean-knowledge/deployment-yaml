@@ -255,8 +255,42 @@ def add_anna(yaml_path):
     with open(yaml_path, "w") as fout:
         yaml.dump(deployment, fout, sort_keys=False)
 
+
+def flag_phycocyanin(yaml_path):
+    with open(yaml_path) as fin:
+        deployment = yaml.safe_load(fin)
+    devices = deployment['glider_devices']
+    if 'optics' not in devices.keys():
+        return
+    if devices['optics']['model'] != 'Tridente':
+        return
+    print(yaml_path)
+    phyco_report = "https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf"
+    mission_comment_add = f'Tridente phycocyanin channel values are suspect. The cause is under investigation and appears to be due to bad calibration {phyco_report}'
+    if deployment['metadata']['comment'].strip():
+        deployment['metadata']['comment'] += ' ' + mission_comment_add
+    else:
+        deployment['metadata']['comment'] = mission_comment_add
+    if 'qc' in deployment.keys():
+        qc = deployment['qc']
+    else:
+        qc = {}
+    qc['phycocyanin'] = {'value': 4,
+                            'comment': mission_comment_add
+    }
+    with open(yaml_path, "w") as fout:
+        yaml.dump(deployment, fout, sort_keys=False)
+
+
+def standardise_yaml_format(yaml_path):
+    with open(yaml_path) as fin:
+        deployment = yaml.safe_load(fin)
+    with open(yaml_path, "w") as fout:
+        yaml.dump(deployment, fout, sort_keys=False)
+
 if __name__ == '__main__':
     yaml_files = list(Path("../mission_yaml").glob("*.yml"))
     yaml_files.sort()
     for yml in yaml_files:
-        add_anna(yml)
+        #standardise_yaml_format(yml)
+        flag_phycocyanin(yml)

@@ -28,7 +28,9 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Kalmus
   wmo_id: '6801506'
-  comment: ' Glider flew with increased zt and speed occasionally to fight currents. '
+  comment: ' Glider flew with increased zt and speed occasionally to fight currents.  Tridente
+    phycocyanin channel values are suspect. The cause is under investigation and appears
+    to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
     Adele Maciute
@@ -476,6 +478,6 @@ netcdf_variables:
     observation_type: measured
 qc:
   phycocyanin:
-    value: 3
-    comment: " Suspicious values from the phycocyanin channel. The cause is unknown\
-      \ and under investigation "
+    value: 4
+    comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
+      and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
