@@ -265,9 +265,10 @@ def flag_phycocyanin(yaml_path):
         return
     if devices['optics']['model'] != 'Tridente':
         return
-    print(yaml_path)
     phyco_report = "https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf"
     mission_comment_add = f'Tridente phycocyanin channel values are suspect. The cause is under investigation and appears to be due to bad calibration {phyco_report}'
+    if phyco_report in deployment['metadata']['comment']:
+        return
     if deployment['metadata']['comment'].strip():
         deployment['metadata']['comment'] += ' ' + mission_comment_add
     else:
@@ -279,6 +280,8 @@ def flag_phycocyanin(yaml_path):
     qc['phycocyanin'] = {'value': 4,
                             'comment': mission_comment_add
     }
+    deployment['qc'] = qc
+    print('Added phycocyanin edits to', yaml_path)
     with open(yaml_path, "w") as fout:
         yaml.dump(deployment, fout, sort_keys=False)
 

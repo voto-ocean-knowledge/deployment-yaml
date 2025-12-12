@@ -28,8 +28,10 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Fibbla
   wmo_id: '6801665'
-  comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
-    and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
+  comment: ' zt/zs=2 and alt=2 for full mission duration. Went through BY20 at the
+    end of the mission for recovery. A few cycles with turned off Tridente early on
+    the mission. Tridente phycocyanin channel values are suspect. The cause is under
+    investigation and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
     Adele Maciute
