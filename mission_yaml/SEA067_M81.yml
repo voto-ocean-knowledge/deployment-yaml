@@ -40,7 +40,9 @@ metadata:
   deployment_id: '81'
   comment: ' zt/zs=2 and alt=2 for full mission duration. bu/bd was increased occasionally
     to fight currents. Glider flew on increased bu/bd and pu/pd towards the end of
-    the mission for logistical reasons.  '
+    the mission for logistical reasons.   Tridente phycocyanin channel values are
+    suspect. The cause is under investigation and appears to be due to bad calibration
+    https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
   deployment_name: SAMBA
   project: SAMBA
   project_url: voiceoftheocean.org/ocean-observatories/
@@ -476,8 +478,8 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: " Tridente phycocyanin channel exhibits suspisious values. The cause\
-      \ is under investigation to improve sensor performance.  "
+    comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
+      and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
   oxygen_concentration:
     value: 4
-    comment: " Sensor cap was on for the full mission duration.  "
+    comment: ' Sensor cap was on for the full mission duration.  '

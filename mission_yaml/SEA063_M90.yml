@@ -34,7 +34,9 @@ metadata:
     intercomparison to the onboard AD2CP. Faster vertical speeds and steeper pitches
     are used for these tests. Oxygen concentration is showing unrealistically high
     values around 80 m. See qc. Sub sampling towards the end of the mission as well
-    as a period with payload off to save battery to account for logistics.'
+    as a period with payload off to save battery to account for logistics. Tridente
+    phycocyanin channel values are suspect. The cause is under investigation and appears
+    to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -482,8 +484,8 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: " Suspicious values from the phycocyanin channel. The cause is unknown\
-      \ and under investigation "
+    comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
+      and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
   oxygen_concentration:
     value: 4
-    comment: " Unreal higher values around 80 m depth.  "
+    comment: ' Unreal higher values around 80 m depth.  '

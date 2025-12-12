@@ -31,7 +31,9 @@ metadata:
   comment: ' Glider flew on an increased vertical speed to fight currents occasionally
     and towards the end of the mission to reach recovery waypoint in time. zt=20 for
     a short time around c.223 and c.286 to proceed in currents. Apart from that, zt/zs=2
-    and alt=2 for full mission duration. '
+    and alt=2 for full mission duration.  Tridente phycocyanin channel values are
+    suspect. The cause is under investigation and appears to be due to bad calibration
+    https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
     Adele Maciute
@@ -480,5 +482,5 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: " Suspicious values from the phycocyanin channel. The cause is unknown\
-      \ and under investigation "
+    comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
+      and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
