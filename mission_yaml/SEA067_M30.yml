@@ -31,8 +31,8 @@ metadata:
   comment: Altitude set to 5m for the entire mission duration. Zt/zs set to 2m for
     the entire mission duration. Glider was lost in an underwater cave and recovered
     a month later. This is why there is a large gap in the dataset in this area
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Chiara Monforte
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Chiara Monforte
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Pilot
   creator_email: callum.rollo@voiceoftheocean.org

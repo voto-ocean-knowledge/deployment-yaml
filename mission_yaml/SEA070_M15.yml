@@ -32,8 +32,8 @@ metadata:
     the methane sensor. Zt/zs set to 4m for the entire mission duration and altitude
     set to 5m but the glider was flying well above the seabed due to the shallow max
     diving depth (zb). Issues with the CTD (GPCTD) so data quality is unreliable
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Chiara Monforte
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Chiara Monforte
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Pilot
   creator_email: callum.rollo@voiceoftheocean.org

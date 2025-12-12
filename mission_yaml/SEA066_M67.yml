@@ -28,7 +28,9 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Saltarv
   wmo_id: '6801505'
-  comment: ' Glider flew with zt/zs=2 and alt=2 for full mission duration. Vertical speed was increased towards the end of the mission to reach recovery waypoint in time. '
+  comment: ' Glider flew with zt/zs=2 and alt=2 for full mission duration. Vertical
+    speed was increased towards the end of the mission to reach recovery waypoint
+    in time. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -63,13 +65,13 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2025-06-25'
     calibration_parameters:
-      Chl_C0: -738.94304e-03
+      Chl_C0: -0.73894304
       Chl_C1: 2.5235072e06
-      Chl_C2: 103.31017e-03
+      Chl_C2: 0.10331017
       PC_C0: -1.0925524
       PC_C1: 2.9347115e06
       PC_C2: 1.0
-      backscatter_C0: 999.0388e-09
+      backscatter_C0: 9.990388e-07
       backscatter_C1: 12.705978
   oxygen:
     make: JFE Advantech
@@ -80,22 +82,22 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2023-08-26'
     calibration_parameters:
-      d0: -1.738649e-04 
-      d1: -1.929757e-01
-      d2: +1.925271e-01 
+      d0: -0.0001738649
+      d1: -0.1929757
+      d2: 0.1925271
       d3: 0.0
       d4: 0.0
-      c0: +3.092823e-03
-      c1: +1.329350e-04
-      c2: +2.414648e-06
+      c0: 0.003092823
+      c1: 0.000132935
+      c2: 2.414648e-06
       e0: 1.0
-      Cp: +4.000000e-03
-      A: -1.288162e+01 
-      B: +1.467866e-03 
-      C: -2.550103e-08 
-      D: +5.835115e-13
+      Cp: 0.004
+      A: -12.88162
+      B: 0.001467866
+      C: -2.550103e-08
+      D: 5.835115e-13
       E: -7.257766e-18
-      F: +4.697937e-23
+      F: 4.697937e-23
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -475,4 +477,7 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: “Full measurement exhibit a consistent pattern of relatively lower readings to 40 m which is inconsistent with upcast data at the same depths. The cause is unknown and under investigation to improve sensor performance. “
+    comment: " Full measurement exhibit a consistent pattern of relatively lower\
+      \ readings to 40\u202Fm which is inconsistent with upcast data at the same depths.\
+      \ The cause is unknown and under investigation to improve sensor performance.\
+      \  "

@@ -28,7 +28,8 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Vresros
   wmo_id: '8901000'
-  comment: ' gLider flew on a higher vertical speed towards the end of misison for logistical reasons. zt/zs=2 and alt=2 for full mission duration. '
+  comment: ' gLider flew on a higher vertical speed towards the end of misison for
+    logistical reasons. zt/zs=2 and alt=2 for full mission duration. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider

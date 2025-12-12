@@ -28,9 +28,11 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Smilla
   wmo_id: '8901050'
-  comment: ' Part of the PhycoGlider II project. Glider flew on zt/zs=2 and alt=2 for full mission duration. '
+  comment: ' Part of the PhycoGlider II project. Glider flew on zt/zs=2 and alt=2
+    for full mission duration. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
+    Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
     Manager, Glider Technician
@@ -476,4 +478,5 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: “Suspicious values from the phycocyanin channel. The cause is unknown and under investigation“
+    comment: " Suspicious values from the phycocyanin channel. The cause is unknown\
+      \ and under investigation "

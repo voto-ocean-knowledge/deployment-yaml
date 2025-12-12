@@ -32,8 +32,8 @@ metadata:
     higher values in the deep section of the transect. Zt/zs set to 2m for the entire
     mission duration. Water was leaking through the FLBBCD which likely causes the
     temporal drift evident in the chlorophyll data
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Andrew Birkett, Chiara Monforte
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Andrew Birkett, Chiara Monforte
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Glider Pilot
   creator_email: callum.rollo@voiceoftheocean.org

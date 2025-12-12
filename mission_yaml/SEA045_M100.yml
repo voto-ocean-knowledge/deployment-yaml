@@ -28,9 +28,13 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Kvanne
   wmo_id: '6801673'
-  comment: ' Part of the PhycoGlider II project. The glider timed a calibration profile at station BY38 with R/V SVEA on 2025-08-13 during SMHIs August expedition. Glider was emergency recovered due to an issue with the linear motor movement. Pressure is sourced from the ADCP due to issues with the Legato pressure sensor'
+  comment: ' Part of the PhycoGlider II project. The glider timed a calibration profile
+    at station BY38 with R/V SVEA on 2025-08-13 during SMHIs August expedition. Glider
+    was emergency recovered due to an issue with the linear motor movement. Pressure
+    is sourced from the ADCP due to issues with the Legato pressure sensor'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
+    Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
     Manager, Glider Technician
@@ -63,13 +67,13 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2025-05-27'
     calibration_parameters:
-      Chl_C0: -95.64375e-03
+      Chl_C0: -0.09564375
       Chl_C1: 1.6513902e06
-      Chl_C2: 103.31017e-03
-      PC_C0: -254.73633e-03
+      Chl_C2: 0.10331017
+      PC_C0: -0.25473633
       PC_C1: 5.540121e06
       PC_C2: 1.0
-      backscatter_C0: 232.06675e-09
+      backscatter_C0: 2.3206675e-07
       backscatter_C1: 16.842283
   oxygen:
     make: JFE Advantech
@@ -81,22 +85,22 @@ glider_devices:
     two_point_calibrated: 'Yes'
     calibration_date: '2023-08-26'
     calibration_parameters:
-      d0: +1.343464e-04
-      d1: -1.787488e-01 
-      d2: +1.935888e-01
+      d0: 0.0001343464
+      d1: -0.1787488
+      d2: 0.1935888
       d3: 0.0
       d4: 0.0
-      c0: +2.957998e-03
-      c1: +1.280082e-04
-      c2: +2.611012e-06
+      c0: 0.002957998
+      c1: 0.0001280082
+      c2: 2.611012e-06
       e0: 1.0
-      Cp: +4.000000e-03
-      A: -1.281456e+01
-      B: +1.479444e-03
+      Cp: 0.004
+      A: -12.81456
+      B: 0.001479444
       C: -2.636503e-08
-      D: +6.137695e-13
-      E: -7.758560e-18
-      F: +5.016239e-23
+      D: 6.137695e-13
+      E: -7.75856e-18
+      F: 5.016239e-23
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -476,4 +480,5 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: “Suspicious values from the phycocyanin channel. The cause is unknown and under investigation“
+    comment: " Suspicious values from the phycocyanin channel. The cause is unknown\
+      \ and under investigation "

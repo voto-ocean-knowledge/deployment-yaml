@@ -28,7 +28,9 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Minna
   wmo_id: '8901001'
-  comment: ' Glider replaced with another fully charged one on 27 V to account for our future and other ongoing operations, therefore this mission is shorter than usual. zt/zs and alt=2 for full mission duration. '
+  comment: ' Glider replaced with another fully charged one on 27 V to account for
+    our future and other ongoing operations, therefore this mission is shorter than
+    usual. zt/zs and alt=2 for full mission duration. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider

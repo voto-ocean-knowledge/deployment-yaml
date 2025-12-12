@@ -28,9 +28,11 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Kalmus
   wmo_id: '6801506'
-  comment: ' Glider used an increased zt up to 35 m and increased vertical speed occasionally to fight strong currents. '
+  comment: ' Glider used an increased zt up to 35 m and increased vertical speed occasionally
+    to fight strong currents. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
+    Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
     Manager, Glider Technician
@@ -63,13 +65,13 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2025-06-19'
     calibration_parameters:
-      Chl_C0: -19.198487E-3
+      Chl_C0: -0.019198487
       Chl_C1: 2.6541158E6
-      Chl_C2: 103.31017E-3
-      PC_C0: 53.852633E-3
+      Chl_C2: 0.10331017
+      PC_C0: 0.053852633
       PC_C1: 2.8548872E6
       PC_C2: 1.0
-      backscatter_C0: 22.28689E-9
+      backscatter_C0: 2.228689e-08
       backscatter_C1: 11.278274
   oxygen:
     make: JFE Advantech
@@ -83,7 +85,7 @@ glider_devices:
     calibration_parameters:
       d0: 8.562884e-05
       d1: -0.1864571
-      d2: 0.1928810
+      d2: 0.192881
       d3: 0.0
       d4: 0.0
       c0: 0.002945188
@@ -476,4 +478,5 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: “Suspicious values from the phycocyanin channel. The cause is unknown and under investigation“
+    comment: " Suspicious values from the phycocyanin channel. The cause is unknown\
+      \ and under investigation "

@@ -34,8 +34,8 @@ metadata:
     all the time, while at surface, the sensor was set to sample  every 30s. Glider
     was set to drift for the last part of the mission with payload switched off. No
     science data is available for that period
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Chiara Monforte
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Chiara Monforte
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Pilot
   creator_email: callum.rollo@voiceoftheocean.org

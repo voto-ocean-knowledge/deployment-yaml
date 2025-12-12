@@ -28,8 +28,13 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Ljung
   wmo_id: '6801707'
-  comment: ' The mission is part of the inTail project with testing the new oxygen sensor.
-    zt/zs=2 and alt=4-8 for full mission duration for the sake of the InTail sensor. During this mission the glider is flown over a bottom mounted ADCP for intercomparison to the onboard AD2CP. Faster vertical speeds and steeper pitches are used for these tests. Oxygen concentration is showing unrealistically high values around 80 m. See qc. Sub sampling towards the end of the mission as well as a period with payload off to save battery to account for logistics.'
+  comment: ' The mission is part of the inTail project with testing the new oxygen
+    sensor. zt/zs=2 and alt=4-8 for full mission duration for the sake of the InTail
+    sensor. During this mission the glider is flown over a bottom mounted ADCP for
+    intercomparison to the onboard AD2CP. Faster vertical speeds and steeper pitches
+    are used for these tests. Oxygen concentration is showing unrealistically high
+    values around 80 m. See qc. Sub sampling towards the end of the mission as well
+    as a period with payload off to save battery to account for logistics.'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -64,39 +69,39 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2025-06-19'
     calibration_parameters:
-      Chl_C0: 13.258136e-03
+      Chl_C0: 0.013258136
       Chl_C1: 2.2709605e06
-      Chl_C2: 103.31017e-03
-      PC_C0: -333.1373e-03
+      Chl_C2: 0.10331017
+      PC_C0: -0.3331373
       PC_C1: 2.998615e06
       PC_C2: 1.0
-      backscatter_C0: 244.28843e-09
+      backscatter_C0: 2.4428843e-07
       backscatter_C1: 12.442607
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0095'
+    serial: 0095
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     two_point_calibrated: 'Yes'
     calibration_date: '2024-01-13'
     calibration_parameters:
-      d0: +2.122214e-04
-      d1: -2.307901e-01
-      d2: +2.127514e-01
+      d0: 0.0002122214
+      d1: -0.2307901
+      d2: 0.2127514
       d3: 0.0
       d4: 0.0
-      c0: 2.955601e-03
-      c1: 1.240437e-04
+      c0: 0.002955601
+      c1: 0.0001240437
       c2: 2.690884e-06
       e0: 1.0
-      Cp: +3.700000e-0
-      A: -1.275913e+01
-      B: 1.480854e-03
+      Cp: 3.7
+      A: -12.75913
+      B: 0.001480854
       C: -2.638831e-08
       D: 6.137363e-13
-      E: -7.744244e-1
+      E: -0.7744244
       F: 4.990697e-23
   AD2CP:
     make: Nortek
@@ -477,7 +482,8 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: “Suspicious values from the phycocyanin channel. The cause is unknown and under investigation“
+    comment: " Suspicious values from the phycocyanin channel. The cause is unknown\
+      \ and under investigation "
   oxygen_concentration:
     value: 4
-    comment: “Unreal higher values around 80 m depth. “
+    comment: " Unreal higher values around 80 m depth.  "
