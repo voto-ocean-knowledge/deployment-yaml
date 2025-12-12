@@ -30,7 +30,8 @@ metadata:
   wmo_id: '8901001'
   comment: '   '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
+    Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
     Manager, Glider Technician
@@ -63,13 +64,13 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2025-06-20'
     calibration_parameters:
-      Chl_C0: -738.94304E-3
+      Chl_C0: -0.73894304
       Chl_C1: 2.5235072E6
-      Chl_C2: 103.31017E-3
+      Chl_C2: 0.10331017
       PC_C0: -1.0925524
       PC_C1: 2.9347115E6
       PC_C2: 1.0
-      backscatter_C0: 999.0388E-9
+      backscatter_C0: 9.990388e-07
       backscatter_C1: 12.705978
   oxygen:
     make: JFE Advantech
@@ -81,22 +82,22 @@ glider_devices:
     two_point_calibrated: 'Yes'
     calibration_date: '2024-01-26'
     calibration_parameters:
-      d0: -2.158511e-04
-      d1: -2.012382e-01 
-      d2: +1.941476e-01 
+      d0: -0.0002158511
+      d1: -0.2012382
+      d2: 0.1941476
       d3: 0.0
       d4: 0.0
-      c0: +3.092576e-03
-      c1: +1.314481e-04
-      c2: +2.420729e-06
+      c0: 0.003092576
+      c1: 0.0001314481
+      c2: 2.420729e-06
       e0: 1.0
-      Cp: +3.700000e-03
-      A: -1.261686e+01
-      B: +1.469161e-03
+      Cp: 0.0037
+      A: -12.61686
+      B: 0.001469161
       C: -2.550187e-08
-      D: +5.815232e-13
+      D: 5.815232e-13
       E: -7.188652e-18
-      F: +4.627832e-23
+      F: 4.627832e-23
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -476,4 +477,5 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: “Full measurement exhibit generally high values, with a consistent lag between up- and downcast. “
+    comment: " Full measurement exhibit generally high values, with a consistent\
+      \ lag between up- and downcast.  "

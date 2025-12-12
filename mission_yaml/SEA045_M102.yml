@@ -28,9 +28,11 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Kvanne
   wmo_id: '6801673'
-  comment: ' Voltage drops towards the last few weeks of mission. Occasionally not profiling all the way to the bottom due to failed bottom tracking.'
+  comment: ' Voltage drops towards the last few weeks of mission. Occasionally not
+    profiling all the way to the bottom due to failed bottom tracking.'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
+    Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
     Manager, Glider Technician
@@ -63,13 +65,13 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2025-06-19'
     calibration_parameters:
-      Chl_C0: -15.267585e-03
+      Chl_C0: -0.015267585
       Chl_C1: 1.7750864e06
-      Chl_C2: 103.31017e-03
+      Chl_C2: 0.10331017
       PC_C0: -272.6416Ee03
       PC_C1: 2.7452715e06
       PC_C2: 1.0
-      backscatter_C0: 377.33747e-09
+      backscatter_C0: 3.7733747e-07
       backscatter_C1: 14.131917
   oxygen:
     make: JFE Advantech
@@ -81,22 +83,22 @@ glider_devices:
     two_point_calibrated: 'Yes'
     calibration_date: '2024-06-06'
     calibration_parameters:
-      d0: +8.006861e-05
-      d1: -1.708346e-01
-      d2: +1.942610e-01
+      d0: 8.006861e-05
+      d1: -0.1708346
+      d2: 0.194261
       d3: 0.0
       d4: 0.0
-      c0: +2.910576e-03
-      c1: +1.247150e-04
-      c2: +2.715957e-06
+      c0: 0.002910576
+      c1: 0.000124715
+      c2: 2.715957e-06
       e0: 1.0
-      Cp: +3.800000e-03
-      A: -1.285995e+01
-      B: +1.482147e-03
+      Cp: 0.0038
+      A: -12.85995
+      B: 0.001482147
       C: -2.664719e-08
-      D: +6.256232e-13
+      D: 6.256232e-13
       E: -7.984048e-18
-      F: +5.175089e-23
+      F: 5.175089e-23
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -476,4 +478,5 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 3
-    comment: “Suspicious values from the phycocyanin channel. The cause is unknown and under investigation“
+    comment: " Suspicious values from the phycocyanin channel. The cause is unknown\
+      \ and under investigation "

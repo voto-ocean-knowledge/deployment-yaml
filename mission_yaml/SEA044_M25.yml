@@ -31,8 +31,8 @@ metadata:
   comment: Issue on first deployment so glider was recovered and redeployed 8 days
     later with the same mission number. Altitude set to 12m for the entire mission
     duration. Zt/zs set to 15m for the entire mission duration
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician
   creator_email: callum.rollo@voiceoftheocean.org

@@ -31,8 +31,8 @@ metadata:
   comment: Altitude set to 5m for the entire mission duration. Zt/zs set to 4m for
     the entire mission duration. The glider performed a few dives with max diving
     depth 45 and then 30m for testing
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Chiara Monforte
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Chiara Monforte
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Pilot
   creator_email: callum.rollo@voiceoftheocean.org

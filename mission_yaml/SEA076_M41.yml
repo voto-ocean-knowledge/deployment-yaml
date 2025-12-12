@@ -30,7 +30,8 @@ metadata:
   wmo_id: '6801665'
   comment: ' '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
+    Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
     Manager, Glider Technician
@@ -61,13 +62,13 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2025-06-20'
     calibration_parameters:
-      Chl_C0: -98.69699E-3
+      Chl_C0: -0.09869699
       Chl_C1: 2.15259E6
-      Chl_C2: 103.31017E-3
-      PC_C0: 26.413163E-3
+      Chl_C2: 0.10331017
+      PC_C0: 0.026413163
       PC_C1: 3.2830065E6
       PC_C2: 1.0
-      backscatter_C0: 454.60214E-9
+      backscatter_C0: 4.5460214e-07
       backscatter_C1: 12.154743
   oxygen:
     make: JFE Advantech
@@ -473,4 +474,5 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: “Suspicious values from the phycocyanin channel. The cause is unknown and under investigation“
+    comment: " Suspicious values from the phycocyanin channel. The cause is unknown\
+      \ and under investigation "

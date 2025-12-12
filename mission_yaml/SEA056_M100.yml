@@ -30,7 +30,8 @@ metadata:
   wmo_id: '6801675'
   comment: '  '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
+    Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
     Manager, Glider Technician
@@ -63,13 +64,13 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2025-06-19'
     calibration_parameters:
-      Chl_C0: 30.365441e-03
+      Chl_C0: 0.030365441
       Chl_C1: 2.4691522e06
-      Chl_C2: 103.31017e-03
-      PC_C0: -262.03474e-03
+      Chl_C2: 0.10331017
+      PC_C0: -0.26203474
       PC_C1: 3.6712498e06
       PC_C2: 1
-      backscatter_C0: 55.214777e-09
+      backscatter_C0: 5.5214777e-08
       backscatter_C1: 10.832467
   oxygen:
     make: JFE Advantech
@@ -81,22 +82,22 @@ glider_devices:
     two_point_calibrated: 'Yes'
     calibration_date: '2024-06-06'
     calibration_parameters:
-      d0: +8.148819e-05
-      d1: -1.697983e-01
-      d2: +1.943211e-01
+      d0: 8.148819e-05
+      d1: -0.1697983
+      d2: 0.1943211
       d3: 0.0
       d4: 0.0
-      c0: +2.875601e-03
-      c1: +1.227918e-04
-      c2: +2.748141e-06
+      c0: 0.002875601
+      c1: 0.0001227918
+      c2: 2.748141e-06
       e0: 1.0
-      Cp: +3.800000e-03
-      A: -1.245549e+01
-      B: +1.472191e-03
+      Cp: 0.0038
+      A: -12.45549
+      B: 0.001472191
       C: -2.561056e-08
-      D: +5.818844e-13
-      E: -7.120555е-18
-      F:  +4.532106e-23
+      D: 5.818844e-13
+      E: "-7.120555\u0435-18"
+      F: 4.532106e-23
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -476,4 +477,5 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: “Tridente phycocyanin channel exhibits suspisious values. The cause is under investigation to improve sensor performance. “
+    comment: " Tridente phycocyanin channel exhibits suspisious values. The cause\
+      \ is under investigation to improve sensor performance.  "

@@ -31,8 +31,8 @@ metadata:
   comment: Altitude set to 5m for the entire mission duration. Zt/zs set to 2m for
     the entire mission duration. Glider had a major water leak so it was recover short
     after deployment
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin, Gunnar Johnsson, Chiara Monforte
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin, Gunnar Johnsson, Chiara Monforte
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Pilot
   creator_email: callum.rollo@voiceoftheocean.org

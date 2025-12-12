@@ -29,7 +29,8 @@ metadata:
   glider_name: Marviol
   wmo_id: '6801507'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
+    Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
     Manager, Glider Technician
@@ -37,7 +38,8 @@ metadata:
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
   deployment_id: '79'
-  comment: ' Glider flew with zt/zs=2 and alt=2 for full mission duration. Vertical speed was increased towards the end of the mission for logistical reasons. '
+  comment: ' Glider flew with zt/zs=2 and alt=2 for full mission duration. Vertical
+    speed was increased towards the end of the mission for logistical reasons. '
   deployment_name: SAMBA
   project: SAMBA
   project_url: voiceoftheocean.org/ocean-observatories/
@@ -61,13 +63,13 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2025-06-20'
     calibration_parameters:
-      Chl_C0: 4.509943E-3
+      Chl_C0: 0.004509943
       Chl_C1: 2.7024982E6
-      Chl_C2: 103.31017E-3
-      PC_C0: 20.063099E-3
+      Chl_C2: 0.10331017
+      PC_C0: 0.020063099
       PC_C1: 3.4030602E6
       PC_C2: 1.0
-      backscatter_C0: -463.84545E-9
+      backscatter_C0: -4.6384545e-07
       backscatter_C1: 11.237395
   oxygen:
     make: JFE Advantech
@@ -78,22 +80,22 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2024-02-15'
     calibration_parameters:
-       d0: 0.0001817772 
-       d1: -0.1706152
-       d2: 0.1926727
-       d3: 0.0
-       d4: 0.0
-       c0: 0.002973652
-       c1: 0.0001255534
-       c2: 2.89126e-06
-       e0: 1.0
-       Cp: 0.0039
-       A: -12.7743
-       B: 0.00147517
-       C: -2.594112e-08
-       D: 5.954839e-13
-       E: -7.392508e-18
-       F: 4.738719e-23
+      d0: 0.0001817772
+      d1: -0.1706152
+      d2: 0.1926727
+      d3: 0.0
+      d4: 0.0
+      c0: 0.002973652
+      c1: 0.0001255534
+      c2: 2.89126e-06
+      e0: 1.0
+      Cp: 0.0039
+      A: -12.7743
+      B: 0.00147517
+      C: -2.594112e-08
+      D: 5.954839e-13
+      E: -7.392508e-18
+      F: 4.738719e-23
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -331,7 +333,7 @@ netcdf_variables:
     resolution: '0.01'
   chlorophyll:
     source: TRIDENTE_CHLOROPHYLL
-    long_name: 470 nm wavelength chlorophyll 
+    long_name: 470 nm wavelength chlorophyll
     standard_name: concentration_of_chlorophyll_in_sea_water
     units: mg m-3
     coordinates: time depth latitude longitude
@@ -473,4 +475,5 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: “Suspicious values from the phycocyanin channel. The cause is unknown and under investigation“
+    comment: " Suspicious values from the phycocyanin channel. The cause is unknown\
+      \ and under investigation "

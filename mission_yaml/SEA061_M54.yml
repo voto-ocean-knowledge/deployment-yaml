@@ -31,8 +31,8 @@ metadata:
   comment: Altitude set to 6m for the entire mission duration. Zt/zs set to 2m for
     the entire mission duration. The glider was set to drift at depth for the last
     two days with payload switched off. No science data is available for that period
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician
   creator_email: callum.rollo@voiceoftheocean.org

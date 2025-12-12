@@ -32,8 +32,8 @@ metadata:
     the entire mission duration. Soon after the start of them mission, the oxygen
     sensor acquisition settings were changed to record data every 30s instead of 1s
     between 0 and 1m (i.e while at surface)
-  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur,
-    Marcus Melin
+  contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
+    Melin
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician
   creator_email: callum.rollo@voiceoftheocean.org
