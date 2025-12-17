@@ -28,9 +28,11 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Smilla
   wmo_id: '8901050'
-  comment: ' '
+  comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
+    and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
+    Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
     Manager, Glider Technician
@@ -81,22 +83,22 @@ glider_devices:
     two_point_calibrated: 'Yes'
     calibration_date: '2023-08-26'
     calibration_parameters:
-      d0: -1.738649e-04
-      d1: -2.086047e-01
-      d2: +1.976003e-01
+      d0: -0.0001738649
+      d1: -0.2086047
+      d2: 0.1976003
       d3: 0.0
       d4: 0.0
-      c0: +3.092823e-03
-      c1: +1.329350e-04
-      c2: +2.414648e-06
+      c0: 0.003092823
+      c1: 0.000132935
+      c2: 2.414648e-06
       e0: 1.0
-      Cp: +4.000000e-03
-      A: -1.288162e+01
-      B: +1.467866e-03
-      C: -2.550103e-08 
-      D: +5.835115e-13
+      Cp: 0.004
+      A: -12.88162
+      B: 0.001467866
+      C: -2.550103e-08
+      D: 5.835115e-13
       E: -7.257766e-18
-      F:  +4.697937e-23
+      F: 4.697937e-23
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -476,4 +478,5 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: “Suspicious values from the phycocyanin channel. The cause is unknown and under investigation“
+    comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
+      and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf

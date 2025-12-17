@@ -28,9 +28,13 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Fibbla
   wmo_id: '6801665'
-  comment: ' zt/zs=2 and alt=2 for full mission duration. Went through BY20 at the end of the mission for recovery. A few cycles with turned off Tridente early on the mission.'
+  comment: ' zt/zs=2 and alt=2 for full mission duration. Went through BY20 at the
+    end of the mission for recovery. A few cycles with turned off Tridente early on
+    the mission. Tridente phycocyanin channel values are suspect. The cause is under
+    investigation and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne, Adele Maciute
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
+    Adele Maciute
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
     Manager, Glider Technician
@@ -61,13 +65,13 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2025-06-20'
     calibration_parameters:
-      Chl_C0: -98.69699E-3
+      Chl_C0: -0.09869699
       Chl_C1: 2.15259E6
-      Chl_C2: 103.31017E-3
-      PC_C0: 26.413163E-3
+      Chl_C2: 0.10331017
+      PC_C0: 0.026413163
       PC_C1: 3.2830065E6
       PC_C2: 1.0
-      backscatter_C0: 454.60214E-9
+      backscatter_C0: 4.5460214e-07
       backscatter_C1: 12.154743
   oxygen:
     make: JFE Advantech
@@ -79,8 +83,8 @@ glider_devices:
     calibration_date: '2023-08-26'
     calibration_parameters:
       d0: 6.707286e-05
-      d1: -1.830777e-01
-      d2: +1.964218e-01
+      d1: -0.1830777
+      d2: 0.1964218
       d3: 0.0
       d4: 0.0
       c0: 0.002911369
@@ -473,4 +477,5 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: “Full measurement exhibit a consistent pattern of relatively lower readings to 40 m which is inconsistent with upcast data at the same depths. The cause is under investigation to improve sensor performance. “
+    comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
+      and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf

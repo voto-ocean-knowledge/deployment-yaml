@@ -30,7 +30,9 @@ metadata:
   wmo_id: '6801506'
   comment: ' Glider was recovered, moved and redeployed on 2025-09-05 due to a malfunctioning
     sensor on the replacement glider. Occasionally flew on higher vertical speeds
-    to fight currents. zt/zs=2 and alt=2 for full mission duration.'
+    to fight currents. zt/zs=2 and alt=2 for full mission duration. Tridente phycocyanin
+    channel values are suspect. The cause is under investigation and appears to be
+    due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
@@ -477,5 +479,5 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: " Suspicious values from the phycocyanin channel. The cause is unknown\
-      \ and under investigation "
+    comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
+      and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf

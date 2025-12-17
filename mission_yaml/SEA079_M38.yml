@@ -28,7 +28,8 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Minna
   wmo_id: '8901001'
-  comment: '   '
+  comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
+    and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
     Adele Maciute
@@ -477,5 +478,5 @@ netcdf_variables:
 qc:
   phycocyanin:
     value: 4
-    comment: " Full measurement exhibit generally high values, with a consistent\
-      \ lag between up- and downcast.  "
+    comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
+      and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
