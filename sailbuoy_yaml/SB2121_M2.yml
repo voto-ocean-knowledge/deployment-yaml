@@ -1,0 +1,22 @@
+metadata:
+  platform_serial: SB2121
+  deployment_id: 2
+  start_date: '2025-09-05'
+  end_date: '2025-09-26'
+  comment: Deployed to Skagerak/Kattegat during the SkaMix field campaign
+  project: SkaMix
+devices:
+  autopilot:
+    make_model: Sailbuoy autopilot
+  datalogger:
+    make_model: Sailbuoy datalogger
+  ctd:
+    make_model: RBR legato CTD
+    serial: 207496 
+    calibration_date: '2021-06-22'
+  meteorology:
+    make_model: Gill Instruments GMX560
+    serial: 24080013
+  wave:
+    make_model: Datawell MOSE-G1000
+    serial: '1-11G731'
