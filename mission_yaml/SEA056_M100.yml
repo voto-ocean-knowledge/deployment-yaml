@@ -63,7 +63,7 @@ glider_devices:
     long_name: RBR Tridente
     make_model: RBR Tridente
     factory_calibrated: 'Yes'
-    calibration_date: '2025-06-19'
+    calibration_date: '2025-06-25'
     calibration_parameters:
       Chl_C0: 0.030365441
       Chl_C1: 2.4691522e06
