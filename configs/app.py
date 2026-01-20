@@ -48,7 +48,7 @@ elif dir_path.is_dir():
     else:
         st.write(f"Found all three config files needed by the checker {tuple(essential_files)} 👍")
 
-    sea_files = list(dir_path.glob("SEA*"))
+    sea_files = list(dir_path.glob("SEA*")) + list(dir_path.glob("SHW*"))
     if sea_files:
         st.write(f"It looks like this is the directory of {sea_files[0].name.split('.')[0]}")
     if "config_check.log" in files:

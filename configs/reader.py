@@ -170,14 +170,14 @@ class ConfigReader:
                 self.mission_raw_dir = self.mission_dir
 
         else:
-            if list(self.mission_dir.glob("seapayload_SEA*")):
-                mission_str_raw =  list(self.mission_dir.glob("seapayload_SEA*"))[0].name.split('.')[0].split('_', maxsplit=1)[1]
-            elif list(self.mission_dir.glob("SEA*pdf")):
-                mission_str_raw = list(self.mission_dir.glob("SEA*pdf"))[0].name.split('.')[0]
-            elif list(self.mission_dir.glob("SEA*docx")):
-                mission_str_raw = list(self.mission_dir.glob("SEA*docx"))[0].name.split('.')[0]
-            elif list(self.mission_dir.glob("SEA*_M*.yml")):
-                mission_str_raw = list(self.mission_dir.glob("SEA*_M*.yml"))[0].name.split('.')[0]
+            if list(self.mission_dir.glob("seapayload_S*")):
+                mission_str_raw =  list(self.mission_dir.glob("seapayload_S*"))[0].name.split('.')[0].split('_', maxsplit=1)[1]
+            elif list(self.mission_dir.glob("S*pdf")):
+                mission_str_raw = list(self.mission_dir.glob("S*pdf"))[0].name.split('.')[0]
+            elif list(self.mission_dir.glob("S*docx")):
+                mission_str_raw = list(self.mission_dir.glob("S*docx"))[0].name.split('.')[0]
+            elif list(self.mission_dir.glob("S*_M*.yml")):
+                mission_str_raw = list(self.mission_dir.glob("S*_M*.yml"))[0].name.split('.')[0]
             else:
                 mission_str_raw = ""
         if not mission_str_raw or "XX" in mission_str_raw:
