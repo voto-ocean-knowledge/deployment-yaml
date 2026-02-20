@@ -26,8 +26,8 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: NoName
-  wmo_id: ' '
+  glider_name: Ekman
+  wmo_id: '8901183'
   comment: ' The first mission with the SeaExplorer200 performed by VOTO. Challenging currents and the new platform resulted in many changes of flight profiles a well as testing and using the propelled drifts early and late during the mission. Tridente phycocyanin channel values are suspect. The cause is under
     investigation and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
