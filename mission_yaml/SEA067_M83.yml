@@ -26,10 +26,8 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Ekman
-  wmo_id: '8901183'
-  comment: ' The first mission with the SeaExplorer200 performed by VOTO. Challenging currents and the new platform resulted in many changes of flight profiles a well as testing and using the propelled drifts early and late during the mission. Tridente phycocyanin channel values are suspect. The cause is under
-    investigation and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
+  glider_name: Marviol
+  wmo_id: '6801507'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
     Adele Maciute
@@ -39,81 +37,82 @@ metadata:
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '22'
+  deployment_id: '83'
+  comment: ' Tridente phycocyanin channel values are
+    suspect. The cause is under investigation and appears to be due to bad calibration
+    https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
   deployment_name: SAMBA
   project: SAMBA
-  project_url: https://voiceoftheocean.org/ocean-observatories/
-  summary: ' Part of SAMBA continuous monitoring '
-  platform_serial: SHW002
-  seanav: '3.9.1-r'
-  seapld: '2.25.4-cr'
+  project_url: voiceoftheocean.org/ocean-observatories/
+  summary: Part of SAMBA continuous monitoring
+  platform_serial: SEA067
 glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '238480'
+    serial: '210555'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2025-04-17'
+    calibration_date: '2022-05-16'
   optics:
     make: RBR
     model: Tridente
-    serial: '238737'
+    serial: '238738'
     long_name: RBR Tridente
     make_model: RBR Tridente
     factory_calibrated: 'Yes'
-    calibration_date: '2025-06-25'
+    calibration_date: '2025-06-20'
     calibration_parameters:
-      Chl_C0: 8.486743e-03
-      Chl_C1: 1.6364926e06
-      Chl_C2: 103.31017e-03
-      PC_C0: 29.01513e-03
-      PC_C1: 3.5210688e06
+      Chl_C0: 0.004509943
+      Chl_C1: 2.7024982E6
+      Chl_C2: 0.10331017
+      PC_C0: 0.020063099
+      PC_C1: 3.4030602E6
       PC_C2: 1.0
-      backscatter_C0: -230.14356e-09
-      backscatter_C1: 9.160208
+      backscatter_C0: -4.6384545e-07
+      backscatter_C1: 11.237395
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0128'
+    serial: '0041'
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    calibration_date: '2025-06-10'
+    calibration_date: '2024-02-15'
     calibration_parameters:
-      d0: -2.910485e-04
-      d1: -1.497593e-01
-      d2: 1.881743e-01
+      d0: 0.0001817772
+      d1: -0.1706152
+      d2: 0.1926727
       d3: 0.0
       d4: 0.0
-      c0: +2.896543e-03
-      c1: +1.229512e-04
-      c2: 2.736071e-06
+      c0: 0.002973652
+      c1: 0.0001255534
+      c2: 2.89126e-06
       e0: 1.0
-      Cp: 4.3e-03
-      A: -1.285023e01
-      B: 1.486026e-03
-      C: -2.686413e-08
-      D: 6.342545e-13
-      E: -8.162941e-18
-      F: 5.321793e-23
+      Cp: 0.0039
+      A: -12.7743
+      B: 0.00147517
+      C: -2.594112e-08
+      D: 5.954839e-13
+      E: -7.392508e-18
+      F: 4.738719e-23
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '107326'
+    serial: '103354'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2025-06-17'
+    calibration_date: '2022-01-11'
   irradiance:
     make: Biospherical
     model: MPE-PAR
-    serial: '3199'
+    serial: '2874'
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
     factory_calibrated: 'Yes'
-    calibration_date: '2024-05-02'
+    calibration_date: '2022-08-11'
 netcdf_variables:
   keep_variables:
   - temperature
@@ -353,7 +352,7 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_scatterometer
   phycocyanin:
-    source: TRIDENTE_PHYCOCYANIN
+    source: TRIDENTE_FDOM
     long_name: phycocyanin
     standard_name: phycocyanin
     units: mg m-3
@@ -416,28 +415,28 @@ netcdf_variables:
     long_name: AD2CP recorded time
     standard_name: ad2cp_recorded_time
     coordinates: time depth latitude longitude
-  ad2cp_beam1_cell_number2:
-    source: AD2CP_V1_CN2
-    long_name: glider beam 1 measure from AD2CP in cell 2
-    standard_name: platform_beam1_measure_ad2cp_cell2
+  ad2cp_beam1_cell_number1:
+    source: AD2CP_V1_CN1
+    long_name: glider beam 1 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
     units: m s-1
     coordinates: time depth latitude longitude
-  ad2cp_beam2_cell_number2:
-    source: AD2CP_V2_CN2
-    long_name: glider beam 2 measure from AD2CP in cell 2
-    standard_name: platform_beam1_measure_ad2cp_cell2
+  ad2cp_beam2_cell_number1:
+    source: AD2CP_V2_CN1
+    long_name: glider beam 2 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
     units: m s-1
     coordinates: time depth latitude longitude
-  ad2cp_beam3_cell_number2:
-    source: AD2CP_V3_CN2
-    long_name: glider beam 3 measure from AD2CP in cell 2
-    standard_name: platform_beam1_measure_ad2cp_cell2
+  ad2cp_beam3_cell_number1:
+    source: AD2CP_V3_CN1
+    long_name: glider beam 3 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
     units: m s-1
     coordinates: time depth latitude longitude
-  ad2cp_beam4_cell_number2:
-    source: AD2CP_V4_CN2
-    long_name: glider beam 4 measure from AD2CP in cell 2
-    standard_name: platform_beam1_measure_ad2cp_cell2
+  ad2cp_beam4_cell_number1:
+    source: AD2CP_V4_CN1
+    long_name: glider beam 4 measure from AD2CP in cell 1
+    standard_name: platform_beam1_measure_ad2cp_cell1
     units: m s-1
     coordinates: time depth latitude longitude
   downwelling_PAR:
