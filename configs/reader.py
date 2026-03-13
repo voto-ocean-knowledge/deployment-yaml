@@ -6,6 +6,7 @@ import numpy as np
 import yaml
 import logging
 _log = logging.getLogger(__name__)
+table_log = logging.getLogger(name="table")
 script_dir = Path(__file__).parent.resolve()
 module_dir = Path(__file__).parent.parent.resolve()
 yaml_dir = module_dir / 'yaml_from_cfg'
@@ -197,12 +198,17 @@ class ConfigReader:
                 return True
         f = ContextFilter()
         _log.addFilter(f)
+        table_log.addFilter(f)
 
     def init_local_logger(self):
         ch = logging.FileHandler(f"{str(self.mission_dir / 'config_check.log')}", mode='w')
         ch.setLevel(logging.INFO)
         ch.setFormatter(logging.Formatter(f"%(levelname)-10s %(mission_str)-12s %(message)s"))
         _log.addHandler(ch)
+        ch = logging.FileHandler(f"{str(self.mission_dir / 'table_config_check.log')}", mode='w')
+        ch.setLevel(logging.INFO)
+        ch.setFormatter(logging.Formatter(f"%(levelname)s	%(mission_str)s	%(message)s"))
+        table_log.addHandler(ch)
 
     def read_configs(self):
         if 'docs/1_Operations' in str(self.mission_dir):
@@ -277,10 +283,19 @@ class ConfigReader:
                 continue
             if key not in cfg.keys() and key in previous.keys():
                     _log.warning(f"Removed value for {key}. Previous mission  (M{prev}). {key} = {previous[key]} in previous mission")
+                    table_log.warning(f"removed\t{key}\tNone\t{previous[key]}")
                     continue
             if key in cfg.keys():
+                value = cfg[key]
+                if 'channel' in str(value) and type(value) is dict:
+                    for sub_key, sub_var in value.items():
+                        if 'channel' not in sub_key:
+                            continue
+                        if sub_var.lower() != sub_var:
+                            _log.error(f"Channel value {key}:{sub_key}:{sub_var} is not lowercase")
                 if key not in previous.keys():
                     _log.warning(f"New value {key} = {cfg[key]}. {key} not present in previous mission (M{prev})")
+                    table_log.warning(f"new\t{key}\t{cfg[key]}\tNone")
                     continue
 
                 if type(cfg[key]) is dict:
@@ -290,9 +305,11 @@ class ConfigReader:
                         if previous[key][sub_key] != sub_var:
                             _log.warning(
                                 f"Changed value {key}: {sub_key} = {sub_var}. Previous mission (M{prev}) {key}: {sub_key}  = {previous[key][sub_key]}")
+                            table_log.warning(f"change\t{key}: {sub_key}\t{sub_var}\t{previous[key][sub_key]}")
                     continue
                 if previous[key] != cfg[key]:
                     _log.warning(f"Changed value {key} = {cfg[key]}. Previous mission (M{prev}) {key} = {previous[key]}")
+                    table_log.warning(f"change\t{key}\t{cfg[key]}\t{previous[key]}")
 
     def compare_pyglider_yaml(self):
         pyglider_yaml = module_dir / "mission_yaml" / self.yaml_path.name
@@ -310,10 +327,13 @@ class ConfigReader:
             for cal_key, cal_val in val.items():
                 if cal_val != devices[key][cal_key]:
                     msg = f"Missmatch calibration value {key}: {cal_key}: {cal_val}. Expected {devices[key][cal_key]} from pyglider yaml"
+                    table_msg = f"missmatch\tcalibration value {key}: {cal_key}\t{cal_val}\t{devices[key][cal_key]}"
                     if cal_key=='calibration_date':
                         _log.warning(msg)
+                        table_log.warning(table_msg)
                     else:
                         _log.error(msg)
+                        table_log.error(table_msg)
         return
 
     def write_configs(self):
@@ -419,7 +439,7 @@ def run_all():
 
 def run_local():
     for file_dir in [#"/mnt/docs/1_Operations/Missions/23_Phycoglider_2/SEA077_PLD094/SEA077_M44",
-                     "/mnt/docs/1_Operations/Missions/07_SAMBA_05/02_SAMBA_05_002/SEA076_PLD093/202508DD_M41",
+                     "/mnt/docs/1_Operations/Missions/03_SAMBA_02/07_SAMBA_02_007/SEA056_PLD073/202603DD_M103",
                     #"/mnt/docs/1_Operations/Missions/03_SAMBA_02/06_SAMBA_02_006/SEA067_PLD091/20250804_M78",
     ]:
         conf = ConfigReader(file_dir)
@@ -449,6 +469,10 @@ def run_checker_on_dir(file_dir):
     for handler in handlers:
         _log.removeHandler(handler)
         handler.close()
+    handlers = table_log.handlers[:]
+    for handler in handlers:
+        table_log.removeHandler(handler)
+        handler.close()
 
     return True
 
@@ -476,4 +500,4 @@ if __name__ == '__main__':
                 logging.StreamHandler()
             ]
         )
-        run_all()
+        run_local()
