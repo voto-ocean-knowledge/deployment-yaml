@@ -286,6 +286,13 @@ class ConfigReader:
                     table_log.warning(f"removed\t{key}\tNone\t{previous[key]}")
                     continue
             if key in cfg.keys():
+                value = cfg[key]
+                if 'channel' in str(value) and type(value) is dict:
+                    for sub_key, sub_var in value.items():
+                        if 'channel' not in sub_key:
+                            continue
+                        if sub_var.lower() != sub_var:
+                            _log.error(f"Channel value {key}:{sub_key}:{sub_var} is not lowercase")
                 if key not in previous.keys():
                     _log.warning(f"New value {key} = {cfg[key]}. {key} not present in previous mission (M{prev})")
                     table_log.warning(f"new\t{key}\t{cfg[key]}\tNone")
@@ -432,7 +439,7 @@ def run_all():
 
 def run_local():
     for file_dir in [#"/mnt/docs/1_Operations/Missions/23_Phycoglider_2/SEA077_PLD094/SEA077_M44",
-                     "/mnt/docs/1_Operations/Missions/07_SAMBA_05/02_SAMBA_05_002/SEA076_PLD093/202508DD_M41",
+                     "/mnt/docs/1_Operations/Missions/03_SAMBA_02/07_SAMBA_02_007/SEA056_PLD073/202603DD_M103",
                     #"/mnt/docs/1_Operations/Missions/03_SAMBA_02/06_SAMBA_02_006/SEA067_PLD091/20250804_M78",
     ]:
         conf = ConfigReader(file_dir)
@@ -493,4 +500,4 @@ if __name__ == '__main__':
                 logging.StreamHandler()
             ]
         )
-        run_all()
+        run_local()
