@@ -1,5 +1,6 @@
 from pathlib import Path
 import streamlit as st
+import pandas as pd
 from reader import run_checker_on_dir
 st.set_page_config(page_title='Config Checker', page_icon = "🔥",)# layout = 'wide')
 st.title("Config Checker for SeaExplorer")
@@ -70,13 +71,32 @@ if runnable:
         result = run_checker_on_dir(dir_path)
         if result:
             st.badge("Success 🥳", icon=":material/check:", color="green")
-            st.subheader("Checker output (also in file `config_checker.log`):")
+            st.header("Checker output")
+            st.markdown("also in file `config_checker.log`")
             with open(dir_path / "config_check.log", 'r') as fin:
                 for line in fin.readlines():
                     first_word = line.split(' ')[0]
                     if first_word in fmt_colors.keys():
                         line = f":{fmt_colors[first_word]}[{line}]"
                     st.write(line)
+            table_log = dir_path / "table_config_check.log"
+            if table_log.exists():
+                st.header("Comparison tables")
+                st.markdown("Contains some of the information from the logs in nice tables for comparison. **protip:** double click a table cell to expand it")
+                df_all = pd.read_csv(table_log, sep='\t',
+                                 names=['level', 'mission', 'kind', 'parameter', 'current', 'previous'])
+                df_pyglider = df_all[df_all['kind'] == 'missmatch']
+                df =  df_all[df_all['kind'] != 'missmatch']
+                subset = ['level','parameter', 'current', 'previous']
+                for level in ['ERROR', 'WARNING', 'INFO']:
+                    if level not in df.level.values:
+                        continue
+                    st.subheader(level.title())
+                    st.dataframe(df[df.level==level][subset], hide_index=True)
+                if not df_pyglider.empty:
+                    df_pyglider = df_pyglider.rename({'current': 'config file', 'previous': 'YAML file'}, axis=1)
+                    st.subheader("YAML file comparison")
+                    st.dataframe(df_pyglider, hide_index=True)
         else:
             st.subheader(":red[Script Failed! 😭 contact Callum]")
 
