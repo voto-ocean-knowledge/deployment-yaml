@@ -6,7 +6,7 @@ with open(Path("/home/callum/Documents/community/ocean-gliders-format-vocabulari
 
 sensor_model_conversion = {
     'Nortek AD2CP': 'Nortek Glider1000 AD2CP Acoustic Doppler Current Profiler',
-    'Biospherical MPE-PAR': 'Biospherical Instruments PAR sensor (unspecified model)',
+    'Biospherical MPE-PAR': 'Biospherical Instruments MPE underwater PAR sensor',
     'Franatech METS': 'Franatech METS Methane Sensor',
     'JFE Advantech AROD_FT': 'JFE Advantech Rinko FT ARO-FT oxygen sensor',
     'RBR coda TODO': 'RBR Coda T.ODO Temperature and Dissolved Oxygen Sensor',
@@ -91,11 +91,16 @@ sensor_variables = {
         'BBP700': 'FLBBPC_BB_700_SCALED',
         'RBBP700': 'FLBBPC_BB_700_COUNT',
     },
+    'Wetlabs FLBBPC no raw': {
+        'CHLA': 'FLBBPC_CHL_SCALED',
+        'PHYCOCYANIN': 'FLBBPC_PC_SCALED',
+        'BBP700': 'FLBBPC_BB_700_SCALED',
+    },
     'Wetlabs FLBBPE': {
         'CHLA': 'FLBBPE_CHL_SCALED',
         'FLUOCHLA': 'FLBBPE_CHL_COUNT',
-        'PHYC': 'FLBBPC_PE_SCALED',
-        'FLUOPHYC': 'FLBBPC_PE_COUNT',
+        'PHYC': 'FLBBPE_PE_SCALED',
+        'FLUOPHYC': 'FLBBPE_PE_COUNT',
         'BBP700': 'FLBBPE_BB_700_SCALED',
         'RBBP700': 'FLBBPE_BB_700_COUNT',
     },
@@ -127,20 +132,30 @@ sensor_variables = {
         'ED532': 'OCR504_Ed3',
         'DPAR': 'OCR504_Ed4',
     },
+    'RBR Tridente LEGATO': {
+        'CHLA': 'LEGATO_TRIDENTE_CHLOROPHYLL',
+        'BBP700': 'LEGATO_TRIDENTE_BACKSCATTER',
+        'PHYCOCYANIN': 'LEGATO_TRIDENTE_PHYCOCYANIN',
+    },
     'RBR Tridente LEGATO_TRIDENTE_PHYCOCYANIN': {
         'CHLA': 'TRIDENTE_CHLOROPHYLL',
         'BBP700': 'TRIDENTE_BACKSCATTER',
         'PHYCOCYANIN': 'LEGATO_TRIDENTE_PHYCOCYANIN',
     },
-    'RBR Tridente TRIDENTE_FDOM': {
+    'RBR Tridente TRIDENTE_PHYCOCYANIN_FDOM': {
         'CHLA': 'TRIDENTE_CHLOROPHYLL',
         'BBP700': 'TRIDENTE_BACKSCATTER',
         'PHYCOCYANIN': 'TRIDENTE_FDOM',
     },
+    'RBR Tridente TRIDENTE_FDOM': {
+        'CHLA': 'TRIDENTE_CHLOROPHYLL',
+        'BBP700': 'TRIDENTE_BACKSCATTER',
+        'FDOM': 'TRIDENTE_FDOM',
+    },
 
 }
 
-def add_variables(devices):
+def add_variables(devices, original_vars):
     variables = {}
     variables['timebase'] = {'source': 'NAV_LATITUDE'}
     keep_vars = []
@@ -151,6 +166,18 @@ def add_variables(devices):
         if device_name not in sensor_variables.keys():
             print("oh no", device_name)
             continue
+        if "tridente" in device_name.lower():
+            if ('chlorophyll', 'LEGATO_TRIDENTE_CHLOROPHYLL') in original_vars.items():
+                device_name = 'RBR Tridente LEGATO'
+            elif ('phycocyanin', 'LEGATO_TRIDENTE_PHYCOCYANIN') in original_vars.items():
+                device_name = 'RBR Tridente LEGATO_TRIDENTE_PHYCOCYANIN'
+            elif ('fdom', 'TRIDENTE_FDOM') in original_vars.items():
+                device_name = 'RBR Tridente TRIDENTE_PHYCOCYANIN_FDOM'
+            elif ('phycocyanin', 'TRIDENTE_FDOM') in original_vars.items():
+                device_name = 'RBR Tridente TRIDENTE_PHYCOCYANIN_FDOM'
+        if 'flbbpc' in device_name.lower():
+            if 'FLBBPC_CHL_COUNT' not in original_vars.values():
+                device_name = 'Wetlabs FLBBPC no raw'
         device_variables = sensor_variables[device_name]
         for var_name, source in device_variables.items():
             variable_dict = og1_variables[var_name]
@@ -194,7 +221,8 @@ def convert_to_og1(yaml_path):
     out['glider_devices'] = og1_devices
 
     # determine variables to add and add them
-    variables = add_variables(original_devices)
+    original_variables = mission_meta['variables']
+    variables = add_variables(original_devices, original_variables)
     out['netcdf_variables'] = variables
 
     # add pilot QC if present
@@ -220,5 +248,5 @@ def convert_all_yaml():
         convert_to_og1(yml)
 
 if __name__ == '__main__':
+    convert_to_og1(Path('mission_yaml/SEA066_M60.yml'))
     convert_all_yaml()
-    convert_to_og1(Path('mission_yaml/SEA045_M79.yml'))
