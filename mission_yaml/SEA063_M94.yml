@@ -28,13 +28,8 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Ljung
   wmo_id: '6801707'
-  comment: ' The mission is part of the inTail project with testing the new oxygen
-    sensor. zt/zs=2 and alt=4-8 for full mission duration for the sake of the InTail
-    sensor. During this mission the glider is flown over a bottom mounted ADCP for
-    intercomparison to the onboard AD2CP. Faster vertical speeds and steeper pitches
-    are used for these tests. Oxygen concentration is showing unrealistically high
-    values around 80 m. See qc. Sub sampling towards the end of the mission as well
-    as a period with payload off to save battery to account for logistics. Tridente
+  comment: ' The mission is part of the InTail project with testing the new oxygen
+    sensor. Tridente
     phycocyanin channel values are suspect. The cause is under investigation and appears
     to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
@@ -45,7 +40,7 @@ metadata:
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '90'
+  deployment_id: '94'
   deployment_name: InTail
   project: InTail
   project_url: https://voiceoftheocean.org/ocean-observatories/
@@ -65,46 +60,46 @@ glider_devices:
   optics:
     make: RBR
     model: Tridente
-    serial: '238733'
+    serial: '238737'
     long_name: RBR Tridente
     make_model: RBR Tridente
     factory_calibrated: 'Yes'
-    calibration_date: '2025-06-19'
+    calibration_date: '2025-06-25'
     calibration_parameters:
-      Chl_C0: 0.013258136
-      Chl_C1: 2.2709605e06
-      Chl_C2: 0.10331017
-      PC_C0: -0.3331373
-      PC_C1: 2.998615e06
+      Chl_C0: 8.486743e-03
+      Chl_C1: 1.6364926e06
+      Chl_C2: 103.31017e-03
+      PC_C0: 29.01513e-03
+      PC_C1: 3.5210688e06
       PC_C2: 1.0
-      backscatter_C0: 2.4428843e-07
-      backscatter_C1: 12.442607
+      backscatter_C0: -230.14356e-09
+      backscatter_C1: 9.160208
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: 0095
+    serial: 0039
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     two_point_calibrated: 'Yes'
-    calibration_date: '2024-01-13'
+    calibration_date: '2024-06-06'
     calibration_parameters:
-      d0: 0.0002122214
-      d1: -0.2307901
-      d2: 0.2127514
+      d0:  +8.006861e-05
+      d1: -1.708346e-01
+      d2: +1.942610e-01
       d3: 0.0
       d4: 0.0
-      c0: 0.002955601
-      c1: 0.0001240437
-      c2: 2.690884e-06
+      c0: +2.910576e-03
+      c1: +1.247150e-04
+      c2: +2.715957e-06
       e0: 1.0
-      Cp: 3.7
-      A: -12.75913
-      B: 0.001480854
-      C: -2.638831e-08
-      D: 6.137363e-13
-      E: -0.7744244
-      F: 4.990697e-23
+      Cp: 3.8e-03
+      A: -1.285995e+01
+      B: +1.482147e-03
+      C: -2.664719e-08
+      D: +6.256232e-13
+      E: -7.984048e-18
+      F: +5.175089e-23
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -486,6 +481,3 @@ qc:
     value: 4
     comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
       and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
-  oxygen_concentration:
-    value: 4
-    comment: ' Unreal higher values around 80 m depth.  '

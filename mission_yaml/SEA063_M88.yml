@@ -92,11 +92,11 @@ glider_devices:
   irradiance:
     make: Biospherical
     model: MPE-PAR
-    serial: '3200'
+    serial: '2983'
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
     factory_calibrated: 'Yes'
-    calibration_date: '2024-05-02'
+    calibration_date: '2023-02-21'
 netcdf_variables:
   keep_variables:
   - temperature
