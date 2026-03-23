@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Smilla
   wmo_id: '8901050'
-  comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
+  comment: This mission was recovered early due to logistical reasons connected to frozen harbours. Tridente phycocyanin channel values are suspect. The cause is under investigation
     and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,

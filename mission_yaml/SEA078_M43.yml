@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Vresros
   wmo_id: '8901000'
-  comment: Occasionally flying on a safe zb=200 m due to failing bottom tracking on c.170, 171, 176, 200, 322 and 459. Tridente phycocyanin channel values are suspect. The cause is under investigation
+  comment: This mission was terminated early due to emergency circumstances. Tridente phycocyanin channel values are suspect. The cause is under investigation
     and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
@@ -39,7 +39,7 @@ metadata:
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '42'
+  deployment_id: '43'
   deployment_name: SAMBA
   project: SAMBA
   project_url: voiceoftheocean.org/ocean-observatories/
