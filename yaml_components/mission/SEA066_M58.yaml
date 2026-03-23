@@ -20,7 +20,7 @@ platform_devices:
       Chl_SF: 0.0121
       SIG_DarkCounts: 46
       SIG_SF: 3.145e-06
-    make_model: Wetlabs FLBBPC
+    make_model: Wetlabs FLBBCD
     sensor_calibration_date: '2022-05-10'
     sensor_serial_number: '7564'
   oxygen:
