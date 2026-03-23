@@ -16,8 +16,8 @@ platform_devices:
     sensor_serial_number: '206612'
   irradiance:
     make_model: Biospherical MPE-PAR
-    sensor_calibration_date: '2024-05-02'
-    sensor_serial_number: '3200'
+    sensor_calibration_date: '2023-02-21'
+    sensor_serial_number: '2983'
   oxygen:
     calibration_parameters:
       A: -12.82154

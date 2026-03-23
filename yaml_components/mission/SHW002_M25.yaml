@@ -1,9 +1,7 @@
 metadata:
-  comment: The first mission with the SeaExplorer200 performed by VOTO. Challenging
-    currents and the new platform resulted in many changes of flight profiles a well
-    as testing and using the propelled drifts early and late during the mission. Tridente
-    phycocyanin channel values are suspect. The cause is under investigation and appears
-    to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
+  comment: Two channels, Backscatter and chlorophyll, are available from Tridente
+    on this mission. Deployed in Arkona Basin to measure a potential north sea water
+    inflow into the Baltic Sea.
   project: SAMBA
 platform_devices:
   AD2CP:
@@ -20,17 +18,14 @@ platform_devices:
     sensor_serial_number: '3199'
   optics:
     calibration_parameters:
-      Chl_C0: 0.008486743
-      Chl_C1: 1.6364926e06
+      Chl_C0: 0.023341889
+      Chl_C1: 2.262095e06
       Chl_C2: 0.10331017
-      PC_C0: 0.02901513
-      PC_C1: 3.5210688e06
-      PC_C2: 1.0
-      backscatter_C0: -2.3014356e-07
-      backscatter_C1: 9.160208
+      backscatter_C0: 1.5123581e-05
+      backscatter_C1: 7.7753944
     make_model: RBR Tridente
-    sensor_calibration_date: '2025-06-25'
-    sensor_serial_number: '238737'
+    sensor_calibration_date: '2024-06-05'
+    sensor_serial_number: '235280'
   oxygen:
     calibration_parameters:
       A: -1.285023e01
@@ -52,16 +47,11 @@ platform_devices:
     make_model: JFE Advantech AROD_FT
     sensor_calibration_date: '2025-06-10'
     sensor_serial_number: 0128
-qc:
-  phycocyanin:
-    comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
-      and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
-    value: 4
 variables:
-  ad2cp_beam1_cell_number2: AD2CP_V1_CN2
-  ad2cp_beam2_cell_number2: AD2CP_V2_CN2
-  ad2cp_beam3_cell_number2: AD2CP_V3_CN2
-  ad2cp_beam4_cell_number2: AD2CP_V4_CN2
+  ad2cp_beam1_cell_number1: AD2CP_V1_CN1
+  ad2cp_beam2_cell_number1: AD2CP_V2_CN1
+  ad2cp_beam3_cell_number1: AD2CP_V3_CN1
+  ad2cp_beam4_cell_number1: AD2CP_V4_CN1
   ad2cp_heading: AD2CP_HEADING
   ad2cp_pitch: AD2CP_PITCH
   ad2cp_pressure: AD2CP_PRESSURE
@@ -93,7 +83,6 @@ variables:
   oxygen_ad_counts: AROD_FT_DO_AN
   oxygen_concentration: AROD_FT_DO
   oxygen_led_counts: AROD_FT_LED
-  phycocyanin: TRIDENTE_PHYCOCYANIN
   pitch: Pitch
   pressure: LEGATO_PRESSURE
   roll: Roll

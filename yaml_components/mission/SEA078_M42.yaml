@@ -1,7 +1,7 @@
 metadata:
-  comment: Occasionally flying on a safe zb=200 m due to failing bottom tracking.
-    Tridente phycocyanin channel values are suspect. The cause is under investigation
-    and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
+  comment: Occasionally flying on a safe zb=200 m due to failing bottom tracking on
+    c.170, 171, 176, 200, 322 and 459. Tridente phycocyanin channel values are suspect.
+    The cause is under investigation and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
   project: SAMBA
 platform_devices:
   AD2CP:
@@ -27,7 +27,7 @@ platform_devices:
       backscatter_C0: 2.320667e-07
       backscatter_C1: 16.842283
     make_model: RBR Tridente
-    sensor_calibration_date: '2025-06-19'
+    sensor_calibration_date: '2025-05-27'
     sensor_serial_number: '238736'
   oxygen:
     calibration_parameters:

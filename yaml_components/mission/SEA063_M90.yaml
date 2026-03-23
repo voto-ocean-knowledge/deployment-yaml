@@ -21,7 +21,7 @@ platform_devices:
   irradiance:
     make_model: Biospherical MPE-PAR
     sensor_calibration_date: '2023-02-21'
-    sensor_serial_number: '3200'
+    sensor_serial_number: '2983'
   optics:
     calibration_parameters:
       Chl_C0: 0.013258136
