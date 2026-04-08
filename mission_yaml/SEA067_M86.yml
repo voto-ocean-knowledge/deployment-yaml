@@ -46,8 +46,8 @@ metadata:
   project_url: voiceoftheocean.org/ocean-observatories/
   summary: Part of SAMBA continuous monitoring
   platform_serial: SEA067
-  seanav: '3.9.4-r'
-  seapld: '2.26.0-r'
+  seanav: 3.9.4-r
+  seapld: 2.26.0-r
 glider_devices:
   ctd:
     make: RBR
@@ -354,7 +354,7 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_scatterometer
   phycocyanin:
-    source: TRIDENTE_FDOM
+    source: TRIDENTE_PHYCOCYANIN
     long_name: phycocyanin
     standard_name: phycocyanin
     units: mg m-3
