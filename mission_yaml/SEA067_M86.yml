@@ -354,7 +354,7 @@ netcdf_variables:
     coordinates: time depth latitude longitude
     instrument: instrument_scatterometer
   phycocyanin:
-    source: TRIDENTE_FDOM
+    source: TRIDENTE_PHYCOCYANIN
     long_name: phycocyanin
     standard_name: phycocyanin
     units: mg m-3
