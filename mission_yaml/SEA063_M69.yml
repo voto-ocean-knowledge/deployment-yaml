@@ -87,6 +87,7 @@ glider_devices:
     make: Biospherical
     model: MPE-PAR
     serial: '2983'
+    tailward_mounting_angle_relative_to_platform_z_axis_degrees: 17.71
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
     factory_calibrated: 'Yes'
