@@ -32,9 +32,10 @@ metadata:
     higher values in the deep section of the transect. Zt/zs set to 2m for the entire
     mission duration
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Chiara Monforte
+    Melin, Gunnar Johnsson, Andrew Birkett, Chiara Monforte, Martin Mohrmann
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
-    Technician, Glider Technician, Glider Technician, Glider Pilot
+    Technician, Glider Technician, Glider Technician, Glider Pilot, Scientific Data
+    Analyst
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
