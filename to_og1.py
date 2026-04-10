@@ -126,6 +126,10 @@ sensor_variables = {
         'BBP700': 'TRIDENTE_BACKSCATTER',
         'PHYCOCYANIN': 'TRIDENTE_PHYCOCYANIN',
     },
+    'RBR Tridente two channel': {
+        'CHLA': 'TRIDENTE_CHLOROPHYLL',
+        'BBP700': 'TRIDENTE_BACKSCATTER',
+    },
     'SeaBird OCR504': {
         'ED380': 'OCR504_Ed1',
         'ED490': 'OCR504_Ed2',
@@ -175,6 +179,8 @@ def add_variables(devices, original_vars):
                 device_name = 'RBR Tridente TRIDENTE_PHYCOCYANIN_FDOM'
             elif ('phycocyanin', 'TRIDENTE_FDOM') in original_vars.items():
                 device_name = 'RBR Tridente TRIDENTE_PHYCOCYANIN_FDOM'
+            elif 'phycocyanin' not in original_vars.keys() and 'fdom' not in original_vars.keys():
+                device_name = 'RBR Tridente two channel'
         if 'flbbpc' in device_name.lower():
             if 'FLBBPC_CHL_COUNT' not in original_vars.values():
                 device_name = 'Wetlabs FLBBPC no raw'
