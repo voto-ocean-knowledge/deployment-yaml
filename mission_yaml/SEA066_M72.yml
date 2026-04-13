@@ -26,88 +26,90 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Fibbla
-  wmo_id: '6801665'
-  comment: Glider sampled through BY20 during transit to recovery point. Tridente phycocyanin channel values are suspect. The cause is under investigation
-    and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
+  glider_name: Saltarv
+  wmo_id: '6801505'
+  comment: ' Tridente phycocyanin channel values are suspect. The cause is under
+    investigation and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
-    Adele Maciute, Aaron Mau, Martin Mohrmann
+    Martin Mohrmann
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
-    Manager, Glider Technician, Data Analyst, Scientific Data Analyst
+    Manager, Scientific Data Analyst
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '44'
+  deployment_id: '72'
   deployment_name: SAMBA
   project: SAMBA
-  project_url: https://voiceoftheocean.org/ocean-observatories/
+  project_url: voiceoftheocean.org/ocean-observatories/
   summary: ' Part of SAMBA continuous monitoring'
-  platform_serial: SEA076
+  platform_serial: SEA066
+  seapld: 2.25.2 -r
+  seanav: 3.8.2 -r
 glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '205046'
+    serial: '206610'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2023-09-05'
+    calibration_date: '2021-03-01'
   optics:
     make: RBR
     model: Tridente
-    serial: '238743'
+    serial: '238742'
     long_name: RBR Tridente
     make_model: RBR Tridente
     factory_calibrated: 'Yes'
-    calibration_date: '2025-06-20'
+    calibration_date: '2025-06-19'
     calibration_parameters:
-      Chl_C0: -0.09869699
-      Chl_C1: 2.15259E6
-      Chl_C2: 0.10331017
-      PC_C0: 0.026413163
-      PC_C1: 3.2830065E6
+      Chl_C0: -15.267585e-03
+      Chl_C1: 1.7750864e06
+      Chl_C2: 103.31017e-03
+      PC_C0: -272.6416e-03
+      PC_C1: 2.7452715e06
       PC_C2: 1.0
-      backscatter_C0: 4.5460214e-07
-      backscatter_C1: 12.154743
+      backscatter_C0: 377.33747e-09
+      backscatter_C1: 14.131917
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0070'
+    serial: '0040'
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    calibration_date: '2023-08-26'
+    calibration_date: '2025-12-09'
     calibration_parameters:
-      d0: 6.707286e-05
-      d1: -0.1830777
-      d2: 0.1964218
+      d0: 7.365514e-04
+      d1: 1.563020e-01
+      d2: 1.916604e-01
       d3: 0.0
       d4: 0.0
-      c0: 0.002911369
-      c1: 0.0001243058
-      c2: 2.561515e-06
+      c0: 2.939792e-03
+      c1: 1.235029e-04
+      c2: 2.489407e-06
       e0: 1.0
-      Cp: 0.004
-      A: -12.9157
-      B: 0.001475098
-      C: -2.62001e-08
-      D: 6.117645e-13
-      E: -7.783219e-18
-      F: 5.064287e-23
+      Cp: 4.200000е-03
+      A: -1.280008e+01
+      B: 1.470423e-03
+      C: -2.563077e-08
+      D: 5.850023e-13
+      E: -7.219255e-18
+      F: 4.627835e-23
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '104648'
+    serial: '105526'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2023-08-16'
+    calibration_date: '2023-09-04'
   irradiance:
     make: Biospherical
     model: MPE-PAR
-    serial: '3197'
+    serial: '3198'
     tailward_mounting_angle_relative_to_platform_z_axis_degrees: 17.71
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
