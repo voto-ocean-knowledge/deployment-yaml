@@ -1,5 +1,6 @@
 import yaml
 from pathlib import Path
+import extract_old_pyglider_yaml_metadata
 
 with open(Path("/home/callum/Documents/community/ocean-gliders-format-vocabularies/yaml/validated_yaml/og1_sensors.yaml")) as fin:
     sensors = yaml.safe_load(fin)
@@ -254,5 +255,6 @@ def convert_all_yaml():
         convert_to_og1(yml)
 
 if __name__ == '__main__':
+    extract_old_pyglider_yaml_metadata.main()
     convert_to_og1(Path('mission_yaml/SEA066_M60.yml'))
     convert_all_yaml()

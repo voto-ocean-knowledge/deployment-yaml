@@ -1,6 +1,7 @@
 metadata:
-  comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
-    and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
+  comment: Glider sampled through BY20 during transit to recovery point. Tridente
+    phycocyanin channel values are suspect. The cause is under investigation and appears
+    to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
   project: SAMBA
 platform_devices:
   AD2CP:
