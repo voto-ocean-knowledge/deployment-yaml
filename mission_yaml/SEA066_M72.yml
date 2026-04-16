@@ -26,84 +26,102 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Trift
-  wmo_id: '6801675'
-  comment: 'Max diving depth set to 57m to avoid sampling in anoxic waters as it damages
-    the methane sensor. Zt/zs set to 2m for the entire mission duration and altitude
-    set to 5m but the glider was flying well above the seabed due to the shallow max
-    diving depth (zb). The optical sensor (FLNTU) was set to record data on downcast
-    and inflecting points only and at C17 those settings were changed such that the
-    sensor collects data only on downcast '
+  glider_name: Saltarv
+  wmo_id: '6801505'
+  comment: ' Tridente phycocyanin channel values are suspect. The cause is under
+    investigation and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Chiara Monforte, Martin Mohrmann
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
+    Martin Mohrmann
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
-    Technician, Glider Technician, Glider Pilot, Scientific Data Analyst
+    Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
+    Manager, Scientific Data Analyst
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '57'
-  deployment_name: NS_Bornholm
-  project: NS_Bornholm
-  project_url: https://voiceoftheocean.org/
-  summary: ' Part of NS_Bornholm continuous monitoring'
-  platform_serial: SEA056
+  deployment_id: '72'
+  deployment_name: SAMBA
+  project: SAMBA
+  project_url: voiceoftheocean.org/ocean-observatories/
+  summary: ' Part of SAMBA continuous monitoring'
+  platform_serial: SEA066
+  seapld: 2.25.2 -r
+  seanav: 3.8.2 -r
 glider_devices:
-  altimeter:
-    make: UNKNOWN
-    model: UNKNOWN
-    serial: '37'
   ctd:
     make: RBR
     model: legato
-    serial: '205046'
+    serial: '206610'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2020-07-21'
+    calibration_date: '2021-03-01'
   optics:
-    make: Wetlabs
-    model: FLNTU
-    serial: '6134'
-    long_name: Wetlabs ECO Puck FLNTU
-    make_model: Wetlabs FLNTU
+    make: RBR
+    model: Tridente
+    serial: '238742'
+    long_name: RBR Tridente
+    make_model: RBR Tridente
     factory_calibrated: 'Yes'
-    calibration_date: '2020-02-06'
+    calibration_date: '2025-06-19'
     calibration_parameters:
-      Chl_DarkCounts: 48
-      Chl_SF: 0.0121
-      NTU_DarkCounts: 49
-      NTU_SF: 0.0061
+      Chl_C0: -15.267585e-03
+      Chl_C1: 1.7750864e06
+      Chl_C2: 103.31017e-03
+      PC_C0: -272.6416e-03
+      PC_C1: 2.7452715e06
+      PC_C2: 1.0
+      backscatter_C0: 377.33747e-09
+      backscatter_C1: 14.131917
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0050'
+    serial: '0040'
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    calibration_date: '2022-03-19'
-  methane:
-    make: Franatech
-    model: METS
-    serial: '2117'
-    long_name: Franatech METS
-    make_model: Franatech METS
-    factory_calibrated: 'Yes'
-    calibration_date: '2022-07-01'
+    calibration_date: '2025-12-09'
+    calibration_parameters:
+      d0: 7.365514e-04
+      d1: 1.563020e-01
+      d2: 1.916604e-01
+      d3: 0.0
+      d4: 0.0
+      c0: 2.939792e-03
+      c1: 1.235029e-04
+      c2: 2.489407e-06
+      e0: 1.0
+      Cp: 4.200000е-03
+      A: -1.280008e+01
+      B: 1.470423e-03
+      C: -2.563077e-08
+      D: 5.850023e-13
+      E: -7.219255e-18
+      F: 4.627835e-23
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '103355'
+    serial: '105526'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2022-03-17'
+    calibration_date: '2023-09-04'
+  irradiance:
+    make: Biospherical
+    model: MPE-PAR
+    serial: '3198'
+    tailward_mounting_angle_relative_to_platform_z_axis_degrees: 17.71
+    long_name: Biospherical MPE-PAR
+    make_model: Biospherical MPE-PAR
+    factory_calibrated: 'Yes'
+    calibration_date: '2024-05-02'
 netcdf_variables:
   keep_variables:
   - temperature
   - oxygen_concentration
   - chlorophyll
   - ad2cp_heading
-  - methane_concentration
+  - downwelling_PAR
   timebase:
     source: NAV_LATITUDE
   time:
@@ -317,8 +335,8 @@ netcdf_variables:
     accuracy: '0.02'
     resolution: '0.01'
   chlorophyll:
-    source: FLNTU_CHL_SCALED
-    long_name: chlorophyll
+    source: TRIDENTE_CHLOROPHYLL
+    long_name: 470 nm wavelength chlorophyll
     standard_name: concentration_of_chlorophyll_in_sea_water
     units: mg m-3
     coordinates: time depth latitude longitude
@@ -326,30 +344,22 @@ netcdf_variables:
     valid_min: '0.'
     valid_max: '50.'
     observation_type: calculated
-    sensitivity: '0.025'
-  chlorophyll_raw:
-    source: FLNTU_CHL_COUNT
-    long_name: raw chlorophyll
-    standard_name: raw_chlorophyll_in_sea_water
-    units: counts
-    coordinates: time depth latitude longitude
-    instrument: instrument_flourometer
-  turbidity:
-    source: FLNTU_NTU_SCALED
-    long_name: turbidity
-    standard_name: turbidity_in_sea_water
-    units: NTU
-    coordinates: time depth latitude longitude
-    instrument: instrument_turbidity_meter
+  backscatter:
+    source: TRIDENTE_BACKSCATTER
+    long_name: 700 nm wavelength backscatter
+    standard_name: 700_nm_wavelength_backscatter_in_sea_water
+    units: m-1 sr-1
     valid_min: '0.'
-    valid_max: '25.'
-    observation_type: calculated
-    sensitivity: '0.01'
-  turbidity_raw:
-    source: FLNTU_NTU_COUNT
-    long_name: raw turbidity
-    standard_name: raw_turbidity_in_sea_water
-    units: counts
+    valid_max: '0.05'
+    coordinates: time depth latitude longitude
+    instrument: instrument_scatterometer
+  phycocyanin:
+    source: TRIDENTE_FDOM
+    long_name: phycocyanin
+    standard_name: phycocyanin
+    units: mg m-3
+    valid_min: '0.'
+    valid_max: '500.'
     coordinates: time depth latitude longitude
     instrument: instrument_flourometer
   oxygen_concentration:
@@ -378,54 +388,6 @@ netcdf_variables:
     observation_type: measured
     accuracy: '0.01'
     resolution: '0.001'
-  methane_raw_concentration:
-    source: METS_METHANE_VOLT
-    long_name: methane raw concentration
-    standard_name: methane_raw_concentration
-    units: V
-    coordinates: time depth latitude longitude
-    instrument: Nan
-    valid_min: Nan
-    valid_max: Nan
-    observation_type: calculated
-    accuracy: Nan
-    resolution: Nan
-  methane_concentration:
-    source: METS_METHANE_SCALED
-    long_name: methane concentration
-    standard_name: methane_concentration
-    units: mg m-3
-    coordinates: time depth latitude longitude
-    instrument: Nan
-    valid_min: Nan
-    valid_max: Nan
-    observation_type: calculated
-    accuracy: Nan
-    resolution: Nan
-  mets_raw_temperature:
-    source: METS_TEMP_VOLT
-    long_name: mets sensor raw temperature
-    standard_name: sensor_raw_temperature
-    units: V
-    coordinates: time depth latitude longitude
-    instrument: Nan
-    valid_min: Nan
-    valid_max: Nan
-    observation_type: calculated
-    accuracy: Nan
-    resolution: Nan
-  mets_temperature:
-    source: METS_TEMP_SCALED
-    long_name: mets sensor temperature
-    standard_name: sensor_temperature
-    units: Celsius
-    coordinates: time depth latitude longitude
-    instrument: Nan
-    valid_min: Nan
-    valid_max: Nan
-    observation_type: calculated
-    accuracy: Nan
-    resolution: Nan
   ad2cp_heading:
     source: AD2CP_HEADING
     long_name: glider heading angle from AD2CP
@@ -479,11 +441,42 @@ netcdf_variables:
     standard_name: platform_beam1_measure_ad2cp_cell1
     units: m s-1
     coordinates: time depth latitude longitude
+  downwelling_PAR:
+    source: MPE-PAR_IRRADIANCE
+    long_name: Downwelling PAR (Photosynthetically Active Radiation) in range 400-700
+      nm
+    standard_name: downwelling_PAR
+    units: "\u03BCE cm-2 s-1"
+    average_method: geometric mean
+    coordinates: time depth latitude longitude
+    instrument: instrument_radiometer
+    observation_type: measured
+  internal_temperature_PAR:
+    source: MPE-PAR_TEMPERATURE
+    long_name: Sensor internal temperature
+    standard_name: internal_temperature_PAR
+    units: Celsius
+    coordinates: time depth latitude longitude
+    instrument: instrument_thermistor
+    observation_type: measured
+  oxygen_ad_counts:
+    source: AROD_FT_DO_AN
+    long_name: oxygen sensor raw analogue counts
+    standard_name: oxygen_sensor_ad_counts
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_phosphorescence
+    observation_type: measured
+  oxygen_led_counts:
+    source: AROD_FT_LED
+    long_name: oxygen sensor LED counts
+    standard_name: oxygen_sensor_led_value
+    units: counts
+    coordinates: time depth latitude longitude
+    instrument: instrument_phosphorescence
+    observation_type: measured
 qc:
-  oxygen_concentration:
-    value: 3
-    comment: Dissolved oxygen concentration values may be inaccurate. Deterioration
-      of the foil has caused uncorrectable errors and non-linear temporal drift in
-      other missions with this sensor during this timeframe. We have not observed
-      issues in this particular mission, but we recommend caution when using this
-      data. More information on the history and updates regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
+  phycocyanin:
+    value: 4
+    comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
+      and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf

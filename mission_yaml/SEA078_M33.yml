@@ -31,10 +31,11 @@ metadata:
   comment: ' Glider flew on increased vertical speed occationally to fight currents.
     zt/zs=2 and alt=2 for full mission duration. '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
+    Martin Mohrmann
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
-    Manager
+    Manager, Scientific Data Analyst
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
@@ -108,6 +109,7 @@ glider_devices:
     make: Biospherical
     model: MPE-PAR
     serial: '2984'
+    tailward_mounting_angle_relative_to_platform_z_axis_degrees: 17.71
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
     factory_calibrated: 'Yes'

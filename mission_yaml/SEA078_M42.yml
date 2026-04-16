@@ -28,14 +28,15 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Vresros
   wmo_id: '8901000'
-  comment: Occasionally flying on a safe zb=200 m due to failing bottom tracking on c.170, 171, 176, 200, 322 and 459. Tridente phycocyanin channel values are suspect. The cause is under investigation
-    and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
+  comment: Occasionally flying on a safe zb=200 m due to failing bottom tracking on
+    c.170, 171, 176, 200, 322 and 459. Tridente phycocyanin channel values are suspect.
+    The cause is under investigation and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
-    Adele Maciute
+    Adele Maciute, Aaron Mau, Martin Mohrmann
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
-    Manager, Glider Technician
+    Manager, Glider Technician, Data Analyst, Scientific Data Analyst
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
@@ -65,40 +66,40 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2025-05-27'
     calibration_parameters:
-      Chl_C0: -95.6437e-03
+      Chl_C0: -0.0956437
       Chl_C1: 1.6513902e06
-      Chl_C2: 103.31017e-03
-      PC_C0: -254.73633e-03
+      Chl_C2: 0.10331017
+      PC_C0: -0.25473633
       PC_C1: 5.540121e06
       PC_C2: 1.0
-      backscatter_C0: 232.0667e-09
+      backscatter_C0: 2.320667e-07
       backscatter_C1: 16.842283
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0069'
+    serial: 0069
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     two_point_calibrated: 'Yes'
     calibration_date: '2024-06-06'
     calibration_parameters:
-      d0: +6.516091e-05
-      d1: -1.693870e-01
-      d2: +1.965692e-01
+      d0: 6.516091e-05
+      d1: -0.169387
+      d2: 0.1965692
       d3: 0.0
       d4: 0.0
-      c0: +2.988351e-03
-      c1: +1.271127e-0
-      c2: +2.792309e-06
+      c0: 0.002988351
+      c1: 1.271127
+      c2: 2.792309e-06
       e0: 1.0
-      Cp: +3.800000e-03
-      A: -1.291523e+01
-      B: +1.481117e-03
+      Cp: 0.0038
+      A: -12.91523
+      B: 0.001481117
       C: -2.674323e-08
-      D: +6.329282e-13
+      D: 6.329282e-13
       E: -8.164567e-18
-      F: +5.323646e-23
+      F: 5.323646e-23
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -111,6 +112,7 @@ glider_devices:
     make: Biospherical
     model: MPE-PAR
     serial: '3203'
+    tailward_mounting_angle_relative_to_platform_z_axis_degrees: 17.71
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
     factory_calibrated: 'Yes'

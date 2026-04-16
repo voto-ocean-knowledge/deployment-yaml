@@ -28,15 +28,14 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Ljung
   wmo_id: '6801707'
-  comment: ' The mission is part of the InTail project with testing the new oxygen
-    sensor. Tridente
-    phycocyanin channel values are suspect. The cause is under investigation and appears
-    to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
+  comment: ' The mission is part of the InTail project with testing the new InTail oxygen
+    sensor. The InTail data is not available publically. Glider profiled past BY20 on the way to recovery point. From c. 195 and onwards MPE-PAR sampled every 3rd downcast and AROD-FT sampling every 6th dive. Glider performed a sub-oxycline drift c 279. InTail sensor was turned off cycles 371-506 to monitor battery endurance. Tridente phycocyanin channel values are suspect. The cause is under investigation and appears to be due to bad calibration. https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
-    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne
+    Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
+    Aaron Mau, Martin Mohrmann
   contributor_role: Data Processor, PI, Head of Operations, Glider Technician, Glider
     Technician, Glider Technician, Glider Technician, Platform Coordinator, Project
-    Manager
+    Manager, Data Analyst, Scientific Data Analyst
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
@@ -66,13 +65,13 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2025-06-25'
     calibration_parameters:
-      Chl_C0: 8.486743e-03
+      Chl_C0: 0.008486743
       Chl_C1: 1.6364926e06
-      Chl_C2: 103.31017e-03
-      PC_C0: 29.01513e-03
+      Chl_C2: 0.10331017
+      PC_C0: 0.02901513
       PC_C1: 3.5210688e06
       PC_C2: 1.0
-      backscatter_C0: -230.14356e-09
+      backscatter_C0: -2.3014356e-07
       backscatter_C1: 9.160208
   oxygen:
     make: JFE Advantech
@@ -84,22 +83,22 @@ glider_devices:
     two_point_calibrated: 'Yes'
     calibration_date: '2024-06-06'
     calibration_parameters:
-      d0:  +8.006861e-05
-      d1: -1.708346e-01
-      d2: +1.942610e-01
+      d0: 8.006861e-05
+      d1: -0.1708346
+      d2: 0.194261
       d3: 0.0
       d4: 0.0
-      c0: +2.910576e-03
-      c1: +1.247150e-04
-      c2: +2.715957e-06
+      c0: 0.002910576
+      c1: 0.000124715
+      c2: 2.715957e-06
       e0: 1.0
-      Cp: 3.8e-03
-      A: -1.285995e+01
-      B: +1.482147e-03
+      Cp: 0.0038
+      A: -12.85995
+      B: 0.001482147
       C: -2.664719e-08
-      D: +6.256232e-13
+      D: 6.256232e-13
       E: -7.984048e-18
-      F: +5.175089e-23
+      F: 5.175089e-23
   AD2CP:
     make: Nortek
     model: AD2CP
@@ -112,6 +111,7 @@ glider_devices:
     make: Biospherical
     model: MPE-PAR
     serial: '2983'
+    tailward_mounting_angle_relative_to_platform_z_axis_degrees: 17.71
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
     factory_calibrated: 'Yes'
