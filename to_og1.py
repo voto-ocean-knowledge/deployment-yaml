@@ -160,7 +160,7 @@ sensor_variables = {
 
 }
 
-def add_variables(devices, original_vars):
+def add_variables(devices, og1_devices, original_vars):
     variables = {}
     variables['timebase'] = {'source': 'NAV_LATITUDE'}
     keep_vars = []
@@ -171,6 +171,13 @@ def add_variables(devices, original_vars):
         if device_name not in sensor_variables.keys():
             print("oh no", device_name)
             continue
+        if device_name == 'SeaExplorer':
+            sensor = 'SeaExplorer'
+        else:
+            og1_sensor_model = sensor_model_conversion[device_name]
+            for sensor_id, sensor_dict in og1_devices.items():
+                if sensor_dict['long_name'] == og1_sensor_model:
+                    sensor = sensor_id
         if "tridente" in device_name.lower():
             if ('chlorophyll', 'LEGATO_TRIDENTE_CHLOROPHYLL') in original_vars.items():
                 device_name = 'RBR Tridente LEGATO'
@@ -186,9 +193,11 @@ def add_variables(devices, original_vars):
             if 'FLBBPC_CHL_COUNT' not in original_vars.values():
                 device_name = 'Wetlabs FLBBPC no raw'
         device_variables = sensor_variables[device_name]
+
         for var_name, source in device_variables.items():
             variable_dict = og1_variables[var_name]
             variable_dict['source'] = source
+            variable_dict['sensor'] = sensor
             if var_name in ['LATITUDE', 'LONGITUDE']:
                 variable_dict['conversion'] = 'nmea2deg'
             variables[var_name] = variable_dict
@@ -229,7 +238,7 @@ def convert_to_og1(yaml_path):
 
     # determine variables to add and add them
     original_variables = mission_meta['variables']
-    variables = add_variables(original_devices, original_variables)
+    variables = add_variables(original_devices, og1_devices, original_variables)
     out['netcdf_variables'] = variables
 
     # add pilot QC if present
