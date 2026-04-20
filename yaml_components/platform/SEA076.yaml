@@ -1,0 +1,6 @@
+glider_name: Fibbla
+platform: sub-surface gliders
+platform_model: Alseamar SeaExplorer X2 glider
+platform_model_vocabulary: http://vocab.nerc.ac.uk/collection/B76/current/B7600035/
+platform_vocabulary: http://vocab.nerc.ac.uk/collection/L06/current/27/
+wmo_id: 6801665

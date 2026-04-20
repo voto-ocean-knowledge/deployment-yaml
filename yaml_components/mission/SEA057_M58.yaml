@@ -1,0 +1,77 @@
+metadata:
+  comment: Missing info for MR1000G. Calibration date unknown
+  project: QUICCHE
+platform_devices:
+  AD2CP:
+    make_model: Nortek AD2CP
+    sensor_calibration_date: '2020-06-10'
+    sensor_serial_number: '101594'
+  ctd:
+    make_model: RBR legato CTD
+    sensor_calibration_date: '2020-07-06'
+    sensor_serial_number: '204951'
+  optics:
+    calibration_parameters:
+      Chl_DarkCounts: 44
+      Chl_SF: 0.0073
+      PE_DarkCounts: 47
+      PE_SF: 0.0424
+      SIG_DarkCounts: 43
+      SIG_SF: 1.85e-06
+    make_model: Wetlabs FLBBPE
+    sensor_calibration_date: '2020-08-21'
+    sensor_serial_number: '6480'
+  oxygen:
+    make_model: JFE Advantech AROD_FT
+    sensor_calibration_date: '2020-05-22'
+    sensor_serial_number: '0042'
+  turbulence:
+    make_model: Rockland Scientific MR1000G-RDL
+    sensor_calibration_date: '2020-06-10'
+    sensor_serial_number: '458'
+variables:
+  ad2cp_beam1_cell_number1: AD2CP_V1_CN1
+  ad2cp_beam2_cell_number1: AD2CP_V2_CN1
+  ad2cp_beam3_cell_number1: AD2CP_V3_CN1
+  ad2cp_beam4_cell_number1: AD2CP_V4_CN1
+  ad2cp_heading: AD2CP_HEADING
+  ad2cp_pitch: AD2CP_PITCH
+  ad2cp_pressure: AD2CP_PRESSURE
+  ad2cp_roll: AD2CP_ROLL
+  ad2cp_time: AD2CP_TIME
+  angular_cmd: AngCmd
+  angular_pos: AngPos
+  backscatter_raw: FLBBPE_BB_700_COUNT
+  backscatter_scaled: FLBBPE_BB_700_SCALED
+  ballast_cmd: BallastCmd
+  ballast_pos: BallastPos
+  chlorophyll: FLBBPE_CHL_SCALED
+  chlorophyll_raw: FLBBPE_CHL_COUNT
+  conductivity: LEGATO_CONDUCTIVITY
+  dead_reckoning: DeadReckoning
+  declination: Declination
+  desired_heading: DesiredH
+  dive_num: fnum
+  heading: Heading
+  internal_pressure: Pa
+  internal_temperature: Temperature
+  latitude: NAV_LATITUDE
+  linear_cmd: LinCmd
+  linear_pos: LinPos
+  longitude: NAV_LONGITUDE
+  nav_resource: NAV_RESOURCE
+  nav_state: NAV_RESOURCE
+  oxygen_concentration: AROD_FT_DO
+  phycoerythrin: FLBBPE_PE_SCALED
+  phycoerythrin_raw: FLBBPE_PE_COUNT
+  pitch: Pitch
+  pressure: LEGATO_PRESSURE
+  roll: Roll
+  salinity: LEGATO_SALINITY
+  security_level: SecurityLevel
+  temperature: LEGATO_TEMPERATURE
+  temperature_oxygen: AROD_FT_TEMP
+  time: time
+  tke_dissipation_shear_1: MR1000G-RDL_EPS1
+  tke_dissipation_shear_2: MR1000G-RDL_EPS2
+  voltage: Voltage

@@ -1,0 +1,84 @@
+metadata:
+  comment: Altitude set to 5m for the entire mission duration. Zt/zs set to 2m for
+    the entire mission duration. Glider was set to drift for the last part of the
+    mission with payload switched off. In this period, the glider was completing some
+    normal dives with payload switched on. This is why there are gaps in the dataset
+  project: CABLE
+platform_devices:
+  AD2CP:
+    make_model: Nortek AD2CP
+    sensor_calibration_date: '2022-03-15'
+    sensor_serial_number: '103360'
+  ctd:
+    make_model: RBR legato CTD
+    sensor_calibration_date: '2021-03-01'
+    sensor_serial_number: '206610'
+  optics:
+    calibration_parameters:
+      Chl_DarkCounts: 48
+      Chl_SF: 0.0073
+      PC_DarkCounts: 44
+      PC_SF: 0.0424
+      SIG_DarkCounts: 46
+      SIG_SF: 1.783e-06
+    make_model: Wetlabs FLBBPC
+    sensor_calibration_date: '2021-03-22'
+    sensor_serial_number: '6754'
+  oxygen:
+    make_model: RBR coda TODO
+    sensor_calibration_date: '2021-02-26'
+    sensor_serial_number: '205592'
+qc:
+  oxygen_concentration:
+    comment: Deterioration of the foil has caused errors in the dissolved oxygen concentration.
+      Values are observed to be substantially higher than the reference CTD cast at
+      deployment. There is an apparent temporal increase in dissolved oxygen concentration
+      throughout the mission. More information on the history and updates regarding
+      this issue (https://observations.voiceoftheocean.org/data/updates).
+    value: 4
+variables:
+  ad2cp_beam1_cell_number1: AD2CP_V1_CN1
+  ad2cp_beam2_cell_number1: AD2CP_V2_CN1
+  ad2cp_beam3_cell_number1: AD2CP_V3_CN1
+  ad2cp_beam4_cell_number1: AD2CP_V4_CN1
+  ad2cp_heading: AD2CP_HEADING
+  ad2cp_pitch: AD2CP_PITCH
+  ad2cp_pressure: AD2CP_PRESSURE
+  ad2cp_roll: AD2CP_ROLL
+  ad2cp_time: AD2CP_TIME
+  altimeter: Altitude
+  angular_cmd: AngCmd
+  angular_pos: AngPos
+  backscatter_raw: FLBBPC_BB_700_COUNT
+  backscatter_scaled: FLBBPC_BB_700_SCALED
+  ballast_cmd: BallastCmd
+  ballast_pos: BallastPos
+  chlorophyll: FLBBPC_CHL_SCALED
+  chlorophyll_raw: FLBBPC_CHL_COUNT
+  conductivity: LEGATO_CONDUCTIVITY
+  dead_reckoning: DeadReckoning
+  declination: Declination
+  desired_heading: DesiredH
+  dive_num: fnum
+  heading: Heading
+  internal_pressure: Pa
+  internal_temperature: Temperature
+  latitude: NAV_LATITUDE
+  linear_cmd: LinCmd
+  linear_pos: LinPos
+  longitude: NAV_LONGITUDE
+  nav_resource: NAV_RESOURCE
+  nav_state: NAV_RESOURCE
+  oxygen_concentration: LEGATO_CODA_DO
+  oxygen_phase: LEGATO_CODA_CORR_PHASE
+  phycocyanin: FLBBPC_PC_SCALED
+  phycocyanin_raw: FLBBPC_PC_COUNT
+  pitch: Pitch
+  pressure: LEGATO_PRESSURE
+  roll: Roll
+  salinity: LEGATO_SALINITY
+  security_level: SecurityLevel
+  temperature: LEGATO_TEMPERATURE
+  temperature_oxygen: LEGATO_CODA_TEMPERATURE
+  time: time
+  voltage: Voltage

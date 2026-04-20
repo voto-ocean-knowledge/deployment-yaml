@@ -1,0 +1,81 @@
+metadata:
+  comment: Altitude set to 2m for the entire mission duration. Zt/zs set to 2m for
+    the entire mission duration
+  project: CABLE
+platform_devices:
+  AD2CP:
+    make_model: Nortek AD2CP
+    sensor_calibration_date: '2022-07-18'
+    sensor_serial_number: '104649'
+  ctd:
+    make_model: RBR legato CTD
+    sensor_calibration_date: '2022-10-21'
+    sensor_serial_number: '212534'
+  optics:
+    calibration_parameters:
+      CDOM_DarkCounts: 50
+      CDOM_SF: 0.0909
+      Chl_DarkCounts: 47
+      Chl_SF: 0.0121
+      SIG_DarkCounts: 50
+      SIG_SF: 3.108e-06
+    make_model: Wetlabs FLBBCD
+    sensor_calibration_date: '2022-06-21'
+    sensor_serial_number: '7619'
+  oxygen:
+    make_model: JFE Advantech AROD_FT
+    sensor_calibration_date: '2022-11-11'
+    sensor_serial_number: 0069
+qc:
+  oxygen_concentration:
+    comment: Deterioration of the foil has caused uncorrectable errors in the dissolved
+      oxygen concentration. Values are observed to be substantially lower than the
+      reference CTD cast at deployment.  There is an apparent non-linear temporal
+      increase in dissolved oxygen concentration throughout the mission. More information
+      on the history and updates regarding this issue ( https://observations.voiceoftheocean.org/data/updates).
+    value: 4
+variables:
+  ad2cp_beam1_cell_number1: AD2CP_V1_CN1
+  ad2cp_beam2_cell_number1: AD2CP_V2_CN1
+  ad2cp_beam3_cell_number1: AD2CP_V3_CN1
+  ad2cp_beam4_cell_number1: AD2CP_V4_CN1
+  ad2cp_heading: AD2CP_HEADING
+  ad2cp_pitch: AD2CP_PITCH
+  ad2cp_pressure: AD2CP_PRESSURE
+  ad2cp_roll: AD2CP_ROLL
+  ad2cp_time: AD2CP_TIME
+  altimeter: Altitude
+  angular_cmd: AngCmd
+  angular_pos: AngPos
+  backscatter_raw: FLBBCD_BB_700_COUNT
+  backscatter_scaled: FLBBCD_BB_700_SCALED
+  ballast_cmd: BallastCmd
+  ballast_pos: BallastPos
+  cdom: FLBBCD_CDOM_SCALED
+  cdom_raw: FLBBCD_CDOM_COUNT
+  chlorophyll: FLBBCD_CHL_SCALED
+  chlorophyll_raw: FLBBCD_CHL_COUNT
+  conductivity: LEGATO_CONDUCTIVITY
+  dead_reckoning: DeadReckoning
+  declination: Declination
+  desired_heading: DesiredH
+  dive_num: fnum
+  heading: Heading
+  internal_pressure: Pa
+  internal_temperature: Temperature
+  latitude: NAV_LATITUDE
+  linear_cmd: LinCmd
+  linear_pos: LinPos
+  longitude: NAV_LONGITUDE
+  nav_resource: NAV_RESOURCE
+  nav_state: NAV_RESOURCE
+  oxygen_concentration: AROD_FT_DO
+  pitch: Pitch
+  pressure: LEGATO_PRESSURE
+  roll: Roll
+  salinity: LEGATO_SALINITY
+  security_level: SecurityLevel
+  temperature: LEGATO_TEMPERATURE
+  temperature_oxygen: AROD_FT_TEMP
+  time: time
+  voltage: Voltage

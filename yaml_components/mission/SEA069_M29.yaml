@@ -1,0 +1,67 @@
+metadata:
+  comment: Glider dove on a faster profile with zt=20 occationaly due to strong currents.
+    The sensor cap was on the oxygen sensor forr the full mission duration, see qc
+  project: SAMBA
+platform_devices:
+  altimeter:
+    sensor_serial_number: '52'
+  ctd:
+    make_model: RBR legato CTD
+    sensor_calibration_date: '2023-06-02'
+    sensor_serial_number: '206613'
+  optics:
+    calibration_parameters:
+      Chl_DarkCounts: 48
+      Chl_SF: 0.0073
+      PC_DarkCounts: 44
+      PC_SF: 0.0424
+      SIG_DarkCounts: 46
+      SIG_SF: 1.783e-06
+    make_model: Wetlabs FLBBPC
+    sensor_calibration_date: '2021-03-22'
+    sensor_serial_number: '6754'
+  oxygen:
+    make_model: JFE Advantech AROD_FT
+    sensor_calibration_date: '2024-01-26'
+    sensor_serial_number: '0050'
+qc:
+  oxygen_concentration:
+    comment: 'Issue with Oxygen sensor: Sensor protective cap was on for full mission
+      duration.'
+    value: 4
+variables:
+  altimeter: Altitude
+  angular_cmd: AngCmd
+  angular_pos: AngPos
+  backscatter_raw: FLBBPC_BB_700_COUNT
+  backscatter_scaled: FLBBPC_BB_700_SCALED
+  ballast_cmd: BallastCmd
+  ballast_pos: BallastPos
+  chlorophyll: FLBBPC_CHL_SCALED
+  chlorophyll_raw: FLBBPC_CHL_COUNT
+  conductivity: LEGATO_CONDUCTIVITY
+  dead_reckoning: DeadReckoning
+  declination: Declination
+  desired_heading: DesiredH
+  dive_num: fnum
+  heading: Heading
+  internal_pressure: Pa
+  internal_temperature: Temperature
+  latitude: NAV_LATITUDE
+  linear_cmd: LinCmd
+  linear_pos: LinPos
+  longitude: NAV_LONGITUDE
+  nav_resource: NAV_RESOURCE
+  nav_state: NAV_RESOURCE
+  oxygen_concentration: AROD_FT_DO
+  phycocyanin: FLBBPC_PC_SCALED
+  phycocyanin_raw: FLBBPC_PC_COUNT
+  pitch: Pitch
+  pressure: LEGATO_PRESSURE
+  roll: Roll
+  salinity: LEGATO_SALINITY
+  security_level: SecurityLevel
+  temperature: LEGATO_TEMPERATURE
+  temperature_oxygen: AROD_FT_TEMP
+  time: time
+  voltage: Voltage

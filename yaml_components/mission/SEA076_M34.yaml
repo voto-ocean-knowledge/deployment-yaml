@@ -1,0 +1,107 @@
+metadata:
+  comment: Glider performed two evening drifts with the payload turned off at the
+    end of the mission.
+  project: SAMBA
+platform_devices:
+  AD2CP:
+    make_model: Nortek AD2CP
+    sensor_calibration_date: '2023-08-16'
+    sensor_serial_number: '104648'
+  ctd:
+    make_model: RBR legato CTD
+    sensor_calibration_date: '2023-09-05'
+    sensor_serial_number: '205046'
+  irradiance:
+    make_model: Biospherical MPE-PAR
+    sensor_calibration_date: '2024-05-02'
+    sensor_serial_number: '3197'
+  optics:
+    calibration_parameters:
+      CDOM_DarkCounts: 47
+      CDOM_SF: 0.0908
+      Chl_DarkCounts: 47
+      Chl_SF: 0.0121
+      SIG_DarkCounts: 48
+      SIG_SF: 3.115e-06
+    make_model: Wetlabs FLBBCD
+    sensor_calibration_date: '2023-04-27'
+    sensor_serial_number: '8201'
+  oxygen:
+    calibration_parameters:
+      A: -12.9157
+      B: 0.001475098
+      C: -2.62001e-08
+      Cp: 0.004
+      D: 6.117645e-13
+      E: -7.783219e-18
+      F: 5.064287e-23
+      c0: 0.002911369
+      c1: 0.0001243058
+      c2: 2.561515e-06
+      d0: 6.707286e-05
+      d1: -0.181252
+      d2: 0.1963972
+      d3: 0.0
+      d4: 0.0
+      e0: 1.0
+    make_model: JFE Advantech AROD_FT
+    sensor_calibration_date: '2023-08-26'
+    sensor_serial_number: '0070'
+qc:
+  cdom:
+    comment: High values of CDOM raw counts. The cause of the issue is still unknown.
+      The relative variability may be intact but absolute values are unreliable.
+    value: 4
+  cdom_raw:
+    comment: High values of CDOM raw counts. The cause of the issue is still unknown.
+      The relative variability may be intact but absolute values are unreliable.
+    value: 4
+variables:
+  ad2cp_beam1_cell_number1: AD2CP_V1_CN1
+  ad2cp_beam2_cell_number1: AD2CP_V2_CN1
+  ad2cp_beam3_cell_number1: AD2CP_V3_CN1
+  ad2cp_beam4_cell_number1: AD2CP_V4_CN1
+  ad2cp_heading: AD2CP_HEADING
+  ad2cp_pitch: AD2CP_PITCH
+  ad2cp_pressure: AD2CP_PRESSURE
+  ad2cp_roll: AD2CP_ROLL
+  ad2cp_time: AD2CP_TIME
+  altimeter: Altitude
+  angular_cmd: AngCmd
+  angular_pos: AngPos
+  backscatter_raw: FLBBCD_BB_700_COUNT
+  backscatter_scaled: FLBBCD_BB_700_SCALED
+  ballast_cmd: BallastCmd
+  ballast_pos: BallastPos
+  cdom: FLBBCD_CDOM_SCALED
+  cdom_raw: FLBBCD_CDOM_COUNT
+  chlorophyll: FLBBCD_CHL_SCALED
+  chlorophyll_raw: FLBBCD_CHL_COUNT
+  conductivity: LEGATO_CONDUCTIVITY
+  dead_reckoning: DeadReckoning
+  declination: Declination
+  desired_heading: DesiredH
+  dive_num: fnum
+  downwelling_PAR: MPE-PAR_IRRADIANCE
+  heading: Heading
+  internal_pressure: Pa
+  internal_temperature: Temperature
+  internal_temperature_PAR: MPE-PAR_TEMPERATURE
+  latitude: NAV_LATITUDE
+  linear_cmd: LinCmd
+  linear_pos: LinPos
+  longitude: NAV_LONGITUDE
+  nav_resource: NAV_RESOURCE
+  nav_state: NAV_RESOURCE
+  oxygen_ad_counts: AROD_FT_DO_AN
+  oxygen_concentration: AROD_FT_DO
+  oxygen_led_counts: AROD_FT_LED
+  pitch: Pitch
+  pressure: LEGATO_PRESSURE
+  roll: Roll
+  salinity: LEGATO_SALINITY
+  security_level: SecurityLevel
+  temperature: LEGATO_TEMPERATURE
+  temperature_oxygen: AROD_FT_TEMP
+  time: time
+  voltage: Voltage

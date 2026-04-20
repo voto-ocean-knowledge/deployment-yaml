@@ -1,0 +1,84 @@
+metadata:
+  comment: Mission part of the inTail project with testing the new oxygen sensor.
+    Due to GPS-spoofing the positions of cycles 140, 181, 189, 197, 201, 205, 217,
+    516 are affected. Vertical speed temporarily increased towards the end of mission
+    to reach recovery waypoint in time. zt/zs=2 and alt=4-6 for full mission duration
+    for the sake of the InTail sensor.
+  project: InTail
+platform_devices:
+  AD2CP:
+    make_model: Nortek AD2CP
+    sensor_calibration_date: '2021-02-03'
+    sensor_serial_number: '101589'
+  ctd:
+    make_model: RBR legato CTD
+    sensor_calibration_date: '2024-02-23'
+    sensor_serial_number: '206612'
+  irradiance:
+    make_model: Biospherical MPE-PAR
+    sensor_calibration_date: '2023-02-21'
+    sensor_serial_number: '2983'
+  oxygen:
+    calibration_parameters:
+      A: -12.82154
+      B: 0.001475065
+      C: -2.606607e-08
+      Cp: 0.004
+      D: 6.031889e-13
+      E: -7.567309e-18
+      F: 4.876386e-23
+      c0: 0.002977295
+      c1: 0.0001304232
+      c2: 2.632691e-06
+      d0: 0.0001841021
+      d1: -0.1822113
+      d2: 0.192927
+      d3: 0.0
+      d4: 0.0
+      e0: 1.0
+    make_model: JFE Advantech AROD_FT
+    sensor_calibration_date: '2023-08-11'
+    sensor_serial_number: '0040'
+variables:
+  ad2cp_beam1_cell_number1: AD2CP_V1_CN1
+  ad2cp_beam2_cell_number1: AD2CP_V2_CN1
+  ad2cp_beam3_cell_number1: AD2CP_V3_CN1
+  ad2cp_beam4_cell_number1: AD2CP_V4_CN1
+  ad2cp_heading: AD2CP_HEADING
+  ad2cp_pitch: AD2CP_PITCH
+  ad2cp_pressure: AD2CP_PRESSURE
+  ad2cp_roll: AD2CP_ROLL
+  ad2cp_time: AD2CP_TIME
+  altimeter: Altitude
+  angular_cmd: AngCmd
+  angular_pos: AngPos
+  ballast_cmd: BallastCmd
+  ballast_pos: BallastPos
+  conductivity: LEGATO_CONDUCTIVITY
+  dead_reckoning: DeadReckoning
+  declination: Declination
+  desired_heading: DesiredH
+  dive_num: fnum
+  downwelling_PAR: MPE-PAR_IRRADIANCE
+  heading: Heading
+  internal_pressure: Pa
+  internal_temperature: Temperature
+  internal_temperature_PAR: MPE-PAR_TEMPERATURE
+  latitude: NAV_LATITUDE
+  linear_cmd: LinCmd
+  linear_pos: LinPos
+  longitude: NAV_LONGITUDE
+  nav_resource: NAV_RESOURCE
+  nav_state: NAV_RESOURCE
+  oxygen_ad_counts: AROD_FT_DO_AN
+  oxygen_concentration: AROD_FT_DO
+  oxygen_led_counts: AROD_FT_LED
+  pitch: Pitch
+  pressure: LEGATO_PRESSURE
+  roll: Roll
+  salinity: LEGATO_SALINITY
+  security_level: SecurityLevel
+  temperature: LEGATO_TEMPERATURE
+  temperature_oxygen: AROD_FT_TEMP
+  time: time
+  voltage: Voltage

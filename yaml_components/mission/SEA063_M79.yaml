@@ -1,0 +1,76 @@
+metadata:
+  comment: Glider loitered with the payload off at the end of the mission for 10 h
+    sequences overnight to save battery. Otherwise it flew on zt/zs=2 and alt=2 for
+    full mission duration.
+  project: SAMBA
+platform_devices:
+  AD2CP:
+    make_model: Nortek AD2CP
+    sensor_calibration_date: '2021-02-03'
+    sensor_serial_number: '101589'
+  ctd:
+    make_model: RBR legato CTD
+    sensor_calibration_date: '2021-06-10'
+    sensor_serial_number: '207476'
+  irradiance:
+    make_model: Biospherical MPE-PAR
+    sensor_calibration_date: '2023-02-21'
+    sensor_serial_number: '2983'
+  optics:
+    calibration_parameters:
+      Chl_DarkCounts: 48
+      Chl_SF: 0.0121
+      NTU_DarkCounts: 49
+      NTU_SF: 0.006
+    make_model: Wetlabs FLNTU
+    sensor_calibration_date: '2021-02-01'
+    sensor_serial_number: '6661'
+  oxygen:
+    make_model: JFE Advantech AROD_FT
+    sensor_calibration_date: '2023-08-11'
+    sensor_serial_number: '0040'
+variables:
+  ad2cp_beam1_cell_number1: AD2CP_V1_CN1
+  ad2cp_beam2_cell_number1: AD2CP_V2_CN1
+  ad2cp_beam3_cell_number1: AD2CP_V3_CN1
+  ad2cp_beam4_cell_number1: AD2CP_V4_CN1
+  ad2cp_heading: AD2CP_HEADING
+  ad2cp_pitch: AD2CP_PITCH
+  ad2cp_pressure: AD2CP_PRESSURE
+  ad2cp_roll: AD2CP_ROLL
+  ad2cp_time: AD2CP_TIME
+  altimeter: Altitude
+  angular_cmd: AngCmd
+  angular_pos: AngPos
+  ballast_cmd: BallastCmd
+  ballast_pos: BallastPos
+  chlorophyll: FLNTU_CHL_SCALED
+  chlorophyll_raw: FLNTU_CHL_COUNT
+  conductivity: LEGATO_CONDUCTIVITY
+  dead_reckoning: DeadReckoning
+  declination: Declination
+  desired_heading: DesiredH
+  dive_num: fnum
+  downwelling_PAR: MPE-PAR_IRRADIANCE
+  heading: Heading
+  internal_pressure: Pa
+  internal_temperature: Temperature
+  internal_temperature_PAR: MPE-PAR_TEMPERATURE
+  latitude: NAV_LATITUDE
+  linear_cmd: LinCmd
+  linear_pos: LinPos
+  longitude: NAV_LONGITUDE
+  nav_resource: NAV_RESOURCE
+  nav_state: NAV_RESOURCE
+  oxygen_concentration: AROD_FT_DO
+  pitch: Pitch
+  pressure: LEGATO_PRESSURE
+  roll: Roll
+  salinity: LEGATO_SALINITY
+  security_level: SecurityLevel
+  temperature: LEGATO_TEMPERATURE
+  temperature_oxygen: AROD_FT_TEMP
+  time: time
+  turbidity: FLNTU_NTU_SCALED
+  turbidity_raw: FLNTU_NTU_COUNT
+  voltage: Voltage

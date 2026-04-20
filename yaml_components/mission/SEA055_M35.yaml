@@ -1,0 +1,62 @@
+metadata:
+  comment: Altitude set to 10m for the entire mission duration . Zt/zs set to 2m for
+    the entire mission duration
+  project: SAMBA
+platform_devices:
+  altimeter:
+    sensor_serial_number: '33'
+  ctd:
+    make_model: RBR legato CTD
+    sensor_calibration_date: '2020-06-22'
+    sensor_serial_number: '204958'
+  optics:
+    calibration_parameters:
+      Chl_DarkCounts: 46
+      Chl_SF: 0.0073
+      PC_DarkCounts: 47
+      PC_SF: 0.0388
+      SIG_DarkCounts: 47
+      SIG_SF: 1.815e-06
+    make_model: Wetlabs FLBBPC
+    sensor_calibration_date: '2020-12-22'
+    sensor_serial_number: '6598'
+  oxygen:
+    make_model: JFE Advantech AROD_FT
+    sensor_calibration_date: '2020-02-05'
+    sensor_serial_number: '0040'
+variables:
+  altimeter: Altitude
+  angular_cmd: AngCmd
+  angular_pos: AngPos
+  backscatter_raw: FLBBPC_BB_700_COUNT
+  backscatter_scaled: FLBBPC_BB_700_SCALED
+  ballast_cmd: BallastCmd
+  ballast_pos: BallastPos
+  chlorophyll: FLBBPC_CHL_SCALED
+  chlorophyll_raw: FLBBPC_CHL_COUNT
+  conductivity: LEGATO_CONDUCTIVITY
+  dead_reckoning: DeadReckoning
+  declination: Declination
+  desired_heading: DesiredH
+  dive_num: fnum
+  heading: Heading
+  internal_pressure: Pa
+  internal_temperature: Temperature
+  latitude: NAV_LATITUDE
+  linear_cmd: LinCmd
+  linear_pos: LinPos
+  longitude: NAV_LONGITUDE
+  nav_resource: NAV_RESOURCE
+  nav_state: NAV_RESOURCE
+  oxygen_concentration: AROD_FT_DO
+  phycocyanin: FLBBPC_PC_SCALED
+  phycocyanin_raw: FLBBPC_PC_COUNT
+  pitch: Pitch
+  pressure: LEGATO_PRESSURE
+  roll: Roll
+  salinity: LEGATO_SALINITY
+  security_level: SecurityLevel
+  temperature: LEGATO_TEMPERATURE
+  temperature_oxygen: AROD_FT_TEMP
+  time: time
+  voltage: Voltage

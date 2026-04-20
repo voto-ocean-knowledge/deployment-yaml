@@ -1,0 +1,6 @@
+glider_name: ShallowExplorer_001
+platform: sub-surface gliders
+platform_model: Alseamar SeaExplorer X3 shallow glider
+platform_model_vocabulary: http://vocab.nerc.ac.uk/collection/B76/current/B7600037/
+platform_vocabulary: http://vocab.nerc.ac.uk/collection/L06/current/27/
+wmo_id: 8901081

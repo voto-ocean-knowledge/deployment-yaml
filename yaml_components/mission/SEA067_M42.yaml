@@ -1,0 +1,88 @@
+metadata:
+  comment: Altitude set to 2m for the entire mission duration . Zt/zs set to 2m for
+    the entire mission duration. Towards the end of the mission, the irradiance sensor
+    was switched OFF during the night to save battery
+  project: SAMBA
+platform_devices:
+  AD2CP:
+    make_model: Nortek AD2CP
+    sensor_calibration_date: '2022-01-11'
+    sensor_serial_number: '103354'
+  ctd:
+    make_model: RBR legato CTD
+    sensor_calibration_date: '2022-05-16'
+    sensor_serial_number: '210555'
+  irradiance:
+    make_model: Biospherical MPE-PAR
+    sensor_calibration_date: '2022-08-11'
+    sensor_serial_number: '2874'
+  optics:
+    calibration_parameters:
+      Chl_DarkCounts: 44
+      Chl_SF: 0.0072
+      PC_DarkCounts: 51
+      PC_SF: 0.0423
+      SIG_DarkCounts: 48
+      SIG_SF: 1.899e-06
+    make_model: Wetlabs FLBBPC
+    sensor_calibration_date: '2022-01-11'
+    sensor_serial_number: '7313'
+  oxygen:
+    make_model: JFE Advantech AROD_FT
+    sensor_calibration_date: '2022-11-11'
+    sensor_serial_number: '0067'
+qc:
+  oxygen_concentration:
+    comment: The absolute values of the oxygen data can be unreliable. The relative
+      variability is confirmed to be valid and no temporal drift exist has been observed.
+      Absolute values may be inaccurate and lower than reference data. Re-calibration
+      of the sensor is required. More information on the history and updates regarding
+      this issue ( https://observations.voiceoftheocean.org/data/updates).
+    value: 4
+variables:
+  ad2cp_beam1_cell_number1: AD2CP_V1_CN1
+  ad2cp_beam2_cell_number1: AD2CP_V2_CN1
+  ad2cp_beam3_cell_number1: AD2CP_V3_CN1
+  ad2cp_beam4_cell_number1: AD2CP_V4_CN1
+  ad2cp_heading: AD2CP_HEADING
+  ad2cp_pitch: AD2CP_PITCH
+  ad2cp_pressure: AD2CP_PRESSURE
+  ad2cp_roll: AD2CP_ROLL
+  ad2cp_time: AD2CP_TIME
+  altimeter: Altitude
+  angular_cmd: AngCmd
+  angular_pos: AngPos
+  backscatter_raw: FLBBPC_BB_700_COUNT
+  backscatter_scaled: FLBBPC_BB_700_SCALED
+  ballast_cmd: BallastCmd
+  ballast_pos: BallastPos
+  chlorophyll: FLBBPC_CHL_SCALED
+  chlorophyll_raw: FLBBPC_CHL_COUNT
+  conductivity: LEGATO_CONDUCTIVITY
+  dead_reckoning: DeadReckoning
+  declination: Declination
+  desired_heading: DesiredH
+  dive_num: fnum
+  downwelling_PAR: MPE-PAR_IRRADIANCE
+  heading: Heading
+  internal_pressure: Pa
+  internal_temperature: Temperature
+  internal_temperature_PAR: MPE-PAR_TEMPERATURE
+  latitude: NAV_LATITUDE
+  linear_cmd: LinCmd
+  linear_pos: LinPos
+  longitude: NAV_LONGITUDE
+  nav_resource: NAV_RESOURCE
+  nav_state: NAV_RESOURCE
+  oxygen_concentration: AROD_FT_DO
+  phycocyanin: FLBBPC_PC_SCALED
+  phycocyanin_raw: FLBBPC_PC_COUNT
+  pitch: Pitch
+  pressure: LEGATO_PRESSURE
+  roll: Roll
+  salinity: LEGATO_SALINITY
+  security_level: SecurityLevel
+  temperature: LEGATO_TEMPERATURE
+  temperature_oxygen: AROD_FT_TEMP
+  time: time
+  voltage: Voltage

@@ -1,0 +1,88 @@
+metadata:
+  comment: After a few days the max diving  depth set to 60m to avoid sampling in
+    anoxic waters as it damages the methane sensor. Zt/zs set to 4m for the entire
+    mission duration and altitude set to 5m but the glider was flying well above the
+    seabed due to the shallow max diving depth (zb)
+  project: NS_Bornholm
+platform_devices:
+  AD2CP:
+    make_model: Nortek AD2CP
+    sensor_calibration_date: '2022-05-01'
+    sensor_serial_number: '103364'
+  ctd:
+    make_model: Seabird SlocumCTD
+    sensor_calibration_date: '2022-05-01'
+    sensor_serial_number: CTD0271
+  methane:
+    make_model: Franatech METS
+    sensor_calibration_date: '2022-07-01'
+    sensor_serial_number: '2117'
+  optics:
+    calibration_parameters: {}
+    make_model: SeaOWL UV-A
+    sensor_calibration_date: '2022-06-01'
+    sensor_serial_number: '0165'
+  oxygen:
+    make_model: Seabird SBE43F
+    sensor_calibration_date: '2022-05-01'
+    sensor_serial_number: DO3489
+qc:
+  conductivity:
+    comment: ctd pump failed. Downcast data are less badly affected.
+    start: '2022-10-30'
+    value: 4
+  oxygen_frequency:
+    comment: ctd pump failed. Downcast data are less badly affected.
+    start: '2022-10-30'
+    value: 4
+  temperature:
+    comment: ctd pump failed. Downcast data are less badly affected.
+    start: '2022-10-30'
+    value: 4
+variables:
+  ad2cp_beam1_cell_number1: AD2CP_V1_CN1
+  ad2cp_beam2_cell_number1: AD2CP_V2_CN1
+  ad2cp_beam3_cell_number1: AD2CP_V3_CN1
+  ad2cp_beam4_cell_number1: AD2CP_V4_CN1
+  ad2cp_heading: AD2CP_HEADING
+  ad2cp_pitch: AD2CP_PITCH
+  ad2cp_pressure: AD2CP_PRESSURE
+  ad2cp_roll: AD2CP_ROLL
+  ad2cp_time: AD2CP_TIME
+  altimeter: Altitude
+  angular_cmd: AngCmd
+  angular_pos: AngPos
+  backscatter_raw: SEAOWL_BB_700_COUNT
+  backscatter_scaled: SEAOWL_BB_700_SCALED
+  ballast_cmd: BallastCmd
+  ballast_pos: BallastPos
+  chlorophyll: SEAOWL_CHL_SCALED
+  chlorophyll_raw: SEAOWL_CHL_COUNT
+  conductivity: GPCTD_CONDUCTIVITY
+  dead_reckoning: DeadReckoning
+  declination: Declination
+  desired_heading: DesiredH
+  dive_num: fnum
+  fdom: SEAOWL_FDOM_SCALED
+  fdom_raw: SEAOWL_FDOM_COUNT
+  heading: Heading
+  internal_pressure: Pa
+  internal_temperature: Temperature
+  latitude: NAV_LATITUDE
+  linear_cmd: LinCmd
+  linear_pos: LinPos
+  longitude: NAV_LONGITUDE
+  methane_concentration: METS_METHANE_SCALED
+  methane_raw_concentration: METS_METHANE_VOLT
+  mets_raw_temperature: METS_TEMP_VOLT
+  mets_temperature: METS_TEMP_SCALED
+  nav_resource: NAV_RESOURCE
+  nav_state: NAV_RESOURCE
+  oxygen_frequency: GPCTD_DOF
+  pitch: Pitch
+  pressure: GPCTD_PRESSURE
+  roll: Roll
+  security_level: SecurityLevel
+  temperature: GPCTD_TEMPERATURE
+  time: time
+  voltage: Voltage

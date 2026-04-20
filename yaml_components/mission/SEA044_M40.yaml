@@ -1,0 +1,74 @@
+metadata:
+  comment: Altitude set to 6m for the entire mission duration. Zt/zs set to 5m for
+    the entire mission duration. Glider hit the seabed multiple times due to issues
+    with the altimeter and after that the maximum diving depth was reduced to avoid
+    possible collisions with the seabed. The glider maximum diving depth was set to
+    65 or 75m depending on the section of the transect, therefore the glider often
+    turned back well before 6m from the seabed
+  project: SAMBA
+platform_devices:
+  altimeter:
+    sensor_serial_number: '34'
+  ctd:
+    make_model: RBR legato CTD
+    sensor_calibration_date: '2020-07-21'
+    sensor_serial_number: '205047'
+  irradiance:
+    make_model: SeaBird OCR504
+    sensor_calibration_date: '2020-02-21'
+    sensor_serial_number: '2044'
+  optics:
+    calibration_parameters:
+      Chl_DarkCounts: 46
+      Chl_SF: 0.0072
+      PC_DarkCounts: 45
+      PC_SF: 0.0386
+      SIG_DarkCounts: 45
+      SIG_SF: 1.722e-06
+    make_model: Wetlabs FLBBPC
+    sensor_calibration_date: '2020-12-22'
+    sensor_serial_number: '6597'
+  oxygen:
+    make_model: JFE Advantech AROD_FT
+    sensor_calibration_date: '2020-02-08'
+    sensor_serial_number: '0041'
+variables:
+  altimeter: Altitude
+  angular_cmd: AngCmd
+  angular_pos: AngPos
+  backscatter_raw: FLBBPC_BB_700_COUNT
+  backscatter_scaled: FLBBPC_BB_700_SCALED
+  ballast_cmd: BallastCmd
+  ballast_pos: BallastPos
+  chlorophyll: FLBBPC_CHL_SCALED
+  chlorophyll_raw: FLBBPC_CHL_COUNT
+  conductivity: LEGATO_CONDUCTIVITY
+  dead_reckoning: DeadReckoning
+  declination: Declination
+  desired_heading: DesiredH
+  dive_num: fnum
+  down_irradiance_380: OCR504_Ed1
+  down_irradiance_490: OCR504_Ed2
+  down_irradiance_532: OCR504_Ed3
+  downwelling_PAR: OCR504_Ed4
+  heading: Heading
+  internal_pressure: Pa
+  internal_temperature: Temperature
+  latitude: NAV_LATITUDE
+  linear_cmd: LinCmd
+  linear_pos: LinPos
+  longitude: NAV_LONGITUDE
+  nav_resource: NAV_RESOURCE
+  nav_state: NAV_RESOURCE
+  oxygen_concentration: AROD_FT_DO
+  phycocyanin: FLBBPC_PC_SCALED
+  phycocyanin_raw: FLBBPC_PC_COUNT
+  pitch: Pitch
+  pressure: LEGATO_PRESSURE
+  roll: Roll
+  salinity: LEGATO_SALINITY
+  security_level: SecurityLevel
+  temperature: LEGATO_TEMPERATURE
+  temperature_oxygen: AROD_FT_TEMP
+  time: time
+  voltage: Voltage

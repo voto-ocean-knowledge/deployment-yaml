@@ -1,0 +1,102 @@
+metadata:
+  comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
+    and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
+  project: SAMBA
+platform_devices:
+  AD2CP:
+    make_model: Nortek AD2CP
+    sensor_calibration_date: '2022-01-11'
+    sensor_serial_number: '103354'
+  ctd:
+    make_model: RBR legato CTD
+    sensor_calibration_date: '2022-05-16'
+    sensor_serial_number: '210555'
+  irradiance:
+    make_model: Biospherical MPE-PAR
+    sensor_calibration_date: '2022-08-11'
+    sensor_serial_number: '2874'
+  optics:
+    calibration_parameters:
+      Chl_C0: 0.004509943
+      Chl_C1: 2.7024982E6
+      Chl_C2: 0.10331017
+      PC_C0: 0.020063099
+      PC_C1: 3.4030602E6
+      PC_C2: 1.0
+      backscatter_C0: -4.6384545e-07
+      backscatter_C1: 11.237395
+    make_model: RBR Tridente
+    sensor_calibration_date: '2025-06-20'
+    sensor_serial_number: '238738'
+  oxygen:
+    calibration_parameters:
+      A: -12.7743
+      B: 0.00147517
+      C: -2.594112e-08
+      Cp: 0.0039
+      D: 5.954839e-13
+      E: -7.392508e-18
+      F: 4.738719e-23
+      c0: 0.002973652
+      c1: 0.0001255534
+      c2: 2.89126e-06
+      d0: 0.0001817772
+      d1: -0.1706152
+      d2: 0.1926727
+      d3: 0.0
+      d4: 0.0
+      e0: 1.0
+    make_model: JFE Advantech AROD_FT
+    sensor_calibration_date: '2024-02-15'
+    sensor_serial_number: '0041'
+qc:
+  phycocyanin:
+    comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
+      and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
+    value: 4
+variables:
+  ad2cp_beam1_cell_number1: AD2CP_V1_CN1
+  ad2cp_beam2_cell_number1: AD2CP_V2_CN1
+  ad2cp_beam3_cell_number1: AD2CP_V3_CN1
+  ad2cp_beam4_cell_number1: AD2CP_V4_CN1
+  ad2cp_heading: AD2CP_HEADING
+  ad2cp_pitch: AD2CP_PITCH
+  ad2cp_pressure: AD2CP_PRESSURE
+  ad2cp_roll: AD2CP_ROLL
+  ad2cp_time: AD2CP_TIME
+  altimeter: Altitude
+  angular_cmd: AngCmd
+  angular_pos: AngPos
+  backscatter: TRIDENTE_BACKSCATTER
+  ballast_cmd: BallastCmd
+  ballast_pos: BallastPos
+  chlorophyll: TRIDENTE_CHLOROPHYLL
+  conductivity: LEGATO_CONDUCTIVITY
+  dead_reckoning: DeadReckoning
+  declination: Declination
+  desired_heading: DesiredH
+  dive_num: fnum
+  downwelling_PAR: MPE-PAR_IRRADIANCE
+  heading: Heading
+  internal_pressure: Pa
+  internal_temperature: Temperature
+  internal_temperature_PAR: MPE-PAR_TEMPERATURE
+  latitude: NAV_LATITUDE
+  linear_cmd: LinCmd
+  linear_pos: LinPos
+  longitude: NAV_LONGITUDE
+  nav_resource: NAV_RESOURCE
+  nav_state: NAV_RESOURCE
+  oxygen_ad_counts: AROD_FT_DO_AN
+  oxygen_concentration: AROD_FT_DO
+  oxygen_led_counts: AROD_FT_LED
+  phycocyanin: TRIDENTE_PHYCOCYANIN
+  pitch: Pitch
+  pressure: LEGATO_PRESSURE
+  roll: Roll
+  salinity: LEGATO_SALINITY
+  security_level: SecurityLevel
+  temperature: LEGATO_TEMPERATURE
+  temperature_oxygen: AROD_FT_TEMP
+  time: time
+  voltage: Voltage

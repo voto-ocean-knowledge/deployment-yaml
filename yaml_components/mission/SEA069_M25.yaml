@@ -1,0 +1,75 @@
+metadata:
+  comment: Altitude set to 2m for the entire mission duration . Zt/zs set to 2m for
+    most of the mission but often increased to 15 or 20m when the glider struggled
+    with strong currents. Glider struggled with strong currents so it was often outside
+    the desired transect
+  project: SAMBA
+platform_devices:
+  altimeter:
+    sensor_serial_number: '52'
+  ctd:
+    make_model: RBR legato CTD
+    sensor_calibration_date: '2023-06-02'
+    sensor_serial_number: '206613'
+  optics:
+    calibration_parameters:
+      Chl_DarkCounts: 48
+      Chl_SF: 0.0073
+      PC_DarkCounts: 44
+      PC_SF: 0.0424
+      SIG_DarkCounts: 46
+      SIG_SF: 1.783e-06
+    make_model: Wetlabs FLBBPC
+    sensor_calibration_date: '2021-03-22'
+    sensor_serial_number: '6754'
+  oxygen:
+    make_model: JFE Advantech AROD_FT
+    sensor_calibration_date: '2022-11-08'
+    sensor_serial_number: '0066'
+qc:
+  oxygen_concentration:
+    comment: Following issues with the oxygen sensor, a 2-point calibration has been
+      performed on date {2023-06-15}. The values at 0 and 100 % saturation are accurate.
+      Absolute Values between these two extremes may be inaccurate. The relative variability
+      is confirmed to be valid and no temporal drift occurs. During tests values that
+      can be outside the manufacturer acceptance range have been observed when compared
+      to the output from a reference sensor. This issue is particularly evident around
+      100μmol/l. More information on the history and updates regarding this issue
+      (https://observations.voiceoftheocean.org/data/updates).
+    value: 4
+variables:
+  altimeter: Altitude
+  angular_cmd: AngCmd
+  angular_pos: AngPos
+  backscatter_raw: FLBBPC_BB_700_COUNT
+  backscatter_scaled: FLBBPC_BB_700_SCALED
+  ballast_cmd: BallastCmd
+  ballast_pos: BallastPos
+  chlorophyll: FLBBPC_CHL_SCALED
+  chlorophyll_raw: FLBBPC_CHL_COUNT
+  conductivity: LEGATO_CONDUCTIVITY
+  dead_reckoning: DeadReckoning
+  declination: Declination
+  desired_heading: DesiredH
+  dive_num: fnum
+  heading: Heading
+  internal_pressure: Pa
+  internal_temperature: Temperature
+  latitude: NAV_LATITUDE
+  linear_cmd: LinCmd
+  linear_pos: LinPos
+  longitude: NAV_LONGITUDE
+  nav_resource: NAV_RESOURCE
+  nav_state: NAV_RESOURCE
+  oxygen_concentration: AROD_FT_DO
+  phycocyanin: FLBBPC_PC_SCALED
+  phycocyanin_raw: FLBBPC_PC_COUNT
+  pitch: Pitch
+  pressure: LEGATO_PRESSURE
+  roll: Roll
+  salinity: LEGATO_SALINITY
+  security_level: SecurityLevel
+  temperature: LEGATO_TEMPERATURE
+  temperature_oxygen: AROD_FT_TEMP
+  time: time
+  voltage: Voltage

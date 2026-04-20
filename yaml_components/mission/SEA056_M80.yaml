@@ -1,0 +1,94 @@
+metadata:
+  comment: Glider flew on a faster vertical speed zt=15 for a shorter period to fight
+    currents, otherwise zt/zs/alt=2 for full mission duration.
+  project: SAMBA
+platform_devices:
+  AD2CP:
+    make_model: Nortek AD2CP
+    sensor_calibration_date: '2023-10-19'
+    sensor_serial_number: '103356'
+  ctd:
+    make_model: RBR legato CTD
+    sensor_calibration_date: '2023-06-14'
+    sensor_serial_number: '230629'
+  irradiance:
+    make_model: Biospherical MPE-PAR
+    sensor_calibration_date: '2024-05-02'
+    sensor_serial_number: '3202'
+  optics:
+    calibration_parameters:
+      Chl_DarkCounts: 48
+      Chl_SF: 0.0121
+      NTU_DarkCounts: 49
+      NTU_SF: 0.0061
+    make_model: Wetlabs FLNTU
+    sensor_calibration_date: '2020-02-06'
+    sensor_serial_number: '6134'
+  oxygen:
+    calibration_parameters:
+      A: -12.85995
+      B: 0.001482147
+      C: -2.664719e-08
+      Cp: 0.0038
+      D: 6.256232e-13
+      E: -7.984048e-18
+      F: 5.175089e-23
+      c0: 0.002910576
+      c1: 0.000124715
+      c2: 2.715957e-06
+      d0: 8.006861e-05
+      d1: -0.1662231
+      d2: 0.1927369
+      d3: 0.0
+      d4: 0.0
+      e0: 1.0
+    make_model: JFE Advantech AROD_FT
+    sensor_calibration_date: '2024-06-06'
+    sensor_serial_number: 0039
+variables:
+  ad2cp_beam1_cell_number1: AD2CP_V1_CN1
+  ad2cp_beam2_cell_number1: AD2CP_V2_CN1
+  ad2cp_beam3_cell_number1: AD2CP_V3_CN1
+  ad2cp_beam4_cell_number1: AD2CP_V4_CN1
+  ad2cp_heading: AD2CP_HEADING
+  ad2cp_pitch: AD2CP_PITCH
+  ad2cp_pressure: AD2CP_PRESSURE
+  ad2cp_roll: AD2CP_ROLL
+  ad2cp_time: AD2CP_TIME
+  altimeter: Altitude
+  angular_cmd: AngCmd
+  angular_pos: AngPos
+  ballast_cmd: BallastCmd
+  ballast_pos: BallastPos
+  chlorophyll: FLNTU_CHL_SCALED
+  chlorophyll_raw: FLNTU_CHL_COUNT
+  conductivity: LEGATO_CONDUCTIVITY
+  dead_reckoning: DeadReckoning
+  declination: Declination
+  desired_heading: DesiredH
+  dive_num: fnum
+  downwelling_PAR: MPE-PAR_IRRADIANCE
+  heading: Heading
+  internal_pressure: Pa
+  internal_temperature: Temperature
+  internal_temperature_PAR: MPE-PAR_TEMPERATURE
+  latitude: NAV_LATITUDE
+  linear_cmd: LinCmd
+  linear_pos: LinPos
+  longitude: NAV_LONGITUDE
+  nav_resource: NAV_RESOURCE
+  nav_state: NAV_RESOURCE
+  oxygen_ad_counts: AROD_FT_DO_AN
+  oxygen_concentration: AROD_FT_DO
+  oxygen_led_counts: AROD_FT_LED
+  pitch: Pitch
+  pressure: LEGATO_PRESSURE
+  roll: Roll
+  salinity: LEGATO_SALINITY
+  security_level: SecurityLevel
+  temperature: LEGATO_TEMPERATURE
+  temperature_oxygen: AROD_FT_TEMP
+  time: time
+  turbidity: FLNTU_NTU_SCALED
+  turbidity_raw: FLNTU_NTU_COUNT
+  voltage: Voltage

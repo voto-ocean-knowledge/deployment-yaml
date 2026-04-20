@@ -1,0 +1,102 @@
+metadata:
+  comment: Altitude set to 5m for the entire mission duration. Zt/zs set to 4m for
+    the entire mission duration. The glider hit the seabed a few times due to issues
+    with the ADCP. Occasionally max diving depth was reduced or altitude was increased
+    to avoid the risk of collision
+  project: NS_Bornholm
+platform_devices:
+  AD2CP:
+    make_model: Nortek AD2CP
+    sensor_calibration_date: '2022-03-15'
+    sensor_serial_number: '103356'
+  ctd:
+    make_model: RBR legato CTD
+    sensor_calibration_date: '2022-05-16'
+    sensor_serial_number: '210555'
+  nitrate:
+    make_model: Seabird Deep SUNA
+    sensor_calibration_date: '2019-05-20'
+    sensor_serial_number: NTR-1293
+  optics:
+    calibration_parameters:
+      CDOM_DarkCounts: 50
+      CDOM_SF: 0.0909
+      Chl_DarkCounts: 41
+      Chl_SF: 0.0121
+      SIG_DarkCounts: 48
+      SIG_SF: 3.118e-06
+    make_model: Wetlabs FLBBCD
+    sensor_calibration_date: '2022-04-04'
+    sensor_serial_number: '7485'
+  oxygen:
+    make_model: RBR coda TODO
+    sensor_calibration_date: '2022-05-26'
+    sensor_serial_number: '210568'
+qc:
+  cdom:
+    comment: Apparent temporal decrease in the intensity of the CDOM signal. Cause
+      unknown. More information on the history and updates regarding this issue (
+      https://observations.voiceoftheocean.org/data/updates).
+    value: 4
+  cdom_raw:
+    comment: Apparent temporal decrease in the intensity of the CDOM signal. Cause
+      unknown. More information on the history and updates regarding this issue (
+      https://observations.voiceoftheocean.org/data/updates).
+    value: 4
+  oxygen_concentration:
+    comment: Deterioration of the foil has caused errors in the dissolved oxygen concentration.
+      Values are observed to be substantially higher than the reference CTD cast at
+      deployment. There is an apparent temporal increase in dissolved oxygen concentration
+      throughout the mission. More information on the history and updates regarding
+      this issue (https://observations.voiceoftheocean.org/data/updates).
+    value: 4
+variables:
+  ad2cp_beam1_cell_number1: AD2CP_V1_CN1
+  ad2cp_beam2_cell_number1: AD2CP_V2_CN1
+  ad2cp_beam3_cell_number1: AD2CP_V3_CN1
+  ad2cp_beam4_cell_number1: AD2CP_V4_CN1
+  ad2cp_heading: AD2CP_HEADING
+  ad2cp_pitch: AD2CP_PITCH
+  ad2cp_pressure: AD2CP_PRESSURE
+  ad2cp_roll: AD2CP_ROLL
+  ad2cp_time: AD2CP_TIME
+  altimeter: Altitude
+  angular_cmd: AngCmd
+  angular_pos: AngPos
+  backscatter_raw: FLBBCD_BB_700_COUNT
+  backscatter_scaled: FLBBCD_BB_700_SCALED
+  ballast_cmd: BallastCmd
+  ballast_pos: BallastPos
+  cdom: FLBBCD_CDOM_SCALED
+  cdom_raw: FLBBCD_CDOM_COUNT
+  chlorophyll: FLBBCD_CHL_SCALED
+  chlorophyll_raw: FLBBCD_CHL_COUNT
+  conductivity: LEGATO_CONDUCTIVITY
+  dead_reckoning: DeadReckoning
+  declination: Declination
+  desired_heading: DesiredH
+  dive_num: fnum
+  heading: Heading
+  internal_pressure: Pa
+  internal_temperature: Temperature
+  latitude: NAV_LATITUDE
+  linear_cmd: LinCmd
+  linear_pos: LinPos
+  longitude: NAV_LONGITUDE
+  nav_resource: NAV_RESOURCE
+  nav_state: NAV_RESOURCE
+  nitrate_concentration: SUNA_NITRATE
+  nitrate_molar_concentration: SUNA_MOLAR_NITRATE
+  oxygen_concentration: LEGATO_CODA_DO
+  oxygen_phase: LEGATO_CODA_CORR_PHASE
+  pitch: Pitch
+  pressure: LEGATO_PRESSURE
+  roll: Roll
+  salinity: LEGATO_SALINITY
+  security_level: SecurityLevel
+  suna_internal_humidity: SUNA_HUMIDITY_NITRATE
+  suna_internal_temperature: SUNA_TEMP_NITRATE
+  temperature: LEGATO_TEMPERATURE
+  temperature_oxygen: LEGATO_CODA_TEMPERATURE
+  time: time
+  voltage: Voltage

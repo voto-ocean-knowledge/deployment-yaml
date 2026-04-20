@@ -1,0 +1,86 @@
+metadata:
+  comment: Altitude set to 6m for the entire mission duration. Zt/zs set to 5m for
+    the entire mission duration. The gldier hit the seabed a few times due to ADCP
+    failure. ADCP and irradiance sensor (OCR504) stopped recording dat at C174. Emergency
+    recovery due to water leaks in the dry section of the glider. The raw data could
+    not be recovered and only the subsampled files sent through iriudium are available
+    for this mission
+  project: SAMBA
+platform_devices:
+  AD2CP:
+    make_model: Nortek AD2CP
+    sensor_calibration_date: '2021-05-21'
+    sensor_serial_number: '102882'
+  ctd:
+    make_model: RBR legato CTD
+    sensor_calibration_date: '2021-03-03'
+    sensor_serial_number: '206611'
+  irradiance:
+    make_model: SeaBird OCR504
+    sensor_calibration_date: '2021-03-08'
+    sensor_serial_number: '2197'
+  optics:
+    calibration_parameters:
+      Chl_DarkCounts: 47
+      Chl_SF: 0.0073
+      PC_DarkCounts: 43
+      PC_SF: 0.0422
+      SIG_DarkCounts: 46
+      SIG_SF: 1.8e-06
+    make_model: Wetlabs FLBBPC
+    sensor_calibration_date: '2021-03-22'
+    sensor_serial_number: '6755'
+  oxygen:
+    make_model: RBR coda TODO
+    sensor_calibration_date: '2021-02-26'
+    sensor_serial_number: '206115'
+variables:
+  ad2cp_beam1_cell_number1: AD2CP_V1_CN1
+  ad2cp_beam2_cell_number1: AD2CP_V2_CN1
+  ad2cp_beam3_cell_number1: AD2CP_V3_CN1
+  ad2cp_beam4_cell_number1: AD2CP_V4_CN1
+  ad2cp_heading: AD2CP_HEADING
+  ad2cp_pitch: AD2CP_PITCH
+  ad2cp_pressure: AD2CP_PRESSURE
+  ad2cp_roll: AD2CP_ROLL
+  ad2cp_time: AD2CP_TIME
+  altimeter: Altitude
+  angular_cmd: AngCmd
+  angular_pos: AngPos
+  backscatter_raw: FLBBPC_BB_700_COUNT
+  backscatter_scaled: FLBBPC_BB_700_SCALED
+  ballast_cmd: BallastCmd
+  ballast_pos: BallastPos
+  chlorophyll: FLBBPC_CHL_SCALED
+  chlorophyll_raw: FLBBPC_CHL_COUNT
+  conductivity: LEGATO_CONDUCTIVITY
+  dead_reckoning: DeadReckoning
+  declination: Declination
+  desired_heading: DesiredH
+  dive_num: fnum
+  down_irradiance_380: OCR504_Ed1
+  down_irradiance_490: OCR504_Ed2
+  down_irradiance_532: OCR504_Ed3
+  downwelling_PAR: OCR504_Ed4
+  heading: Heading
+  internal_pressure: Pa
+  internal_temperature: Temperature
+  latitude: NAV_LATITUDE
+  linear_cmd: LinCmd
+  linear_pos: LinPos
+  longitude: NAV_LONGITUDE
+  nav_resource: NAV_RESOURCE
+  nav_state: NAV_RESOURCE
+  oxygen_concentration: LEGATO_CODA_DO
+  oxygen_phase: LEGATO_CODA_CORR_PHASE
+  phycocyanin: FLBBPC_PC_SCALED
+  phycocyanin_raw: FLBBPC_PC_COUNT
+  pitch: Pitch
+  pressure: LEGATO_PRESSURE
+  roll: Roll
+  salinity: LEGATO_SALINITY
+  security_level: SecurityLevel
+  temperature: LEGATO_TEMPERATURE
+  temperature_oxygen: LEGATO_CODA_TEMPERATURE
+  time: time
+  voltage: Voltage

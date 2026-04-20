@@ -1,0 +1,105 @@
+metadata:
+  comment: Glider got pushed off transect between 2025-01-08 to 2025-01-10 due to
+    currents. Glider flew on increased vertical speed and decreased pitch towards
+    the end of the mission for logistical reasons. Tridente phycocyanin channel values
+    are suspect. The cause is under investigation and appears to be due to bad calibration
+    https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
+  project: SAMBA
+platform_devices:
+  AD2CP:
+    make_model: Nortek AD2CP
+    sensor_calibration_date: '2022-05-25'
+    sensor_serial_number: '103363'
+  ctd:
+    make_model: RBR legato CTD
+    sensor_calibration_date: '2025-01-13'
+    sensor_serial_number: '205048'
+  irradiance:
+    make_model: Biospherical MPE-PAR
+    sensor_calibration_date: '2024-05-02'
+    sensor_serial_number: '3191'
+  optics:
+    calibration_parameters:
+      Chl_C0: 0.019609326
+      Chl_C1: 2.4724888e06
+      Chl_C2: 0.10331017
+      PC_C0: 0.09200525
+      PC_C1: 4.0099958e06
+      PC_C2: 1.0
+      backscatter_C0: 2.82882e-07
+      backscatter_C1: 11.481439
+    make_model: RBR Tridente
+    sensor_calibration_date: '2025-05-27'
+    sensor_serial_number: '238732'
+  oxygen:
+    calibration_parameters:
+      A: -12.88162
+      B: 0.001467866
+      C: -2.550103e-08
+      Cp: 0.004
+      D: 5.835115e-13
+      E: -7.257766e-18
+      F: 4.697937e-23
+      c0: 0.003092823
+      c1: 0.000132935
+      c2: 2.414648e-06
+      d0: -0.0001738649
+      d1: -0.2086047
+      d2: 0.1976003
+      d3: 0.0
+      d4: 0.0
+      e0: 1.0
+    make_model: JFE Advantech AROD_FT
+    sensor_calibration_date: '2023-08-26'
+    sensor_serial_number: '0067'
+qc:
+  phycocyanin:
+    comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
+      and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
+    value: 4
+variables:
+  ad2cp_beam1_cell_number1: AD2CP_V1_CN1
+  ad2cp_beam2_cell_number1: AD2CP_V2_CN1
+  ad2cp_beam3_cell_number1: AD2CP_V3_CN1
+  ad2cp_beam4_cell_number1: AD2CP_V4_CN1
+  ad2cp_heading: AD2CP_HEADING
+  ad2cp_pitch: AD2CP_PITCH
+  ad2cp_pressure: AD2CP_PRESSURE
+  ad2cp_roll: AD2CP_ROLL
+  ad2cp_time: AD2CP_TIME
+  altimeter: Altitude
+  angular_cmd: AngCmd
+  angular_pos: AngPos
+  backscatter: TRIDENTE_BACKSCATTER
+  ballast_cmd: BallastCmd
+  ballast_pos: BallastPos
+  chlorophyll: TRIDENTE_CHLOROPHYLL
+  conductivity: LEGATO_CONDUCTIVITY
+  dead_reckoning: DeadReckoning
+  declination: Declination
+  desired_heading: DesiredH
+  dive_num: fnum
+  downwelling_PAR: MPE-PAR_IRRADIANCE
+  heading: Heading
+  internal_pressure: Pa
+  internal_temperature: Temperature
+  internal_temperature_PAR: MPE-PAR_TEMPERATURE
+  latitude: NAV_LATITUDE
+  linear_cmd: LinCmd
+  linear_pos: LinPos
+  longitude: NAV_LONGITUDE
+  nav_resource: NAV_RESOURCE
+  nav_state: NAV_RESOURCE
+  oxygen_ad_counts: AROD_FT_DO_AN
+  oxygen_concentration: AROD_FT_DO
+  oxygen_led_counts: AROD_FT_LED
+  phycocyanin: TRIDENTE_FDOM
+  pitch: Pitch
+  pressure: LEGATO_PRESSURE
+  roll: Roll
+  salinity: LEGATO_SALINITY
+  security_level: SecurityLevel
+  temperature: LEGATO_TEMPERATURE
+  temperature_oxygen: AROD_FT_TEMP
+  time: time
+  voltage: Voltage

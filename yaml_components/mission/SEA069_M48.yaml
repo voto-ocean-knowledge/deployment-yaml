@@ -1,0 +1,120 @@
+metadata:
+  comment: Glider occasionally flew on increased vspeed due to strong currents. zs/zt
+    and alt=2 for full mission duration.  Biofouling affected the wetlabs data (backscatter,
+    phycocyanin). See QC
+  project: SAMBA
+platform_devices:
+  AD2CP:
+    make_model: Nortek AD2CP
+    sensor_calibration_date: '2024-02-10'
+    sensor_serial_number: '105524'
+  ctd:
+    make_model: RBR legato CTD
+    sensor_calibration_date: '2021-03-01'
+    sensor_serial_number: '206610'
+  irradiance:
+    make_model: Biospherical MPE-PAR
+    sensor_calibration_date: '2024-07-25'
+    sensor_serial_number: '3201'
+  optics:
+    calibration_parameters:
+      Chl_DarkCounts: 48
+      Chl_SF: 0.0073
+      PC_DarkCounts: 44
+      PC_SF: 0.0424
+      SIG_DarkCounts: 46
+      SIG_SF: 1.783e-06
+    make_model: Wetlabs FLBBPC
+    sensor_calibration_date: '2021-03-22'
+    sensor_serial_number: '6754'
+  oxygen:
+    calibration_parameters:
+      A: -12.83706
+      B: 0.001482922
+      C: -2.668022e-08
+      Cp: 0.0037
+      D: 6.271794e-13
+      E: -8.023481e-18
+      F: 5.211949e-23
+      c0: 0.002945188
+      c1: 0.0001272086
+      c2: 2.523607e-06
+      d0: 8.562884e-05
+      d1: -0.1777866
+      d2: 0.1915917
+      d3: 0.0
+      d4: 0.0
+      e0: 1.0
+    make_model: JFE Advantech AROD_FT
+    sensor_calibration_date: '2024-01-26'
+    sensor_serial_number: '0050'
+qc:
+  backscatter_raw:
+    comment: Biofouling on wetlabs FLBBPC
+    end: '2025-06-22'
+    start: '2025-06-18'
+    value: 4
+  backscatter_scaled:
+    comment: Biofouling on wetlabs FLBBPC
+    end: '2025-06-22'
+    start: '2025-06-18'
+    value: 4
+  phycocyanin:
+    comment: Biofouling on wetlabs FLBBPC
+    end: '2025-06-22'
+    start: '2025-06-18'
+    value: 4
+  phycocyanin_raw:
+    comment: Biofouling biofouling on wetlabs FLBBPC
+    end: '2025-06-22'
+    start: '2025-06-18'
+    value: 4
+variables:
+  ad2cp_beam1_cell_number1: AD2CP_V1_CN1
+  ad2cp_beam2_cell_number1: AD2CP_V2_CN1
+  ad2cp_beam3_cell_number1: AD2CP_V3_CN1
+  ad2cp_beam4_cell_number1: AD2CP_V4_CN1
+  ad2cp_heading: AD2CP_HEADING
+  ad2cp_pitch: AD2CP_PITCH
+  ad2cp_pressure: AD2CP_PRESSURE
+  ad2cp_roll: AD2CP_ROLL
+  ad2cp_time: AD2CP_TIME
+  altimeter: Altitude
+  angular_cmd: AngCmd
+  angular_pos: AngPos
+  backscatter_raw: FLBBPC_BB_700_COUNT
+  backscatter_scaled: FLBBPC_BB_700_SCALED
+  ballast_cmd: BallastCmd
+  ballast_pos: BallastPos
+  chlorophyll: FLBBPC_CHL_SCALED
+  chlorophyll_raw: FLBBPC_CHL_COUNT
+  conductivity: LEGATO_CONDUCTIVITY
+  dead_reckoning: DeadReckoning
+  declination: Declination
+  desired_heading: DesiredH
+  dive_num: fnum
+  downwelling_PAR: MPE-PAR_IRRADIANCE
+  heading: Heading
+  internal_pressure: Pa
+  internal_temperature: Temperature
+  internal_temperature_PAR: MPE-PAR_TEMPERATURE
+  latitude: NAV_LATITUDE
+  linear_cmd: LinCmd
+  linear_pos: LinPos
+  longitude: NAV_LONGITUDE
+  nav_resource: NAV_RESOURCE
+  nav_state: NAV_RESOURCE
+  oxygen_ad_counts: AROD_FT_DO_AN
+  oxygen_concentration: AROD_FT_DO
+  oxygen_led_counts: AROD_FT_LED
+  phycocyanin: FLBBPC_PC_SCALED
+  phycocyanin_raw: FLBBPC_PC_COUNT
+  pitch: Pitch
+  pressure: LEGATO_PRESSURE
+  roll: Roll
+  salinity: LEGATO_SALINITY
+  security_level: SecurityLevel
+  temperature: LEGATO_TEMPERATURE
+  temperature_oxygen: AROD_FT_TEMP
+  time: time
+  voltage: Voltage
