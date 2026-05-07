@@ -1,5 +1,6 @@
 metadata:
-  comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
+  comment: GPS spoofing occurred on c. 711 affecting both the position and some timestamps.
+    Tridente phycocyanin channel values are suspect. The cause is under investigation
     and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
   project: SAMBA
 platform_devices:

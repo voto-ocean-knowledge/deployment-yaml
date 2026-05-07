@@ -1,8 +1,10 @@
 import yaml
 from pathlib import Path
+import logging
 import extract_old_pyglider_yaml_metadata
+_log = logging.getLogger(__name__)
 
-with open(Path("/home/callum/Documents/community/ocean-gliders-format-vocabularies/yaml/validated_yaml/og1_sensors.yaml")) as fin:
+with open(Path("/data/ocean-gliders-format-vocabularies/yaml/validated_yaml/og1_sensors.yaml")) as fin:
     sensors = yaml.safe_load(fin)
 
 sensor_model_conversion = {
@@ -46,7 +48,7 @@ def convert_devices(devices):
 
     return og1_devices
 
-with open(Path("/home/callum/Documents/community/ocean-gliders-format-vocabularies/yaml/validated_yaml/og1_variables.yaml")) as fin:
+with open(Path("/data/ocean-gliders-format-vocabularies/yaml/validated_yaml/og1_variables.yaml")) as fin:
     og1_variables = yaml.safe_load(fin)
 
 sensor_variables = {
@@ -210,8 +212,11 @@ def add_variables(devices, og1_devices, original_vars):
 
 def convert_to_og1(yaml_path):
     yaml_out_dir = Path('og1')
+    if not yaml_out_dir.exists():
+        yaml_out_dir.mkdir()
     yaml_name = yaml_path.name
     yaml_out = yaml_out_dir / yaml_name.replace('.yml', '.yaml')
+
     with open('yaml_components/global_metadata.yaml') as fin:
         meta = yaml.safe_load(fin)['metadata']
     out = {}
@@ -257,13 +262,25 @@ def convert_all_yaml():
         if "OG" in str(yml):
             continue
         if "SEA070" in str(yml):
-            print("Skip, we'll come back to this")
+            _log.warning("Skip, we'll come back to this")
             # todo deal with all the extra sensors on this one
             continue
-        print(yml)
+        if "SEA069_M15" in str(yml):
+            _log.warning("Skip, we'll come back to this")
+            # todo deal with all the extra sensors on this one
+            continue
+        _log.info(yml)
         convert_to_og1(yml)
 
 if __name__ == '__main__':
+    logging.basicConfig(
+        filename="/data/log/to_og1_yaml.log",
+        filemode="a",
+        format="%(asctime)s %(levelname)-8s %(message)s",
+        level=logging.INFO,
+        datefmt="%Y-%m-%d %H:%M:%S",
+    )
+    _log.info("START")
     extract_old_pyglider_yaml_metadata.main()
-    convert_to_og1(Path('mission_yaml/SEA066_M60.yml'))
     convert_all_yaml()
+    _log.info("COMPLETE")
