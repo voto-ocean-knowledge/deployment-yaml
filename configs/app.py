@@ -7,7 +7,7 @@ st.title("Config Checker for SeaExplorer")
 
 runnable = False
 fmt_colors = {
-    'WARNING': 'orange',
+    'WARNING': 'blue',
     'ERROR': 'red',
 }
 

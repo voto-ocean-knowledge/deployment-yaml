@@ -1,55 +1,54 @@
 metadata:
-  comment: Glider occationally flew on increased vertical speed to account for currents.
-    Tridente phycocyanin channel values are suspect. The cause is under investigation
+  comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
     and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
   project: SAMBA
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP
-    sensor_calibration_date: '2022-05-25'
-    sensor_serial_number: '103363'
+    sensor_calibration_date: '2024-02-10'
+    sensor_serial_number: '104640'
   ctd:
     make_model: RBR legato CTD
-    sensor_calibration_date: '2025-01-13'
-    sensor_serial_number: '205048'
+    sensor_calibration_date: '2024-02-23'
+    sensor_serial_number: '206523'
   irradiance:
     make_model: Biospherical MPE-PAR
     sensor_calibration_date: '2024-05-02'
-    sensor_serial_number: '3191'
+    sensor_serial_number: '3194'
   optics:
     calibration_parameters:
-      Chl_C0: 0.019609326
-      Chl_C1: 2.4724888e06
+      Chl_C0: 0.030365441
+      Chl_C1: 2.4691522e06
       Chl_C2: 0.10331017
-      PC_C0: 0.09200525
-      PC_C1: 4.0099958e06
-      PC_C2: 1.0
-      backscatter_C0: 2.82882e-07
-      backscatter_C1: 11.481439
+      PC_C0: -0.26203474
+      PC_C1: 3.6712498e06
+      PC_C2: 1
+      backscatter_C0: 5.5214777e-08
+      backscatter_C1: 10.832467
     make_model: RBR Tridente
-    sensor_calibration_date: '2025-05-27'
-    sensor_serial_number: '238732'
+    sensor_calibration_date: '2025-06-25'
+    sensor_serial_number: '238734'
   oxygen:
     calibration_parameters:
-      A: -12.88162
-      B: 0.001467866
-      C: -2.550103e-08
-      Cp: 0.004
-      D: 5.835115e-13
-      E: -7.257766e-18
-      F: 4.697937e-23
-      c0: 0.003092823
-      c1: 0.000132935
-      c2: 2.414648e-06
-      d0: -0.0001738649
-      d1: -0.2086047
-      d2: 0.1976003
+      A: -12.45549
+      B: 0.001472191
+      C: -2.561056e-08
+      Cp: 0.0038
+      D: 5.818844e-13
+      E: -7.120555е-18
+      F: 4.532106e-23
+      c0: 0.002875601
+      c1: 0.0001227918
+      c2: 2.748141e-06
+      d0: 8.148819e-05
+      d1: -0.1697983
+      d2: 0.1943211
       d3: 0.0
       d4: 0.0
       e0: 1.0
     make_model: JFE Advantech AROD_FT
-    sensor_calibration_date: '2023-08-26'
-    sensor_serial_number: '0067'
+    sensor_calibration_date: '2024-06-06'
+    sensor_serial_number: '0066'
 qc:
   phycocyanin:
     comment: Tridente phycocyanin channel values are suspect. The cause is under investigation
@@ -91,7 +90,7 @@ variables:
   oxygen_ad_counts: AROD_FT_DO_AN
   oxygen_concentration: AROD_FT_DO
   oxygen_led_counts: AROD_FT_LED
-  phycocyanin: TRIDENTE_FDOM
+  phycocyanin: TRIDENTE_PHYCOCYANIN
   pitch: Pitch
   pressure: LEGATO_PRESSURE
   roll: Roll

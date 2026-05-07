@@ -2,7 +2,7 @@ import yaml
 from pathlib import Path
 import extract_old_pyglider_yaml_metadata
 
-with open(Path("/home/callum/Documents/community/ocean-gliders-format-vocabularies/yaml/validated_yaml/og1_sensors.yaml")) as fin:
+with open(Path("/data/ocean-gliders-format-vocabularies/yaml/validated_yaml/og1_sensors.yaml")) as fin:
     sensors = yaml.safe_load(fin)
 
 sensor_model_conversion = {
@@ -46,7 +46,7 @@ def convert_devices(devices):
 
     return og1_devices
 
-with open(Path("/home/callum/Documents/community/ocean-gliders-format-vocabularies/yaml/validated_yaml/og1_variables.yaml")) as fin:
+with open(Path("/data/ocean-gliders-format-vocabularies/yaml/validated_yaml/og1_variables.yaml")) as fin:
     og1_variables = yaml.safe_load(fin)
 
 sensor_variables = {
@@ -210,8 +210,11 @@ def add_variables(devices, og1_devices, original_vars):
 
 def convert_to_og1(yaml_path):
     yaml_out_dir = Path('og1')
+    if not yaml_out_dir.exists():
+        yaml_out_dir.mkdir()
     yaml_name = yaml_path.name
     yaml_out = yaml_out_dir / yaml_name.replace('.yml', '.yaml')
+
     with open('yaml_components/global_metadata.yaml') as fin:
         meta = yaml.safe_load(fin)['metadata']
     out = {}
@@ -257,6 +260,10 @@ def convert_all_yaml():
         if "OG" in str(yml):
             continue
         if "SEA070" in str(yml):
+            print("Skip, we'll come back to this")
+            # todo deal with all the extra sensors on this one
+            continue
+        if "SEA069_M15" in str(yml):
             print("Skip, we'll come back to this")
             # todo deal with all the extra sensors on this one
             continue
