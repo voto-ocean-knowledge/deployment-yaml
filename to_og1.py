@@ -1,6 +1,8 @@
 import yaml
 from pathlib import Path
+import logging
 import extract_old_pyglider_yaml_metadata
+_log = logging.getLogger(__name__)
 
 with open(Path("/data/ocean-gliders-format-vocabularies/yaml/validated_yaml/og1_sensors.yaml")) as fin:
     sensors = yaml.safe_load(fin)
@@ -260,17 +262,25 @@ def convert_all_yaml():
         if "OG" in str(yml):
             continue
         if "SEA070" in str(yml):
-            print("Skip, we'll come back to this")
+            _log.warning("Skip, we'll come back to this")
             # todo deal with all the extra sensors on this one
             continue
         if "SEA069_M15" in str(yml):
-            print("Skip, we'll come back to this")
+            _log.warning("Skip, we'll come back to this")
             # todo deal with all the extra sensors on this one
             continue
-        print(yml)
+        _log.info(yml)
         convert_to_og1(yml)
 
 if __name__ == '__main__':
+    logging.basicConfig(
+        filename="/data/log/to_og1_yaml.log",
+        filemode="a",
+        format="%(asctime)s %(levelname)-8s %(message)s",
+        level=logging.INFO,
+        datefmt="%Y-%m-%d %H:%M:%S",
+    )
+    _log.info("START")
     extract_old_pyglider_yaml_metadata.main()
-    convert_to_og1(Path('mission_yaml/SEA066_M60.yml'))
     convert_all_yaml()
+    _log.info("COMPLETE")
