@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Ekman
   wmo_id: '8901183'
-  comment: ' Tridente
+  comment: ' Glider recovered due to problem with writing data. Information to be updated here. Spoofing occurences on this mission, specific cycles affected to be updated. Tridente
     phycocyanin channel values are suspect. The cause is under investigation and appears
     to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
