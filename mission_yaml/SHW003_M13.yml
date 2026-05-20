@@ -66,14 +66,14 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2025-06-25'
     calibration_parameters:
-      Chl_C0: 
-      Chl_C1: 
-      Chl_C2: 
-      PC_C0: 
-      PC_C1: 
+      Chl_C0: 8.486743e-03
+      Chl_C1: 1.6364926e06
+      Chl_C2: 103.31017e-03
+      PC_C0: 29.01513e-03
+      PC_C1: 3.5210688e06
       PC_C2: 1.0
-      backscatter_C0: 
-      backscatter_C1: 
+      backscatter_C0: -230.14356e-09
+      backscatter_C1: 9.160208
   oxygen:
     make: JFE Advantech
     model: AROD-FT
@@ -81,25 +81,25 @@ glider_devices:
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    two_point_calibrated: 'Yes'
+    two_point_calibrated: 'No'
     calibration_date: '2026-01-21'
     calibration_parameters:
-      d0: 
-      d1: 
-      d2: 
+      d0: -1.135707e-05
+      d1: -1.521722e-01
+      d2: 1.923756e-01
       d3: 0.0
       d4: 0.0
-      c0: 
-      c1: 
-      c2: 
+      c0: 2.822237e-03
+      c1: 1.218115e-04
+      c2: 2.577903e-06
       e0: 1.0
-      Cp: 
-      A: 
-      B: 
-      C: 
-      D: 
-      E: 
-      F: 
+      Cp: 4.200000e-03
+      A: -1.315859e+01
+      B: 1.459029e-03
+      C: -2.494942e-08
+      D: 5.626160e-13
+      E: -6.885092e-18
+      F: 4.442941e-23
   AD2CP:
     make: Nortek
     model: AD2CP
