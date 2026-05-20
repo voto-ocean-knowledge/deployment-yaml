@@ -26,9 +26,9 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Ekman
-  wmo_id: '8901183'
-  comment: ' Glider recovered due to problem with writing data. Information to be updated here. Spoofing occurences on this mission, specific cycles affected to be updated. Tridente
+  glider_name: Carson
+  wmo_id: '8901204'
+  comment: ' Tridente
     phycocyanin channel values are suspect. The cause is under investigation and appears
     to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
@@ -40,78 +40,78 @@ metadata:
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '26'
+  deployment_id: '13'
   deployment_name: SAMBA
   project: SAMBA
   project_url: https://voiceoftheocean.org/ocean-observatories/
   summary: ' Part of SAMBA continuous monitoring '
-  platform_serial: SHW002
-  seanav: 3.9.4-r
-  seapld: 2.25.4-cr
+  platform_serial: SHW003
+  seanav: 3.9.5-cr
+  seapld: 2.26.0-cr
 glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '238480'
-    long_name: RBR legato CTD
-    make_model: RBR legato CTD
+    serial: '241732'
+    long_name: RBR legato4 CTD
+    make_model: RBR legato4 CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2025-04-17'
+    calibration_date: '2026-03-05'
   optics:
     make: RBR
     model: Tridente
-    serial: '238740'
+    serial: '238737'
     long_name: RBR Tridente
     make_model: RBR Tridente
     factory_calibrated: 'Yes'
-    calibration_date: '2025-06-20'
+    calibration_date: '2025-06-25'
     calibration_parameters:
-      Chl_C0: 47.50405e-03
-      Chl_C1: 1.532593e06
+      Chl_C0: 8.486743e-03
+      Chl_C1: 1.6364926e06
       Chl_C2: 103.31017e-03
-      PC_C0: -98.71562e-03
-      PC_C1: 5.806249e06
+      PC_C0: 29.01513e-03
+      PC_C1: 3.5210688e06
       PC_C2: 1.0
-      backscatter_C0: -462.59714e-09
-      backscatter_C1: 10.841611
+      backscatter_C0: -230.14356e-09
+      backscatter_C1: 9.160208
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: 0128
+    serial: '0142'
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
-    two_point_calibrated: 'Yes'
-    calibration_date: '2025-06-10'
+    two_point_calibrated: 'No'
+    calibration_date: '2026-01-21'
     calibration_parameters:
-      d0: -0.0002910485
-      d1: -1.625398e-01
-      d2: 1.902478e-01
+      d0: -1.135707e-05
+      d1: -1.521722e-01
+      d2: 1.923756e-01
       d3: 0.0
       d4: 0.0
-      c0: 0.002896543
-      c1: 0.0001229512
-      c2: 2.736071e-06
+      c0: 2.822237e-03
+      c1: 1.218115e-04
+      c2: 2.577903e-06
       e0: 1.0
-      Cp: 0.0043
-      A: -1.285023e01
-      B: 0.001486026
-      C: -2.686413e-08
-      D: 6.342545e-13
-      E: -8.162941e-18
-      F: 5.321793e-23
+      Cp: 4.200000e-03
+      A: -1.315859e+01
+      B: 1.459029e-03
+      C: -2.494942e-08
+      D: 5.626160e-13
+      E: -6.885092e-18
+      F: 4.442941e-23
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '107326'
+    serial: '107449'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2025-06-17'
+    calibration_date: '2026-01-19'
   irradiance:
     make: Biospherical
     model: MPE-PAR
-    serial: '3199'
+    serial: '3200'
     tailward_mounting_angle_relative_to_platform_z_axis_degrees: 17.71
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
@@ -286,7 +286,7 @@ netcdf_variables:
     units: None
     coordinates: time depth latitude longitude
   conductivity:
-    source: LEGATO_CONDUCTIVITY
+    source: LEGATO4_CONDUCTIVITY
     long_name: water conductivity
     standard_name: sea_water_electrical_conductivity
     units: mS cm-1
@@ -298,7 +298,7 @@ netcdf_variables:
     accuracy: '0.003'
     resolution: '0.001'
   temperature:
-    source: LEGATO_TEMPERATURE
+    source: LEGATO4_TEMPERATURE
     long_name: water temperature
     standard_name: sea_water_temperature
     units: Celsius
@@ -310,7 +310,7 @@ netcdf_variables:
     accuracy: '0.002'
     resolution: '0.00005'
   pressure:
-    source: LEGATO_PRESSURE
+    source: LEGATO4_PRESSURE
     long_name: water pressure
     standard_name: sea_water_pressure
     units: dbar
@@ -325,7 +325,7 @@ netcdf_variables:
     resolution: '0.01'
     comment: ctd pressure sensor
   salinity:
-    source: LEGATO_SALINITY
+    source: LEGATO4_SALINITY
     long_name: water salinity
     standard_name: sea_water_salinity
     units: PSU
