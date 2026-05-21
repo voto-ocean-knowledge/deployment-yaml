@@ -14,6 +14,7 @@ sensor_model_conversion = {
     'JFE Advantech AROD_FT': 'JFE Advantech Rinko FT ARO-FT oxygen sensor',
     'RBR coda TODO': 'RBR Coda T.ODO Temperature and Dissolved Oxygen Sensor',
     'RBR legato CTD': 'RBR Legato3 CTD',
+    'RBR legato4 CTD': 'RBR Legato4 CTD',
     'RBR Tridente': 'RBR tridente scattering fluorescence sensor',
     'Rockland Scientific MR1000G-RDL': 'Rockland Scientific MicroRider-1000G turbulence microstructure profiler',
     'SeaBird OCR504': 'Satlantic {Sea-Bird} OCR-504 multispectral radiometer',
@@ -64,6 +65,11 @@ sensor_variables = {
         'PRES': 'LEGATO_PRESSURE',
         'TEMP': 'LEGATO_TEMPERATURE',
         'CNDC': 'LEGATO_CONDUCTIVITY',
+    },
+    'RBR legato4 CTD': {
+        'PRES': 'LEGATO4_PRESSURE',
+        'TEMP': 'LEGATO4_TEMPERATURE',
+        'CNDC': 'LEGATO4_CONDUCTIVITY',
     },
     'Seabird SlocumCTD': {
         'PRES': 'GPCTD_PRESSURE',
