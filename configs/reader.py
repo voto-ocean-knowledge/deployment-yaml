@@ -158,6 +158,14 @@ def read_pld_config(config_file):
     return pld_params | devices_dict
 
 
+def expected_values_checker(cfg, expected_values, section=''):
+    for key, var in cfg.items():
+        if key not in expected_values.keys():
+            continue
+        if str(var) != str(expected_values[key]):
+            _log.error(f"Bad value for {section} {key} = {var}. Expected {expected_values[key]}")
+
+
 class ConfigReader:
     def __init__(self, mission_dir):
         self.mission_dir = Path(mission_dir)
@@ -250,11 +258,13 @@ class ConfigReader:
             'mission.mode': '0',
         }
         cfg = self.config_dict
-        for key, var in cfg.items():
-            if key not in expected_values.keys():
-                continue
-            if str(var) != str(expected_values[key]):
-                _log.error(f"Bad value for {key} = {var}. Expected {expected_values[key]}")
+        expected_values_checker(cfg, expected_values)
+        expected_sensor_values = {
+            'AROD_FT': {'cfg.analog': '1'},
+        }
+        for sensor, expected_values in expected_sensor_values.items():
+            if sensor in cfg.keys():
+                expected_values_checker(cfg[sensor], expected_values, section=sensor)
         return
 
     def compare_last_mission(self):
@@ -356,6 +366,7 @@ class ConfigReader:
 
 sensors_conversion_dict = {
     'LEGATO': {'dict_name': 'ctd'},
+    'LEGATO4': {'dict_name': 'ctd'},
     'GPCTD': {'dict_name': 'ctd'},
     'TRIDENTE': {'dict_name': 'optics'},
     'FLBBCD': {'dict_name': 'optics'},
