@@ -38,8 +38,7 @@ metadata:
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
   deployment_id: '73'
-  comment: ' Due to GPS-spoofing the position of cycles 137, 177, 197, 201, 213 and
-    484 are affected. Vertical speed and zt temporarily increased towards the end
+  comment: ' GNSS jamming affecting cycles 137 (A), 177 (A), 197 (A), 201 (A), 213 (A), 481 (C), 483 (A), 484 (A). Read more on the issue: https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_6_gnss_jamming.pdf. Vertical speed and zt temporarily increased towards the end
     of mission to reach recovery waypoint in time. Apart from this zt/zs and alt=2
     for full mission duration. '
   deployment_name: SAMBA
