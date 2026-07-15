@@ -26,10 +26,10 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Ljung
-  wmo_id: '6801707'
+  glider_name: Fibbla
+  wmo_id: '6801665'
   comment: ' The mission is part of the InTail project with testing the new InTail oxygen
-    sensor. The InTail data is not available publically. Flight is varying in pitch and speed over the mission for scientific value and flight depth are adjusted in sections to stay safe from the bottom.'
+    sensor. The InTail data is not available publically.'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
     Aaron Mau, Martin Mohrmann
@@ -39,19 +39,19 @@ metadata:
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '96'
+  deployment_id: '48'
   deployment_name: InTail
   project: InTail
   project_url: https://voiceoftheocean.org/ocean-observatories/
   summary: ' Part of the InTail project '
-  platform_serial: SEA063
-  seanav: 3.8.2 -r
+  platform_serial: SEA076
+  seanav: 3.9.4 -r
   seapld: 2.24.2 -r
 glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '206612'
+    serial: '206523'
     long_name: RBR legato CTD
     make_model: RBR legato CTD
     factory_calibrated: 'Yes'
@@ -59,11 +59,11 @@ glider_devices:
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '101589'
+    serial: '103360'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2021-02-03'
+    calibration_date: '2022-03-15'
 netcdf_variables:
   keep_variables:
   - temperature
