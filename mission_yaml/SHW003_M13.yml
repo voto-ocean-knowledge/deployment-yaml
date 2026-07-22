@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Carson
   wmo_id: '8901204'
-  comment: ' Tridente
+  comment: 'GNSS jamming affecting cycles 2365(C),  2367 (A, B), 2368 (C). Read more on the issue: https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_6_gnss_jamming.pdf. Tridente
     phycocyanin channel values are suspect. The cause is under investigation and appears
     to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
@@ -47,7 +47,7 @@ metadata:
   summary: ' Part of SAMBA continuous monitoring '
   platform_serial: SHW003
   seanav: 3.9.5-cr
-  seapld: 2.26.0-cr
+  seapld: 2.26.0-r
 glider_devices:
   ctd:
     make: RBR
