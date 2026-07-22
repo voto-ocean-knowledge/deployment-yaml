@@ -28,8 +28,8 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Fibbla
   wmo_id: '6801665'
-  comment: ' The mission is part of the InTail project with testing the new InTail oxygen
-    sensor. The InTail data is not available publically.'
+  comment: 'The mission is part of the InTail project with testing the new InTail oxygen
+    sensor. The InTail data is not available publically. GNSS jamming affecting cycles 25 (C), 26 (A, B), 27 (A, B), 28 (C), 33 (C). Read more on the issue: https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_6_gnss_jamming.pdf.'
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
     Aaron Mau, Martin Mohrmann

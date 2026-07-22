@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Ekman
   wmo_id: '8901183'
-  comment: 'Navigational data is missing from cycle 808 due to an SD card writing issue. GNSS jamming affecting cycles 436 (C), 773 (B), 801 (B, C). Read more on the issue: https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_6_gnss_jamming.pdf. Tridente
+  comment: 'Mission aborted early due to a vehicle leak. Tridente
     phycocyanin channel values are suspect. The cause is under investigation and appears
     to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
