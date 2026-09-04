@@ -51,11 +51,11 @@ glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '205046'
-    long_name: RBR legato CTD
-    make_model: RBR legato CTD
+    serial: '241976'
+    long_name: RBR legato4 CTD
+    make_model: RBR legato4 CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2023-09-05'
+    calibration_date: '2026-03-13'
   optics:
     make: RBR
     model: Tridente
