@@ -81,22 +81,26 @@ if runnable:
                     st.write(line)
             table_log = dir_path / "table_config_check.log"
             if table_log.exists():
-                st.header("Comparison tables")
-                st.markdown("Contains some of the information from the logs in nice tables for comparison. **protip:** double click a table cell to expand it")
                 df_all = pd.read_csv(table_log, sep='\t',
-                                 names=['level', 'mission', 'kind', 'parameter', 'current', 'previous'])
-                df_pyglider = df_all[df_all['kind'] == 'missmatch']
-                df =  df_all[df_all['kind'] != 'missmatch']
-                subset = ['level','parameter', 'current', 'previous']
-                for level in ['ERROR', 'WARNING', 'INFO']:
-                    if level not in df.level.values:
-                        continue
-                    st.subheader(level.title())
-                    st.dataframe(df[df.level==level][subset], hide_index=True)
-                if not df_pyglider.empty:
-                    df_pyglider = df_pyglider.rename({'current': 'config file', 'previous': 'YAML file'}, axis=1)
-                    st.subheader("YAML file comparison")
-                    st.dataframe(df_pyglider, hide_index=True)
+                                     names=['level', 'mission', 'kind', 'parameter', 'current', 'previous'])
+                if not df_all.empty:
+                    st.header("Comparison tables")
+                    st.markdown("Contains some of the information from the logs in nice tables for comparison. **protip:** double click a table cell to expand it")
+                    df_pyglider = df_all[df_all['kind'] == 'missmatch']
+                    df =  df_all[df_all['kind'] != 'missmatch']
+                    subset = ['level','parameter', 'current', 'previous']
+                    for level in ['ERROR', 'WARNING', 'INFO']:
+                        if level not in df.level.values:
+                            continue
+                        st.subheader(level.title())
+                        st.dataframe(df[df.level==level][subset], hide_index=True)
+                    if not df_pyglider.empty:
+                        df_pyglider = df_pyglider.rename({'current': 'config file', 'previous': 'YAML file'}, axis=1)
+                        st.subheader("YAML file comparison")
+                        st.dataframe(df_pyglider, hide_index=True)
+                else:
+                    st.markdown("No comparison table for this mission! Possibly becuase it is the first one for this glider")
+
         else:
             st.subheader(":red[Script Failed! 😭 contact Callum]")
 
