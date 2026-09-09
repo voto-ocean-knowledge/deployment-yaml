@@ -294,6 +294,7 @@ class ConfigReader:
             'drf.dtpid.kd',
             'drf.dtpid.ki',
             'drf.ppid.ki',
+            'drf.bal.inc.coef',
             'security.fly.timeout',
             'vspeed.inib.immersion',
             'inflecting.fly.enable',
@@ -452,7 +453,7 @@ class ConfigReader:
     def compare_pyglider_yaml(self):
         pyglider_yaml = module_dir / "mission_yaml" / self.yaml_path.name
         if not pyglider_yaml.exists():
-            _log.error(f"no pyglider yaml {pyglider_yaml} found")
+            _log.warning(f"no pyglider yaml {pyglider_yaml} found")
             return
         _log.info(f"Compare with pyglider yaml {pyglider_yaml}")
         with open(pyglider_yaml) as fin:
