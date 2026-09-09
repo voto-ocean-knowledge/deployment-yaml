@@ -51,6 +51,8 @@ metadata:
   seanav: 3.9.1-r
   seapld: 2.25.4-cr
   membrane_serial: SHW002_1
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
+  site: SAMBA_01
 glider_devices:
   ctd:
     make: RBR

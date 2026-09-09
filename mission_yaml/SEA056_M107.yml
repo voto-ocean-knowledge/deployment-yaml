@@ -28,7 +28,10 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Trift
   wmo_id: '6801675'
-  comment: 'Payload was disabled from 2026-08-02 until 2026-08-06 for battery preservation. Tridente phycocyanin channel values are suspect. The cause is under investigation and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf. Chlorophyll data is also suspect after Tridente calibration, see qc.'
+  comment: Payload was disabled from 2026-08-02 until 2026-08-06 for battery preservation.
+    Tridente phycocyanin channel values are suspect. The cause is under investigation
+    and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf.
+    Chlorophyll data is also suspect after Tridente calibration, see qc.
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
     Adele Maciute, Aaron Mau, Martin Mohrmann
@@ -46,6 +49,8 @@ metadata:
   platform_serial: SEA056
   seanav: 3.9.4 -r
   seapld: 2.26.0 -r
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
+  site: SAMBA_05
 glider_devices:
   ctd:
     make: RBR
@@ -64,13 +69,13 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2026-04-07'
     calibration_parameters:
-      Chl_C0: 24.022298e-03
+      Chl_C0: 0.024022298
       Chl_C1: 3.7170145e06
       Chl_C2: 100e-03
-      PC_C0: -667.2761e-03
+      PC_C0: -0.6672761
       PC_C1: 19.476016e06
       PC_C2: 1
-      backscatter_C0: 117.31325e-09
+      backscatter_C0: 1.1731325e-07
       backscatter_C1: 14.606347
   oxygen:
     make: JFE Advantech
@@ -83,8 +88,8 @@ glider_devices:
     calibration_date: '2024-06-06'
     calibration_parameters:
       d0: 8.148819e-05
-      d1: -1.680660e-01
-      d2: 1.947194e-01
+      d1: -0.168066
+      d2: 0.1947194
       d3: 0.0
       d4: 0.0
       c0: 0.002875601

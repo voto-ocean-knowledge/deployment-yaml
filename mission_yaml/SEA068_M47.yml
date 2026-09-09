@@ -48,6 +48,8 @@ metadata:
   platform_serial: SEA068
   seanav: 3.8.2 -r
   seapld: 2.25.2 -r
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
+  site: SAMBA_01
 glider_devices:
   ctd:
     make: RBR

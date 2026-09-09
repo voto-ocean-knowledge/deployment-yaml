@@ -28,8 +28,10 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Smilla
   wmo_id: '8901050'
-  comment: 'Glider loitered daily for ~7h periods with payload off from 2026-07-28 to preserve battery due to logistics. Vertical speed was increased towards the end of the mission. Tridente phycocyanin channel values are suspect. The cause is under investigation
-    and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf '
+  comment: 'Glider loitered daily for ~7h periods with payload off from 2026-07-28
+    to preserve battery due to logistics. Vertical speed was increased towards the
+    end of the mission. Tridente phycocyanin channel values are suspect. The cause
+    is under investigation and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
     Adele Maciute, Aaron Mau, Martin Mohrmann
@@ -47,6 +49,8 @@ metadata:
   platform_serial: SEA077
   seapld: 2.25.2 -r
   seanav: 3.9.4 -r
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
+  site: SAMBA_03
 glider_devices:
   ctd:
     make: RBR

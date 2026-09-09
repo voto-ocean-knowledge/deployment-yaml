@@ -49,6 +49,8 @@ metadata:
   project_url: voiceoftheocean.org/ocean-observatories/
   summary: ' Part of SAMBA continuous monitoring'
   platform_serial: SEA076
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
+  site: SAMBA_04
 glider_devices:
   ctd:
     make: RBR
