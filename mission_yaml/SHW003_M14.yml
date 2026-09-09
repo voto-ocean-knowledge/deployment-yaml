@@ -42,7 +42,7 @@ metadata:
   deployment_name: SAMBA
   project: SAMBA
   project_url: https://voiceoftheocean.org/ocean-observatories/
-  summary: ' Part of SAMBA continuous monitoring '
+  summary: Part of SAMBA continuous monitoring
   platform_serial: SHW003
   seanav: 3.9.6-r
   seapld: 2.26.0-r

@@ -314,6 +314,9 @@ def for_ioos_compliance(yaml_path):
     with open(yaml_out, "w") as fout:
         yaml.dump(deployment, fout, sort_keys=False)
 
+
+sites, lon, lat, missions = [], [], [], []
+
 def add_samba_site(yaml_path):
     with open(yaml_path) as fin:
         deployment = yaml.safe_load(fin)
@@ -327,8 +330,6 @@ def add_samba_site(yaml_path):
         print(f'did not find {fn}. skipping')
         return
     ds = xr.open_dataset(nc)
-    if 'site' in deployment['metadata'].keys():
-        return
     df_sites = pd.read_csv('samba_locations.csv', sep=';')
     centre_lon = np.nanmedian(ds.longitude)
     centre_lat = np.nanmedian(ds.latitude)
@@ -337,6 +338,13 @@ def add_samba_site(yaml_path):
     diff_dist = np.abs(diff_lat) + np.abs(diff_lon)
     site = df_sites['observatory'][np.argmin(diff_dist)]
     deployment['metadata']['site'] = site
+    deployment['metadata']['summary'] = 'Part of SAMBA continuous monitoring'
+    sites.append(site)
+    lon.append(centre_lon)
+    lat.append(centre_lat)
+    missions.append(fn)
+    df = pd.DataFrame({'site': sites, 'lon': lon, 'lat': lat, 'mission': missions})
+    df.to_csv('/home/callum/Downloads/sites.csv', index=False)
     print(fn, site)
 
     with open(yaml_path, "w") as fout:
