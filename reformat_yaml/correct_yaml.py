@@ -2,6 +2,8 @@ import datetime
 import yaml
 import pandas as pd
 import os
+import xarray as xr
+import numpy as np
 from pathlib import Path
 from coefficients import arod_coefficients, glider_missions_affected
 
@@ -313,12 +315,47 @@ def for_ioos_compliance(yaml_path):
         yaml.dump(deployment, fout, sort_keys=False)
 
 
+sites, lon, lat, missions = [], [], [], []
+
+def add_samba_site(yaml_path):
+    with open(yaml_path) as fin:
+        deployment = yaml.safe_load(fin)
+    if ('project', 'SAMBA') not in deployment['metadata'].items():
+        return
+    deployment['metadata']['network'] = 'OceanGliders > BOON > Baltic Sea > SAMBA'
+    fn = yaml_path.name.split('.')[0]
+    platform, mission = fn.split('_M')
+    nc = Path(f"/data/data_l0_pyglider/nrt/{platform}/M{mission}/timeseries/mission_timeseries.nc")
+    if not nc.exists():
+        print(f'did not find {fn}. skipping')
+        return
+    ds = xr.open_dataset(nc)
+    df_sites = pd.read_csv('samba_locations.csv', sep=';')
+    centre_lon = np.nanmedian(ds.longitude)
+    centre_lat = np.nanmedian(ds.latitude)
+    diff_lat = df_sites.lat - centre_lat
+    diff_lon = df_sites.lon - centre_lon
+    diff_dist = np.abs(diff_lat) + np.abs(diff_lon)
+    site = df_sites['observatory'][np.argmin(diff_dist)]
+    deployment['metadata']['site'] = site
+    deployment['metadata']['summary'] = 'Part of SAMBA continuous monitoring'
+    sites.append(site)
+    lon.append(centre_lon)
+    lat.append(centre_lat)
+    missions.append(fn)
+    df = pd.DataFrame({'site': sites, 'lon': lon, 'lat': lat, 'mission': missions})
+    df.to_csv('/home/callum/Downloads/sites.csv', index=False)
+    print(fn, site)
+
+    with open(yaml_path, "w") as fout:
+        yaml.dump(deployment, fout, sort_keys=False)
+
 def main():
     yaml_files = list(Path("../mission_yaml").glob("*.yml"))
     yaml_files.sort()
     for yml in yaml_files:
         #standardise_yaml_format(yml)
-        flag_phycocyanin(yml)
+        add_samba_site(yml)
 
 
 if __name__ == '__main__':

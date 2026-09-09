@@ -28,8 +28,9 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Aster
   wmo_id: '6801602'
-  comment: 'Mission finished early due to loss of communication. Tridente phycocyanin channel values are suspect. The
-    cause is under investigation and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
+  comment: Mission finished early due to loss of communication. Tridente phycocyanin
+    channel values are suspect. The cause is under investigation and appears to be
+    due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
     Adele Maciute, Martin Mohrmann
@@ -43,10 +44,12 @@ metadata:
   deployment_name: SAMBA
   project: SAMBA
   project_url: https://voiceoftheocean.org/ocean-observatories/
-  summary: ' Part of SAMBA continuous monitoring'
+  summary: Part of SAMBA continuous monitoring
   platform_serial: SEA068
   seanav: 3.9.6 -r
   seapld: 2.26.0-r
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
+  site: SAMBA_06
 glider_devices:
   ctd:
     make: RBR
@@ -65,13 +68,13 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2026-05-25'
     calibration_parameters:
-      Chl_C0: 19.70394E-3
+      Chl_C0: 0.01970394
       Chl_C1: 1.8151802E6
       Chl_C2: 0.1
-      PC_C0: 87.32588E-3
+      PC_C0: 0.08732588
       PC_C1: 3.3094505E6
       PC_C2: 1.0
-      backscatter_C0: -14.294329E-9
+      backscatter_C0: -1.4294329e-08
       backscatter_C1: 12.886573
   oxygen:
     make: JFE Advantech
@@ -83,22 +86,22 @@ glider_devices:
     two_point_calibrated: 'Yes'
     calibration_date: '2025-12-10'
     calibration_parameters:
-      d0: -2.745015e-04
-      d1: -1.935387e-01
-      d2: 1.963006e-01
-      d3: 0.000000e+00
-      d4: 0.000000e+00
-      c0: 3.075467e-03
-      c1: 1.328715e-04
-      c2: 2.463560e-06
-      e0: 1.000000e+00
-      Cp: 4.200000e-03
-      A: -1.281132e+01
-      B: 1.480346e-03
-      C: -2.651420e-08
+      d0: -0.0002745015
+      d1: -0.1935387
+      d2: 0.1963006
+      d3: 0.0
+      d4: 0.0
+      c0: 0.003075467
+      c1: 0.0001328715
+      c2: 2.46356e-06
+      e0: 1.0
+      Cp: 0.0042
+      A: -12.81132
+      B: 0.001480346
+      C: -2.65142e-08
       D: 6.197656e-13
       E: -7.853983e-18
-      F: 5.063170e-23
+      F: 5.06317e-23
   AD2CP:
     make: Nortek
     model: AD2CP

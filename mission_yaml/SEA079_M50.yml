@@ -43,10 +43,12 @@ metadata:
   deployment_name: SAMBA
   project: SAMBA
   project_url: voiceoftheocean.org/ocean-observatories/
-  summary: ' Part of SAMBA continuous monitoring'
+  summary: Part of SAMBA continuous monitoring
   platform_serial: SEA079
   seanav: 3.9.26 -r
   seapld: 2.26.0 -r
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
+  site: SAMBA_05
 glider_devices:
   ctd:
     make: RBR
@@ -65,13 +67,13 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2025-06-20'
     calibration_parameters:
-      Chl_C0: 4.509943e-03
+      Chl_C0: 0.004509943
       Chl_C1: 2.7024982e06
-      Chl_C2: 103.31017e-03
-      PC_C0: 20.063099e-03
+      Chl_C2: 0.10331017
+      PC_C0: 0.020063099
       PC_C1: 3.4030602e06
       PC_C2: 1.0
-      backscatter_C0: -463.84545e-09
+      backscatter_C0: -4.6384545e-07
       backscatter_C1: 11.237395
   oxygen:
     make: JFE Advantech
@@ -84,19 +86,19 @@ glider_devices:
     calibration_date: '2023-08-26'
     calibration_parameters:
       d0: 6.707286e-05
-      d1: -1.847810e-01
-      d2: 1.968775e-01
+      d1: -0.184781
+      d2: 0.1968775
       d3: 0.0
       d4: 0.0
-      c0: 2.911369e-03
-      c1: 1.243058e-04
+      c0: 0.002911369
+      c1: 0.0001243058
       c2: 2.561515e-06
       e0: 1.0
-      Cp: 4.000000e-03
-      A: -1.291570e+01
-      B: 1.475098e-03
-      C: -2.620010e-08
-      D: +6.117645e-13
+      Cp: 0.004
+      A: -12.9157
+      B: 0.001475098
+      C: -2.62001e-08
+      D: 6.117645e-13
       E: -7.783219e-18
       F: 5.064287e-23
   AD2CP:

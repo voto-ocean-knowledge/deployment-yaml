@@ -28,9 +28,9 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Ekman
   wmo_id: '8901183'
-  comment: 'Mission aborted early due to a vehicle leak. Tridente
-    phycocyanin channel values are suspect. The cause is under investigation and appears
-    to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf '
+  comment: 'Mission aborted early due to a vehicle leak. Tridente phycocyanin channel
+    values are suspect. The cause is under investigation and appears to be due to
+    bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
     Adele Maciute, Aaron Mau, Martin Mohrmann
@@ -44,11 +44,13 @@ metadata:
   deployment_name: SAMBA
   project: SAMBA
   project_url: https://voiceoftheocean.org/ocean-observatories/
-  summary: ' Part of SAMBA continuous monitoring '
+  summary: Part of SAMBA continuous monitoring
   platform_serial: SHW002
   seanav: 3.9.4-r
   seapld: 2.25.4-cr
   membrane_serial: SHW002_1
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
+  site: SAMBA_02
 glider_devices:
   ctd:
     make: RBR
@@ -67,13 +69,13 @@ glider_devices:
     factory_calibrated: 'Yes'
     calibration_date: '2026-03-31'
     calibration_parameters:
-      Chl_C0: -738.94304e-03
+      Chl_C0: -0.73894304
       Chl_C1: 2.5235072e06
-      Chl_C2: 103.31017e-03
+      Chl_C2: 0.10331017
       PC_C0: -1.0925524
       PC_C1: 2.9347115e06
       PC_C2: 1.0
-      backscatter_C0: 999.0388e-09
+      backscatter_C0: 9.990388e-07
       backscatter_C1: 12.705978
   oxygen:
     make: JFE Advantech
@@ -86,8 +88,8 @@ glider_devices:
     calibration_date: '2025-06-10'
     calibration_parameters:
       d0: -0.0002910485
-      d1: -1.625398e-01
-      d2: 1.902478e-01
+      d1: -0.1625398
+      d2: 0.1902478
       d3: 0.0
       d4: 0.0
       c0: 0.002896543

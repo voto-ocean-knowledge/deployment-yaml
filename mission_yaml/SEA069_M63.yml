@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Kalmus
   wmo_id: '6801506'
-  comment: 'Tridente sensor not functioning for this mission'
+  comment: Tridente sensor not functioning for this mission
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
     Adele Maciute, Aaron Mau, Martin Mohrmann
@@ -42,10 +42,12 @@ metadata:
   deployment_name: SAMBA
   project: SAMBA
   project_url: voiceoftheocean.org/ocean-observatories/
-  summary: ' Part of SAMBA continuous monitoring'
+  summary: Part of SAMBA continuous monitoring
   platform_serial: SEA069
   seapld: 2.26.0 -r
   seanav: 3.9.4 -r
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
+  site: SAMBA_03
 glider_devices:
   ctd:
     make: RBR
@@ -75,26 +77,26 @@ glider_devices:
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0068'
+    serial: 0068
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     two_point_calibrated: 'Yes'
     calibration_date: '2024-01-26'
     calibration_parameters:
-      d0: -2.158511e-04
-      d1: -2.350765e-01
-      d2: 2.027477e-01
+      d0: -0.0002158511
+      d1: -0.2350765
+      d2: 0.2027477
       d3: 0.0
       d4: 0.0
-      c0: 3.092576e-03
-      c1: 1.314481e-04
+      c0: 0.003092576
+      c1: 0.0001314481
       c2: 2.420729e-06
       e0: 1.0
-      Cp: 3.700000e-03
-      A: -1.261686e+01
-      B: 1.469161e-03
-      C: -2.550187e-08 
+      Cp: 0.0037
+      A: -12.61686
+      B: 0.001469161
+      C: -2.550187e-08
       D: 5.815232e-13
       E: -7.188652e-18
       F: 4.627832e-23

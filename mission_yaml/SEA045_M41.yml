@@ -43,8 +43,10 @@ metadata:
   deployment_name: SAMBA
   project: SAMBA
   project_url: voiceoftheocean.org/ocean-observatories/
-  summary: ' Part of SAMBA continuous monitoring'
+  summary: Part of SAMBA continuous monitoring
   platform_serial: SEA045
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
+  site: SAMBA_01
 glider_devices:
   altimeter:
     make: UNKNOWN
