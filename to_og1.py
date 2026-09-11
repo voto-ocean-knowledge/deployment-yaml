@@ -55,10 +55,16 @@ with open(Path("/data/ocean-gliders-format-vocabularies/yaml/validated_yaml/og1_
 sensor_variables = {
     'SeaExplorer': {
         'TIME': 'time',
-        'LATITUDE': 'NAV_LATITUDE',
-        'LONGITUDE': 'NAV_LONGITUDE',
+        'LATITUDE': 'Lat',
+        'LONGITUDE': 'Lon',
         'NAV_RESOURCE': 'NAV_RESOURCE',
         'DIVE_NUMBER': 'fnum',
+        'HEADING': 'Heading',
+        'ROLL': 'Roll',
+        'PITCH': 'Pitch',
+        #'SECURITY_LEVEL': 'SecurityLevel',
+        #'ALTITUDE': 'Altitude',
+        'DEAD_RECKONING': 'DeadReckoning',
         # lots more here obvs
     },
     'RBR legato CTD': {
