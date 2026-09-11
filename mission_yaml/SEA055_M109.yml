@@ -53,7 +53,7 @@ metadata:
 glider_devices:
   ctd:
     make: RBR
-    model: legato4
+    model: legato
     serial: '241977'
     long_name: RBR legato4 CTD
     make_model: RBR legato4 CTD
@@ -287,7 +287,7 @@ netcdf_variables:
     units: None
     coordinates: time depth latitude longitude
   conductivity:
-    source: LEGATO_CONDUCTIVITY
+    source: LEGATO4_CONDUCTIVITY
     long_name: water conductivity
     standard_name: sea_water_electrical_conductivity
     units: mS cm-1
@@ -299,7 +299,7 @@ netcdf_variables:
     accuracy: '0.003'
     resolution: '0.001'
   temperature:
-    source: LEGATO_TEMPERATURE
+    source: LEGATO4_TEMPERATURE
     long_name: water temperature
     standard_name: sea_water_temperature
     units: Celsius
@@ -311,7 +311,7 @@ netcdf_variables:
     accuracy: '0.002'
     resolution: '0.00005'
   pressure:
-    source: LEGATO_PRESSURE
+    source: LEGATO4_PRESSURE
     long_name: water pressure
     standard_name: sea_water_pressure
     units: dbar
@@ -326,7 +326,7 @@ netcdf_variables:
     resolution: '0.01'
     comment: ctd pressure sensor
   salinity:
-    source: LEGATO_SALINITY
+    source: LEGATO4_SALINITY
     long_name: water salinity
     standard_name: sea_water_salinity
     units: PSU
