@@ -44,6 +44,9 @@ def main():
         metadata = {}
         metadata['comment'] = comment
         metadata['project'] = meta['project'].lstrip(' ').rstrip(' ')
+        for mkey in ['site', 'network', 'seanav', 'seapld']:
+            if mkey in meta.keys():
+                metadata[mkey] = meta[mkey]
         mission['metadata'] = metadata
         og1_sensors = {}
         original_sensors = deployment['glider_devices']
