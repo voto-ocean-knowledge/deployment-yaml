@@ -44,6 +44,8 @@ metadata:
   project_url: https://voiceoftheocean.org
   summary: ' Part of the SpiceMix project '
   platform_serial: SEA044
+  seanav: 3.9.4 -r
+  seapld: 2.26.0 -r
 glider_devices:
   AD2CP:
     make: Nortek
