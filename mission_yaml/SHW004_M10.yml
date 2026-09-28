@@ -28,7 +28,7 @@ metadata:
   transmission_system: IRIDIUM
   glider_name: Rossby
   wmo_id: '8901228'
-  comment: 'Tridente phycocyanin channel values are suspect. The cause is under investigation
+  comment: 'ADCP calibration to be double checked upon recovery. Tridente phycocyanin channel values are suspect. The cause is under investigation
     and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
