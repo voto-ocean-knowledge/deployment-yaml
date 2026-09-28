@@ -26,9 +26,9 @@ metadata:
   standard_name_vocabulary: CF STandard Name Table v49
   sea_name: Baltic
   transmission_system: IRIDIUM
-  glider_name: Carson
-  wmo_id: '8901204'
-  comment: 'Mission terminated early due to an issue with the navigational pressure sensor leading to dropping the emergency dropweight on 2026-09-25. Glider did propelled dives to recovery point W-NW of the standard transect until recovery 2026-09-27. Tridente phycocyanin channel values are suspect. The cause is under investigation
+  glider_name: Rossby
+  wmo_id: '8901228'
+  comment: 'Tridente phycocyanin channel values are suspect. The cause is under investigation
     and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf '
   contributor_name: Callum Rollo, Louise Biddle, Olle Glader, Aleksandra Mazur, Marcus
     Melin, Gunnar Johnsson, Andrew Birkett, Michaela Edwinson, Anna Willstrand Wranne,
@@ -39,81 +39,81 @@ metadata:
   creator_email: callum.rollo@voiceoftheocean.org
   creator_name: Callum Rollo
   creator_url: https://observations.voiceoftheocean.org
-  deployment_id: '14'
+  deployment_id: '10'
   deployment_name: SAMBA
   project: SAMBA
   project_url: https://voiceoftheocean.org/ocean-observatories/
   summary: Part of SAMBA continuous monitoring
-  platform_serial: SHW003
+  platform_serial: SHW004
   seanav: 3.9.6-r
-  seapld: 2.26.0-r
-  membrane_serial: SHW003_1
+  seapld: 2.26.2-r
+  membrane_serial: SHW004_1
   network: OceanGliders > BOON > Baltic Sea > SAMBA
   site: SAMBA_02
 glider_devices:
   ctd:
     make: RBR
     model: legato
-    serial: '241732'
+    serial: '241730'
     long_name: RBR legato4 CTD
     make_model: RBR legato4 CTD
     factory_calibrated: 'Yes'
-    calibration_date: '2026-03-05'
+    calibration_date: '2026-03-25'
   optics:
     make: RBR
     model: Tridente
-    serial: '238737'
+    serial: '238739'
     long_name: RBR Tridente
     make_model: RBR Tridente
     factory_calibrated: 'Yes'
-    calibration_date: '2025-06-25'
+    calibration_date: '2026-03-31'
     calibration_parameters:
-      Chl_C0: 0.008486743
-      Chl_C1: 1.6364926e06
-      Chl_C2: 0.10331017
-      PC_C0: 0.02901513
-      PC_C1: 3.5210688e06
+      Chl_C0: 27.448213e-03
+      Chl_C1: 1.880521e06
+      Chl_C2: 100e-03
+      PC_C0: -4.6974723e-03
+      PC_C1: 2.9079422e06
       PC_C2: 1.0
-      backscatter_C0: -2.3014356e-07
-      backscatter_C1: 9.160208
+      backscatter_C0: -830.2409e-09
+      backscatter_C1: 12.188643
   oxygen:
     make: JFE Advantech
     model: AROD-FT
-    serial: '0142'
+    serial: '0144'
     long_name: JFE Advantech RINKO-FT
     make_model: JFE Advantech AROD_FT
     factory_calibrated: 'Yes'
     two_point_calibrated: 'No'
-    calibration_date: '2026-01-21'
+    calibration_date: '2026-01-24'
     calibration_parameters:
-      d0: -1.135707e-05
-      d1: -0.1521722
-      d2: 0.1923756
+      d0: -8.391726e-05
+      d1: -1.529748e-01
+      d2: 1.916596e-01
       d3: 0.0
       d4: 0.0
-      c0: 0.002822237
-      c1: 0.0001218115
-      c2: 2.577903e-06
+      c0: 2.879991e-03
+      c1: 1.246006e-04
+      c2: 2.57610e-06
       e0: 1.0
-      Cp: 0.0042
-      A: -13.15859
-      B: 0.001459029
-      C: -2.494942e-08
-      D: 5.62616e-13
-      E: -6.885092e-18
-      F: 4.442941e-23
+      Cp: 4.2e-03
+      A: -1.288273e01
+      B: 1.480242e-03
+      C: -2.648934e-08
+      D: 6.217530e-18
+      E: -7.962234e-18
+      F: 5.193788e-23
   AD2CP:
     make: Nortek
     model: AD2CP
-    serial: '107449'
+    serial: '107756'
     long_name: Nortek Glider1000 AD2CP
     make_model: Nortek AD2CP
     factory_calibrated: 'Yes'
-    calibration_date: '2026-01-19'
+    calibration_date: '2026-02-20'
   irradiance:
     make: Biospherical
     model: MPE-PAR
-    serial: '3200'
+    serial: '3199'
     tailward_mounting_angle_relative_to_platform_z_axis_degrees: 17.71
     long_name: Biospherical MPE-PAR
     make_model: Biospherical MPE-PAR
