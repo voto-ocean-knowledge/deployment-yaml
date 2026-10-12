@@ -264,6 +264,23 @@ def convert_to_og1(yaml_path):
 
     # any special exceptions etc.
 
+    # Stand-in to add any missing variables not yet converted to OG1
+    og1_sources = [variable_dict['source'] for variable_dict in variables.values() if type(variable_dict) is dict]
+
+    with open(Path("mission_yaml") / f"{platform_deployment_id}.yml") as fin:
+        original_mission = yaml.safe_load(fin)
+
+    for original_var_name, original_source in original_variables.items():
+        if 'time' in original_var_name.lower():
+            continue # let's not mess with extra datetime vars just now
+        if original_source not in og1_sources:
+            original_variables_meta = original_mission['netcdf_variables'][original_var_name]
+            keep_keys = ['source', 'long_name', 'units', 'comment', 'conversion']
+            new_variable_meta = {k: original_variables_meta[k] for k in keep_keys if k in original_variables_meta}
+            new_variable_meta['coordinates'] = 'TIME, LONGITUDE, LATITUDE, DEPTH'
+            new_variable_meta['processing_comment'] = 'Legacy variable not yet converted to OG1'
+            variables[original_var_name] = new_variable_meta
+
     with open(yaml_out, "w") as fout:
         yaml.dump(out, fout, allow_unicode=True)
 
