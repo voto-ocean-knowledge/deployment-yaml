@@ -277,6 +277,13 @@ def convert_to_og1(yaml_path):
         out['qc'] = new_qc
 
     # any special exceptions etc.
+    platform_mission = (platform_serial, int(deployment_number))
+    match platform_mission:
+        case ('SEA045', 100):
+            out['netcdf_variables']['PRES']['source'] = 'AD2CP_PRESSURE'
+            out['netcdf_variables']['PRES']['comment'] =out['netcdf_variables']['AD2CP_PITCH']['comment']
+            out['netcdf_variables']['PRES']['sensor'] = out['netcdf_variables']['AD2CP_PITCH']['sensor']
+
 
     # Stand-in to add any missing variables not yet converted to OG1
     og1_sources = [variable_dict['source'] for variable_dict in variables.values() if type(variable_dict) is dict]
