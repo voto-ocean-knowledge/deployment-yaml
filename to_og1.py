@@ -55,8 +55,8 @@ with open(Path("/data/ocean-gliders-format-vocabularies/yaml/validated_yaml/og1_
 sensor_variables = {
     'SeaExplorer': {
         'TIME': 'time',
-        'LATITUDE': 'Lat',
-        'LONGITUDE': 'Lon',
+        'LATITUDE': 'NAV_LATITUDE',
+        'LONGITUDE': 'NAV_LONGITUDE',
         'NAV_RESOURCE': 'NAV_RESOURCE',
         'DIVE_NUMBER': 'fnum',
         'HEADING': 'Heading',
@@ -259,8 +259,22 @@ def convert_to_og1(yaml_path):
     out['netcdf_variables'] = variables
 
     # add pilot QC if present
+    qc_key_translation = {
+        'phycocyanin': 'PHYCOCYANIN',
+        'oxygen_concentration': 'DOXY',
+        'cdom': 'CDOM',
+        'chlorophyll': 'CHLA',
+        'temperature': 'TEMP',
+        'temperature_oxygen': 'TEMPDOXY',
+        'conductivity': 'CNDC',
+        'pressure': 'PRES',
+    }
     if 'qc' in mission_meta.keys():
-        out['qc'] = mission_meta['qc']
+        new_qc = {}
+        for key, val in mission_meta['qc'].items():
+            new_key = qc_key_translation.get(key, key)
+            new_qc[new_key] = val
+        out['qc'] = new_qc
 
     # any special exceptions etc.
 
