@@ -460,7 +460,7 @@ qc:
       throughout the mission. More information on the history and updates regarding
       this issue (https://observations.voiceoftheocean.org/data/updates).
     value: 4
-  cdom_raw:
+  FLUOCDOM:
     comment: Apparent temporal increase in the intensity of the CDOM signal. Cause
       unknown. In this mission, the protective copper plate over the CDOM sensor was
       removed. More information on the history and updates regarding this issue (

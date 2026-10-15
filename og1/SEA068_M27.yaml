@@ -388,7 +388,7 @@ qc:
       throughout the mission. More information on the history and updates regarding
       this issue (https://observations.voiceoftheocean.org/data/updates).
     value: 4
-  cdom_raw:
+  FLUOCDOM:
     comment: Apparent temporal decrease in the intensity of the CDOM signal. Cause
       unknown. More information on the history and updates regarding this issue (
       https://observations.voiceoftheocean.org/data/updates).
