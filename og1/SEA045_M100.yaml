@@ -278,8 +278,8 @@ netcdf_variables:
     observation_type: measured
     positive: down
     reference_datum: sea-surface
-    sensor: SENSOR_CTD_205047
-    source: LEGATO_PRESSURE
+    sensor: SENSOR_CURRENT_PROFILERS_105526
+    source: AD2CP_PRESSURE
     standard_name: sea_water_pressure
     units: dbar
     valid_max: 2000.0
@@ -351,12 +351,6 @@ netcdf_variables:
     processing_comment: Legacy variable not yet converted to OG1
     source: AD2CP_V4_CN1
     units: m s-1
-  ad2cp_pressure:
-    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
-    long_name: glider pressure from AD2CP
-    processing_comment: Legacy variable not yet converted to OG1
-    source: AD2CP_PRESSURE
-    units: dbar
   angular_cmd:
     coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
     long_name: glider angular command
@@ -441,13 +435,6 @@ netcdf_variables:
     processing_comment: Legacy variable not yet converted to OG1
     source: AROD_FT_LED
     units: counts
-  pressure:
-    comment: ad2cp pressure sensor
-    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
-    long_name: water pressure
-    processing_comment: Legacy variable not yet converted to OG1
-    source: AD2CP_PRESSURE
-    units: dbar
   salinity:
     coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
     long_name: water salinity
