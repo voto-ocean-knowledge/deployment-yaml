@@ -487,6 +487,11 @@ qc:
     end: '2025-06-04'
     start: '2025-05-26'
     value: 3
+  FLUOCHLA:
+    comment: Biofouling on wetlabs FLBBPC suspected to also affect chlorophyll
+    end: '2025-06-04'
+    start: '2025-05-26'
+    value: 3
   PHYCOCYANIN:
     comment: Biofouling on wetlabs FLBBPC
     end: '2025-06-04'
@@ -502,11 +507,6 @@ qc:
     end: '2025-06-04'
     start: '2025-05-26'
     value: 4
-  chlorophyll_raw:
-    comment: Biofouling on wetlabs FLBBPC suspected to also affect chlorophyll
-    end: '2025-06-04'
-    start: '2025-05-26'
-    value: 3
   phycocyanin_raw:
     comment: Biofouling on wetlabs FLBBPC
     end: '2025-06-04'

@@ -448,7 +448,7 @@ qc:
     comment: High values of CDOM raw counts. The cause of the issue is still unknown.
       The relative variability may be intact but absolute values are unreliable.
     value: 4
-  cdom_raw:
+  FLUOCDOM:
     comment: High values of CDOM raw counts. The cause of the issue is still unknown.
       The relative variability may be intact but absolute values are unreliable.
     value: 4

@@ -465,19 +465,19 @@ qc:
       100μmol/l. More information on the history and updates regarding this issue
       (https://observations.voiceoftheocean.org/data/updates).
     value: 4
+  FLUOCDOM:
+    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
+      further controls are recommended.
+    value: 3
+  FLUOCHLA:
+    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
+      further controls are recommended.
+    value: 3
   backscatter_raw:
     comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
       further controls are recommended.
     value: 3
   backscatter_scaled:
-    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
-      further controls are recommended.
-    value: 3
-  cdom_raw:
-    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
-      further controls are recommended.
-    value: 3
-  chlorophyll_raw:
     comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
       further controls are recommended.
     value: 3
