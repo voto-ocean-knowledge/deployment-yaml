@@ -1,0 +1,230 @@
+glider_devices:
+  SENSOR_CTD_234334:
+    long_name: RBR Legato3 CTD
+    sensor_calibration_date: '2023-08-24'
+    sensor_maker: RBR
+    sensor_maker_vocabulary: http://vocab.nerc.ac.uk/collection/L35/current/MAN0049/
+    sensor_model: RBR Legato3 CTD
+    sensor_model_vocabulary: http://vocab.nerc.ac.uk/collection/L22/current/TOOL1745/
+    sensor_serial_number: '234334'
+    sensor_type: CTD
+    sensor_type_vocabulary: http://vocab.nerc.ac.uk/collection/L05/current/130/
+  SENSOR_CURRENT_PROFILERS_106378:
+    long_name: Nortek Glider1000 AD2CP Acoustic Doppler Current Profiler
+    sensor_calibration_date: '2024-03-27'
+    sensor_maker: Nortek
+    sensor_maker_vocabulary: http://vocab.nerc.ac.uk/collection/L35/current/MAN0068/
+    sensor_model: Nortek Glider1000 AD2CP Acoustic Doppler Current Profiler
+    sensor_model_vocabulary: http://vocab.nerc.ac.uk/collection/L22/current/TOOL1774/
+    sensor_serial_number: '106378'
+    sensor_type: current profilers
+    sensor_type_vocabulary: http://vocab.nerc.ac.uk/collection/L05/current/115/
+metadata:
+  Conventions: CF-1.10, OG-1.0, Unidata Dataset Discovery v1.0
+  acknowledgement: This study used data collected and made freely available by Voice
+    of the Ocean Foundation (https://voiceoftheocean.org) accessed from https://erddap.observations.voiceoftheocean.org/erddap/index.html
+  agency: Voice of the Ocean
+  agency_role: contact point
+  agency_role_vocabulary: http://vocab.nerc.ac.uk/collection/C86/current/
+  comment: This mission is part of testing the new ShallowExplorer in the Baltic Sea.
+    This deployment is at the SAMBA_03 transect East of gotland
+  contributing_institutions: Voice of the Ocean Foundation
+  contributing_institutions_role: Operator
+  contributing_institutions_role_vocabulary: http://vocab.nerc.ac.uk/collection/W08/current/
+  contributor_email: 'callum.rollo@voiceoftheocean.org, louise.biddle@voiceoftheocean.org,,
+    , , , , '
+  contributor_name: 'Callum Rollo, Louise Biddle,, , , , , '
+  contributor_role: Data scientist, PI, Operator, Operator, Operator, Operator, Operator,
+    Operator,
+  contributor_role_vocabulary: http://vocab.nerc.ac.uk/collection/W08/
+  creator_email: callum.rollo@voiceoftheocean.org
+  creator_name: Callum Rollo
+  creator_url: https://observations.voiceoftheocean.org
+  deployment_id: 35
+  featureType: trajectory
+  glider_name: ShallowExplorer_001
+  keywords: AUVS, Autonomous Underwater Vehicles, Oceans, Ocean Pressure, Water Pressure,
+    Ocean Temperature, Water Temperature, Salinity/Density, Conductivity, Density,
+    Salinity
+  keywords_vocabulary: GCMD Science Keywords
+  license: Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/)
+    This study used data collected and made freely available by Voice of the Ocean
+    Foundation (https://voiceoftheocean.org) accessed from https://erddap.observations.voiceoftheocean.org/erddap/index.html
+  metadata_link: http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html
+  naming_authority: Voice of the Ocean Foundation
+  platform: sub-surface gliders
+  platform_model: Alseamar SeaExplorer X3 shallow glider
+  platform_model_vocabulary: http://vocab.nerc.ac.uk/collection/B76/current/B7600037/
+  platform_serial_number: SHW001
+  platform_vocabulary: http://vocab.nerc.ac.uk/collection/L06/current/27/
+  processing_level: Data provided as is with no expressed or implied assurance of
+    quality assurance or quality control. L0
+  project: SAMBA
+  publisher_email: callum.rollo@voiceoftheocean.org
+  publisher_name: Callum Rollo
+  publisher_url: https://voiceoftheocean.org
+  references: created with pyglider https://github.com/c-proof/pyglider
+  rtqc_method: IOOS QC QARTOD https://github.com/ioos/ioos_qc
+  rtqc_method_doi: None
+  source: Observational data from a profiling glider.
+  standard_name_vocabulary: CF Standard Name Table v92
+  title: OceanGliders datafile from VOTO SeaExplorer
+  transmission_system: IRIDIUM
+  wmo_id: 8901081
+netcdf_variables:
+  AD2CP_HEADING:
+    comment: measured by AD2CP
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Orientation (horizontal relative to magnetic north) of measurement
+      platform {heading}
+    sensor: SENSOR_CURRENT_PROFILERS_106378
+    source: AD2CP_HEADING
+    standard_name: platform_orientation
+    units: Degrees
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/HEADING/
+  AD2CP_PITCH:
+    comment: measured by AD2CP
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Orientation (pitch) of measurement platform by inclinometer
+    sensor: SENSOR_CURRENT_PROFILERS_106378
+    source: AD2CP_PITCH
+    standard_name: platform_pitch_fore_up
+    units: Degrees
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/PITCH/
+  AD2CP_ROLL:
+    comment: measured by AD2CP
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Orientation (roll angle) of measurement platform by inclinometer
+    sensor: SENSOR_CURRENT_PROFILERS_106378
+    source: AD2CP_ROLL
+    standard_name: platform_roll_starboard_down
+    units: Degrees
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/ROLL/
+  CNDC:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Electrical conductivity of the water body by CTD
+    observation_type: measured
+    sensor: SENSOR_CTD_234334
+    source: LEGATO_CONDUCTIVITY
+    standard_name: sea_water_electrical_conductivity
+    units: mS cm-1
+    valid_max: 85.0
+    valid_min: 0.0
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/CNDC/
+  DEAD_RECKONING:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Dead reckoning. 1 when platform lon and lat are derived from dead reckoning.
+    observation_type: measured
+    sensor: SeaExplorer
+    source: DeadReckoning
+    units: '1'
+    valid_max: 0
+    valid_min: 1
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/DEAD_RECKON/
+  DIVE_NUMBER:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Sequential number representing a complete descent-ascent cycle of the
+      glider
+    sensor: SeaExplorer
+    source: fnum
+    units: '1'
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/DIVE_NUMBER/
+  HEADING:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Orientation (horizontal relative to magnetic north) of measurement
+      platform {heading} by compass
+    sensor: SeaExplorer
+    source: Heading
+    standard_name: platform_orientation
+    units: Degrees
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/HEADING/
+  LATITUDE:
+    _FillValue: -9999.9
+    conversion: nmea2deg
+    interpolation_methodology: ''
+    long_name: latitude of each measurement and GPS location
+    sensor: SeaExplorer
+    source: Lat
+    standard_name: latitude
+    units: degree_north
+    valid_max: 90.0
+    valid_min: -90.0
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/LAT/
+  LONGITUDE:
+    _FillValue: -9999.9
+    conversion: nmea2deg
+    interpolation_methodology: ''
+    long_name: longitude of each measurement and GPS location
+    sensor: SeaExplorer
+    source: Lon
+    standard_name: longitude
+    units: degree_east
+    valid_max: 180.0
+    valid_min: -180.0
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/LON/
+  NAV_RESOURCE:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Navigation state of SeaExplorer glider
+    sensor: SeaExplorer
+    source: NAV_RESOURCE
+    units: '1'
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/NAV_RESOURCE/
+  PITCH:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Orientation (pitch) of measurement platform by inclinometer
+    sensor: SeaExplorer
+    source: Pitch
+    standard_name: platform_pitch_fore_up
+    units: Degrees
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/PITCH/
+  PRES:
+    comment: measured by AD2CP
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Pressure (spatial coordinate) exerted by the water body by profiling
+      pressure sensor and correction to read zero at sea level
+    observation_type: measured
+    positive: down
+    reference_datum: sea-surface
+    sensor: SENSOR_CTD_234334
+    source: LEGATO_PRESSURE
+    standard_name: sea_water_pressure
+    units: dbar
+    valid_max: 2000.0
+    valid_min: 0.0
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/PRES/
+  ROLL:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Orientation (roll angle) of measurement platform by inclinometer
+    sensor: SeaExplorer
+    source: Roll
+    standard_name: platform_roll_starboard_down
+    units: Degrees
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/ROLL/
+  TEMP:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Temperature of the water body by CTD
+    observation_type: measured
+    sensor: SENSOR_CTD_234334
+    source: LEGATO_TEMPERATURE
+    standard_name: sea_water_temperature
+    units: Degrees Celsius
+    valid_max: 42.0
+    valid_min: -5.0
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/TEMP/
+  TIME:
+    _FillValue: 1
+    calendar: gregorian
+    interpolation_methodology: ''
+    long_name: Time elapsed since 1970-01-01T00:00:00Z
+    sensor: SeaExplorer
+    source: time
+    standard_name: time
+    units: since 1970-01-01T00:00:00Z
+    valid_max: 4000000000
+    valid_min: 1000000000
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/TIME/
+  keep_variables:
+  - AD2CP_PITCH
+  - conductivity
+  timebase:
+    source: NAV_LATITUDE
