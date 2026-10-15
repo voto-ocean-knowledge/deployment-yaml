@@ -1,7 +1,9 @@
 metadata:
   comment: Altitude set to 5m for the entire mission duration . Zt/zs set to 2m for
     the entire mission duration
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_02
 platform_devices:
   ctd:
     make_model: RBR legato CTD

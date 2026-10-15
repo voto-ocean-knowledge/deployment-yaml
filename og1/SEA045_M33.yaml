@@ -204,7 +204,7 @@ netcdf_variables:
     interpolation_methodology: ''
     long_name: latitude of each measurement and GPS location
     sensor: SeaExplorer
-    source: Lat
+    source: NAV_LATITUDE
     standard_name: latitude
     units: degree_north
     valid_max: 90.0
@@ -216,7 +216,7 @@ netcdf_variables:
     interpolation_methodology: ''
     long_name: longitude of each measurement and GPS location
     sensor: SeaExplorer
-    source: Lon
+    source: NAV_LONGITUDE
     standard_name: longitude
     units: degree_east
     valid_max: 180.0
@@ -238,7 +238,7 @@ netcdf_variables:
     units: Degrees
     vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/PITCH/
   PRES:
-    comment: measured by AD2CP
+    comment: ctd pressure sensor
     coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
     long_name: Pressure (spatial coordinate) exerted by the water body by profiling
       pressure sensor and correction to read zero at sea level
@@ -302,10 +302,124 @@ netcdf_variables:
     standard_name: sea_water_turbidity
     units: '1'
     vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/TURB/
+  ad2cp_beam1_cell_number2:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider beam 1 measure from AD2CP in cell 2
+    processing_comment: Legacy variable not yet converted to OG1
+    source: AD2CP_V1_CN2
+    units: m s-1
+  ad2cp_beam2_cell_number2:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider beam 2 measure from AD2CP in cell 2
+    processing_comment: Legacy variable not yet converted to OG1
+    source: AD2CP_V2_CN2
+    units: m s-1
+  ad2cp_beam3_cell_number2:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider beam 3 measure from AD2CP in cell 2
+    processing_comment: Legacy variable not yet converted to OG1
+    source: AD2CP_V3_CN2
+    units: m s-1
+  ad2cp_beam4_cell_number2:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider beam 4 measure from AD2CP in cell 2
+    processing_comment: Legacy variable not yet converted to OG1
+    source: AD2CP_V4_CN2
+    units: m s-1
+  ad2cp_pressure:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider pressure from AD2CP
+    processing_comment: Legacy variable not yet converted to OG1
+    source: AD2CP_PRESSURE
+    units: dbar
+  angular_cmd:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider angular command
+    processing_comment: Legacy variable not yet converted to OG1
+    source: AngCmd
+    units: degrees
+  angular_pos:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider angular position
+    processing_comment: Legacy variable not yet converted to OG1
+    source: AngPos
+    units: degrees
+  ballast_cmd:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider ballast command
+    processing_comment: Legacy variable not yet converted to OG1
+    source: BallastCmd
+    units: ml
+  ballast_pos:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider ballast position
+    processing_comment: Legacy variable not yet converted to OG1
+    source: BallastPos
+    units: ml
+  declination:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: declination
+    processing_comment: Legacy variable not yet converted to OG1
+    source: Declination
+    units: degrees
+  desired_heading:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider desired heading angle
+    processing_comment: Legacy variable not yet converted to OG1
+    source: DesiredH
+    units: degrees
+  internal_pressure:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: internal pressure
+    processing_comment: Legacy variable not yet converted to OG1
+    source: Pa
+    units: Pa
+  internal_temperature:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: internal temperature
+    processing_comment: Legacy variable not yet converted to OG1
+    source: Temperature
+    units: Celsius
   keep_variables:
   - AD2CP_PITCH
   - conductivity
   - TURB
   - TEMPDOXY
+  linear_cmd:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider linear command
+    processing_comment: Legacy variable not yet converted to OG1
+    source: LinCmd
+    units: cm
+  linear_pos:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider linear position
+    processing_comment: Legacy variable not yet converted to OG1
+    source: LinPos
+    units: cm
+  salinity:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: water salinity
+    processing_comment: Legacy variable not yet converted to OG1
+    source: LEGATO_SALINITY
+    units: PSU
+  security_level:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: security level
+    processing_comment: Legacy variable not yet converted to OG1
+    source: SecurityLevel
+    units: None
   timebase:
     source: NAV_LATITUDE
+  turbidity_raw:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: raw turbidity
+    processing_comment: Legacy variable not yet converted to OG1
+    source: FLNTU_NTU_COUNT
+    units: counts
+  voltage:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider voltage
+    processing_comment: Legacy variable not yet converted to OG1
+    source: Voltage
+    units: V

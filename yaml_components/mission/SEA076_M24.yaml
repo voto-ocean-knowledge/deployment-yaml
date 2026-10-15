@@ -3,7 +3,9 @@ metadata:
     the entire mission duration. The glider hit the seabed at C546-547-549-553 and
     551. The glider was put on drift mode with payload switched off causing a gap
     in the dataset for a total of 7h on 17-03-2024 between 15:00 and 22:00.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_05
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

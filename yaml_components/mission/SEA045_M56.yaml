@@ -2,7 +2,9 @@ metadata:
   comment: Altitude set to 6m for the entire mission duration. Zt/zs set to 2m for
     the entire mission duration. the glider had issues at the beginning of the mission
     keeping track due to bad navigation settings
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_02
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

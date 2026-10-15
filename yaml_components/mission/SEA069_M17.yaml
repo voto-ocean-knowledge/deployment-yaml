@@ -2,7 +2,9 @@ metadata:
   comment: Altitude set to 2m for the entire mission duration . Zt/zs set to 2m for
     the entire mission duration. Glider was recovered short after deployment as the
     optical sensor stopped working a water leak was suspected
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   altimeter:
     sensor_serial_number: '52'

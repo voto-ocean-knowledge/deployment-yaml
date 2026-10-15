@@ -2,7 +2,9 @@ metadata:
   comment: Altitude set to 2m for the entire mission duration . Zt/zs set to 2m for
     most of the mission but occasionally increased to 15m and 8m when the glider struggled
     with strong currents
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   altimeter:
     sensor_serial_number: '52'

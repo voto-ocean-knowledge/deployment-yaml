@@ -1,8 +1,13 @@
 metadata:
-  comment: GPS spoofing occurred on c. 711 affecting both the position and some timestamps.
+  comment: 'GNSS jamming affecting cycles 708 (C), 711 (A), 713 (C), 888 (A). Read
+    more on the issue: https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_6_gnss_jamming.pdf.
     Tridente phycocyanin channel values are suspect. The cause is under investigation
-    and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
+    and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  seanav: 3.9.4-r
+  seapld: 2.26.0-r
+  site: SAMBA_02
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

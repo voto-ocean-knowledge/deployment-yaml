@@ -1,6 +1,8 @@
 metadata:
   comment: Emergency recovery 2 days after deployment due to linear issues
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_04
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

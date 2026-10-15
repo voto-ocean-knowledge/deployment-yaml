@@ -1,10 +1,12 @@
 metadata:
   comment: Altitude set to 2m for the entire mission duration apart from occasional
     higher values in the deep section of the transect. Zt/zs set to 2m for the entire
-    mission duration. This glider was aquipped with two optical sensors (see metadata
-    for more info. During the mission, tests with the optical sensors were performed
-    so there may be gaps in the dataset
+    mission duration. This glider was equipped with two optical sensors (see metadata
+    for more info). During the mission, tests with the optical sensors were performed
+    so there may be gaps in the dataset and changed sampling resolution.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_02
 platform_devices:
   altimeter:
     sensor_serial_number: '52'

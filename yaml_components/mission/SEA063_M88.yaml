@@ -1,9 +1,10 @@
 metadata:
-  comment: Mission part of the inTail project with testing the new oxygen sensor.
-    Due to GPS-spoofing the positions of cycles 140, 181, 189, 197, 201, 205, 217,
-    516 are affected. Vertical speed temporarily increased towards the end of mission
-    to reach recovery waypoint in time. zt/zs=2 and alt=4-6 for full mission duration
-    for the sake of the InTail sensor.
+  comment: 'Mission part of the inTail project with testing the new oxygen sensor.
+    GNSS jamming affecting cycles 140 (A), 181 (A), 189 (A), 197 (A), 201 (A), 205
+    (A), 217 (A), 516 (A). Read more on the issue: https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_6_gnss_jamming.pdf.
+    Vertical speed temporarily increased towards the end of mission to reach recovery
+    waypoint in time. zt/zs=2 and alt=4-6 for full mission duration for the sake of
+    the InTail sensor.'
   project: InTail
 platform_devices:
   AD2CP:

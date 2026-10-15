@@ -2,7 +2,11 @@ metadata:
   comment: Glider did som shorter drifts with the payload off to preserve battery
     towards the end of the mission. Currents were quite strong and vertical speed
     needed to be increased to progress better. zs/zt and alt=2 for full mission duration.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  seanav: 3.8.2 -r
+  seapld: 2.25.1 -cr
+  site: SAMBA_02
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

@@ -2,7 +2,9 @@ metadata:
   comment: Two channels, Backscatter and chlorophyll, are available from Tridente
     on this mission. Deployed in Arkona Basin to measure a potential north sea water
     inflow into the Baltic Sea.
-  project: SAMBA
+  project: Arkona
+  seanav: 3.9.4-r
+  seapld: 2.25.4-cr
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

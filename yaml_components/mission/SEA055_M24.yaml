@@ -3,7 +3,9 @@ metadata:
     the entire mission duration. The glider was set to drift at depth with payload
     switched off to save battery for the last few days of the mission. No data is
     available for this period
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_02
 platform_devices:
   altimeter:
     sensor_serial_number: '33'

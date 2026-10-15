@@ -3,7 +3,9 @@ metadata:
     most of the mission but often increased to 15 or 20m when the glider struggled
     with strong currents. Glider struggled with strong currents so it was often outside
     the desired transect
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   altimeter:
     sensor_serial_number: '52'

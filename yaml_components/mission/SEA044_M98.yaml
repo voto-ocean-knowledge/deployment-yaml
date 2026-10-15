@@ -2,7 +2,9 @@ metadata:
   comment: Glider was recovered about 60 km NW of the standard transect due to very
     strong currents. The tries in getting it out of the current included faster vertical
     speeds and increased zt values.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

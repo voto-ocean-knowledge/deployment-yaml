@@ -2,7 +2,9 @@ metadata:
   comment: Glider flew on zt/zs=2 and alt=2 for the entire mission duration. The last
     days of the mission the glider performed 4-8 h afternoon loitering to preserve
     battery.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_02
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

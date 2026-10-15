@@ -4,7 +4,9 @@ metadata:
     The glider struggled detecting the seabed so zb was often reduced and/or a high
     altitude value was used. Drift mode with payload switched off was enabled 3 times
     during this mission so three data gaps occured
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_02
 platform_devices:
   altimeter:
     sensor_serial_number: '33'

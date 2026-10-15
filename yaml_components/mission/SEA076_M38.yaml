@@ -1,7 +1,9 @@
 metadata:
   comment: Glider was recovered shortly after deployment due to getting stuck in the
     muddy bottom and releasing the emergency dropweight.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_05
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

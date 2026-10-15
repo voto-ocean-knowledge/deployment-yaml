@@ -4,7 +4,9 @@ metadata:
     with strong currents. The glider was drifting south with the currents therefore
     it was manually moved north on a vessel. This is why there is a drastic change
     in postion happening on 12-12-2023
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   altimeter:
     sensor_serial_number: '52'

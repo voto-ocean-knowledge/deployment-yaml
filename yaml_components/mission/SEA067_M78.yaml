@@ -3,7 +3,9 @@ metadata:
     and alt=2 for full mission duration.  Tridente phycocyanin channel values are
     suspect. The cause is under investigation and appears to be due to bad calibration
     https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_02
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

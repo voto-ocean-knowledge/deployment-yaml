@@ -2,7 +2,9 @@ metadata:
   comment: Altitude set to 5m for the entire mission duration. Zt/zs set to 2m for
     the entire mission duration apart from few dives at the end with zt=35. Glider
     did a couple of short dives to 50m for some tests
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   altimeter:
     sensor_serial_number: '25'

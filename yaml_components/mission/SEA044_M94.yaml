@@ -1,7 +1,9 @@
 metadata:
   comment: Glider dove with an increased zt and increased vertical speeds due to very
     strong currents for a large part of the mission.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   altimeter:
     sensor_serial_number: '53'
