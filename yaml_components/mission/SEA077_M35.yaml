@@ -1,7 +1,9 @@
 metadata:
   comment: Glider used zt/zs=2 and alt=2 for full mission duration. Vertical speed
     was sped up at the end of the mission to reach the recovery waypoint in time.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_04
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

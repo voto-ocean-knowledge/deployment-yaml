@@ -1,7 +1,9 @@
 metadata:
   comment: Glider dove on a faster profile with zt=20 occationaly due to strong currents.
     The sensor cap was on the oxygen sensor forr the full mission duration, see qc
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   altimeter:
     sensor_serial_number: '52'

@@ -3,7 +3,9 @@ metadata:
     most of the mission but occasionally increased to  20m when the glider struggled
     with strong currents. The oxygen sensor (JFE AROD-FT) stopped recording data at
     C541
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   altimeter:
     sensor_serial_number: '53'

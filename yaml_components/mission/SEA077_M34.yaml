@@ -1,6 +1,8 @@
 metadata:
   comment: Glider dove with zt/zs=2 and alt=2 for full mission.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_04
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

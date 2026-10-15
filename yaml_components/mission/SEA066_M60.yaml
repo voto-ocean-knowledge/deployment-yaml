@@ -2,7 +2,9 @@ metadata:
   comment: Voltage drops throughout mission resulted in a few 1 Alarms. Navigation
     pressure sensor (not legato) showing negative values occasionally at the surface.
     zt/zs=2 and alt=2 throughout the full mission.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_03
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

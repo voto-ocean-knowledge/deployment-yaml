@@ -3,7 +3,9 @@ metadata:
     the entire mission duration. Soon after the start of them mission, the oxygen
     sensor acquisition settings were changed to record data every 30s instead of 1s
     between 0 and 1m (i.e while at surface)
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   altimeter:
     sensor_serial_number: '34'

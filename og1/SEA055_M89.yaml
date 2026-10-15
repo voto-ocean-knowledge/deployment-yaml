@@ -1,0 +1,446 @@
+glider_devices:
+  SENSOR_CTD_230846:
+    long_name: RBR Legato3 CTD
+    sensor_calibration_date: '2023-08-28'
+    sensor_maker: RBR
+    sensor_maker_vocabulary: http://vocab.nerc.ac.uk/collection/L35/current/MAN0049/
+    sensor_model: RBR Legato3 CTD
+    sensor_model_vocabulary: http://vocab.nerc.ac.uk/collection/L22/current/TOOL1745/
+    sensor_serial_number: '230846'
+    sensor_type: CTD
+    sensor_type_vocabulary: http://vocab.nerc.ac.uk/collection/L05/current/130/
+  SENSOR_CURRENT_PROFILERS_105527:
+    long_name: Nortek Glider1000 AD2CP Acoustic Doppler Current Profiler
+    sensor_calibration_date: '2024-02-15'
+    sensor_maker: Nortek
+    sensor_maker_vocabulary: http://vocab.nerc.ac.uk/collection/L35/current/MAN0068/
+    sensor_model: Nortek Glider1000 AD2CP Acoustic Doppler Current Profiler
+    sensor_model_vocabulary: http://vocab.nerc.ac.uk/collection/L22/current/TOOL1774/
+    sensor_serial_number: '105527'
+    sensor_type: current profilers
+    sensor_type_vocabulary: http://vocab.nerc.ac.uk/collection/L05/current/115/
+  SENSOR_DISSOLVED_GAS_SENSORS_0095:
+    calibration_parameters: '{''A'': -12.75913, ''B'': 0.001480854, ''C'': -2.638831e-08,
+      ''Cp'': 0.0037, ''D'': 6.137363e-13, ''E'': -7.744244e-18, ''F'': 4.990697e-23,
+      ''c0'': 0.002955601, ''c1'': 0.0001240437, ''c2'': 2.690884e-06, ''d0'': 0.0002122214,
+      ''d1'': -0.2407314, ''d2'': 0.2160254, ''d3'': 0.0, ''d4'': 0.0, ''e0'': 1.0}'
+    long_name: JFE Advantech Rinko FT ARO-FT oxygen sensor
+    sensor_calibration_date: '2024-01-13'
+    sensor_maker: JFE Advantech
+    sensor_maker_vocabulary: http://vocab.nerc.ac.uk/collection/L35/current/MAN0053/
+    sensor_model: JFE Advantech Rinko FT ARO-FT oxygen sensor
+    sensor_model_vocabulary: http://vocab.nerc.ac.uk/collection/L22/current/TOOL1783/
+    sensor_serial_number: 0095
+    sensor_type: dissolved gas sensors
+    sensor_type_vocabulary: http://vocab.nerc.ac.uk/collection/L05/current/351/
+  SENSOR_FLUOROMETERS_235280:
+    calibration_parameters: '{''Chl_C0'': 0.023341889, ''Chl_C1'': 2.262095e-06, ''Chl_C2'':
+      0.10331017, ''backscatter_C0'': 1.5123581e-05, ''backscatter_C1'': 7.7753944,
+      ''fdom_C0'': 0.002956003, ''fdom_C1'': 13731.502}'
+    long_name: RBR tridente scattering fluorescence sensor
+    sensor_calibration_date: '2024-06-05'
+    sensor_maker: RBR
+    sensor_maker_vocabulary: http://vocab.nerc.ac.uk/collection/L35/current/MAN0049/
+    sensor_model: RBR tridente scattering fluorescence sensor
+    sensor_model_vocabulary: http://vocab.nerc.ac.uk/collection/L22/current/TOOL2149/
+    sensor_serial_number: '235280'
+    sensor_type: fluorometers
+    sensor_type_vocabulary: http://vocab.nerc.ac.uk/collection/L05/current/113/
+  SENSOR_MICROSTRUCTURE_SENSORS_0496:
+    long_name: Rockland Scientific MicroRider-1000G turbulence microstructure profiler
+    sensor_calibration_date: '2024-03-04'
+    sensor_maker: Rockland Scientific
+    sensor_maker_vocabulary: http://vocab.nerc.ac.uk/collection/L35/current/MAN0022/
+    sensor_model: Rockland Scientific MicroRider-1000G turbulence microstructure profiler
+    sensor_model_vocabulary: http://vocab.nerc.ac.uk/collection/L22/current/TOOL2265/
+    sensor_serial_number: 0496
+    sensor_type: microstructure sensors
+    sensor_type_vocabulary: http://vocab.nerc.ac.uk/collection/L05/current/184/
+metadata:
+  Conventions: CF-1.10, OG-1.0, Unidata Dataset Discovery v1.0
+  acknowledgement: This study used data collected and made freely available by Voice
+    of the Ocean Foundation (https://voiceoftheocean.org) accessed from https://erddap.observations.voiceoftheocean.org/erddap/index.html
+  agency: Voice of the Ocean
+  agency_role: contact point
+  agency_role_vocabulary: http://vocab.nerc.ac.uk/collection/C86/current/
+  comment: Part of the TurboMix mission, deployed with Legato Tridente and a MicroRider-1000-G
+    sensor. MR1000G was set to sample every 2nd dive downcast + up to 40 m upcast,
+    although it sampled at all times due to a conflict in the softwares of the glider
+    payload and MicroRider sensor which lead to an increased battery consumption.
+    Part-time loitering was performed during the last part of the mission to save
+    battery.
+  contributing_institutions: Voice of the Ocean Foundation
+  contributing_institutions_role: Operator
+  contributing_institutions_role_vocabulary: http://vocab.nerc.ac.uk/collection/W08/current/
+  contributor_email: 'callum.rollo@voiceoftheocean.org, louise.biddle@voiceoftheocean.org,,
+    , , , , '
+  contributor_name: 'Callum Rollo, Louise Biddle,, , , , , '
+  contributor_role: Data scientist, PI, Operator, Operator, Operator, Operator, Operator,
+    Operator,
+  contributor_role_vocabulary: http://vocab.nerc.ac.uk/collection/W08/
+  creator_email: callum.rollo@voiceoftheocean.org
+  creator_name: Callum Rollo
+  creator_url: https://observations.voiceoftheocean.org
+  deployment_id: 89
+  featureType: trajectory
+  glider_name: Kaprifol
+  keywords: AUVS, Autonomous Underwater Vehicles, Oceans, Ocean Pressure, Water Pressure,
+    Ocean Temperature, Water Temperature, Salinity/Density, Conductivity, Density,
+    Salinity
+  keywords_vocabulary: GCMD Science Keywords
+  license: Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/)
+    This study used data collected and made freely available by Voice of the Ocean
+    Foundation (https://voiceoftheocean.org) accessed from https://erddap.observations.voiceoftheocean.org/erddap/index.html
+  metadata_link: http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html
+  naming_authority: Voice of the Ocean Foundation
+  platform: sub-surface gliders
+  platform_model: Alseamar SeaExplorer X2 glider
+  platform_model_vocabulary: http://vocab.nerc.ac.uk/collection/B76/current/B7600035/
+  platform_serial_number: SEA055
+  platform_vocabulary: http://vocab.nerc.ac.uk/collection/L06/current/27/
+  processing_level: Data provided as is with no expressed or implied assurance of
+    quality assurance or quality control. L0
+  project: TurboMix
+  publisher_email: callum.rollo@voiceoftheocean.org
+  publisher_name: Callum Rollo
+  publisher_url: https://voiceoftheocean.org
+  references: created with pyglider https://github.com/c-proof/pyglider
+  rtqc_method: IOOS QC QARTOD https://github.com/ioos/ioos_qc
+  rtqc_method_doi: None
+  source: Observational data from a profiling glider.
+  standard_name_vocabulary: CF Standard Name Table v92
+  title: OceanGliders datafile from VOTO SeaExplorer
+  transmission_system: IRIDIUM
+  wmo_id: 6801674
+netcdf_variables:
+  AD2CP_HEADING:
+    comment: measured by AD2CP
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Orientation (horizontal relative to magnetic north) of measurement
+      platform {heading}
+    sensor: SENSOR_CURRENT_PROFILERS_105527
+    source: AD2CP_HEADING
+    standard_name: platform_orientation
+    units: Degrees
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/HEADING/
+  AD2CP_PITCH:
+    comment: measured by AD2CP
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Orientation (pitch) of measurement platform by inclinometer
+    sensor: SENSOR_CURRENT_PROFILERS_105527
+    source: AD2CP_PITCH
+    standard_name: platform_pitch_fore_up
+    units: Degrees
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/PITCH/
+  AD2CP_ROLL:
+    comment: measured by AD2CP
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Orientation (roll angle) of measurement platform by inclinometer
+    sensor: SENSOR_CURRENT_PROFILERS_105527
+    source: AD2CP_ROLL
+    standard_name: platform_roll_starboard_down
+    units: Degrees
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/ROLL/
+  BBP700:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Particle backscattering at 700 nanometers.
+    observation_type: calculated
+    processing: Particulate backscatter bbp calculated following methods in the Ocean
+      Observatories Initiative document DATA PRODUCT SPECIFICATION FOR OPTICAL BACKSCATTER
+      (RED WAVELENGTHS) Version 1-05 Document Control Number 1341-00540 2014-05-28.
+      Downloaded from http://oceanobservatories.org/wp-content/uploads/2015/10/1341-00540_Data_Product_SPEC_FLUBSCT_OOI.pdf
+    sensor: SENSOR_FLUOROMETERS_235280
+    source: TRIDENTE_BACKSCATTER
+    standard_name: acoustic_volume_backscattering_strength_in_sea_water
+    units: m-1
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/BBP700/
+  CHLA:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Chlorophyll-A
+    observation_type: calculated
+    sensor: SENSOR_FLUOROMETERS_235280
+    source: TRIDENTE_CHLOROPHYLL
+    standard_name: concentration_of_chlorophyll_in_sea_water
+    units: mg m-3
+    valid_max: 50.0
+    valid_min: 0.0
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/CHLA/
+  CNDC:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Electrical conductivity of the water body by CTD
+    observation_type: measured
+    sensor: SENSOR_CTD_230846
+    source: LEGATO_CONDUCTIVITY
+    standard_name: sea_water_electrical_conductivity
+    units: mS cm-1
+    valid_max: 85.0
+    valid_min: 0.0
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/CNDC/
+  DEAD_RECKONING:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Dead reckoning. 1 when platform lon and lat are derived from dead reckoning.
+    observation_type: measured
+    sensor: SeaExplorer
+    source: DeadReckoning
+    units: '1'
+    valid_max: 0
+    valid_min: 1
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/DEAD_RECKON/
+  DIVE_NUMBER:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Sequential number representing a complete descent-ascent cycle of the
+      glider
+    sensor: SeaExplorer
+    source: fnum
+    units: '1'
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/DIVE_NUMBER/
+  DOXY:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Dissolved oxygen
+    observation_type: calculated
+    sensor: SENSOR_DISSOLVED_GAS_SENSORS_0095
+    source: AROD_FT_DO
+    standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
+    units: mmol m-3
+    valid_max: 425.0
+    valid_min: 0.0
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/DOXY/
+  HEADING:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Orientation (horizontal relative to magnetic north) of measurement
+      platform {heading} by compass
+    sensor: SeaExplorer
+    source: Heading
+    standard_name: platform_orientation
+    units: Degrees
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/HEADING/
+  LATITUDE:
+    _FillValue: -9999.9
+    conversion: nmea2deg
+    interpolation_methodology: ''
+    long_name: latitude of each measurement and GPS location
+    sensor: SeaExplorer
+    source: NAV_LATITUDE
+    standard_name: latitude
+    units: degree_north
+    valid_max: 90.0
+    valid_min: -90.0
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/LAT/
+  LONGITUDE:
+    _FillValue: -9999.9
+    conversion: nmea2deg
+    interpolation_methodology: ''
+    long_name: longitude of each measurement and GPS location
+    sensor: SeaExplorer
+    source: NAV_LONGITUDE
+    standard_name: longitude
+    units: degree_east
+    valid_max: 180.0
+    valid_min: -180.0
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/LON/
+  NAV_RESOURCE:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Navigation state of SeaExplorer glider
+    sensor: SeaExplorer
+    source: NAV_RESOURCE
+    units: '1'
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/NAV_RESOURCE/
+  PHYCOCYANIN:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Phycocyanin concentration per unit volume of fresh or salt water.
+    sensor: SENSOR_FLUOROMETERS_235280
+    source: TRIDENTE_FDOM
+    units: mg m-3
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/PHYCOCYANIN/
+  PITCH:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Orientation (pitch) of measurement platform by inclinometer
+    sensor: SeaExplorer
+    source: Pitch
+    standard_name: platform_pitch_fore_up
+    units: Degrees
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/PITCH/
+  PRES:
+    comment: ctd pressure sensor
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Pressure (spatial coordinate) exerted by the water body by profiling
+      pressure sensor and correction to read zero at sea level
+    observation_type: measured
+    positive: down
+    reference_datum: sea-surface
+    sensor: SENSOR_CTD_230846
+    source: LEGATO_PRESSURE
+    standard_name: sea_water_pressure
+    units: dbar
+    valid_max: 2000.0
+    valid_min: 0.0
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/PRES/
+  ROLL:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Orientation (roll angle) of measurement platform by inclinometer
+    sensor: SeaExplorer
+    source: Roll
+    standard_name: platform_roll_starboard_down
+    units: Degrees
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/ROLL/
+  TEMP:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Temperature of the water body by CTD
+    observation_type: measured
+    sensor: SENSOR_CTD_230846
+    source: LEGATO_TEMPERATURE
+    standard_name: sea_water_temperature
+    units: Degrees Celsius
+    valid_max: 42.0
+    valid_min: -5.0
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/TEMP/
+  TEMPDOXY:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: Sea temperature from oxygen sensor ITS-90 scale
+    observation_type: measured
+    sensor: SENSOR_DISSOLVED_GAS_SENSORS_0095
+    source: AROD_FT_TEMP
+    standard_name: sea_water_temperature
+    units: Degrees Celsius
+    valid_max: 42.0
+    valid_min: -5.0
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/TEMPDOXY/
+  TIME:
+    _FillValue: 1
+    calendar: gregorian
+    interpolation_methodology: ''
+    long_name: Time elapsed since 1970-01-01T00:00:00Z
+    sensor: SeaExplorer
+    source: time
+    standard_name: time
+    units: since 1970-01-01T00:00:00Z
+    valid_max: 4000000000
+    valid_min: 1000000000
+    vocabulary: http://vocab.nerc.ac.uk/collection/OG1/current/TIME/
+  ad2cp_beam1_cell_number1:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider beam 1 measure from AD2CP in cell 1
+    processing_comment: Legacy variable not yet converted to OG1
+    source: AD2CP_V1_CN1
+    units: m s-1
+  ad2cp_beam2_cell_number1:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider beam 2 measure from AD2CP in cell 1
+    processing_comment: Legacy variable not yet converted to OG1
+    source: AD2CP_V2_CN1
+    units: m s-1
+  ad2cp_beam3_cell_number1:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider beam 3 measure from AD2CP in cell 1
+    processing_comment: Legacy variable not yet converted to OG1
+    source: AD2CP_V3_CN1
+    units: m s-1
+  ad2cp_beam4_cell_number1:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider beam 4 measure from AD2CP in cell 1
+    processing_comment: Legacy variable not yet converted to OG1
+    source: AD2CP_V4_CN1
+    units: m s-1
+  ad2cp_pressure:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider pressure from AD2CP
+    processing_comment: Legacy variable not yet converted to OG1
+    source: AD2CP_PRESSURE
+    units: dbar
+  angular_cmd:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider angular command
+    processing_comment: Legacy variable not yet converted to OG1
+    source: AngCmd
+    units: degrees
+  angular_pos:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider angular position
+    processing_comment: Legacy variable not yet converted to OG1
+    source: AngPos
+    units: degrees
+  ballast_cmd:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider ballast command
+    processing_comment: Legacy variable not yet converted to OG1
+    source: BallastCmd
+    units: ml
+  ballast_pos:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider ballast position
+    processing_comment: Legacy variable not yet converted to OG1
+    source: BallastPos
+    units: ml
+  declination:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: declination
+    processing_comment: Legacy variable not yet converted to OG1
+    source: Declination
+    units: degrees
+  desired_heading:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider desired heading angle
+    processing_comment: Legacy variable not yet converted to OG1
+    source: DesiredH
+    units: degrees
+  internal_pressure:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: internal pressure
+    processing_comment: Legacy variable not yet converted to OG1
+    source: Pa
+    units: Pa
+  internal_temperature:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: internal temperature
+    processing_comment: Legacy variable not yet converted to OG1
+    source: Temperature
+    units: Celsius
+  keep_variables:
+  - AD2CP_PITCH
+  - conductivity
+  - PHYCOCYANIN
+  - TEMPDOXY
+  linear_cmd:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider linear command
+    processing_comment: Legacy variable not yet converted to OG1
+    source: LinCmd
+    units: cm
+  linear_pos:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider linear position
+    processing_comment: Legacy variable not yet converted to OG1
+    source: LinPos
+    units: cm
+  salinity:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: water salinity
+    processing_comment: Legacy variable not yet converted to OG1
+    source: LEGATO_SALINITY
+    units: PSU
+  security_level:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: security level
+    processing_comment: Legacy variable not yet converted to OG1
+    source: SecurityLevel
+    units: None
+  timebase:
+    source: NAV_LATITUDE
+  tke_dissipation_shear_1:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: log10 of turbulent kinetic energy dissipation shear 1
+    processing_comment: Legacy variable not yet converted to OG1
+    source: MR1000G-RDL_LOG10_EPS1
+    units: log10 W kg-1
+  tke_dissipation_shear_2:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: log10 of turbulent kinetic energy dissipation shear 2
+    processing_comment: Legacy variable not yet converted to OG1
+    source: MR1000G-RDL_LOG10_EPS1
+    units: log10 W kg-1
+  voltage:
+    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
+    long_name: glider voltage
+    processing_comment: Legacy variable not yet converted to OG1
+    source: Voltage
+    units: V

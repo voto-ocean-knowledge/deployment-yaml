@@ -4,7 +4,11 @@ metadata:
     as testing and using the propelled drifts early and late during the mission. Tridente
     phycocyanin channel values are suspect. The cause is under investigation and appears
     to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  seanav: 3.9.1-r
+  seapld: 2.25.4-cr
+  site: SAMBA_01
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

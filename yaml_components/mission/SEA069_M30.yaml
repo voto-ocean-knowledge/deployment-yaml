@@ -1,7 +1,9 @@
 metadata:
   comment: zt was 20 m for a part of the mission and in the end up to 40 m. Vertical
     speed was also higher due to strong currents in the northern part of the transect.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   altimeter:
     sensor_serial_number: '52'

@@ -1,6 +1,10 @@
 metadata:
   comment: None
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  seanav: 3.8.2 -r
+  seapld: 2.25.2 -r
+  site: SAMBA_05
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

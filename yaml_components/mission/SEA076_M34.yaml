@@ -1,7 +1,11 @@
 metadata:
   comment: Glider performed two evening drifts with the payload turned off at the
     end of the mission.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  seanav: 3.8.2 -r
+  seapld: 2.24.2 -r
+  site: SAMBA_03
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

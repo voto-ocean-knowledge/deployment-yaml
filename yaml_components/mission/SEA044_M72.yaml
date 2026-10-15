@@ -3,7 +3,9 @@ metadata:
     the entire mission duration. The acquisition settings for the oxygen sensor (JFE
     AROD-FT) were changed towards the end of the mission. Instead of fast sampling
     all the time, while at surface, the sensor was set to sample  every 30s
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   altimeter:
     sensor_serial_number: '53'

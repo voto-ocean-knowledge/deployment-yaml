@@ -1,8 +1,11 @@
 metadata:
-  comment: GPS posision of c. 522 and 586 is affected by spoofing.Tridente phycocyanin
-    channel values are suspect. The cause is under investigation and appears to be
-    due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
+  comment: 'GNSS jamming affecting cycles 435 (C), 522 (A), 586 (A). Read more on
+    the issue: https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_6_gnss_jamming.pdf.
+    Tridente phycocyanin channel values are suspect. The cause is under investigation
+    and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf'
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_02
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

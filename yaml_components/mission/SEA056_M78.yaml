@@ -1,7 +1,9 @@
 metadata:
   comment: Glider flew on zt/zt and alt=2 on until last week where it loitered with
     payload off during evening and afternoons to save battery.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_04
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

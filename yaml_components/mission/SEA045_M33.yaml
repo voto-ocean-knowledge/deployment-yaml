@@ -2,7 +2,9 @@ metadata:
   comment: Altitude set to 10m at the beginning of the mission and then increased
     to 12m for the rest of the mission but occasionally decreased to 8m . Zt/zs set
     to 15m for most the mission and occasionally increased to 35m and 40m
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

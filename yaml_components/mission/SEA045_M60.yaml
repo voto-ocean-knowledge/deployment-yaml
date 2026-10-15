@@ -4,7 +4,9 @@ metadata:
     other sensor kept working but the pressure comes from the LEGATO therefore no
     data from the other sensors can be processed. Data from the other sensors can
     be shared upon request
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_02
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

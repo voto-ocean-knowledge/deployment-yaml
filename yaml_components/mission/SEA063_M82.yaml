@@ -2,7 +2,11 @@ metadata:
   comment: Glider loitered for periods at the end of the mission to save battery.
     The ADCP stopped collecting data for a period between 2025-02-08 to 2025-02-09.
     The Legato stopped working on the 2025-02-15.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  seanav: 3.8.2 -r
+  seapld: 2.24.2 -r
+  site: SAMBA_02
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

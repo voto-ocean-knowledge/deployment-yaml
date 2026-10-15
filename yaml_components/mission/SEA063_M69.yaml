@@ -3,7 +3,9 @@ metadata:
     the entire mission duration. The glider was put on drift mode for the last part
     of the mission with payload switched off, causing gaps in the dataset. The glider
     collected data at least once a day in between drifting dives.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_02
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

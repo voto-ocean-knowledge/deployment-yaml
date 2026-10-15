@@ -1,7 +1,9 @@
 metadata:
   comment: This mission is part of testing the new ShallowExplorer in the Baltic Sea.
     This deployment is at the SAMBA_02 transect in the Bornholm Basin.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_02
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

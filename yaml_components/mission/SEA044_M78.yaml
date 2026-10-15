@@ -4,7 +4,9 @@ metadata:
     with strong currents. During the very last part of the mission, the sensors were
     set to collect data every 3 dives in order to save battery. This is why there
     are small gaps in the dataset
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   altimeter:
     sensor_serial_number: '53'

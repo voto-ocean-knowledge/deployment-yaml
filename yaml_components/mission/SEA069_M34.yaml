@@ -1,6 +1,8 @@
 metadata:
   comment: Occational flight on zt=40 and increased vertical speed to fly in currents
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   altimeter:
     sensor_serial_number: '52'

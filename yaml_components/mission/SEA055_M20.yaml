@@ -3,7 +3,9 @@ metadata:
     the entire mission duration. At cycle 1037 the acquiisition settings of the CTD
     (RBR LEGATO) were changed. The sensor sampling frequency was changed from 1Hz
     to the fastest possible
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_02
 platform_devices:
   altimeter:
     sensor_serial_number: '33'

@@ -4,7 +4,9 @@ metadata:
     with currents. At C727 the sampling frequency of the oxygen sensor (JFE AROD-FT)
     was increased from 30s to 1s for the data collected in the top 2m of the water
     column
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   altimeter:
     sensor_serial_number: '25'

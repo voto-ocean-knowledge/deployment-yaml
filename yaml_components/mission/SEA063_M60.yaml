@@ -3,7 +3,9 @@ metadata:
     the entire mission duration. Emergency recovery due to a broken linear actuator.
     The glider spent about 20h at surface while waiting for recovery. During most
     of this time, the payload was swithced off and no data was collected
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_02
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

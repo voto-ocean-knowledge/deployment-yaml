@@ -1,7 +1,9 @@
 metadata:
   comment: Glider flew with increased vertical speed and zt for large parts of mission
     to proceed in strong currents as it got pushed off transect.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   altimeter:
     sensor_serial_number: '52'

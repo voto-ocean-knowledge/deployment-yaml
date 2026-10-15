@@ -2,7 +2,9 @@ metadata:
   comment: Altitude set to 12m for most of the mission and occasionally increased
     to up to 25m when the glider struggled with currents. Zt/zs set to 5m for most
     of the mission and occasionally increased to 10m
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

@@ -3,7 +3,9 @@ metadata:
     afternoon loitering with payload off towards the end of the mission to preserve
     battery. ADCP was turned off between 2025-02-22 to 2025-02-24 due to a probable
     software issue.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_03
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

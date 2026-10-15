@@ -3,6 +3,8 @@ metadata:
     full mission duration.  Tridente phycocyanin channel values are suspect. The cause
     is under investigation and appears to be due to bad calibration https://observations.voiceoftheocean.org/static/img/reports/Quality_Issue_5_tridente_phycocyanin.pdf
   project: PhycoGlider II
+  seanav: 3.8.2 -r
+  seapld: 2.25.2 -r
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

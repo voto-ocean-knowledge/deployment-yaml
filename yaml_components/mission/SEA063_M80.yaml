@@ -1,7 +1,9 @@
 metadata:
   comment: Legato conductivity was not working for the majority of time. Finished
     the mission by loitering in the afternoons to preserve battery due to weather
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_02
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

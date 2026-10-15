@@ -5,7 +5,9 @@ metadata:
     recovery due to water leaks in the dry section of the glider. The raw data could
     not be recovered and only the subsampled files sent through iriudium are available
     for this mission
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_02
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

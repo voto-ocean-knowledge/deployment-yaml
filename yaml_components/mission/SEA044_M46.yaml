@@ -2,7 +2,9 @@ metadata:
   comment: Altitude set to 12m for most of the mission and occasionally increased
     to 20m. Zt/zs set to 5m for most of the mission and occasionally increased to
     10m
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   altimeter:
     sensor_serial_number: '53'

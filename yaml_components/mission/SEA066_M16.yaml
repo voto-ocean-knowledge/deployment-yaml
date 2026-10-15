@@ -3,7 +3,9 @@ metadata:
     of the mission and occasioanally increased to 15m. The ADCP stopped working at
     C142 as well as the OCR504 (Irradiance). Glider was recovered soon after due to
     suspected leak. Water was found in the dry section of the glider
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_01
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

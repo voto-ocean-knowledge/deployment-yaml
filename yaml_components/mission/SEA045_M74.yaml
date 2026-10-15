@@ -5,7 +5,9 @@ metadata:
     all the time, while at surface, the sensor was set to sample  every 30s. Glider
     was set to drift for the last part of the mission with payload switched off. No
     science data is available for that period
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_02
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

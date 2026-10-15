@@ -2,7 +2,9 @@ metadata:
   comment: zt=2 for the entire mission. Glider flew on bu/bd +-1006 and pu/pd +-1020
     since 2024-07-02 and loiterd during the afternoons with payload off since 2024-07-11
     to preserve battery.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_05
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP

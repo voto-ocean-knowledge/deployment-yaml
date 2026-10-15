@@ -5,7 +5,9 @@ metadata:
     possible collisions with the seabed. The glider maximum diving depth was set to
     65 or 75m depending on the section of the transect, therefore the glider often
     turned back well before 6m from the seabed
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_02
 platform_devices:
   altimeter:
     sensor_serial_number: '34'

@@ -2,7 +2,9 @@ metadata:
   comment: Occasionally failed bottom tracking and diving on a safe depth profile
     from around cycle 304. zt/zs=2 and alt=2 for the remainer of the mission. AROD_FT
     Analogue values not available.
+  network: OceanGliders > BOON > Baltic Sea > SAMBA
   project: SAMBA
+  site: SAMBA_05
 platform_devices:
   AD2CP:
     make_model: Nortek AD2CP
