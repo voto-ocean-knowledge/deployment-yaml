@@ -98,7 +98,7 @@ variables:
   oxygen_led_counts: AROD_FT_LED
   phycocyanin: TRIDENTE_FDOM
   pitch: Pitch
-  pressure: AD2CP_PRESSURE
+  pressure: LEGATO_PRESSURE
   roll: Roll
   salinity: LEGATO_SALINITY
   security_level: SecurityLevel

@@ -441,13 +441,6 @@ netcdf_variables:
     processing_comment: Legacy variable not yet converted to OG1
     source: AROD_FT_LED
     units: counts
-  pressure:
-    comment: ad2cp pressure sensor
-    coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
-    long_name: water pressure
-    processing_comment: Legacy variable not yet converted to OG1
-    source: AD2CP_PRESSURE
-    units: dbar
   salinity:
     coordinates: TIME, LONGITUDE, LATITUDE, DEPTH
     long_name: water salinity

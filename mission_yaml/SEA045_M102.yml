@@ -313,7 +313,7 @@ netcdf_variables:
     accuracy: '0.002'
     resolution: '0.00005'
   pressure:
-    source: AD2CP_PRESSURE
+    source: LEGATO_PRESSURE
     long_name: water pressure
     standard_name: sea_water_pressure
     units: dbar
@@ -322,11 +322,11 @@ netcdf_variables:
     valid_max: '1000'
     positive: down
     reference_datum: sea-surface
-    instrument: instrument_ad2cp
+    instrument: instrument_ctd
     observation_type: measured
     accuracy: '0.5'
     resolution: '0.01'
-    comment: ad2cp pressure sensor
+    comment: ctd pressure sensor
   salinity:
     source: LEGATO_SALINITY
     long_name: water salinity
