@@ -497,17 +497,7 @@ qc:
     end: '2025-06-04'
     start: '2025-05-26'
     value: 4
-  backscatter_raw:
-    comment: Biofouling on wetlabs FLBBPC
-    end: '2025-06-04'
-    start: '2025-05-26'
-    value: 4
-  backscatter_scaled:
-    comment: Biofouling on wetlabs FLBBPC
-    end: '2025-06-04'
-    start: '2025-05-26'
-    value: 4
-  phycocyanin_raw:
+  RBBP700:
     comment: Biofouling on wetlabs FLBBPC
     end: '2025-06-04'
     start: '2025-05-26'
