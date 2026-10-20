@@ -264,6 +264,8 @@ def convert_to_og1(yaml_path):
         'oxygen_concentration': 'DOXY',
         'cdom': 'CDOM',
         'cdom_raw' : 'FLUOCDOM',
+        'backscatter': 'BBP700',
+        'backscatter_raw': 'RBBP700',
         'chlorophyll': 'CHLA',
         'chlorophyll_raw': 'FLUOCHLA',
         'temperature': 'TEMP',
@@ -275,6 +277,9 @@ def convert_to_og1(yaml_path):
         new_qc = {}
         for key, val in mission_meta['qc'].items():
             new_key = qc_key_translation.get(key, key)
+            if new_key == key:
+                print(f'WARN dropping pilot qc for {yaml_name}: {key}')
+                continue#
             new_qc[new_key] = val
         out['qc'] = new_qc
 

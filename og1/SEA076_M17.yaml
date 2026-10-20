@@ -473,11 +473,7 @@ qc:
     comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
       further controls are recommended.
     value: 3
-  backscatter_raw:
-    comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
-      further controls are recommended.
-    value: 3
-  backscatter_scaled:
+  RBBP700:
     comment: Water was leaking through the FLBBCD sensors so data may be incorrect,
       further controls are recommended.
     value: 3
