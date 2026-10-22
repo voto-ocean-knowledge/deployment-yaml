@@ -45,7 +45,7 @@ metadata:
   project_url: voiceoftheocean.org/ocean-observatories/
   summary: Part of SAMBA continuous monitoring
   platform_serial: SEA079
-  seanav: 3.9.26 -r
+  seanav: 3.9.6 -r
   seapld: 2.26.0 -r
   network: OceanGliders > BOON > Baltic Sea > SAMBA
   site: SAMBA_05
