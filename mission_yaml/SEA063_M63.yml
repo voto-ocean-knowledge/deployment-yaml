@@ -434,7 +434,7 @@ netcdf_variables:
     long_name: Downwelling PAR (Photosynthetically Active Radiation) in range 400-700
       nm
     standard_name: downwelling_PAR
-    units: "\u03BCE cm-2 s-1"
+    units: "μE cm-2 s-1"
     average_method: geometric mean
     coordinates: time depth latitude longitude
     instrument: instrument_radiometer
@@ -456,5 +456,5 @@ qc:
       \ variability is confirmed to be valid and no temporal drift occurs. During\
       \ tests values that can be outside the manufacturer acceptance range have been\
       \ observed when compared to the output from a reference sensor. This issue is\
-      \ particularly evident around 100\u03BCmol/l. More information on the history\
+      \ particularly evident around 100μmol/l. More information on the history\
       \ and updates regarding this issue (https://observations.voiceoftheocean.org/data/updates)."

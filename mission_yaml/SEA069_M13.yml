@@ -342,7 +342,7 @@ netcdf_variables:
     instrument: instrument_flourometer
   backscatter_scaled:
     source: FLBBPC_BB_700_SCALED
-    long_name: "700 nm \u03B2 total volume scattering coefficient at 117 degree angle"
+    long_name: "700 nm β total volume scattering coefficient at 117 degree angle"
     standard_name: 700_nm_wavelength_total_volume_scattering_coefficient
     units: m-1 sr-1
     coordinates: time depth latitude longitude

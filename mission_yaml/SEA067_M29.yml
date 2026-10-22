@@ -339,7 +339,7 @@ netcdf_variables:
     instrument: instrument_flourometer
   backscatter_scaled:
     source: FLBBPC_BB_700_SCALED
-    long_name: "700 nm \u03B2 total volume scattering coefficient at 117 degree angle"
+    long_name: "700 nm β total volume scattering coefficient at 117 degree angle"
     standard_name: 700_nm_wavelength_total_volume_scattering_coefficient
     units: m-1 sr-1
     coordinates: time depth latitude longitude
@@ -445,6 +445,6 @@ qc:
     comment: "Dissolved oxygen concentration values are inaccurate. Deterioration\
       \ of the foil has caused errors and temporal drift in other missions with this\
       \ sensor during this timeframe. We do not observe a temporal drift in this particular\
-      \ mission, but the sensor does observe the expected 0 \u03BCmol L<sup>-1</sup>\
+      \ mission, but the sensor does observe the expected 0 μmol L<sup>-1</sup>\
       \ oxygen concentration in anoxic waters. More information on the history and\
       \ updates regarding this issue (https://observations.voiceoftheocean.org/data/updates)."

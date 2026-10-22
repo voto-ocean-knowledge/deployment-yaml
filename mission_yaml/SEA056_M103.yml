@@ -99,7 +99,7 @@ glider_devices:
       B: 0.001472191
       C: -2.561056e-08
       D: 5.818844e-13
-      E: "-7.120555\u0435-18"
+      E: -7.120555e-18
       F: 4.532106e-23
   AD2CP:
     make: Nortek
@@ -449,7 +449,7 @@ netcdf_variables:
     long_name: Downwelling PAR (Photosynthetically Active Radiation) in range 400-700
       nm
     standard_name: downwelling_PAR
-    units: "\u03BCE cm-2 s-1"
+    units: "μE cm-2 s-1"
     average_method: geometric mean
     coordinates: time depth latitude longitude
     instrument: instrument_radiometer

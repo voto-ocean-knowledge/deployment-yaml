@@ -93,7 +93,7 @@ glider_devices:
       c1: 0.0001235029
       c2: 2.489407e-06
       e0: 1.0
-      Cp: "4.200000\u0435-03"
+      Cp: 4.200000e-03
       A: -12.80008
       B: 0.001470423
       C: -2.563077e-08
@@ -448,7 +448,7 @@ netcdf_variables:
     long_name: Downwelling PAR (Photosynthetically Active Radiation) in range 400-700
       nm
     standard_name: downwelling_PAR
-    units: "\u03BCE cm-2 s-1"
+    units: "μE cm-2 s-1"
     average_method: geometric mean
     coordinates: time depth latitude longitude
     instrument: instrument_radiometer
