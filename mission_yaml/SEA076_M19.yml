@@ -475,5 +475,5 @@ qc:
       \ variability is confirmed to be valid and no temporal drift occurs. During\
       \ tests values that can be outside the manufacturer acceptance range have been\
       \ observed when compared to the output from a reference sensor. This issue is\
-      \ particularly evident around 100\u03BCmol/l. More information on the history\
+      \ particularly evident around 100μmol/l. More information on the history\
       \ and updates regarding this issue (https://observations.voiceoftheocean.org/data/updates)."

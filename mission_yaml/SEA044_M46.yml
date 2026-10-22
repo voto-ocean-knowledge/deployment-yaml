@@ -420,7 +420,7 @@ netcdf_variables:
     long_name: Downwelling PAR (Photosynthetically Active Radiation) in range 400-700
       nm
     standard_name: downwelling_PAR
-    units: "\u03BCE m-2 s-1"
+    units: "μE m-2 s-1"
     average_method: geometric mean
     coordinates: time depth latitude longitude
     instrument: instrument_radiometer
