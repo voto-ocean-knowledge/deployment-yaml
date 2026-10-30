@@ -27,7 +27,7 @@ if dir_path.is_file():
     dir_path = dir_path.parent
 
 multi_line = r'''Please enter a directory which contains glider config files. Acceptable formats include:  
-- `/mnt/docs/1_Operations/Missions/23_Phycoglider_2/SEA077_PLD094/SEA077_M44`  
+- `/mnt/docs/1_Operations/Missions/22_Phycoglider_2/SEA077_PLD094/SEA077_M44`  
 - `\docs\1_Operations\Missions\07_SAMBA_05\02_SAMBA_05_002\SEA079_PLD096\20250710_M34`  
      '''
 
