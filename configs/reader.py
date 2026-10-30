@@ -610,16 +610,27 @@ def run_checker_on_dir(file_dir):
 
 def run_local(all_files=False):
     if all_files:
-        msn_files = list(Path("/mnt/docs/1_Operations/Missions/").rglob("*sea.msn"))
+        msn_files = []
+        root_dirs = Path("/mnt/docs/1_Operations/Missions/").glob("??_*")
+        for root_dir in root_dirs:
+            msn_files += list(root_dir.rglob("*sea.msn"))
         directories = [fn.parent for fn in msn_files]
     else:
         directories = [
-        '/mnt/docs/1_Operations/Missions/03_SAMBA_02/07_SAMBA_02_007/SHW004_PLD175/202609DD_M10',
+        '/mnt/docs/1_Operations/Missions/03_SAMBA_02/07_SAMBA_02_007/SHW004_PLD175/20260927_M10',
         '/mnt/docs/1_Operations/Missions/03_SAMBA_02/07_SAMBA_02_007/SHW003_PLD174/20260729_M14',
         '/mnt/docs/1_Operations/Missions/21_InTail/SEA076_PLD090/20260614_M48',
         "/mnt/docs/1_Operations/Missions/03_SAMBA_02/07_SAMBA_02_007/SEA056_PLD073/20260314_M103",
     ]
+    skip_directories = [
+        Path('/mnt/docs/1_Operations/Missions/26_Arkona_MBI/SHW002_PLD165/202602DD_M24/configs')
+    ]
+
     for file_dir in directories:
+        if file_dir in skip_directories:
+            _log.info(f"Skipping {file_dir}")
+            continue
+        _log.info(f"Processing {file_dir}")
         conf = ConfigReader(file_dir)
         conf.init_local_logger()
         conf.write_yaml_to_mission_dir = True
@@ -643,11 +654,11 @@ def main():
             level=logging.ERROR,
             format=f"%(levelname)-10s %(mission_str)-12s %(message)s",
             handlers=[
-                logging.FileHandler(f'/data/log/config_checker_all_files.log', mode='w'),
+                logging.FileHandler(f'/data/log/config_checker_all_files.log', mode='a'),
                 logging.StreamHandler()
             ]
         )
-        run_local(all_files=False)
+        run_local(all_files=True)
 
 
 if __name__ == '__main__':
