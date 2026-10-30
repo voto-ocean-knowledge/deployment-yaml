@@ -107,6 +107,11 @@ def read_nav_config(config_file, defaults_file=False):
                 line = line.replace(bad_char, '')
             if not line:
                 continue
+            # Extra check for new VOTO nav and pld strings
+            if ':' in line and '=' not in line and 'seanav' in line:
+                key, var = line.split(':')
+                sea_msn[key] = var
+                continue
             if line[0] == ';':
                 if defaults_file:
                     line = line[1:]
@@ -119,6 +124,8 @@ def read_nav_config(config_file, defaults_file=False):
                 sea_msn[key] = var
             else:
                 key, var = line.rsplit('=', maxsplit=1)
+            if  'seanav' in key:
+                var = var.replace('>=', '')
             sea_msn[key] = var
     return sea_msn
 
@@ -150,6 +157,9 @@ def read_pld_config(config_file, defaults_file=False):
                 device_dict_key = line[1:-1]
                 continue
             if "=" not in line:
+                if ':' in line and 'CCU' in line:
+                    key, var = line.split(':')
+                    pld_params[key] = var
                 continue
             key, var = line.split('=', maxsplit=1)
             if key == 'used':
@@ -163,6 +173,8 @@ def read_pld_config(config_file, defaults_file=False):
                 continue
 
             if read_global:
+                if 'CCU' in key :
+                    key = key.replace(':>', '')
                 pld_params[key] = var
     if defaults_file:
         # Add values for the acq.2 that some gliders have
@@ -182,7 +194,7 @@ def expected_values_checker(cfg, expected_values, section=''):
             continue
         if str(var) != str(expected_values[key]):
             _log.error(f"Bad value for {section} {key} = {var}. Expected {expected_values[key]}")
-            
+
 def check_config_alseamar_defaults(mission_cfg, alseamar_cfg):
     skips_keys = ['config_file_directory', 'id']
     for key, val in mission_cfg.items():
@@ -279,7 +291,7 @@ class ConfigReader:
         else:
             cfg_dict = read_pld_config(sea_pld)
             self.config_dict = self.config_dict | cfg_dict
-            
+
     def read_alseamar_configs(self):
         _log.info("Check against alseamar defaults")
         alseamar_dir = script_dir / 'alseamar'
@@ -288,8 +300,8 @@ class ConfigReader:
         self.alseamar_config = self.alseamar_config | read_pld_config(alseamar_dir / 'seapayload.cfg', defaults_file=True)
         # Add values missing from alseamar conf files
         for extra_key in [
-            'CCUversion:>',
-            'seanav', 
+            'CCUversion',
+            'seanav',
             'drf.dtpid.kp',
             'drf.dtpid.kd',
             'drf.dtpid.ki',
@@ -310,7 +322,7 @@ class ConfigReader:
         mission_str_config = f"{self.config_dict['id'].upper()}_M{self.config_dict['mission.num']}"
         if mission_str_config != self.mission_str:
             _log.error(f"mission id {mission_str_config} from config files != {self.mission_str} from filepath for {self.mission_dir}")
-    
+
 
     def check_default_params(self):
         expected_values = {
@@ -610,16 +622,27 @@ def run_checker_on_dir(file_dir):
 
 def run_local(all_files=False):
     if all_files:
-        msn_files = list(Path("/mnt/docs/1_Operations/Missions/").rglob("*sea.msn"))
+        msn_files = []
+        root_dirs = Path("/mnt/docs/1_Operations/Missions/").glob("??_*")
+        for root_dir in root_dirs:
+            msn_files += list(root_dir.rglob("*sea.msn"))
         directories = [fn.parent for fn in msn_files]
     else:
         directories = [
-        '/mnt/docs/1_Operations/Missions/03_SAMBA_02/07_SAMBA_02_007/SHW004_PLD175/202609DD_M10',
+        '/mnt/docs/1_Operations/Missions/03_SAMBA_02/07_SAMBA_02_007/SHW004_PLD175/20260927_M10',
         '/mnt/docs/1_Operations/Missions/03_SAMBA_02/07_SAMBA_02_007/SHW003_PLD174/20260729_M14',
         '/mnt/docs/1_Operations/Missions/21_InTail/SEA076_PLD090/20260614_M48',
         "/mnt/docs/1_Operations/Missions/03_SAMBA_02/07_SAMBA_02_007/SEA056_PLD073/20260314_M103",
     ]
+    skip_directories = [
+        Path('/mnt/docs/1_Operations/Missions/26_Arkona_MBI/SHW002_PLD165/202602DD_M24/configs')
+    ]
+
     for file_dir in directories:
+        if file_dir in skip_directories:
+            _log.info(f"Skipping {file_dir}")
+            continue
+        _log.info(f"Processing {file_dir}")
         conf = ConfigReader(file_dir)
         conf.init_local_logger()
         conf.write_yaml_to_mission_dir = True
@@ -643,11 +666,11 @@ def main():
             level=logging.ERROR,
             format=f"%(levelname)-10s %(mission_str)-12s %(message)s",
             handlers=[
-                logging.FileHandler(f'/data/log/config_checker_all_files.log', mode='w'),
+                logging.FileHandler(f'/data/log/config_checker_all_files.log', mode='a'),
                 logging.StreamHandler()
             ]
         )
-        run_local(all_files=False)
+        run_local(all_files=True)
 
 
 if __name__ == '__main__':
