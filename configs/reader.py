@@ -107,6 +107,11 @@ def read_nav_config(config_file, defaults_file=False):
                 line = line.replace(bad_char, '')
             if not line:
                 continue
+            # Extra check for new VOTO nav and pld strings
+            if ':' in line and '=' not in line and 'seanav' in line:
+                key, var = line.split(':')
+                sea_msn[key] = var
+                continue
             if line[0] == ';':
                 if defaults_file:
                     line = line[1:]
@@ -119,6 +124,8 @@ def read_nav_config(config_file, defaults_file=False):
                 sea_msn[key] = var
             else:
                 key, var = line.rsplit('=', maxsplit=1)
+            if  'seanav' in key:
+                var = var.replace('>=', '')
             sea_msn[key] = var
     return sea_msn
 
@@ -150,6 +157,9 @@ def read_pld_config(config_file, defaults_file=False):
                 device_dict_key = line[1:-1]
                 continue
             if "=" not in line:
+                if ':' in line and 'CCU' in line:
+                    key, var = line.split(':')
+                    pld_params[key] = var
                 continue
             key, var = line.split('=', maxsplit=1)
             if key == 'used':
@@ -163,6 +173,8 @@ def read_pld_config(config_file, defaults_file=False):
                 continue
 
             if read_global:
+                if 'CCU' in key :
+                    key = key.replace(':>', '')
                 pld_params[key] = var
     if defaults_file:
         # Add values for the acq.2 that some gliders have
@@ -182,7 +194,7 @@ def expected_values_checker(cfg, expected_values, section=''):
             continue
         if str(var) != str(expected_values[key]):
             _log.error(f"Bad value for {section} {key} = {var}. Expected {expected_values[key]}")
-            
+
 def check_config_alseamar_defaults(mission_cfg, alseamar_cfg):
     skips_keys = ['config_file_directory', 'id']
     for key, val in mission_cfg.items():
@@ -279,7 +291,7 @@ class ConfigReader:
         else:
             cfg_dict = read_pld_config(sea_pld)
             self.config_dict = self.config_dict | cfg_dict
-            
+
     def read_alseamar_configs(self):
         _log.info("Check against alseamar defaults")
         alseamar_dir = script_dir / 'alseamar'
@@ -288,8 +300,8 @@ class ConfigReader:
         self.alseamar_config = self.alseamar_config | read_pld_config(alseamar_dir / 'seapayload.cfg', defaults_file=True)
         # Add values missing from alseamar conf files
         for extra_key in [
-            'CCUversion:>',
-            'seanav', 
+            'CCUversion',
+            'seanav',
             'drf.dtpid.kp',
             'drf.dtpid.kd',
             'drf.dtpid.ki',
@@ -310,7 +322,7 @@ class ConfigReader:
         mission_str_config = f"{self.config_dict['id'].upper()}_M{self.config_dict['mission.num']}"
         if mission_str_config != self.mission_str:
             _log.error(f"mission id {mission_str_config} from config files != {self.mission_str} from filepath for {self.mission_dir}")
-    
+
 
     def check_default_params(self):
         expected_values = {
